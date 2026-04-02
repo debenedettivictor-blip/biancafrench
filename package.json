@@ -1,0 +1,11 @@
+{
+  "name": "biancafrench",
+  "version": "1.0.0",
+  "description": "Daily French + History learning app for Bianca",
+  "scripts": {
+    "start": "npx serve . -l $PORT"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
