@@ -2,10 +2,11 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "biancafrench",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["http-server", ".", "-p", "8090", "-c-1"],
-      "port": 8090
+      "name": "dev",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8091", "--bind", "127.0.0.1"],
+      "port": 8091,
+      "autoPort": true
     }
   ]
 }

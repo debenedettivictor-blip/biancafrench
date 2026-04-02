@@ -151,6 +151,27 @@ const app = {
         } else {
             tipsCard.style.display = 'none';
         }
+
+        // Extra verbs
+        const extraContainer = document.getElementById('extra-verbs-container');
+        extraContainer.innerHTML = '';
+        if (f.extraVerbs && f.extraVerbs.length > 0) {
+            f.extraVerbs.forEach(ev => {
+                let html = `<div class="card extra-verb-card">`;
+                html += `<div class="card-header"><h3>${ev.verb}</h3><span class="badge">${ev.meaning}</span></div>`;
+                html += `<div class="conjugation-grid">`;
+                for (const [pronoun, form] of Object.entries(ev.conjugation)) {
+                    html += `<div class="conj-item"><span class="conj-pronoun">${pronoun}</span><span class="conj-verb">${form}</span></div>`;
+                }
+                html += `</div>`;
+                html += `<div class="examples-list">`;
+                ev.examples.forEach(ex => {
+                    html += `<div class="example-item"><div class="example-fr">${ex.fr}</div><div class="example-en">${ex.en}</div></div>`;
+                });
+                html += `</div></div>`;
+                extraContainer.innerHTML += html;
+            });
+        }
     },
 
     // ===== HISTORY TAB =====
@@ -179,6 +200,31 @@ const app = {
 
         // Fun fact
         document.getElementById('history-funfact').textContent = h.funFact;
+
+        // History facts
+        const factsEl = document.getElementById('history-facts');
+        factsEl.innerHTML = '';
+        if (h.facts && h.facts.length > 0) {
+            let html = `<div class="facts-section"><h3>Did You Know?</h3><ul class="facts-list">`;
+            h.facts.forEach(fact => {
+                html += `<li class="fact-item">${fact}</li>`;
+            });
+            html += `</ul></div>`;
+            factsEl.innerHTML = html;
+        }
+
+        // Current events
+        const eventsEl = document.getElementById('history-events');
+        eventsEl.innerHTML = '';
+        const events = lesson.currentEvents;
+        if (events && events.length > 0) {
+            let html = `<div class="events-section"><h3>In the News Today</h3>`;
+            events.forEach(ev => {
+                html += `<div class="event-item"><div class="event-fr">${ev.fr}</div><div class="event-en">${ev.en}</div></div>`;
+            });
+            html += `</div>`;
+            eventsEl.innerHTML = html;
+        }
     },
 
     revealTranslation() {

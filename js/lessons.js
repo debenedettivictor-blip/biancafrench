@@ -26,7 +26,29 @@ const LESSONS = [
                 { fr: "Vous êtes en retard.", en: "You are late." },
                 { fr: "Ils sont contents.", en: "They are happy." }
             ],
-            tips: "In French, you don't use 'a/an' before professions: 'Je suis avocate' (not 'Je suis une avocate'). Adjectives agree in gender — add -e for feminine."
+            tips: "In French, you don't use 'a/an' before professions: 'Je suis avocate' (not 'Je suis une avocate'). Adjectives agree in gender — add -e for feminine.",
+            extraVerbs: [
+                {
+                    verb: "rester", meaning: "to stay / to remain",
+                    conjugation: { "je": "reste", "tu": "restes", "il/elle": "reste", "nous": "restons", "vous": "restez", "ils/elles": "restent" },
+                    examples: [{ fr: "Je reste à la maison.", en: "I stay at home." }, { fr: "Nous restons calmes.", en: "We stay calm." }]
+                },
+                {
+                    verb: "devenir", meaning: "to become",
+                    conjugation: { "je": "deviens", "tu": "deviens", "il/elle": "devient", "nous": "devenons", "vous": "devenez", "ils/elles": "deviennent" },
+                    examples: [{ fr: "Elle devient célèbre.", en: "She is becoming famous." }, { fr: "Ils deviennent meilleurs.", en: "They are becoming better." }]
+                },
+                {
+                    verb: "sembler", meaning: "to seem / to appear",
+                    conjugation: { "je": "semble", "tu": "sembles", "il/elle": "semble", "nous": "semblons", "vous": "semblez", "ils/elles": "semblent" },
+                    examples: [{ fr: "Tu sembles fatiguée.", en: "You seem tired." }, { fr: "Ils semblent contents.", en: "They seem happy." }]
+                },
+                {
+                    verb: "paraître", meaning: "to appear / to look",
+                    conjugation: { "je": "parais", "tu": "parais", "il/elle": "paraît", "nous": "paraissons", "vous": "paraissez", "ils/elles": "paraissent" },
+                    examples: [{ fr: "Elle paraît jeune.", en: "She looks young." }, { fr: "Cela paraît difficile.", en: "That appears difficult." }]
+                }
+            ]
         },
         history: {
             period: "French Revolution (1789)",
@@ -39,15 +61,37 @@ const LESSONS = [
                 { word: "attaqué", meaning: "attacked" },
                 { word: "un événement", meaning: "an event" }
             ],
-            funFact: "The Bastille only held 7 prisoners on the day it was stormed — but it was what it represented that mattered."
+            funFact: "The Bastille only held 7 prisoners on the day it was stormed — but it was what it represented that mattered.",
+            facts: [
+                "Marie Antoinette never actually said 'Let them eat cake' — this phrase was attributed to her by political opponents to make her seem out of touch.",
+                "The guillotine was introduced during the Revolution as a 'humane' method of execution — named after Dr. Joseph-Ignace Guillotin who proposed it.",
+                "The French tricolor flag (blue, white, red) was created during the Revolution by combining the colors of Paris (blue and red) with the white of the monarchy.",
+                "The metric system was invented during the French Revolution in 1799 as part of an effort to rationalize and standardize all measurements across France.",
+                "During the Revolution, the French even created a new calendar with 10-day weeks and months named after nature, like Thermidor (heat) and Brumaire (fog).",
+                "The Declaration of the Rights of Man and of the Citizen, adopted in 1789, inspired the Universal Declaration of Human Rights nearly 160 years later."
+            ]
         },
+        currentEvents: [
+            { fr: "La France accueille les Jeux Olympiques de Paris 2024 avec un succès historique.", en: "France hosts the Paris 2024 Olympics with historic success." },
+            { fr: "L'intelligence artificielle transforme le marché du travail dans le monde entier.", en: "Artificial intelligence is transforming the job market worldwide." },
+            { fr: "Les pays européens investissent dans les énergies renouvelables.", en: "European countries are investing in renewable energy." },
+            { fr: "Le musée du Louvre bat des records de fréquentation avec plus de dix millions de visiteurs.", en: "The Louvre museum breaks attendance records with over ten million visitors." }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ avocate.", answer: "suis", options: ["suis", "es", "est", "sommes"] },
             { type: "fill", prompt: "Nous ___ prêts pour l'examen.", answer: "sommes", options: ["êtes", "suis", "sommes", "sont"] },
             { type: "fill", prompt: "Elles ___ françaises.", answer: "sont", options: ["est", "sommes", "sont", "êtes"] },
             { type: "translate", en: "You are intelligent.", answer: "Tu es intelligente.", accept: ["tu es intelligent", "tu es intelligente", "vous êtes intelligent", "vous êtes intelligente"] },
             { type: "translate", en: "She is a lawyer.", answer: "Elle est avocate.", accept: ["elle est avocate"] },
-            { type: "history", fr: "La Bastille était une prison royale.", answer: "The Bastille was a royal prison.", options: ["The Bastille was a royal prison.", "The Bastille was a royal palace.", "The Bastille was a royal church.", "The Bastille was a royal garden."] }
+            { type: "history", fr: "La Bastille était une prison royale.", answer: "The Bastille was a royal prison.", options: ["The Bastille was a royal prison.", "The Bastille was a royal palace.", "The Bastille was a royal church.", "The Bastille was a royal garden."] },
+            { type: "fill", prompt: "Elle ___ célèbre maintenant.", answer: "devient", options: ["devient", "deviens", "deviennent", "devenez"] },
+            { type: "fill", prompt: "Nous ___ à la maison ce soir.", answer: "restons", options: ["restons", "restez", "reste", "restent"] },
+            { type: "translate", en: "I stay at home.", answer: "Je reste à la maison.", accept: ["je reste à la maison", "je reste a la maison"] },
+            { type: "history", fr: "Le drapeau tricolore a été créé pendant la Révolution.", answer: "The tricolor flag was created during the Revolution.", options: ["The tricolor flag was created during the Revolution.", "The tricolor flag was created by Napoleon.", "The tricolor flag was created during the Renaissance.", "The tricolor flag was created by the king."] },
+            { type: "fill", prompt: "Tu ___ fatiguée aujourd'hui.", answer: "sembles", options: ["sembles", "semble", "semblons", "semblez"] },
+            { type: "fill", prompt: "Elle ___ très jeune pour son âge.", answer: "paraît", options: ["paraît", "parais", "paraissons", "paraissent"] },
+            { type: "translate", en: "They seem happy.", answer: "Ils semblent contents.", accept: ["ils semblent contents", "elles semblent contentes", "ils semblent heureux"] },
+            { type: "history", fr: "Le système métrique a été inventé pendant la Révolution française.", answer: "The metric system was invented during the French Revolution.", options: ["The metric system was invented during the French Revolution.", "The metric system was invented by Napoleon.", "The metric system was invented in England.", "The metric system was invented during the Renaissance."] }
         ]
     },
 
@@ -75,7 +119,29 @@ const LESSONS = [
                 { fr: "Vous avez de la chance.", en: "You are lucky. (lit: You have luck)" },
                 { fr: "Ils ont faim.", en: "They are hungry. (lit: They have hunger)" }
             ],
-            tips: "French uses 'avoir' (to have) for age, hunger, thirst, fear, and being right/wrong. Think of it as 'possessing' a state: 'J'ai faim' = 'I have hunger.'"
+            tips: "French uses 'avoir' (to have) for age, hunger, thirst, fear, and being right/wrong. Think of it as 'possessing' a state: 'J'ai faim' = 'I have hunger.'",
+            extraVerbs: [
+                {
+                    verb: "prendre", meaning: "to take",
+                    conjugation: { "je": "prends", "tu": "prends", "il/elle": "prend", "nous": "prenons", "vous": "prenez", "ils/elles": "prennent" },
+                    examples: [{ fr: "Je prends un café.", en: "I'm having a coffee." }, { fr: "Elle prend le bus.", en: "She takes the bus." }]
+                },
+                {
+                    verb: "donner", meaning: "to give",
+                    conjugation: { "je": "donne", "tu": "donnes", "il/elle": "donne", "nous": "donnons", "vous": "donnez", "ils/elles": "donnent" },
+                    examples: [{ fr: "Je te donne mon numéro.", en: "I give you my number." }, { fr: "Ils donnent des cadeaux.", en: "They give gifts." }]
+                },
+                {
+                    verb: "garder", meaning: "to keep / to guard",
+                    conjugation: { "je": "garde", "tu": "gardes", "il/elle": "garde", "nous": "gardons", "vous": "gardez", "ils/elles": "gardent" },
+                    examples: [{ fr: "Je garde un bon souvenir.", en: "I keep a good memory." }, { fr: "Ils gardent le secret.", en: "They keep the secret." }]
+                },
+                {
+                    verb: "perdre", meaning: "to lose",
+                    conjugation: { "je": "perds", "tu": "perds", "il/elle": "perd", "nous": "perdons", "vous": "perdez", "ils/elles": "perdent" },
+                    examples: [{ fr: "Je perds mes clés tout le temps.", en: "I lose my keys all the time." }, { fr: "Nous perdons patience.", en: "We are losing patience." }]
+                }
+            ]
         },
         history: {
             period: "Ancient Egypt (3000 BCE)",
@@ -88,15 +154,37 @@ const LESSONS = [
                 { word: "l'écriture", meaning: "writing" },
                 { word: "les hiéroglyphes", meaning: "hieroglyphs" }
             ],
-            funFact: "The Great Pyramid of Giza was the tallest man-made structure in the world for over 3,800 years."
+            funFact: "The Great Pyramid of Giza was the tallest man-made structure in the world for over 3,800 years.",
+            facts: [
+                "Ancient Egyptians invented one of the first forms of toothpaste, made from crushed eggshells, pumice, and ox hooves mixed with water.",
+                "Cleopatra lived closer in time to the Moon landing than to the construction of the Great Pyramid — the pyramids are that old.",
+                "Egyptian workers who built the pyramids were not slaves but paid laborers who received beer, bread, and medical care.",
+                "Ancient Egyptians kept cats as sacred animals and shaved their eyebrows to mourn when a family cat died.",
+                "The ancient Egyptians invented papyrus, one of the earliest forms of paper, made from the pith of the papyrus plant that grew along the Nile.",
+                "Egyptian doctors were remarkably advanced — they performed surgery, set broken bones, and even had specialists for different parts of the body over 4,000 years ago."
+            ]
         },
+        currentEvents: [
+            { fr: "Des archéologues découvrent de nouvelles tombes en Égypte grâce à la technologie satellite.", en: "Archaeologists discover new tombs in Egypt using satellite technology." },
+            { fr: "Le changement climatique menace les sites historiques dans le monde entier.", en: "Climate change threatens historic sites around the world." },
+            { fr: "Les musées utilisent la réalité virtuelle pour montrer l'histoire ancienne.", en: "Museums are using virtual reality to showcase ancient history." },
+            { fr: "Le Grand Musée égyptien ouvre ses portes au Caire près des pyramides de Gizeh.", en: "The Grand Egyptian Museum opens its doors in Cairo near the Giza pyramids." }
+        ],
         exercises: [
             { type: "fill", prompt: "J'___ une question importante.", answer: "ai", options: ["ai", "as", "a", "avons"] },
             { type: "fill", prompt: "Elle ___ vingt-cinq ans.", answer: "a", options: ["est", "a", "ai", "as"] },
             { type: "fill", prompt: "Nous ___ besoin de temps.", answer: "avons", options: ["avons", "avez", "ont", "ai"] },
             { type: "translate", en: "I am hungry.", answer: "J'ai faim.", accept: ["j'ai faim"] },
             { type: "translate", en: "You are right.", answer: "Tu as raison.", accept: ["tu as raison", "vous avez raison"] },
-            { type: "history", fr: "Les Égyptiens avaient des connaissances avancées.", answer: "The Egyptians had advanced knowledge.", options: ["The Egyptians had advanced knowledge.", "The Egyptians had ancient temples.", "The Egyptians had golden treasures.", "The Egyptians had powerful armies."] }
+            { type: "history", fr: "Les Égyptiens avaient des connaissances avancées.", answer: "The Egyptians had advanced knowledge.", options: ["The Egyptians had advanced knowledge.", "The Egyptians had ancient temples.", "The Egyptians had golden treasures.", "The Egyptians had powerful armies."] },
+            { type: "fill", prompt: "Je ___ un café le matin.", answer: "prends", options: ["prends", "prend", "prenons", "prenez"] },
+            { type: "fill", prompt: "Elle ___ des cadeaux à ses amis.", answer: "donne", options: ["donne", "donnes", "donnent", "donnons"] },
+            { type: "translate", en: "She takes the bus.", answer: "Elle prend le bus.", accept: ["elle prend le bus"] },
+            { type: "history", fr: "Les ouvriers des pyramides recevaient de la bière et du pain.", answer: "The pyramid workers received beer and bread.", options: ["The pyramid workers received beer and bread.", "The pyramid workers received gold and jewels.", "The pyramid workers were enslaved.", "The pyramid workers received land."] },
+            { type: "fill", prompt: "Je ___ un bon souvenir de ce voyage.", answer: "garde", options: ["garde", "gardes", "gardons", "gardent"] },
+            { type: "fill", prompt: "Il ___ toujours ses affaires.", answer: "perd", options: ["perd", "perds", "perdons", "perdent"] },
+            { type: "translate", en: "They keep the secret.", answer: "Ils gardent le secret.", accept: ["ils gardent le secret", "elles gardent le secret"] },
+            { type: "history", fr: "Les Égyptiens gardaient les chats comme animaux sacrés.", answer: "The Egyptians kept cats as sacred animals.", options: ["The Egyptians kept cats as sacred animals.", "The Egyptians kept dogs as sacred animals.", "The Egyptians kept cats as pets only.", "The Egyptians feared cats."] }
         ]
     },
 
@@ -124,7 +212,29 @@ const LESSONS = [
                 { fr: "Tu vas réussir.", en: "You are going to succeed." },
                 { fr: "Ils vont au cinéma.", en: "They are going to the cinema." }
             ],
-            tips: "Use 'aller + infinitive' for near future: 'Je vais étudier' = 'I'm going to study.' Use 'au' (à + le) for masculine places, 'à la' for feminine, 'en' for countries."
+            tips: "Use 'aller + infinitive' for near future: 'Je vais étudier' = 'I'm going to study.' Use 'au' (à + le) for masculine places, 'à la' for feminine, 'en' for countries.",
+            extraVerbs: [
+                {
+                    verb: "venir", meaning: "to come",
+                    conjugation: { "je": "viens", "tu": "viens", "il/elle": "vient", "nous": "venons", "vous": "venez", "ils/elles": "viennent" },
+                    examples: [{ fr: "Tu viens avec nous ?", en: "Are you coming with us?" }, { fr: "Je viens de France.", en: "I come from France." }]
+                },
+                {
+                    verb: "partir", meaning: "to leave / to depart",
+                    conjugation: { "je": "pars", "tu": "pars", "il/elle": "part", "nous": "partons", "vous": "partez", "ils/elles": "partent" },
+                    examples: [{ fr: "Le train part à huit heures.", en: "The train leaves at eight o'clock." }, { fr: "Nous partons demain.", en: "We are leaving tomorrow." }]
+                },
+                {
+                    verb: "retourner", meaning: "to return / to go back",
+                    conjugation: { "je": "retourne", "tu": "retournes", "il/elle": "retourne", "nous": "retournons", "vous": "retournez", "ils/elles": "retournent" },
+                    examples: [{ fr: "Je retourne en Italie cet été.", en: "I am going back to Italy this summer." }, { fr: "Nous retournons au musée.", en: "We are going back to the museum." }]
+                },
+                {
+                    verb: "marcher", meaning: "to walk",
+                    conjugation: { "je": "marche", "tu": "marches", "il/elle": "marche", "nous": "marchons", "vous": "marchez", "ils/elles": "marchent" },
+                    examples: [{ fr: "Je marche dans la rue.", en: "I walk in the street." }, { fr: "Nous marchons vers la cathédrale.", en: "We walk toward the cathedral." }]
+                }
+            ]
         },
         history: {
             period: "Renaissance Italy (1400s)",
@@ -137,15 +247,37 @@ const LESSONS = [
                 { word: "de ville en ville", meaning: "from city to city" },
                 { word: "la philosophie", meaning: "philosophy" }
             ],
-            funFact: "Leonardo da Vinci wrote all his notes backwards in mirror script — you need a mirror to read them!"
+            funFact: "Leonardo da Vinci wrote all his notes backwards in mirror script — you need a mirror to read them!",
+            facts: [
+                "Michelangelo painted the Sistine Chapel ceiling while lying on his back on scaffolding for four years (1508-1512) — and he considered himself a sculptor, not a painter.",
+                "The Medici family of Florence were bankers who funded much of the Renaissance, sponsoring artists like Botticelli, Leonardo, and Michelangelo.",
+                "The printing press, invented by Gutenberg around 1440, helped spread Renaissance ideas across Europe faster than ever before.",
+                "Leonardo da Vinci designed flying machines, tanks, and solar power concentrators centuries before they were actually built.",
+                "During the Renaissance, Florence had more banks than any other city in Europe, and the gold florin was the standard currency of international trade.",
+                "Galileo Galilei, born in Pisa in 1564, used a telescope to prove that the Earth revolves around the Sun, challenging centuries of belief."
+            ]
         },
+        currentEvents: [
+            { fr: "L'Italie restaure des monuments historiques grâce à des technologies 3D.", en: "Italy is restoring historical monuments using 3D technologies." },
+            { fr: "Les jeunes du monde entier utilisent les réseaux sociaux pour apprendre l'art.", en: "Young people worldwide use social media to learn about art." },
+            { fr: "Le tourisme culturel reprend en Europe après la pandémie.", en: "Cultural tourism is recovering in Europe after the pandemic." },
+            { fr: "Des œuvres de Léonard de Vinci sont exposées dans une nouvelle exposition immersive à Milan.", en: "Works by Leonardo da Vinci are displayed in a new immersive exhibition in Milan." }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ au restaurant ce soir.", answer: "vais", options: ["vais", "vas", "va", "allons"] },
             { type: "fill", prompt: "Nous ___ étudier le français.", answer: "allons", options: ["allons", "allez", "vont", "vais"] },
             { type: "fill", prompt: "Comment ___-vous ?", answer: "allez", options: ["allez", "allons", "vont", "vas"] },
             { type: "translate", en: "She is going to France.", answer: "Elle va en France.", accept: ["elle va en france"] },
             { type: "translate", en: "We are going to eat.", answer: "Nous allons manger.", accept: ["nous allons manger", "on va manger"] },
-            { type: "history", fr: "Les artistes allaient à Florence pour étudier l'art.", answer: "Artists went to Florence to study art.", options: ["Artists went to Florence to study art.", "Artists went to Rome to study law.", "Artists went to Florence to sell paintings.", "Artists went to Paris to study music."] }
+            { type: "history", fr: "Les artistes allaient à Florence pour étudier l'art.", answer: "Artists went to Florence to study art.", options: ["Artists went to Florence to study art.", "Artists went to Rome to study law.", "Artists went to Florence to sell paintings.", "Artists went to Paris to study music."] },
+            { type: "fill", prompt: "Tu ___ avec nous au cinéma ?", answer: "viens", options: ["viens", "vient", "venez", "venons"] },
+            { type: "fill", prompt: "Le train ___ à neuf heures.", answer: "part", options: ["part", "pars", "partez", "partent"] },
+            { type: "translate", en: "We are leaving tomorrow.", answer: "Nous partons demain.", accept: ["nous partons demain", "on part demain"] },
+            { type: "history", fr: "L'imprimerie a aidé à diffuser les idées de la Renaissance.", answer: "The printing press helped spread Renaissance ideas.", options: ["The printing press helped spread Renaissance ideas.", "The printing press was invented in Florence.", "The printing press replaced handwriting entirely.", "The printing press was banned during the Renaissance."] },
+            { type: "fill", prompt: "Je ___ en Italie cet été.", answer: "retourne", options: ["retourne", "retournes", "retournons", "retournent"] },
+            { type: "fill", prompt: "Nous ___ vers le musée.", answer: "marchons", options: ["marchons", "marchez", "marche", "marchent"] },
+            { type: "translate", en: "We are going back to the museum.", answer: "Nous retournons au musée.", accept: ["nous retournons au musée", "nous retournons au musee", "on retourne au musée"] },
+            { type: "history", fr: "Galilée a utilisé un télescope pour prouver que la Terre tourne autour du Soleil.", answer: "Galileo used a telescope to prove that the Earth revolves around the Sun.", options: ["Galileo used a telescope to prove that the Earth revolves around the Sun.", "Galileo invented the telescope in Florence.", "Galileo used a telescope to discover a new planet.", "Galileo used a telescope to map the oceans."] }
         ]
     },
 
@@ -173,7 +305,29 @@ const LESSONS = [
                 { fr: "Elle fait ses devoirs.", en: "She is doing her homework." },
                 { fr: "Il fait froid en hiver.", en: "It's cold in winter." }
             ],
-            tips: "'Faire' is used for weather (il fait chaud/froid/beau), activities (faire du sport, faire la cuisine), and many set expressions. It's one of the most versatile French verbs!"
+            tips: "'Faire' is used for weather (il fait chaud/froid/beau), activities (faire du sport, faire la cuisine), and many set expressions. It's one of the most versatile French verbs!",
+            extraVerbs: [
+                {
+                    verb: "travailler", meaning: "to work",
+                    conjugation: { "je": "travaille", "tu": "travailles", "il/elle": "travaille", "nous": "travaillons", "vous": "travaillez", "ils/elles": "travaillent" },
+                    examples: [{ fr: "Je travaille dans un bureau.", en: "I work in an office." }, { fr: "Elles travaillent le weekend.", en: "They work on weekends." }]
+                },
+                {
+                    verb: "jouer", meaning: "to play",
+                    conjugation: { "je": "joue", "tu": "joues", "il/elle": "joue", "nous": "jouons", "vous": "jouez", "ils/elles": "jouent" },
+                    examples: [{ fr: "Les enfants jouent dans le parc.", en: "The children play in the park." }, { fr: "Tu joues du piano ?", en: "Do you play the piano?" }]
+                },
+                {
+                    verb: "construire", meaning: "to build / to construct",
+                    conjugation: { "je": "construis", "tu": "construis", "il/elle": "construit", "nous": "construisons", "vous": "construisez", "ils/elles": "construisent" },
+                    examples: [{ fr: "Ils construisent un nouveau pont.", en: "They are building a new bridge." }, { fr: "Nous construisons notre avenir.", en: "We are building our future." }]
+                },
+                {
+                    verb: "écrire", meaning: "to write",
+                    conjugation: { "je": "écris", "tu": "écris", "il/elle": "écrit", "nous": "écrivons", "vous": "écrivez", "ils/elles": "écrivent" },
+                    examples: [{ fr: "Elle écrit une lettre.", en: "She is writing a letter." }, { fr: "Les soldats écrivent à leurs familles.", en: "The soldiers write to their families." }]
+                }
+            ]
         },
         history: {
             period: "World War I (1914-1918)",
@@ -186,15 +340,37 @@ const LESSONS = [
                 { word: "les usines", meaning: "the factories" },
                 { word: "pour toujours", meaning: "forever" }
             ],
-            funFact: "During WWI, the French built a fake Paris near the city to confuse German bombers flying at night."
+            funFact: "During WWI, the French built a fake Paris near the city to confuse German bombers flying at night.",
+            facts: [
+                "The Christmas Truce of 1914 saw British and German soldiers leave their trenches to exchange gifts and play football in no man's land.",
+                "More than 12 million letters were delivered to the front lines every week during WWI, keeping soldiers connected to their families.",
+                "Tanks were first used in battle during WWI — they were called 'tanks' as a code name to keep them secret during transport, and the name stuck.",
+                "Carrier pigeons were used to deliver messages across enemy lines during WWI, and one pigeon named Cher Ami saved nearly 200 American soldiers.",
+                "The war saw the first large-scale use of chemical weapons, with mustard gas and chlorine gas causing devastating injuries in the trenches.",
+                "Over 600,000 French soldiers died at the Battle of Verdun alone in 1916, making it one of the longest and most costly battles in history."
+            ]
         },
+        currentEvents: [
+            { fr: "Les commémorations de la Première Guerre mondiale continuent dans toute l'Europe.", en: "World War I commemorations continue across Europe." },
+            { fr: "Le télétravail change la façon dont les gens travaillent dans le monde.", en: "Remote work is changing how people work around the world." },
+            { fr: "Les femmes occupent de plus en plus de postes de direction dans les entreprises.", en: "Women are holding more and more leadership positions in companies." },
+            { fr: "Des historiens utilisent la technologie pour identifier des soldats inconnus de la Grande Guerre.", en: "Historians are using technology to identify unknown soldiers from the Great War." }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ du yoga chaque matin.", answer: "fais", options: ["fais", "fait", "faisons", "font"] },
             { type: "fill", prompt: "Il ___ très chaud en été.", answer: "fait", options: ["fais", "fait", "faites", "font"] },
             { type: "fill", prompt: "Qu'est-ce que vous ___ ?", answer: "faites", options: ["faites", "faisons", "fais", "font"] },
             { type: "translate", en: "The weather is nice today.", answer: "Il fait beau aujourd'hui.", accept: ["il fait beau aujourd'hui", "il fait beau"] },
             { type: "translate", en: "We are cooking.", answer: "Nous faisons la cuisine.", accept: ["nous faisons la cuisine", "on fait la cuisine"] },
-            { type: "history", fr: "Les femmes faisaient le travail dans les usines.", answer: "Women did the work in the factories.", options: ["Women did the work in the factories.", "Women did the cooking in the kitchens.", "Women did the farming in the fields.", "Women did the nursing in the hospitals."] }
+            { type: "history", fr: "Les femmes faisaient le travail dans les usines.", answer: "Women did the work in the factories.", options: ["Women did the work in the factories.", "Women did the cooking in the kitchens.", "Women did the farming in the fields.", "Women did the nursing in the hospitals."] },
+            { type: "fill", prompt: "Je ___ dans un hôpital.", answer: "travaille", options: ["travaille", "travailles", "travaillons", "travaillent"] },
+            { type: "fill", prompt: "Les enfants ___ au football.", answer: "jouent", options: ["jouent", "joue", "jouons", "jouez"] },
+            { type: "translate", en: "Do you play the piano?", answer: "Tu joues du piano ?", accept: ["tu joues du piano", "vous jouez du piano"] },
+            { type: "history", fr: "La trêve de Noël de 1914 a vu les soldats jouer au football.", answer: "The Christmas Truce of 1914 saw soldiers play football.", options: ["The Christmas Truce of 1914 saw soldiers play football.", "The Christmas Truce of 1914 ended the war.", "The Christmas Truce of 1914 lasted a whole month.", "The Christmas Truce of 1914 was in France only."] },
+            { type: "fill", prompt: "Ils ___ un nouveau pont.", answer: "construisent", options: ["construisent", "construit", "construisons", "construisez"] },
+            { type: "fill", prompt: "Elle ___ une lettre à sa famille.", answer: "écrit", options: ["écrit", "écris", "écrivons", "écrivent"] },
+            { type: "translate", en: "We are building our future.", answer: "Nous construisons notre avenir.", accept: ["nous construisons notre avenir", "on construit notre avenir"] },
+            { type: "history", fr: "Des pigeons voyageurs livraient des messages pendant la guerre.", answer: "Carrier pigeons delivered messages during the war.", options: ["Carrier pigeons delivered messages during the war.", "Carrier pigeons were used as weapons during the war.", "Carrier pigeons were trained to spy during the war.", "Carrier pigeons carried food during the war."] }
         ]
     },
 
@@ -222,7 +398,29 @@ const LESSONS = [
                 { fr: "Pouvez-vous répéter ?", en: "Can you repeat? (polite)" },
                 { fr: "Je voudrais un croissant.", en: "I would like a croissant." }
             ],
-            tips: "'Je voudrais' (I would like) is the polite form of 'je veux' (I want). Always use 'voudrais' in shops and restaurants! These verbs are always followed by an infinitive."
+            tips: "'Je voudrais' (I would like) is the polite form of 'je veux' (I want). Always use 'voudrais' in shops and restaurants! These verbs are always followed by an infinitive.",
+            extraVerbs: [
+                {
+                    verb: "savoir", meaning: "to know a fact / how to",
+                    conjugation: { "je": "sais", "tu": "sais", "il/elle": "sait", "nous": "savons", "vous": "savez", "ils/elles": "savent" },
+                    examples: [{ fr: "Je sais nager.", en: "I know how to swim." }, { fr: "Tu sais où elle habite ?", en: "Do you know where she lives?" }]
+                },
+                {
+                    verb: "devoir", meaning: "to must / to have to",
+                    conjugation: { "je": "dois", "tu": "dois", "il/elle": "doit", "nous": "devons", "vous": "devez", "ils/elles": "doivent" },
+                    examples: [{ fr: "Je dois partir maintenant.", en: "I have to leave now." }, { fr: "Vous devez étudier.", en: "You must study." }]
+                },
+                {
+                    verb: "croire", meaning: "to believe",
+                    conjugation: { "je": "crois", "tu": "crois", "il/elle": "croit", "nous": "croyons", "vous": "croyez", "ils/elles": "croient" },
+                    examples: [{ fr: "Je crois en toi.", en: "I believe in you." }, { fr: "Ils croient que c'est possible.", en: "They believe it is possible." }]
+                },
+                {
+                    verb: "choisir", meaning: "to choose",
+                    conjugation: { "je": "choisis", "tu": "choisis", "il/elle": "choisit", "nous": "choisissons", "vous": "choisissez", "ils/elles": "choisissent" },
+                    examples: [{ fr: "Je choisis le menu du jour.", en: "I choose the daily special." }, { fr: "Nous choisissons notre avenir.", en: "We choose our future." }]
+                }
+            ]
         },
         history: {
             period: "Napoleon Bonaparte (1799-1815)",
@@ -235,15 +433,37 @@ const LESSONS = [
                 { word: "vaincre", meaning: "to defeat" },
                 { word: "la chute", meaning: "the downfall" }
             ],
-            funFact: "Napoleon was not actually short — at 5'7\" he was average height for his time. The myth came from British propaganda!"
+            funFact: "Napoleon was not actually short — at 5'7\" he was average height for his time. The myth came from British propaganda!",
+            facts: [
+                "Napoleon introduced the Napoleonic Code, a legal system that still forms the basis of civil law in over 70 countries today, including France, Belgium, and Louisiana.",
+                "During his Egyptian campaign, Napoleon brought 167 scientists and scholars who discovered the Rosetta Stone, which became the key to decoding hieroglyphs.",
+                "After his final defeat at Waterloo in 1815, Napoleon was exiled to the tiny island of Saint Helena in the South Atlantic, where he died six years later.",
+                "Napoleon once said that an army marches on its stomach, and he pioneered canned food preservation to feed his troops during long campaigns.",
+                "Before becoming emperor, Napoleon was actually born in Corsica just one year after the island was transferred from Genoa to France, making him barely French by birth.",
+                "Napoleon sold the Louisiana Territory to the United States in 1803 for about 15 million dollars, doubling the size of the young nation overnight."
+            ]
         },
+        currentEvents: [
+            { fr: "Les dirigeants mondiaux débattent des réformes des Nations Unies.", en: "World leaders debate reforms of the United Nations." },
+            { fr: "Les élections en France influencent la politique européenne.", en: "Elections in France influence European politics." },
+            { fr: "Le droit international évolue pour répondre aux nouveaux conflits.", en: "International law is evolving to address new conflicts." },
+            { fr: "La France commémore le bicentenaire de la mort de Napoléon avec des expositions nationales.", en: "France commemorates the bicentenary of Napoleon's death with national exhibitions." }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ vous aider.", answer: "peux", options: ["peux", "veux", "peut", "paux"] },
             { type: "fill", prompt: "Elle ___ un verre d'eau.", answer: "veut", options: ["veut", "peut", "veux", "voulez"] },
             { type: "fill", prompt: "Nous ne ___ pas venir demain.", answer: "pouvons", options: ["pouvons", "voulons", "pouvez", "peuvent"] },
             { type: "translate", en: "I would like a coffee.", answer: "Je voudrais un café.", accept: ["je voudrais un café", "je voudrais un cafe"] },
             { type: "translate", en: "Can you repeat?", answer: "Pouvez-vous répéter ?", accept: ["pouvez-vous répéter", "pouvez-vous repeter", "tu peux répéter", "tu peux repeter"] },
-            { type: "history", fr: "Napoléon voulait conquérir toute l'Europe.", answer: "Napoleon wanted to conquer all of Europe.", options: ["Napoleon wanted to conquer all of Europe.", "Napoleon wanted to explore all of Africa.", "Napoleon wanted to unite all of Europe.", "Napoleon wanted to defend all of France."] }
+            { type: "history", fr: "Napoléon voulait conquérir toute l'Europe.", answer: "Napoleon wanted to conquer all of Europe.", options: ["Napoleon wanted to conquer all of Europe.", "Napoleon wanted to explore all of Africa.", "Napoleon wanted to unite all of Europe.", "Napoleon wanted to defend all of France."] },
+            { type: "fill", prompt: "Je ___ nager depuis l'âge de cinq ans.", answer: "sais", options: ["sais", "sait", "savons", "savent"] },
+            { type: "fill", prompt: "Tu ___ finir tes devoirs.", answer: "dois", options: ["dois", "doit", "devons", "devez"] },
+            { type: "translate", en: "I have to leave now.", answer: "Je dois partir maintenant.", accept: ["je dois partir maintenant"] },
+            { type: "history", fr: "Le Code Napoléon est encore la base du droit civil dans plus de 70 pays.", answer: "The Napoleonic Code is still the basis of civil law in over 70 countries.", options: ["The Napoleonic Code is still the basis of civil law in over 70 countries.", "The Napoleonic Code was abolished after his death.", "The Napoleonic Code only applied to France.", "The Napoleonic Code was written by his generals."] },
+            { type: "fill", prompt: "Je ___ en toi.", answer: "crois", options: ["crois", "croit", "croyons", "croient"] },
+            { type: "fill", prompt: "Nous ___ notre destination.", answer: "choisissons", options: ["choisissons", "choisissez", "choisit", "choisissent"] },
+            { type: "translate", en: "They believe it is possible.", answer: "Ils croient que c'est possible.", accept: ["ils croient que c'est possible", "elles croient que c'est possible"] },
+            { type: "history", fr: "Napoléon a vendu la Louisiane aux États-Unis en 1803.", answer: "Napoleon sold Louisiana to the United States in 1803.", options: ["Napoleon sold Louisiana to the United States in 1803.", "Napoleon conquered Louisiana in 1803.", "Napoleon gave Louisiana to Spain in 1803.", "Napoleon discovered Louisiana in 1803."] }
         ]
     },
 
@@ -271,7 +491,29 @@ const LESSONS = [
                 { fr: "Je ne connais personne.", en: "I don't know anyone." },
                 { fr: "Il n'a que vingt ans.", en: "He is only twenty years old." }
             ],
-            tips: "In spoken French, people often drop the 'ne': 'Je comprends pas' instead of 'Je ne comprends pas.' But always write the 'ne' in formal contexts!"
+            tips: "In spoken French, people often drop the 'ne': 'Je comprends pas' instead of 'Je ne comprends pas.' But always write the 'ne' in formal contexts!",
+            extraVerbs: [
+                {
+                    verb: "connaître", meaning: "to know a person / place",
+                    conjugation: { "je": "connais", "tu": "connais", "il/elle": "connaît", "nous": "connaissons", "vous": "connaissez", "ils/elles": "connaissent" },
+                    examples: [{ fr: "Je ne connais pas cette ville.", en: "I don't know this city." }, { fr: "Tu connais Marie ?", en: "Do you know Marie?" }]
+                },
+                {
+                    verb: "croire", meaning: "to believe",
+                    conjugation: { "je": "crois", "tu": "crois", "il/elle": "croit", "nous": "croyons", "vous": "croyez", "ils/elles": "croient" },
+                    examples: [{ fr: "Je ne crois pas cette histoire.", en: "I don't believe this story." }, { fr: "Nous croyons en toi.", en: "We believe in you." }]
+                },
+                {
+                    verb: "comprendre", meaning: "to understand",
+                    conjugation: { "je": "comprends", "tu": "comprends", "il/elle": "comprend", "nous": "comprenons", "vous": "comprenez", "ils/elles": "comprennent" },
+                    examples: [{ fr: "Je ne comprends rien à ce problème.", en: "I don't understand anything about this problem." }, { fr: "Elle comprend trois langues.", en: "She understands three languages." }]
+                },
+                {
+                    verb: "recevoir", meaning: "to receive",
+                    conjugation: { "je": "reçois", "tu": "reçois", "il/elle": "reçoit", "nous": "recevons", "vous": "recevez", "ils/elles": "reçoivent" },
+                    examples: [{ fr: "Je ne reçois jamais de lettres.", en: "I never receive letters." }, { fr: "Nous recevons des amis ce soir.", en: "We are receiving friends tonight." }]
+                }
+            ]
         },
         history: {
             period: "Ancient Greece (500 BCE)",
@@ -284,15 +526,37 @@ const LESSONS = [
                 { word: "un élève", meaning: "a student" },
                 { word: "cesser", meaning: "to stop/cease" }
             ],
-            funFact: "In ancient Athens, citizens could vote to banish someone for 10 years — it was called 'ostracism,' and names were written on pottery shards."
+            funFact: "In ancient Athens, citizens could vote to banish someone for 10 years — it was called 'ostracism,' and names were written on pottery shards.",
+            facts: [
+                "The ancient Olympic Games, first held in 776 BCE, banned women from competing and even from watching — violators faced the death penalty.",
+                "Ancient Greek theaters had such perfect acoustics that a whisper on stage could be heard by all 15,000 spectators in the back rows.",
+                "The Greeks invented the alarm clock around 250 BCE — Plato used a water clock that made a whistling sound to wake his students for early morning lectures.",
+                "Ancient Greeks exercised completely naked in the gymnasium — the word 'gymnasium' comes from the Greek 'gymnos,' meaning naked.",
+                "Sparta had a brutal training program called the agoge where boys were taken from their families at age 7 and trained as warriors until age 30.",
+                "The ancient Greeks believed that redheads turned into vampires after death — this superstition persisted in Greek folklore for centuries."
+            ]
         },
+        currentEvents: [
+            { fr: "La Grèce continue de réclamer le retour des marbres du Parthénon exposés à Londres.", en: "Greece continues to demand the return of the Parthenon marbles displayed in London." },
+            { fr: "La démocratie fait face à de nouveaux défis dans le monde numérique.", en: "Democracy faces new challenges in the digital world." },
+            { fr: "Les philosophes modernes débattent de l'éthique de l'intelligence artificielle.", en: "Modern philosophers debate the ethics of artificial intelligence." },
+            { fr: "Des archéologues découvrent de nouveaux trésors dans les ruines de temples grecs anciens.", en: "Archaeologists discover new treasures in the ruins of ancient Greek temples." }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ne ___ pas français.", answer: "parle", options: ["parle", "parles", "parlons", "parlent"] },
             { type: "fill", prompt: "Elle ne mange ___ de viande.", answer: "jamais", options: ["jamais", "pas", "rien", "plus"] },
             { type: "fill", prompt: "Il n'y a ___ dans le frigo.", answer: "rien", options: ["rien", "pas", "jamais", "personne"] },
             { type: "translate", en: "I don't understand.", answer: "Je ne comprends pas.", accept: ["je ne comprends pas", "je comprends pas"] },
             { type: "translate", en: "We no longer work there.", answer: "Nous ne travaillons plus là.", accept: ["nous ne travaillons plus là", "nous ne travaillons plus la", "on ne travaille plus là", "on ne travaille plus la"] },
-            { type: "history", fr: "La démocratie n'existait nulle part ailleurs.", answer: "Democracy didn't exist anywhere else.", options: ["Democracy didn't exist anywhere else.", "Democracy didn't exist in Athens.", "Democracy didn't exist before Greece.", "Democracy didn't exist without Socrates."] }
+            { type: "history", fr: "La démocratie n'existait nulle part ailleurs.", answer: "Democracy didn't exist anywhere else.", options: ["Democracy didn't exist anywhere else.", "Democracy didn't exist in Athens.", "Democracy didn't exist before Greece.", "Democracy didn't exist without Socrates."] },
+            { type: "fill", prompt: "Je ne ___ pas cette ville.", answer: "connais", options: ["connais", "connaît", "sais", "sait"] },
+            { type: "fill", prompt: "Nous ne ___ pas cette histoire.", answer: "croyons", options: ["croyons", "crois", "croit", "croient"] },
+            { type: "translate", en: "I don't believe this story.", answer: "Je ne crois pas cette histoire.", accept: ["je ne crois pas cette histoire"] },
+            { type: "history", fr: "Les anciens Jeux Olympiques interdisaient aux femmes de participer.", answer: "The ancient Olympic Games banned women from competing.", options: ["The ancient Olympic Games banned women from competing.", "The ancient Olympic Games were held every year.", "The ancient Olympic Games included swimming.", "The ancient Olympic Games were in Rome."] },
+            { type: "fill", prompt: "Elle ne ___ rien à cette leçon.", answer: "comprend", options: ["comprend", "comprends", "comprenons", "comprennent"] },
+            { type: "fill", prompt: "Je ne ___ jamais de cadeaux.", answer: "reçois", options: ["reçois", "reçoit", "recevons", "reçoivent"] },
+            { type: "translate", en: "I never receive letters.", answer: "Je ne reçois jamais de lettres.", accept: ["je ne reçois jamais de lettres", "je ne recois jamais de lettres"] },
+            { type: "translate", en: "She doesn't understand anything about this problem.", answer: "Elle ne comprend rien à ce problème.", accept: ["elle ne comprend rien à ce problème", "elle ne comprend rien a ce probleme", "elle ne comprend rien à ce probleme"] }
         ]
     },
 
@@ -320,7 +584,29 @@ const LESSONS = [
                 { fr: "Ils ont fini le travail.", en: "They finished the work." },
                 { fr: "Elle est née en France.", en: "She was born in France." }
             ],
-            tips: "Most verbs use 'avoir.' Movement verbs use 'être' (aller, venir, partir, arriver, naître, mourir...). With 'être,' the past participle agrees with the subject: 'elle est allée' (extra -e for feminine)."
+            tips: "Most verbs use 'avoir.' Movement verbs use 'être' (aller, venir, partir, arriver, naître, mourir...). With 'être,' the past participle agrees with the subject: 'elle est allée' (extra -e for feminine).",
+            extraVerbs: [
+                {
+                    verb: "manger", meaning: "to eat",
+                    conjugation: { "je": "mange", "tu": "manges", "il/elle": "mange", "nous": "mangeons", "vous": "mangez", "ils/elles": "mangent" },
+                    examples: [{ fr: "J'ai mangé un croissant ce matin.", en: "I ate a croissant this morning." }, { fr: "Nous mangeons à midi.", en: "We eat at noon." }]
+                },
+                {
+                    verb: "boire", meaning: "to drink",
+                    conjugation: { "je": "bois", "tu": "bois", "il/elle": "boit", "nous": "buvons", "vous": "buvez", "ils/elles": "boivent" },
+                    examples: [{ fr: "J'ai bu un café ce matin.", en: "I drank a coffee this morning." }, { fr: "Nous buvons de l'eau.", en: "We drink water." }]
+                },
+                {
+                    verb: "partir", meaning: "to leave / to depart",
+                    conjugation: { "je": "pars", "tu": "pars", "il/elle": "part", "nous": "partons", "vous": "partez", "ils/elles": "partent" },
+                    examples: [{ fr: "Je suis parti à huit heures.", en: "I left at eight o'clock." }, { fr: "Nous partons en vacances demain.", en: "We are leaving on vacation tomorrow." }]
+                },
+                {
+                    verb: "voir", meaning: "to see",
+                    conjugation: { "je": "vois", "tu": "vois", "il/elle": "voit", "nous": "voyons", "vous": "voyez", "ils/elles": "voient" },
+                    examples: [{ fr: "J'ai vu un film hier soir.", en: "I saw a movie last night." }, { fr: "Nous voyons la mer.", en: "We see the sea." }]
+                }
+            ]
         },
         history: {
             period: "The Moon Landing (1969)",
@@ -333,15 +619,37 @@ const LESSONS = [
                 { word: "la course à l'espace", meaning: "the space race" },
                 { word: "la télévision", meaning: "television" }
             ],
-            funFact: "The computers used for the Apollo 11 mission had less processing power than a modern smartphone!"
+            funFact: "The computers used for the Apollo 11 mission had less processing power than a modern smartphone!",
+            facts: [
+                "Buzz Aldrin took communion on the Moon — he brought a tiny communion kit and it was the first food and drink consumed on the lunar surface.",
+                "The Apollo astronauts had to go through U.S. customs when they returned to Earth, declaring their cargo as 'moon rocks and moon dust.'",
+                "The American flag planted on the Moon has likely been bleached completely white by decades of unfiltered solar radiation.",
+                "The Apollo 11 crew spent 21 days in quarantine after returning to Earth because NASA feared they might bring back dangerous lunar microbes.",
+                "Neil Armstrong's heart rate spiked to 150 beats per minute during the final moments of the lunar landing as he manually guided the craft to avoid a boulder field.",
+                "The Soviet Union secretly tried to beat the US to the Moon but their N1 rocket exploded on all four launch attempts, and the program was covered up for decades."
+            ]
         },
+        currentEvents: [
+            { fr: "La NASA et SpaceX préparent une mission pour envoyer des humains sur Mars.", en: "NASA and SpaceX are preparing a mission to send humans to Mars." },
+            { fr: "Le télescope James Webb découvre de nouvelles exoplanètes habitables.", en: "The James Webb telescope discovers new habitable exoplanets." },
+            { fr: "L'Inde et la Chine développent leurs programmes spatiaux rapidement.", en: "India and China are rapidly developing their space programs." },
+            { fr: "La station spatiale internationale accueille des expériences scientifiques de dizaines de pays.", en: "The International Space Station hosts scientific experiments from dozens of countries." }
+        ],
         exercises: [
             { type: "fill", prompt: "J'ai ___ un bon livre hier.", answer: "lu", options: ["lu", "lire", "lis", "lit"] },
             { type: "fill", prompt: "Elle est ___ au cinéma.", answer: "allée", options: ["allée", "allé", "aller", "allés"] },
             { type: "fill", prompt: "Nous avons ___ le film.", answer: "regardé", options: ["regardé", "regarder", "regarde", "regardés"] },
             { type: "translate", en: "I studied all day.", answer: "J'ai étudié toute la journée.", accept: ["j'ai étudié toute la journée", "j'ai etudié toute la journee", "j'ai étudié toute la journee", "j'ai etudie toute la journee"] },
             { type: "translate", en: "She understood the lesson.", answer: "Elle a compris la leçon.", accept: ["elle a compris la leçon", "elle a compris la lecon"] },
-            { type: "history", fr: "Neil Armstrong a marché sur la Lune.", answer: "Neil Armstrong walked on the Moon.", options: ["Neil Armstrong walked on the Moon.", "Neil Armstrong flew to Mars.", "Neil Armstrong discovered the Moon.", "Neil Armstrong photographed the Moon."] }
+            { type: "history", fr: "Neil Armstrong a marché sur la Lune.", answer: "Neil Armstrong walked on the Moon.", options: ["Neil Armstrong walked on the Moon.", "Neil Armstrong flew to Mars.", "Neil Armstrong discovered the Moon.", "Neil Armstrong photographed the Moon."] },
+            { type: "fill", prompt: "Ils sont ___ à la fête hier soir.", answer: "partis", options: ["partis", "parti", "partir", "partons"] },
+            { type: "fill", prompt: "J'ai ___ un beau coucher de soleil.", answer: "vu", options: ["vu", "voir", "vois", "voit"] },
+            { type: "fill", prompt: "Elle a ___ un café au lait.", answer: "bu", options: ["bu", "boire", "bois", "boit"] },
+            { type: "translate", en: "I left at eight o'clock.", answer: "Je suis parti à huit heures.", accept: ["je suis parti à huit heures", "je suis parti a huit heures", "je suis partie à huit heures", "je suis partie a huit heures"] },
+            { type: "translate", en: "We saw the sea.", answer: "Nous avons vu la mer.", accept: ["nous avons vu la mer", "on a vu la mer"] },
+            { type: "translate", en: "They ate at the restaurant.", answer: "Ils ont mangé au restaurant.", accept: ["ils ont mangé au restaurant", "ils ont mange au restaurant", "elles ont mangé au restaurant"] },
+            { type: "history", fr: "Les astronautes d'Apollo ont dû passer la douane américaine en revenant sur Terre.", answer: "The Apollo astronauts had to go through U.S. customs when returning to Earth.", options: ["The Apollo astronauts had to go through U.S. customs when returning to Earth.", "The Apollo astronauts had to quarantine for a year.", "The Apollo astronauts had to pay for their trip.", "The Apollo astronauts had to learn Russian."] },
+            { type: "fill", prompt: "Nous sommes ___ au musée hier.", answer: "allés", options: ["allés", "allé", "aller", "allons"] }
         ]
     },
 
@@ -369,7 +677,29 @@ const LESSONS = [
                 { fr: "Qui est cette personne ?", en: "Who is this person?" },
                 { fr: "Combien ça coûte ?", en: "How much does it cost?" }
             ],
-            tips: "Three ways to ask questions: 1) Add '?' to a statement (Tu parles français ?), 2) Add 'Est-ce que' (Est-ce que tu parles français ?), 3) Invert subject-verb (Parles-tu français ?). Method 1 is casual, 3 is formal."
+            tips: "Three ways to ask questions: 1) Add '?' to a statement (Tu parles français ?), 2) Add 'Est-ce que' (Est-ce que tu parles français ?), 3) Invert subject-verb (Parles-tu français ?). Method 1 is casual, 3 is formal.",
+            extraVerbs: [
+                {
+                    verb: "demander", meaning: "to ask",
+                    conjugation: { "je": "demande", "tu": "demandes", "il/elle": "demande", "nous": "demandons", "vous": "demandez", "ils/elles": "demandent" },
+                    examples: [{ fr: "Je demande l'addition.", en: "I ask for the check." }, { fr: "Elle demande des informations.", en: "She asks for information." }]
+                },
+                {
+                    verb: "répondre", meaning: "to answer / to reply",
+                    conjugation: { "je": "réponds", "tu": "réponds", "il/elle": "répond", "nous": "répondons", "vous": "répondez", "ils/elles": "répondent" },
+                    examples: [{ fr: "Il répond à la question.", en: "He answers the question." }, { fr: "Nous répondons au téléphone.", en: "We answer the phone." }]
+                },
+                {
+                    verb: "chercher", meaning: "to look for / to search",
+                    conjugation: { "je": "cherche", "tu": "cherches", "il/elle": "cherche", "nous": "cherchons", "vous": "cherchez", "ils/elles": "cherchent" },
+                    examples: [{ fr: "Je cherche mes clés.", en: "I am looking for my keys." }, { fr: "Nous cherchons un restaurant.", en: "We are looking for a restaurant." }]
+                },
+                {
+                    verb: "trouver", meaning: "to find",
+                    conjugation: { "je": "trouve", "tu": "trouves", "il/elle": "trouve", "nous": "trouvons", "vous": "trouvez", "ils/elles": "trouvent" },
+                    examples: [{ fr: "Tu trouves la réponse facilement.", en: "You find the answer easily." }, { fr: "Ils trouvent le chemin.", en: "They find the way." }]
+                }
+            ]
         },
         history: {
             period: "The Enlightenment (1700s)",
@@ -382,15 +712,37 @@ const LESSONS = [
                 { word: "juste", meaning: "fair/just" },
                 { word: "la façon", meaning: "the way/manner" }
             ],
-            funFact: "Voltaire reportedly drank 40 cups of coffee a day while writing. He lived to 83, which was remarkable for the 1700s!"
+            funFact: "Voltaire reportedly drank 40 cups of coffee a day while writing. He lived to 83, which was remarkable for the 1700s!",
+            facts: [
+                "Voltaire and Rousseau, two of the Enlightenment's greatest thinkers, despised each other and exchanged vicious letters for decades.",
+                "Denis Diderot spent over 25 years creating the Encyclopédie, one of the first general encyclopedias — the French government tried to ban it multiple times.",
+                "The Enlightenment introduced the radical idea that ordinary people could reason for themselves, which directly challenged the divine right of kings.",
+                "Benjamin Franklin was a celebrity in Enlightenment-era Paris — French women wore wigs styled to look like his famous fur cap.",
+                "The philosopher Montesquieu proposed the separation of powers into executive, legislative, and judicial branches — an idea that shaped the U.S. Constitution.",
+                "During the Enlightenment, coffeehouses became known as 'penny universities' because for the price of a coffee, you could listen to brilliant debates and lectures."
+            ]
         },
+        currentEvents: [
+            { fr: "Les débats sur la liberté d'expression continuent de façonner les lois dans le monde entier.", en: "Debates about freedom of expression continue to shape laws around the world." },
+            { fr: "Les universités françaises modernisent leurs programmes pour attirer des étudiants internationaux.", en: "French universities are modernizing their programs to attract international students." },
+            { fr: "La pensée critique est considérée comme une compétence essentielle dans l'éducation moderne.", en: "Critical thinking is considered an essential skill in modern education." },
+            { fr: "Des intellectuels du monde entier se réunissent pour discuter de l'avenir de la démocratie.", en: "Intellectuals from around the world gather to discuss the future of democracy." }
+        ],
         exercises: [
             { type: "fill", prompt: "___ est-ce que tu habites ?", answer: "Où", options: ["Où", "Qui", "Quand", "Comment"] },
             { type: "fill", prompt: "___ est cette femme ?", answer: "Qui", options: ["Qui", "Que", "Où", "Quand"] },
             { type: "fill", prompt: "___ est-ce que le magasin ferme ?", answer: "Quand", options: ["Quand", "Comment", "Pourquoi", "Combien"] },
             { type: "translate", en: "Where do you live?", answer: "Où est-ce que tu habites ?", accept: ["où est-ce que tu habites", "ou est-ce que tu habites", "où habites-tu", "tu habites où", "ou habites-tu"] },
             { type: "translate", en: "How much does it cost?", answer: "Combien ça coûte ?", accept: ["combien ça coûte", "combien ca coute", "combien ça coute", "combien est-ce que ça coûte", "combien est-ce que ca coute"] },
-            { type: "history", fr: "Les philosophes se sont posé des questions fondamentales.", answer: "The philosophers asked fundamental questions.", options: ["The philosophers asked fundamental questions.", "The philosophers wrote fundamental books.", "The philosophers taught fundamental lessons.", "The philosophers discovered fundamental truths."] }
+            { type: "history", fr: "Les philosophes se sont posé des questions fondamentales.", answer: "The philosophers asked fundamental questions.", options: ["The philosophers asked fundamental questions.", "The philosophers wrote fundamental books.", "The philosophers taught fundamental lessons.", "The philosophers discovered fundamental truths."] },
+            { type: "fill", prompt: "Je ___ des informations sur ce sujet.", answer: "demande", options: ["demande", "demandes", "demandons", "demandez"] },
+            { type: "fill", prompt: "Il ___ toujours aux questions.", answer: "répond", options: ["répond", "réponds", "répondons", "répondent"] },
+            { type: "fill", prompt: "___ est-ce que tu étudies le français ?", answer: "Pourquoi", options: ["Pourquoi", "Combien", "Qui", "Où"] },
+            { type: "fill", prompt: "Nous ___ un bon restaurant.", answer: "cherchons", options: ["cherchons", "cherche", "cherchez", "cherchent"] },
+            { type: "translate", en: "I am looking for my keys.", answer: "Je cherche mes clés.", accept: ["je cherche mes clés", "je cherche mes cles"] },
+            { type: "translate", en: "He answers the question.", answer: "Il répond à la question.", accept: ["il répond à la question", "il repond a la question", "il répond a la question"] },
+            { type: "translate", en: "Why did he leave?", answer: "Pourquoi est-ce qu'il est parti ?", accept: ["pourquoi est-ce qu'il est parti", "pourquoi il est parti", "pourquoi est-il parti"] },
+            { type: "history", fr: "Montesquieu a proposé la séparation des pouvoirs.", answer: "Montesquieu proposed the separation of powers.", options: ["Montesquieu proposed the separation of powers.", "Montesquieu proposed the abolition of monarchy.", "Montesquieu proposed a new religion.", "Montesquieu proposed free education."] }
         ]
     },
 
@@ -418,7 +770,29 @@ const LESSONS = [
                 { fr: "Je suis désolée, je ne parle pas bien français.", en: "I'm sorry, I don't speak French well." },
                 { fr: "Pourriez-vous parler plus lentement ?", en: "Could you speak more slowly?" }
             ],
-            tips: "'S'il vous plaît' (formal) and 's'il te plaît' (informal) both mean 'please.' Always add it — French people really appreciate politeness! 'Pourriez-vous...' is the polite way to ask for something."
+            tips: "'S'il vous plaît' (formal) and 's'il te plaît' (informal) both mean 'please.' Always add it — French people really appreciate politeness! 'Pourriez-vous...' is the polite way to ask for something.",
+            extraVerbs: [
+                {
+                    verb: "acheter", meaning: "to buy",
+                    conjugation: { "je": "achète", "tu": "achètes", "il/elle": "achète", "nous": "achetons", "vous": "achetez", "ils/elles": "achètent" },
+                    examples: [{ fr: "J'achète du pain à la boulangerie.", en: "I buy bread at the bakery." }, { fr: "Nous achetons des souvenirs.", en: "We buy souvenirs." }]
+                },
+                {
+                    verb: "payer", meaning: "to pay",
+                    conjugation: { "je": "paie", "tu": "paies", "il/elle": "paie", "nous": "payons", "vous": "payez", "ils/elles": "paient" },
+                    examples: [{ fr: "Je paie par carte bancaire.", en: "I pay by credit card." }, { fr: "Vous payez combien ?", en: "How much do you pay?" }]
+                },
+                {
+                    verb: "essayer", meaning: "to try",
+                    conjugation: { "je": "essaie", "tu": "essaies", "il/elle": "essaie", "nous": "essayons", "vous": "essayez", "ils/elles": "essaient" },
+                    examples: [{ fr: "J'essaie cette robe.", en: "I try on this dress." }, { fr: "Nous essayons un nouveau restaurant.", en: "We try a new restaurant." }]
+                },
+                {
+                    verb: "attendre", meaning: "to wait",
+                    conjugation: { "je": "attends", "tu": "attends", "il/elle": "attend", "nous": "attendons", "vous": "attendez", "ils/elles": "attendent" },
+                    examples: [{ fr: "J'attends le bus depuis dix minutes.", en: "I have been waiting for the bus for ten minutes." }, { fr: "Nous attendons notre commande.", en: "We are waiting for our order." }]
+                }
+            ]
         },
         history: {
             period: "Medieval Europe (1000-1400)",
@@ -431,15 +805,37 @@ const LESSONS = [
                 { word: "les cathédrales", meaning: "cathedrals" },
                 { word: "terminer", meaning: "to finish" }
             ],
-            funFact: "Notre-Dame de Paris took 182 years to build (1163-1345) and survived the French Revolution, two World Wars, and a devastating fire in 2019."
+            funFact: "Notre-Dame de Paris took 182 years to build (1163-1345) and survived the French Revolution, two World Wars, and a devastating fire in 2019.",
+            facts: [
+                "Medieval knights' armor weighed about 25 kilograms (55 pounds) and they needed help mounting their horses while wearing it.",
+                "The Black Death killed roughly one-third of Europe's entire population between 1347 and 1351 — about 25 million people.",
+                "Medieval peasants actually bathed more often than commonly believed — public bathhouses were popular social gathering places across Europe.",
+                "The average medieval European drank about 300 liters of beer per year because it was often safer than the local water supply.",
+                "Cats were sometimes put on trial in medieval courts for crimes like witchcraft, and could be sentenced to death.",
+                "The medieval spice trade was so valuable that a pound of saffron cost as much as a horse, and peppercorns were used as currency."
+            ]
         },
+        currentEvents: [
+            { fr: "La restauration de Notre-Dame de Paris après l'incendie de 2019 avance à grands pas.", en: "The restoration of Notre-Dame de Paris after the 2019 fire is making great progress." },
+            { fr: "Les marchés médiévaux et les fêtes historiques attirent des milliers de touristes en France.", en: "Medieval markets and historical festivals attract thousands of tourists in France." },
+            { fr: "Les châteaux forts de France sont de plus en plus visités grâce aux réseaux sociaux.", en: "France's medieval castles are increasingly visited thanks to social media." },
+            { fr: "Les historiens utilisent l'intelligence artificielle pour déchiffrer des manuscrits médiévaux.", en: "Historians are using artificial intelligence to decipher medieval manuscripts." }
+        ],
         exercises: [
             { type: "fill", prompt: "Excusez-moi, ___ se trouve la gare ?", answer: "où", options: ["où", "qui", "que", "comment"] },
             { type: "fill", prompt: "Je voudrais ___ une table pour deux.", answer: "réserver", options: ["réserver", "manger", "trouver", "acheter"] },
             { type: "fill", prompt: "L'addition, ___ vous plaît.", answer: "s'il", options: ["s'il", "si", "comme", "merci"] },
             { type: "translate", en: "The check, please.", answer: "L'addition, s'il vous plaît.", accept: ["l'addition, s'il vous plaît", "l'addition s'il vous plaît", "l'addition, s'il vous plait", "l'addition s'il vous plait"] },
             { type: "translate", en: "Could you speak more slowly?", answer: "Pourriez-vous parler plus lentement ?", accept: ["pourriez-vous parler plus lentement", "pouvez-vous parler plus lentement", "tu peux parler plus lentement"] },
-            { type: "history", fr: "Les cathédrales gothiques ont été construites au Moyen Âge.", answer: "Gothic cathedrals were built in the Middle Ages.", options: ["Gothic cathedrals were built in the Middle Ages.", "Gothic cathedrals were built in the Renaissance.", "Gothic cathedrals were destroyed in the Middle Ages.", "Gothic cathedrals were discovered in the Middle Ages."] }
+            { type: "history", fr: "Les cathédrales gothiques ont été construites au Moyen Âge.", answer: "Gothic cathedrals were built in the Middle Ages.", options: ["Gothic cathedrals were built in the Middle Ages.", "Gothic cathedrals were built in the Renaissance.", "Gothic cathedrals were destroyed in the Middle Ages.", "Gothic cathedrals were discovered in the Middle Ages."] },
+            { type: "fill", prompt: "J'___ du pain chaque matin.", answer: "achète", options: ["achète", "achètes", "achetons", "achetez"] },
+            { type: "fill", prompt: "Nous ___ par carte bancaire.", answer: "payons", options: ["payons", "paie", "payez", "paient"] },
+            { type: "fill", prompt: "J'___ le bus depuis vingt minutes.", answer: "attends", options: ["attends", "attend", "attendons", "attendent"] },
+            { type: "fill", prompt: "Elle ___ une nouvelle robe.", answer: "essaie", options: ["essaie", "essaies", "essayons", "essaient"] },
+            { type: "translate", en: "I buy bread at the bakery.", answer: "J'achète du pain à la boulangerie.", accept: ["j'achète du pain à la boulangerie", "j'achete du pain a la boulangerie", "j'achète du pain a la boulangerie"] },
+            { type: "translate", en: "We are waiting for our order.", answer: "Nous attendons notre commande.", accept: ["nous attendons notre commande", "on attend notre commande"] },
+            { type: "translate", en: "I'm sorry, I don't speak French well.", answer: "Je suis désolée, je ne parle pas bien français.", accept: ["je suis désolée, je ne parle pas bien français", "je suis désolée je ne parle pas bien français", "je suis desolee je ne parle pas bien francais", "je suis désolé je ne parle pas bien français"] },
+            { type: "history", fr: "La peste noire a tué environ un tiers de la population européenne.", answer: "The Black Death killed roughly one-third of Europe's population.", options: ["The Black Death killed roughly one-third of Europe's population.", "The Black Death affected only France.", "The Black Death lasted for one year.", "The Black Death was easily cured by medieval doctors."] }
         ]
     },
 
@@ -467,7 +863,29 @@ const LESSONS = [
                 { fr: "Il me semble que tu as raison.", en: "It seems to me that you're right." },
                 { fr: "C'est vrai, mais d'un autre côté...", en: "That's true, but on the other hand..." }
             ],
-            tips: "To sound more natural, vary your expressions: don't always use 'je pense.' Try 'il me semble,' 'je trouve,' 'à mon avis.' Use 'd'un autre côté' (on the other hand) to show nuance — the French love nuance!"
+            tips: "To sound more natural, vary your expressions: don't always use 'je pense.' Try 'il me semble,' 'je trouve,' 'à mon avis.' Use 'd'un autre côté' (on the other hand) to show nuance — the French love nuance!",
+            extraVerbs: [
+                {
+                    verb: "préférer", meaning: "to prefer",
+                    conjugation: { "je": "préfère", "tu": "préfères", "il/elle": "préfère", "nous": "préférons", "vous": "préférez", "ils/elles": "préfèrent" },
+                    examples: [{ fr: "Je préfère le théâtre au cinéma.", en: "I prefer theater to cinema." }, { fr: "Nous préférons rester à la maison.", en: "We prefer to stay at home." }]
+                },
+                {
+                    verb: "détester", meaning: "to hate / to detest",
+                    conjugation: { "je": "déteste", "tu": "détestes", "il/elle": "déteste", "nous": "détestons", "vous": "détestez", "ils/elles": "détestent" },
+                    examples: [{ fr: "Je déteste les embouteillages.", en: "I hate traffic jams." }, { fr: "Elle déteste le froid.", en: "She hates the cold." }]
+                },
+                {
+                    verb: "adorer", meaning: "to love / to adore",
+                    conjugation: { "je": "adore", "tu": "adores", "il/elle": "adore", "nous": "adorons", "vous": "adorez", "ils/elles": "adorent" },
+                    examples: [{ fr: "J'adore la musique classique.", en: "I love classical music." }, { fr: "Ils adorent voyager.", en: "They love traveling." }]
+                },
+                {
+                    verb: "espérer", meaning: "to hope",
+                    conjugation: { "je": "espère", "tu": "espères", "il/elle": "espère", "nous": "espérons", "vous": "espérez", "ils/elles": "espèrent" },
+                    examples: [{ fr: "J'espère que tu vas bien.", en: "I hope you are doing well." }, { fr: "Nous espérons réussir.", en: "We hope to succeed." }]
+                }
+            ]
         },
         history: {
             period: "The American Revolution (1776)",
@@ -480,15 +898,502 @@ const LESSONS = [
                 { word: "mériter", meaning: "to deserve" },
                 { word: "égaux", meaning: "equal" }
             ],
-            funFact: "France sent so much money to help the American Revolution that it contributed to France's own financial crisis — which helped spark the French Revolution just 13 years later!"
+            funFact: "France sent so much money to help the American Revolution that it contributed to France's own financial crisis — which helped spark the French Revolution just 13 years later!",
+            facts: [
+                "Benjamin Franklin was 70 years old when he helped draft the Declaration of Independence — he was by far the oldest of the Founding Fathers.",
+                "The original Declaration of Independence included a passage condemning slavery, but it was removed to gain support from Southern colonies.",
+                "During the American Revolution, about one-third of colonists supported independence, one-third remained loyal to Britain, and one-third tried to stay neutral.",
+                "France sent over 12,000 soldiers and 32,000 sailors to fight alongside the Americans — without French help, the Revolution might have failed.",
+                "The word 'Yankee' was originally a British insult for American colonists, but the Americans proudly adopted it as their own.",
+                "George Washington's troops at Valley Forge were so poorly supplied that many soldiers had no shoes and left bloody footprints in the snow."
+            ]
         },
+        currentEvents: [
+            { fr: "Les États-Unis célèbrent le 250e anniversaire de leur indépendance en 2026.", en: "The United States celebrates the 250th anniversary of its independence in 2026." },
+            { fr: "Les débats sur les droits constitutionnels restent au cœur de la politique américaine.", en: "Debates over constitutional rights remain at the heart of American politics." },
+            { fr: "La relation diplomatique entre la France et les États-Unis continue d'évoluer au XXIe siècle.", en: "The diplomatic relationship between France and the United States continues to evolve in the 21st century." },
+            { fr: "De nouveaux musées consacrés à l'histoire de la Révolution américaine ouvrent leurs portes.", en: "New museums dedicated to the history of the American Revolution are opening their doors." }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ que c'est une bonne idée.", answer: "pense", options: ["pense", "suis", "trouve", "vais"] },
             { type: "fill", prompt: "Je ne suis pas ___ avec toi.", answer: "d'accord", options: ["d'accord", "content", "sûr", "certain"] },
             { type: "fill", prompt: "À mon ___, ce restaurant est le meilleur.", answer: "avis", options: ["avis", "idée", "opinion", "pensée"] },
             { type: "translate", en: "I think it's a good idea.", answer: "Je pense que c'est une bonne idée.", accept: ["je pense que c'est une bonne idée", "je pense que c'est une bonne idee"] },
             { type: "translate", en: "I disagree with you.", answer: "Je ne suis pas d'accord avec toi.", accept: ["je ne suis pas d'accord avec toi", "je ne suis pas d'accord avec vous"] },
-            { type: "history", fr: "La France était d'accord et a aidé les Américains.", answer: "France agreed and helped the Americans.", options: ["France agreed and helped the Americans.", "France disagreed and fought the Americans.", "France agreed but didn't help the Americans.", "France agreed and traded with the Americans."] }
+            { type: "history", fr: "La France était d'accord et a aidé les Américains.", answer: "France agreed and helped the Americans.", options: ["France agreed and helped the Americans.", "France disagreed and fought the Americans.", "France agreed but didn't help the Americans.", "France agreed and traded with the Americans."] },
+            { type: "fill", prompt: "Je ___ le café au thé.", answer: "préfère", options: ["préfère", "préfères", "préférons", "préférez"] },
+            { type: "fill", prompt: "Elle ___ les embouteillages.", answer: "déteste", options: ["déteste", "détestes", "détestons", "détestent"] },
+            { type: "fill", prompt: "J'___ la cuisine française.", answer: "adore", options: ["adore", "adores", "adorons", "adorez"] },
+            { type: "fill", prompt: "Nous ___ réussir l'examen.", answer: "espérons", options: ["espérons", "espère", "espérez", "espèrent"] },
+            { type: "translate", en: "I prefer theater to cinema.", answer: "Je préfère le théâtre au cinéma.", accept: ["je préfère le théâtre au cinéma", "je prefere le theatre au cinema", "je préfère le théâtre au cinéma"] },
+            { type: "translate", en: "I hope you are doing well.", answer: "J'espère que tu vas bien.", accept: ["j'espère que tu vas bien", "j'espere que tu vas bien"] },
+            { type: "translate", en: "In my opinion, this movie is excellent.", answer: "À mon avis, ce film est excellent.", accept: ["à mon avis ce film est excellent", "a mon avis ce film est excellent", "à mon avis, ce film est excellent"] },
+            { type: "history", fr: "La Déclaration d'Indépendance a été écrite en 1776.", answer: "The Declaration of Independence was written in 1776.", options: ["The Declaration of Independence was written in 1776.", "The Declaration of Independence was written in 1789.", "The Declaration of Independence was written in London.", "The Declaration of Independence was written by France."] }
+        ]
+    },
+
+    // ===== LESSON 11: Savoir & Connaître =====
+    {
+        id: 11,
+        title: "Savoir & Connaître — To Know",
+        desc: "Two ways to say 'to know' — facts vs. familiarity.",
+        frenchFocus: {
+            verb: "savoir / connaître",
+            conjugation: {
+                "je": "sais / connais",
+                "tu": "sais / connais",
+                "il/elle": "sait / connaît",
+                "nous": "savons / connaissons",
+                "vous": "savez / connaissez",
+                "ils/elles": "savent / connaissent"
+            },
+            pattern: "savoir + fact/how to | connaître + person/place",
+            examples: [
+                { fr: "Je sais parler français.", en: "I know how to speak French." },
+                { fr: "Tu sais la réponse?", en: "Do you know the answer?" },
+                { fr: "Elle connaît bien Paris.", en: "She knows Paris well." },
+                { fr: "Nous connaissons cet avocat.", en: "We know that lawyer." },
+                { fr: "Vous savez que c'est important.", en: "You know that it's important." },
+                { fr: "Ils ne connaissent pas ma famille.", en: "They don't know my family." }
+            ],
+            tips: "Use 'savoir' for facts, information, and skills (savoir + infinitive = 'to know how to'). Use 'connaître' for people, places, and things you're familiar with.",
+            extraVerbs: [
+                {
+                    verb: "découvrir", meaning: "to discover",
+                    conjugation: { "je": "découvre", "tu": "découvres", "il/elle": "découvre", "nous": "découvrons", "vous": "découvrez", "ils/elles": "découvrent" },
+                    examples: [{ fr: "Je découvre une nouvelle ville.", en: "I discover a new city." }, { fr: "Nous découvrons la vérité.", en: "We discover the truth." }]
+                },
+                {
+                    verb: "apprendre", meaning: "to learn",
+                    conjugation: { "je": "apprends", "tu": "apprends", "il/elle": "apprend", "nous": "apprenons", "vous": "apprenez", "ils/elles": "apprennent" },
+                    examples: [{ fr: "J'apprends le français.", en: "I am learning French." }, { fr: "Ils apprennent vite.", en: "They learn quickly." }]
+                },
+                {
+                    verb: "reconnaître", meaning: "to recognize",
+                    conjugation: { "je": "reconnais", "tu": "reconnais", "il/elle": "reconnaît", "nous": "reconnaissons", "vous": "reconnaissez", "ils/elles": "reconnaissent" },
+                    examples: [{ fr: "Je reconnais cette chanson.", en: "I recognize this song." }, { fr: "Elle reconnaît son erreur.", en: "She recognizes her mistake." }]
+                },
+                {
+                    verb: "croire", meaning: "to believe",
+                    conjugation: { "je": "crois", "tu": "crois", "il/elle": "croit", "nous": "croyons", "vous": "croyez", "ils/elles": "croient" },
+                    examples: [{ fr: "Je crois que c'est vrai.", en: "I believe it is true." }, { fr: "Nous croyons en la science.", en: "We believe in science." }]
+                }
+            ]
+        },
+        history: {
+            period: "The Renaissance (1400s–1600s)",
+            fr: "La Renaissance était une période de renouveau culturel en Europe. Les artistes comme Léonard de Vinci savaient peindre, sculpter et inventer. Les gens connaissaient les œuvres de Michel-Ange et de Raphaël. C'était une époque de curiosité et de savoir.",
+            en: "The Renaissance was a period of cultural renewal in Europe. Artists like Leonardo da Vinci knew how to paint, sculpt, and invent. People knew the works of Michelangelo and Raphael. It was an era of curiosity and knowledge.",
+            vocab: [
+                { word: "le renouveau", meaning: "renewal" },
+                { word: "peindre", meaning: "to paint" },
+                { word: "sculpter", meaning: "to sculpt" },
+                { word: "les œuvres", meaning: "the works" },
+                { word: "le savoir", meaning: "knowledge" }
+            ],
+            funFact: "Leonardo da Vinci wrote his notebooks in mirror writing — you need a mirror to read them!",
+            facts: [
+                "The printing press, invented by Gutenberg around 1440, revolutionized learning by making books affordable and widely available for the first time.",
+                "Leonardo da Vinci designed flying machines, tanks, and solar power concentrators — centuries before the technology existed to build them.",
+                "During the Renaissance, Florence was the banking capital of Europe, and the Medici family funded many of the greatest artists and architects.",
+                "Michelangelo painted the ceiling of the Sistine Chapel while lying on his back on scaffolding for four years (1508–1512).",
+                "The Renaissance began in Italy partly because Italian city-states grew wealthy from Mediterranean trade routes.",
+                "Galileo Galilei, a Renaissance scientist, improved the telescope and confirmed that the Earth orbits the Sun, challenging the Church\'s teachings."
+            ]
+        },
+        currentEvents: [
+            { fr: "Les musées français utilisent la réalité virtuelle pour présenter l\'art de la Renaissance.", en: "French museums use virtual reality to showcase Renaissance art." },
+            { fr: "Les scientifiques découvrent de nouveaux manuscrits de Léonard de Vinci.", en: "Scientists discover new Leonardo da Vinci manuscripts." },
+            { fr: "L\'Italie restaure des œuvres d\'art célèbres de la Renaissance.", en: "Italy restores famous Renaissance artworks." },
+            { fr: "Les écoles européennes apprennent l\'histoire de la Renaissance avec des outils numériques.", en: "European schools learn Renaissance history with digital tools." }
+        ],
+        exercises: [
+            { type: "fill", prompt: "Je ___ parler trois langues.", answer: "sais", options: ["sais", "connais", "savons", "connaît"] },
+            { type: "fill", prompt: "Elle ___ bien cette ville.", answer: "connaît", options: ["sait", "connaît", "savez", "connaissent"] },
+            { type: "fill", prompt: "Nous ___ la réponse.", answer: "savons", options: ["connaissons", "savons", "savent", "connaissez"] },
+            { type: "translate", en: "I know how to cook.", answer: "Je sais cuisiner.", accept: ["je sais cuisiner"] },
+            { type: "translate", en: "Do you know Paris?", answer: "Tu connais Paris?", accept: ["tu connais paris", "vous connaissez paris", "est-ce que tu connais paris"] },
+            { type: "history", fr: "Les artistes savaient peindre et sculpter.", answer: "The artists knew how to paint and sculpt.", options: ["The artists knew how to paint and sculpt.", "The artists knew many famous people.", "The artists knew how to read and write.", "The artists knew the king personally."] },
+            { type: "fill", prompt: "Vous ___ où se trouve le musée?", answer: "savez", options: ["savez", "connaissez", "savent", "connaissent"] },
+            { type: "fill", prompt: "Tu ___ cet artiste?", answer: "connais", options: ["sais", "connais", "connaît", "savons"] },
+            { type: "fill", prompt: "Nous ___ une nouvelle ville.", answer: "découvrons", options: ["découvrons", "découvre", "découvrez", "découvrent"] },
+            { type: "fill", prompt: "J\' ___ le français depuis deux ans.", answer: "apprends", options: ["apprends", "apprend", "apprenons", "apprennent"] },
+            { type: "translate", en: "They know Paris well.", answer: "Ils connaissent bien Paris.", accept: ["ils connaissent bien paris", "elles connaissent bien paris"] },
+            { type: "translate", en: "I believe it is true.", answer: "Je crois que c\'est vrai.", accept: ["je crois que c'est vrai"] },
+            { type: "translate", en: "She recognizes her mistake.", answer: "Elle reconnaît son erreur.", accept: ["elle reconnait son erreur", "elle reconnaît son erreur"] },
+            { type: "history", fr: "Gutenberg a inventé l\'imprimerie vers 1440.", answer: "Gutenberg invented the printing press around 1440.", options: ["Gutenberg invented the printing press around 1440.", "Gutenberg invented the telescope around 1440.", "Gutenberg invented painting around 1440.", "Gutenberg invented the compass around 1440."] }
+        ]
+    },
+
+    // ===== LESSON 12: Prendre =====
+    {
+        id: 12,
+        title: "Prendre — To Take",
+        desc: "A key irregular verb used for taking, eating, drinking, and decisions.",
+        frenchFocus: {
+            verb: "prendre",
+            conjugation: {
+                "je": "prends",
+                "tu": "prends",
+                "il/elle": "prend",
+                "nous": "prenons",
+                "vous": "prenez",
+                "ils/elles": "prennent"
+            },
+            pattern: "Subject + prendre + object (food, transport, decision)",
+            examples: [
+                { fr: "Je prends un café.", en: "I'm having a coffee." },
+                { fr: "Tu prends le métro?", en: "Are you taking the metro?" },
+                { fr: "Elle prend une décision.", en: "She is making a decision." },
+                { fr: "Nous prenons le petit déjeuner.", en: "We are having breakfast." },
+                { fr: "Vous prenez du sucre?", en: "Do you take sugar?" },
+                { fr: "Ils prennent l'avion demain.", en: "They are taking a plane tomorrow." }
+            ],
+            tips: "Prendre is used for meals (prendre le déjeuner), transport (prendre le bus), and decisions (prendre une décision). Its family: apprendre (to learn), comprendre (to understand).",
+            extraVerbs: [
+                {
+                    verb: "comprendre", meaning: "to understand",
+                    conjugation: { "je": "comprends", "tu": "comprends", "il/elle": "comprend", "nous": "comprenons", "vous": "comprenez", "ils/elles": "comprennent" },
+                    examples: [{ fr: "Je comprends le problème.", en: "I understand the problem." }, { fr: "Vous comprenez cette leçon?", en: "Do you understand this lesson?" }]
+                },
+                {
+                    verb: "surprendre", meaning: "to surprise",
+                    conjugation: { "je": "surprends", "tu": "surprends", "il/elle": "surprend", "nous": "surprenons", "vous": "surprenez", "ils/elles": "surprennent" },
+                    examples: [{ fr: "Cette nouvelle me surprend.", en: "This news surprises me." }, { fr: "Ils surprennent leurs amis.", en: "They surprise their friends." }]
+                },
+                {
+                    verb: "conquérir", meaning: "to conquer",
+                    conjugation: { "je": "conquiers", "tu": "conquiers", "il/elle": "conquiert", "nous": "conquérons", "vous": "conquérez", "ils/elles": "conquièrent" },
+                    examples: [{ fr: "Napoléon conquiert l\'Europe.", en: "Napoleon conquers Europe." }, { fr: "Ils conquièrent de nouveaux territoires.", en: "They conquer new territories." }]
+                },
+                {
+                    verb: "perdre", meaning: "to lose",
+                    conjugation: { "je": "perds", "tu": "perds", "il/elle": "perd", "nous": "perdons", "vous": "perdez", "ils/elles": "perdent" },
+                    examples: [{ fr: "Je perds mes clés souvent.", en: "I often lose my keys." }, { fr: "Il perd la bataille.", en: "He loses the battle." }]
+                }
+            ]
+        },
+        history: {
+            period: "Napoleon Bonaparte (1799–1815)",
+            fr: "Napoléon a pris le pouvoir en France en 1799. Il a pris la décision d'envahir l'Égypte et la Russie. Son armée a pris beaucoup de territoires en Europe. Mais la campagne de Russie a été un désastre — il a perdu plus de cinq cent mille soldats.",
+            en: "Napoleon took power in France in 1799. He made the decision to invade Egypt and Russia. His army took many territories in Europe. But the Russian campaign was a disaster — he lost more than five hundred thousand soldiers.",
+            vocab: [
+                { word: "le pouvoir", meaning: "power" },
+                { word: "envahir", meaning: "to invade" },
+                { word: "une armée", meaning: "an army" },
+                { word: "un désastre", meaning: "a disaster" },
+                { word: "les soldats", meaning: "soldiers" }
+            ],
+            funFact: "Napoleon was not actually short — he was about 5'7\", which was average height for his time.",
+            facts: [
+                "Napoleon created the Napoleonic Code, a civil law system that still forms the basis of legal systems in over 70 countries today.",
+                "Napoleon sold the Louisiana Territory to the United States in 1803 for about 15 million dollars, doubling the size of the young nation.",
+                "During Napoleon's invasion of Russia in 1812, the Russian army used a scorched-earth strategy, burning their own cities and crops to starve the French.",
+                "Napoleon was exiled twice — first to the island of Elba in 1814, and then to Saint Helena in 1815 after his defeat at Waterloo.",
+                "The Rosetta Stone, discovered during Napoleon's Egyptian campaign in 1799, became the key to decoding ancient Egyptian hieroglyphs.",
+                "Napoleon crowned himself Emperor in 1804, taking the crown from the Pope and placing it on his own head during the ceremony."
+            ]
+        },
+        currentEvents: [
+            { fr: "La France célèbre le bicentenaire de la mort de Napoléon avec des expositions.", en: "France celebrates the bicentennial of Napoleon's death with exhibitions." },
+            { fr: "Les historiens débattent de l'héritage de Napoléon en Europe.", en: "Historians debate Napoleon's legacy in Europe." },
+            { fr: "Un nouveau film sur Napoléon attire des millions de spectateurs.", en: "A new film about Napoleon attracts millions of viewers." },
+            { fr: "Les archéologues découvrent des artefacts de la campagne de Russie.", en: "Archaeologists discover artifacts from the Russian campaign." }
+        ],
+        exercises: [
+            { type: "fill", prompt: "Je ___ un café chaque matin.", answer: "prends", options: ["prends", "prend", "prenons", "prennent"] },
+            { type: "fill", prompt: "Ils ___ l'avion à midi.", answer: "prennent", options: ["prend", "prenons", "prenez", "prennent"] },
+            { type: "fill", prompt: "Nous ___ le petit déjeuner ensemble.", answer: "prenons", options: ["prenons", "prends", "prenez", "prennent"] },
+            { type: "translate", en: "She is making a decision.", answer: "Elle prend une décision.", accept: ["elle prend une decision"] },
+            { type: "translate", en: "Do you take the metro?", answer: "Tu prends le métro?", accept: ["tu prends le metro", "vous prenez le metro", "vous prenez le métro", "est-ce que tu prends le métro"] },
+            { type: "history", fr: "Napoléon a pris le pouvoir en 1799.", answer: "Napoleon took power in 1799.", options: ["Napoleon took power in 1799.", "Napoleon lost power in 1799.", "Napoleon took a vacation in 1799.", "Napoleon took an army in 1799."] },
+            { type: "fill", prompt: "Elle ___ le bus pour aller au travail.", answer: "prend", options: ["prends", "prend", "prenons", "prennent"] },
+            { type: "fill", prompt: "Vous ___ du sucre dans votre café?", answer: "prenez", options: ["prends", "prend", "prenez", "prennent"] },
+            { type: "fill", prompt: "Je ___ le problème maintenant.", answer: "comprends", options: ["comprends", "comprend", "comprenons", "comprennent"] },
+            { type: "fill", prompt: "Il ___ la bataille de Waterloo.", answer: "perd", options: ["perds", "perd", "perdons", "perdent"] },
+            { type: "translate", en: "We are having breakfast.", answer: "Nous prenons le petit déjeuner.", accept: ["nous prenons le petit dejeuner", "nous prenons le petit déjeuner"] },
+            { type: "translate", en: "This news surprises me.", answer: "Cette nouvelle me surprend.", accept: ["cette nouvelle me surprend"] },
+            { type: "translate", en: "Do you understand this lesson?", answer: "Vous comprenez cette leçon?", accept: ["vous comprenez cette lecon", "vous comprenez cette leçon", "tu comprends cette leçon", "tu comprends cette lecon"] },
+            { type: "history", fr: "Napoléon a vendu la Louisiane aux États-Unis en 1803.", answer: "Napoleon sold Louisiana to the United States in 1803.", options: ["Napoleon sold Louisiana to the United States in 1803.", "Napoleon conquered Louisiana in 1803.", "Napoleon visited Louisiana in 1803.", "Napoleon lost Louisiana in a battle in 1803."] }
+        ]
+    },
+
+    // ===== LESSON 13: Devoir =====
+    {
+        id: 13,
+        title: "Devoir — Must / To Have To",
+        desc: "Express obligation, duty, and what you owe — essential for legal French.",
+        frenchFocus: {
+            verb: "devoir",
+            conjugation: {
+                "je": "dois",
+                "tu": "dois",
+                "il/elle": "doit",
+                "nous": "devons",
+                "vous": "devez",
+                "ils/elles": "doivent"
+            },
+            pattern: "Subject + devoir + infinitive (obligation) / noun (debt)",
+            examples: [
+                { fr: "Je dois étudier ce soir.", en: "I must study tonight." },
+                { fr: "Tu dois respecter la loi.", en: "You must respect the law." },
+                { fr: "Elle doit partir à huit heures.", en: "She has to leave at eight." },
+                { fr: "Nous devons trouver une solution.", en: "We must find a solution." },
+                { fr: "Vous devez signer le contrat.", en: "You must sign the contract." },
+                { fr: "Ils doivent payer l'amende.", en: "They must pay the fine." }
+            ],
+            tips: "Devoir + infinitive = must/have to. Devoir + noun = to owe. 'Je dois 50 euros' = 'I owe 50 euros.' In legal contexts it means 'duty' — 'le devoir' as a noun means 'duty' or 'homework.'",
+            extraVerbs: [
+                {
+                    verb: "falloir", meaning: "to be necessary (impersonal)",
+                    conjugation: { "je": "—", "tu": "—", "il/elle": "faut", "nous": "—", "vous": "—", "ils/elles": "—" },
+                    examples: [{ fr: "Il faut étudier.", en: "It is necessary to study. / One must study." }, { fr: "Il faut respecter la loi.", en: "One must respect the law." }]
+                },
+                {
+                    verb: "protéger", meaning: "to protect",
+                    conjugation: { "je": "protège", "tu": "protèges", "il/elle": "protège", "nous": "protégeons", "vous": "protégez", "ils/elles": "protègent" },
+                    examples: [{ fr: "La loi protège les citoyens.", en: "The law protects the citizens." }, { fr: "Nous protégeons nos droits.", en: "We protect our rights." }]
+                },
+                {
+                    verb: "obéir", meaning: "to obey",
+                    conjugation: { "je": "obéis", "tu": "obéis", "il/elle": "obéit", "nous": "obéissons", "vous": "obéissez", "ils/elles": "obéissent" },
+                    examples: [{ fr: "Tu dois obéir à la loi.", en: "You must obey the law." }, { fr: "Les soldats obéissent aux ordres.", en: "The soldiers obey orders." }]
+                },
+                {
+                    verb: "interdire", meaning: "to forbid",
+                    conjugation: { "je": "interdis", "tu": "interdis", "il/elle": "interdit", "nous": "interdisons", "vous": "interdisez", "ils/elles": "interdisent" },
+                    examples: [{ fr: "La loi interdit la discrimination.", en: "The law forbids discrimination." }, { fr: "On interdit de fumer ici.", en: "Smoking is forbidden here." }]
+                }
+            ]
+        },
+        history: {
+            period: "The Magna Carta (1215)",
+            fr: "En 1215, les barons anglais ont forcé le roi Jean à signer la Magna Carta. Ce document disait que le roi devait respecter certaines lois. Il devait protéger les droits des citoyens. Ce document est devenu la base de la démocratie moderne.",
+            en: "In 1215, the English barons forced King John to sign the Magna Carta. This document said that the king had to respect certain laws. He had to protect citizens' rights. This document became the foundation of modern democracy.",
+            vocab: [
+                { word: "les barons", meaning: "the barons" },
+                { word: "forcer", meaning: "to force" },
+                { word: "les droits", meaning: "rights" },
+                { word: "les citoyens", meaning: "citizens" },
+                { word: "la démocratie", meaning: "democracy" }
+            ],
+            funFact: "Only four original copies of the 1215 Magna Carta survive today — two are held by the British Library.",
+            facts: [
+                "The Magna Carta was originally written in Latin on parchment made from sheepskin, and sealed with the royal seal rather than signed.",
+                "King John agreed to the Magna Carta under pressure but asked the Pope to annul it just ten weeks later, sparking a civil war.",
+                "The Magna Carta established the principle that no one, not even the king, is above the law — a foundation of modern democracy.",
+                "The document originally had 63 clauses, but only three are still part of English law today, including the right to a fair trial.",
+                "The Magna Carta directly influenced the United States Constitution and the Bill of Rights, written over 500 years later.",
+                "In 1217, a revised version called the Charter of the Forest was issued alongside the Magna Carta, protecting the rights of common people to use royal forests."
+            ]
+        },
+        currentEvents: [
+            { fr: "Les démocraties du monde entier célèbrent les principes de la Magna Carta.", en: "Democracies around the world celebrate the principles of the Magna Carta." },
+            { fr: "Les avocats débattent des droits fondamentaux dans les cours internationales.", en: "Lawyers debate fundamental rights in international courts." },
+            { fr: "Les citoyens doivent voter pour protéger leurs droits démocratiques.", en: "Citizens must vote to protect their democratic rights." },
+            { fr: "Le Royaume-Uni réforme ses lois sur les droits de l\'homme.", en: "The United Kingdom reforms its human rights laws." }
+        ],
+        exercises: [
+            { type: "fill", prompt: "Je ___ finir ce travail avant vendredi.", answer: "dois", options: ["dois", "doit", "devons", "doivent"] },
+            { type: "fill", prompt: "Vous ___ signer ici.", answer: "devez", options: ["dois", "doit", "devez", "doivent"] },
+            { type: "fill", prompt: "Ils ___ respecter les règles.", answer: "doivent", options: ["doit", "devons", "devez", "doivent"] },
+            { type: "translate", en: "We must find a solution.", answer: "Nous devons trouver une solution.", accept: ["nous devons trouver une solution"] },
+            { type: "translate", en: "She has to leave.", answer: "Elle doit partir.", accept: ["elle doit partir"] },
+            { type: "history", fr: "Le roi devait respecter certaines lois.", answer: "The king had to respect certain laws.", options: ["The king had to respect certain laws.", "The king had to write new laws.", "The king had to ignore the laws.", "The king had to change the laws."] },
+            { type: "fill", prompt: "Tu ___ être à l\'heure pour le cours.", answer: "dois", options: ["dois", "doit", "devons", "devez"] },
+            { type: "fill", prompt: "Nous ___ protéger l\'environnement.", answer: "devons", options: ["dois", "doit", "devons", "doivent"] },
+            { type: "fill", prompt: "Il ___ étudier pour réussir.", answer: "faut", options: ["faut", "doit", "dois", "devons"] },
+            { type: "fill", prompt: "La loi ___ les citoyens.", answer: "protège", options: ["protège", "protégeons", "protégez", "protègent"] },
+            { type: "translate", en: "The soldiers obey orders.", answer: "Les soldats obéissent aux ordres.", accept: ["les soldats obéissent aux ordres", "les soldats obeissent aux ordres"] },
+            { type: "translate", en: "The law forbids discrimination.", answer: "La loi interdit la discrimination.", accept: ["la loi interdit la discrimination"] },
+            { type: "translate", en: "One must respect the law.", answer: "Il faut respecter la loi.", accept: ["il faut respecter la loi"] },
+            { type: "history", fr: "La Magna Carta a influencé la Constitution américaine.", answer: "The Magna Carta influenced the American Constitution.", options: ["The Magna Carta influenced the American Constitution.", "The Magna Carta replaced the American Constitution.", "The Magna Carta was written in America.", "The Magna Carta was destroyed in 1776."] }
+        ]
+    },
+
+    // ===== LESSON 14: Dire & Parler =====
+    {
+        id: 14,
+        title: "Dire & Parler — To Say & To Speak",
+        desc: "Two verbs of communication — what you say and how you speak.",
+        frenchFocus: {
+            verb: "dire / parler",
+            conjugation: {
+                "je": "dis / parle",
+                "tu": "dis / parles",
+                "il/elle": "dit / parle",
+                "nous": "disons / parlons",
+                "vous": "dites / parlez",
+                "ils/elles": "disent / parlent"
+            },
+            pattern: "dire + que/à (specific words) | parler + de/à (general speech)",
+            examples: [
+                { fr: "Je dis la vérité.", en: "I tell the truth." },
+                { fr: "Qu'est-ce que tu dis?", en: "What are you saying?" },
+                { fr: "Elle parle trois langues.", en: "She speaks three languages." },
+                { fr: "Nous disons au revoir.", en: "We say goodbye." },
+                { fr: "Vous parlez très bien français.", en: "You speak French very well." },
+                { fr: "Ils disent que c'est important.", en: "They say it's important." }
+            ],
+            tips: "Use 'dire' for specific words or messages (dire la vérité, dire que...). Use 'parler' for the act of speaking (parler français, parler à quelqu'un). Note: 'vous dites' is irregular — not 'vous disez!'",
+            extraVerbs: [
+                {
+                    verb: "raconter", meaning: "to tell / to narrate",
+                    conjugation: { "je": "raconte", "tu": "racontes", "il/elle": "raconte", "nous": "racontons", "vous": "racontez", "ils/elles": "racontent" },
+                    examples: [{ fr: "Elle raconte une histoire.", en: "She tells a story." }, { fr: "Raconte-moi ta journée.", en: "Tell me about your day." }]
+                },
+                {
+                    verb: "expliquer", meaning: "to explain",
+                    conjugation: { "je": "explique", "tu": "expliques", "il/elle": "explique", "nous": "expliquons", "vous": "expliquez", "ils/elles": "expliquent" },
+                    examples: [{ fr: "Le professeur explique la leçon.", en: "The teacher explains the lesson." }, { fr: "Peux-tu expliquer ce mot?", en: "Can you explain this word?" }]
+                },
+                {
+                    verb: "répondre", meaning: "to answer / to respond",
+                    conjugation: { "je": "réponds", "tu": "réponds", "il/elle": "répond", "nous": "répondons", "vous": "répondez", "ils/elles": "répondent" },
+                    examples: [{ fr: "Je réponds à la question.", en: "I answer the question." }, { fr: "Il ne répond pas au téléphone.", en: "He does not answer the phone." }]
+                },
+                {
+                    verb: "crier", meaning: "to shout / to yell",
+                    conjugation: { "je": "crie", "tu": "cries", "il/elle": "crie", "nous": "crions", "vous": "criez", "ils/elles": "crient" },
+                    examples: [{ fr: "Ne crie pas!", en: "Don't shout!" }, { fr: "La foule crie de joie.", en: "The crowd shouts with joy." }]
+                }
+            ]
+        },
+        history: {
+            period: "Martin Luther King Jr. (1963)",
+            fr: "En 1963, Martin Luther King Jr. a parlé devant des milliers de personnes à Washington. Il a dit les mots célèbres de son discours. Il parlait de justice et d'égalité pour tous. Son discours a changé l'histoire des droits civiques aux États-Unis.",
+            en: "In 1963, Martin Luther King Jr. spoke in front of thousands of people in Washington. He said the famous words of his speech. He spoke about justice and equality for all. His speech changed the history of civil rights in the United States.",
+            vocab: [
+                { word: "un discours", meaning: "a speech" },
+                { word: "des milliers", meaning: "thousands" },
+                { word: "la justice", meaning: "justice" },
+                { word: "l'égalité", meaning: "equality" },
+                { word: "les droits civiques", meaning: "civil rights" }
+            ],
+            funFact: "The March on Washington in 1963 drew over 250,000 people — one of the largest political rallies in American history.",
+            facts: [
+                "Martin Luther King Jr. was only 35 years old when he received the Nobel Peace Prize in 1964, making him one of the youngest recipients at that time.",
+                "The Civil Rights Act of 1964 outlawed discrimination based on race, color, religion, sex, or national origin in the United States.",
+                "Rosa Parks refused to give up her bus seat in Montgomery, Alabama in 1955, sparking the Montgomery Bus Boycott that lasted 381 days.",
+                "The Voting Rights Act of 1965 eliminated literacy tests and other barriers that had prevented African Americans from exercising their right to vote.",
+                "Martin Luther King Jr. was inspired by Mahatma Gandhi\'s philosophy of nonviolent resistance and traveled to India in 1959 to study his methods.",
+                "The March on Washington was originally planned as a protest, but President Kennedy convinced organizers to make it a more positive demonstration of unity."
+            ]
+        },
+        currentEvents: [
+            { fr: "Les Américains célèbrent le jour de Martin Luther King chaque année en janvier.", en: "Americans celebrate Martin Luther King Day every year in January." },
+            { fr: "Les militants parlent de justice sociale dans les manifestations modernes.", en: "Activists speak about social justice at modern demonstrations." },
+            { fr: "Les écoles enseignent l\'histoire des droits civiques aux élèves.", en: "Schools teach the history of civil rights to students." },
+            { fr: "Les dirigeants du monde entier disent que l\'égalité reste un objectif important.", en: "Leaders around the world say that equality remains an important goal." }
+        ],
+        exercises: [
+            { type: "fill", prompt: "Je ___ toujours la vérité.", answer: "dis", options: ["dis", "dit", "parle", "disons"] },
+            { type: "fill", prompt: "Elle ___ français et anglais.", answer: "parle", options: ["dit", "parle", "dis", "parlent"] },
+            { type: "fill", prompt: "Vous ___ que c'est facile?", answer: "dites", options: ["disez", "dites", "disons", "parlons"] },
+            { type: "translate", en: "We say goodbye.", answer: "Nous disons au revoir.", accept: ["nous disons au revoir"] },
+            { type: "translate", en: "You speak French very well.", answer: "Vous parlez très bien français.", accept: ["vous parlez tres bien francais", "tu parles très bien français", "tu parles tres bien francais"] },
+            { type: "history", fr: "Martin Luther King a parlé de justice et d'égalité.", answer: "MLK spoke about justice and equality.", options: ["MLK spoke about justice and equality.", "MLK spoke about war and peace.", "MLK spoke about science and art.", "MLK spoke about religion and faith."] },
+            { type: "fill", prompt: "Nous ___ au revoir à nos amis.", answer: "disons", options: ["disons", "disent", "dites", "dis"] },
+            { type: "fill", prompt: "Tu ___ français à la maison?", answer: "parles", options: ["dis", "parles", "parle", "parlons"] },
+            { type: "fill", prompt: "Elle ___ une histoire à ses enfants.", answer: "raconte", options: ["raconte", "dit", "parle", "explique"] },
+            { type: "fill", prompt: "Le professeur ___ la grammaire.", answer: "explique", options: ["explique", "dit", "parle", "raconte"] },
+            { type: "translate", en: "I answer the question.", answer: "Je réponds à la question.", accept: ["je réponds à la question", "je reponds a la question"] },
+            { type: "translate", en: "The crowd shouts with joy.", answer: "La foule crie de joie.", accept: ["la foule crie de joie"] },
+            { type: "translate", en: "Tell me about your day.", answer: "Raconte-moi ta journée.", accept: ["raconte-moi ta journée", "raconte-moi ta journee", "racontez-moi votre journée"] },
+            { type: "history", fr: "Rosa Parks a refusé de céder sa place dans le bus en 1955.", answer: "Rosa Parks refused to give up her seat on the bus in 1955.", options: ["Rosa Parks refused to give up her seat on the bus in 1955.", "Rosa Parks drove a bus in 1955.", "Rosa Parks spoke at a rally in 1955.", "Rosa Parks wrote a book in 1955."] }
+        ]
+    },
+
+    // ===== LESSON 15: Venir & Revenir =====
+    {
+        id: 15,
+        title: "Venir — To Come",
+        desc: "Coming, returning, and talking about what just happened.",
+        frenchFocus: {
+            verb: "venir",
+            conjugation: {
+                "je": "viens",
+                "tu": "viens",
+                "il/elle": "vient",
+                "nous": "venons",
+                "vous": "venez",
+                "ils/elles": "viennent"
+            },
+            pattern: "venir + de + place (origin) | venir de + infinitive (just did)",
+            examples: [
+                { fr: "Je viens de France.", en: "I come from France." },
+                { fr: "Tu viens avec nous?", en: "Are you coming with us?" },
+                { fr: "Elle vient de terminer.", en: "She just finished." },
+                { fr: "Nous venons d'arriver.", en: "We just arrived." },
+                { fr: "Vous venez de quelle ville?", en: "What city do you come from?" },
+                { fr: "Ils viennent demain.", en: "They are coming tomorrow." }
+            ],
+            tips: "Venir de + infinitive = 'to have just done something.' 'Je viens de manger' = 'I just ate.' This is called the passé récent — a very useful construction! Family: revenir (come back), devenir (become).",
+            extraVerbs: [
+                {
+                    verb: "revenir", meaning: "to come back / to return",
+                    conjugation: { "je": "reviens", "tu": "reviens", "il/elle": "revient", "nous": "revenons", "vous": "revenez", "ils/elles": "reviennent" },
+                    examples: [{ fr: "Je reviens dans cinq minutes.", en: "I\'ll be back in five minutes." }, { fr: "Ils reviennent de vacances.", en: "They are coming back from vacation." }]
+                },
+                {
+                    verb: "devenir", meaning: "to become",
+                    conjugation: { "je": "deviens", "tu": "deviens", "il/elle": "devient", "nous": "devenons", "vous": "devenez", "ils/elles": "deviennent" },
+                    examples: [{ fr: "Elle devient médecin.", en: "She is becoming a doctor." }, { fr: "La ville devient plus grande.", en: "The city is becoming bigger." }]
+                },
+                {
+                    verb: "partir", meaning: "to leave / to depart",
+                    conjugation: { "je": "pars", "tu": "pars", "il/elle": "part", "nous": "partons", "vous": "partez", "ils/elles": "partent" },
+                    examples: [{ fr: "Je pars demain matin.", en: "I am leaving tomorrow morning." }, { fr: "Nous partons en voyage.", en: "We are leaving on a trip." }]
+                },
+                {
+                    verb: "arriver", meaning: "to arrive",
+                    conjugation: { "je": "arrive", "tu": "arrives", "il/elle": "arrive", "nous": "arrivons", "vous": "arrivez", "ils/elles": "arrivent" },
+                    examples: [{ fr: "Le train arrive à midi.", en: "The train arrives at noon." }, { fr: "Nous arrivons bientôt.", en: "We are arriving soon." }]
+                }
+            ]
+        },
+        history: {
+            period: "Immigration to America (1892–1954)",
+            fr: "Des millions de personnes sont venues en Amérique par Ellis Island. Ils venaient d'Europe — d'Italie, d'Irlande, de Pologne et d'ailleurs. Ils venaient de quitter leur pays pour chercher une vie meilleure. Ellis Island est devenu un symbole d'espoir.",
+            en: "Millions of people came to America through Ellis Island. They came from Europe — Italy, Ireland, Poland, and elsewhere. They had just left their country to seek a better life. Ellis Island became a symbol of hope.",
+            vocab: [
+                { word: "des millions", meaning: "millions" },
+                { word: "chercher", meaning: "to seek" },
+                { word: "une vie meilleure", meaning: "a better life" },
+                { word: "l'espoir", meaning: "hope" },
+                { word: "quitter", meaning: "to leave" }
+            ],
+            funFact: "Over 12 million immigrants were processed at Ellis Island between 1892 and 1954.",
+            facts: [
+                "Ellis Island opened as an immigration station on January 1, 1892, and Annie Moore, a 15-year-old girl from Ireland, was the very first person processed.",
+                "Immigrants at Ellis Island went through medical and legal inspections that lasted three to five hours, and about 2% were denied entry.",
+                "Many immigrants had their names changed or misspelled by officials at Ellis Island who could not understand foreign languages.",
+                "The peak year for immigration through Ellis Island was 1907, when over one million people arrived in a single year.",
+                "Ellis Island closed as an immigration station in 1954 and was abandoned for years before being reopened as a museum in 1990.",
+                "Immigrants often carried all their belongings in a single trunk or suitcase, leaving behind everything they knew for a chance at a new life."
+            ]
+        },
+        currentEvents: [
+            { fr: "Des millions de personnes viennent aux États-Unis chaque année pour travailler et étudier.", en: "Millions of people come to the United States every year to work and study." },
+            { fr: "Les débats sur l\'immigration deviennent de plus en plus importants.", en: "Debates about immigration are becoming increasingly important." },
+            { fr: "Le musée d\'Ellis Island accueille des visiteurs du monde entier.", en: "The Ellis Island museum welcomes visitors from around the world." },
+            { fr: "Les familles d\'immigrants reviennent à Ellis Island pour retrouver leur histoire.", en: "Immigrant families return to Ellis Island to rediscover their history." }
+        ],
+        exercises: [
+            { type: "fill", prompt: "Je ___ de Paris.", answer: "viens", options: ["viens", "vient", "venons", "viennent"] },
+            { type: "fill", prompt: "Nous ___ d'arriver à la maison.", answer: "venons", options: ["viens", "venons", "venez", "viennent"] },
+            { type: "fill", prompt: "Ils ___ demain matin.", answer: "viennent", options: ["vient", "venons", "venez", "viennent"] },
+            { type: "translate", en: "She just finished.", answer: "Elle vient de terminer.", accept: ["elle vient de terminer", "elle vient de finir"] },
+            { type: "translate", en: "Are you coming with us?", answer: "Tu viens avec nous?", accept: ["tu viens avec nous", "vous venez avec nous", "est-ce que tu viens avec nous"] },
+            { type: "history", fr: "Les immigrants venaient d'Europe pour chercher une vie meilleure.", answer: "Immigrants came from Europe to seek a better life.", options: ["Immigrants came from Europe to seek a better life.", "Immigrants came from Europe to start a war.", "Immigrants came from Europe to visit briefly.", "Immigrants came from Europe to study art."] },
+            { type: "fill", prompt: "Elle ___ dans cinq minutes.", answer: "revient", options: ["reviens", "revient", "revenons", "reviennent"] },
+            { type: "fill", prompt: "Nous ___ en voyage demain.", answer: "partons", options: ["pars", "part", "partons", "partent"] },
+            { type: "fill", prompt: "Le train ___ à midi.", answer: "arrive", options: ["arrive", "arrives", "arrivons", "arrivent"] },
+            { type: "fill", prompt: "La ville ___ plus grande chaque année.", answer: "devient", options: ["deviens", "devient", "devenons", "deviennent"] },
+            { type: "translate", en: "I am leaving tomorrow morning.", answer: "Je pars demain matin.", accept: ["je pars demain matin"] },
+            { type: "translate", en: "They are coming back from vacation.", answer: "Ils reviennent de vacances.", accept: ["ils reviennent de vacances", "elles reviennent de vacances"] },
+            { type: "translate", en: "We are arriving soon.", answer: "Nous arrivons bientôt.", accept: ["nous arrivons bientot", "nous arrivons bientôt"] },
+            { type: "history", fr: "Annie Moore était la première immigrante à Ellis Island en 1892.", answer: "Annie Moore was the first immigrant at Ellis Island in 1892.", options: ["Annie Moore was the first immigrant at Ellis Island in 1892.", "Annie Moore built Ellis Island in 1892.", "Annie Moore closed Ellis Island in 1892.", "Annie Moore was born at Ellis Island in 1892."] }
         ]
     },
 

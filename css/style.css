@@ -876,6 +876,95 @@ body {
     }
 }
 
+/* ===== Extra Verbs ===== */
+.extra-verb-card {
+    border-left: 4px solid #D4A843;
+}
+
+.extra-verb-card .card-header {
+    margin-bottom: 12px;
+}
+
+/* ===== History Facts ===== */
+.facts-section {
+    margin-top: 20px;
+    padding: 16px;
+    background: #1B2A4A;
+    border-radius: 12px;
+}
+
+.facts-section h3 {
+    color: #D4A843;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.facts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fact-item {
+    padding: 10px 12px;
+    background: rgba(212, 168, 67, 0.08);
+    border-radius: 8px;
+    color: #F5ECD7;
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 28px;
+}
+
+.fact-item::before {
+    content: "\2728";
+    position: absolute;
+    left: 8px;
+    top: 10px;
+}
+
+/* ===== Current Events ===== */
+.events-section {
+    margin-top: 20px;
+    padding: 16px;
+    background: #162240;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 168, 67, 0.2);
+}
+
+.events-section h3 {
+    color: #D4A843;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.event-item {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.event-item:last-child {
+    margin-bottom: 0;
+}
+
+.event-fr {
+    color: #F5ECD7;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.event-en {
+    color: #8899AA;
+    font-size: 13px;
+    font-style: italic;
+}
+
 /* ===== Animations ===== */
 @keyframes pulse {
     0%, 100% { transform: scale(1); }
