@@ -105,6 +105,7 @@ const app = {
 
         this.renderFrenchTab(lesson);
         this.renderHistoryTab(lesson);
+        this.renderNewsTab(lesson);
         this.resetPractice(lesson);
     },
 
@@ -213,17 +214,31 @@ const app = {
             factsEl.innerHTML = html;
         }
 
-        // Current events
-        const eventsEl = document.getElementById('history-events');
-        eventsEl.innerHTML = '';
+    },
+
+    // ===== WORLD NEWS TAB =====
+    renderNewsTab(lesson) {
+        const newsList = document.getElementById('news-list');
+        const newsEmpty = document.getElementById('news-empty');
+        newsList.innerHTML = '';
+
         const events = lesson.currentEvents;
         if (events && events.length > 0) {
-            let html = `<div class="events-section"><h3>In the News Today</h3>`;
-            events.forEach(ev => {
-                html += `<div class="event-item"><div class="event-fr">${ev.fr}</div><div class="event-en">${ev.en}</div></div>`;
+            newsEmpty.classList.add('hidden');
+            events.forEach((ev, i) => {
+                const item = document.createElement('div');
+                item.className = 'news-item';
+                item.innerHTML = `
+                    <div class="news-number">${i + 1}</div>
+                    <div class="news-content">
+                        <div class="news-fr">${ev.fr}</div>
+                        <div class="news-en">${ev.en}</div>
+                    </div>
+                `;
+                newsList.appendChild(item);
             });
-            html += `</div>`;
-            eventsEl.innerHTML = html;
+        } else {
+            newsEmpty.classList.remove('hidden');
         }
     },
 

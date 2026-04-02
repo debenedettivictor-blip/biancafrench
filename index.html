@@ -73,6 +73,9 @@
             <button class="tab" data-tab="history" onclick="app.switchTab('history')">
                 &#128218; History
             </button>
+            <button class="tab" data-tab="news" onclick="app.switchTab('news')">
+                &#127758; World News
+            </button>
             <button class="tab" data-tab="practice" onclick="app.switchTab('practice')">
                 &#9999;&#65039; Practice
             </button>
@@ -122,7 +125,20 @@
                 </div>
                 <div class="history-funfact" id="history-funfact"></div>
                 <div class="history-facts" id="history-facts"></div>
-                <div class="history-events" id="history-events"></div>
+            </div>
+        </div>
+
+        <!-- World News Tab -->
+        <div class="tab-content" id="tab-news">
+            <div class="card news-card">
+                <div class="news-header">
+                    <h3>&#127758; World News Tied to This Lesson</h3>
+                    <p class="news-subtitle">Real headlines that connect to what you're learning</p>
+                </div>
+                <div class="news-list" id="news-list"></div>
+                <div class="news-empty hidden" id="news-empty">
+                    <p>No world news items for this lesson yet.</p>
+                </div>
             </div>
         </div>
 
