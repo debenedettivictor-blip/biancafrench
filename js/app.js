@@ -217,29 +217,80 @@ const app = {
     },
 
     // ===== WORLD NEWS TAB =====
+    newsCache: null,
+    newsCacheTime: 0,
+
+    async fetchLiveNews() {
+        // Cache for 30 minutes
+        const now = Date.now();
+        if (this.newsCache && (now - this.newsCacheTime) < 30 * 60 * 1000) {
+            return this.newsCache;
+        }
+
+        const rssUrl = encodeURIComponent('https://www.france24.com/fr/rss');
+        const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`);
+        if (!res.ok) throw new Error('Feed fetch failed');
+
+        const data = await res.json();
+        if (data.status !== 'ok' || !data.items) throw new Error('Bad feed data');
+
+        const articles = data.items.slice(0, 6).map(item => ({
+            title: item.title,
+            date: new Date(item.pubDate).toLocaleDateString('fr-FR', {
+                weekday: 'short', day: 'numeric', month: 'short'
+            }),
+            link: item.link
+        }));
+
+        this.newsCache = articles;
+        this.newsCacheTime = now;
+        return articles;
+    },
+
     renderNewsTab(lesson) {
         const newsList = document.getElementById('news-list');
-        const newsEmpty = document.getElementById('news-empty');
-        newsList.innerHTML = '';
+        const fallbackLabel = document.getElementById('news-fallback-label');
+        fallbackLabel.classList.add('hidden');
 
-        const events = lesson.currentEvents;
-        if (events && events.length > 0) {
-            newsEmpty.classList.add('hidden');
-            events.forEach((ev, i) => {
+        // Show loading state
+        newsList.innerHTML = '<div class="news-loading">Loading latest news...</div>';
+
+        this.fetchLiveNews().then(articles => {
+            newsList.innerHTML = '';
+            document.querySelector('.news-live-badge').classList.remove('hidden');
+            articles.forEach((article, i) => {
                 const item = document.createElement('div');
                 item.className = 'news-item';
                 item.innerHTML = `
                     <div class="news-number">${i + 1}</div>
                     <div class="news-content">
-                        <div class="news-fr">${ev.fr}</div>
-                        <div class="news-en">${ev.en}</div>
+                        <div class="news-fr">${article.title}</div>
+                        <div class="news-date">${article.date}</div>
                     </div>
                 `;
                 newsList.appendChild(item);
             });
-        } else {
-            newsEmpty.classList.remove('hidden');
-        }
+        }).catch(() => {
+            // Fallback to static lesson content
+            document.querySelector('.news-live-badge').classList.add('hidden');
+            newsList.innerHTML = '';
+            const events = lesson.currentEvents;
+            if (events && events.length > 0) {
+                fallbackLabel.classList.remove('hidden');
+                events.forEach((ev, i) => {
+                    const item = document.createElement('div');
+                    item.className = 'news-item';
+                    item.innerHTML = `
+                        <div class="news-number">${i + 1}</div>
+                        <div class="news-content">
+                            <div class="news-fr">${ev.fr}</div>
+                            <div class="news-en">${ev.en}</div>
+                        </div>
+                    `;
+                    newsList.appendChild(item);
+                });
+            }
+        });
     },
 
     revealTranslation() {

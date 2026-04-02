@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Bianca French — Apprends le Français!</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -132,12 +134,12 @@
         <div class="tab-content" id="tab-news">
             <div class="card news-card">
                 <div class="news-header">
-                    <h3>&#127758; World News Tied to This Lesson</h3>
-                    <p class="news-subtitle">Real headlines that connect to what you're learning</p>
+                    <h3>&#127758; World News <span class="news-live-badge"><span class="live-dot"></span> LIVE</span></h3>
+                    <p class="news-subtitle">Today's headlines in French — real reading practice</p>
                 </div>
                 <div class="news-list" id="news-list"></div>
-                <div class="news-empty hidden" id="news-empty">
-                    <p>No world news items for this lesson yet.</p>
+                <div class="news-fallback-label hidden" id="news-fallback-label">
+                    <p>Could not load live news — showing lesson headlines instead</p>
                 </div>
             </div>
         </div>
