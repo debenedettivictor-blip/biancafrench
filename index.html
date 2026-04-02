@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bianca French — Apprends le Français!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Confetti canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Top Bar -->
+    <header id="top-bar">
+        <div class="top-bar-inner">
+            <div class="logo" onclick="app.showHome()">
+                <span class="logo-icon">&#127470;&#127479;</span>
+                <span class="logo-text">Bianca French</span>
+            </div>
+            <div class="stats">
+                <div class="stat streak" id="streak-display">
+                    <span class="stat-icon">&#128293;</span>
+                    <span class="stat-value" id="streak-count">0</span>
+                    <span class="stat-label">streak</span>
+                </div>
+                <div class="stat stars-total" id="stars-display">
+                    <span class="stat-icon">&#11088;</span>
+                    <span class="stat-value" id="total-stars">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="global-progress"></div>
+        </div>
+    </header>
+
+    <!-- Home Screen -->
+    <main id="home-screen" class="screen active">
+        <div class="welcome-card">
+            <h1>Bonjour Bianca! &#128150;</h1>
+            <p class="subtitle">Your daily French &amp; History adventure awaits</p>
+            <div class="daily-cta" id="daily-cta">
+                <button class="btn-primary btn-large" id="daily-lesson-btn" onclick="app.startDailyLesson()">
+                    Start Today's Lesson
+                </button>
+                <p class="daily-hint" id="daily-hint"></p>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>All Lessons</h2>
+            <p class="section-subtitle">Tap any lesson to study or review</p>
+        </div>
+        <div class="lessons-grid" id="lessons-grid"></div>
+    </main>
+
+    <!-- Lesson Screen -->
+    <main id="lesson-screen" class="screen">
+        <div class="lesson-nav">
+            <button class="btn-back" onclick="app.showHome()">&#8592; Back</button>
+            <div class="lesson-title-bar">
+                <span class="lesson-number" id="lesson-number"></span>
+                <h2 id="lesson-title"></h2>
+            </div>
+            <div class="lesson-stars" id="lesson-stars"></div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="lesson-tabs">
+            <button class="tab active" data-tab="french" onclick="app.switchTab('french')">
+                &#127467;&#127479; French
+            </button>
+            <button class="tab" data-tab="history" onclick="app.switchTab('history')">
+                &#128218; History
+            </button>
+            <button class="tab" data-tab="practice" onclick="app.switchTab('practice')">
+                &#9999;&#65039; Practice
+            </button>
+        </div>
+
+        <!-- French Tab -->
+        <div class="tab-content active" id="tab-french">
+            <div class="card verb-card">
+                <div class="card-header">
+                    <h3 id="verb-title"></h3>
+                    <span class="badge" id="verb-badge"></span>
+                </div>
+                <div class="conjugation-grid" id="conjugation-grid"></div>
+            </div>
+            <div class="card pattern-card">
+                <h3>Sentence Pattern</h3>
+                <div class="pattern-display" id="pattern-display"></div>
+            </div>
+            <div class="card examples-card">
+                <h3>Examples</h3>
+                <div class="examples-list" id="examples-list"></div>
+            </div>
+            <div class="card tips-card" id="tips-card" style="display:none">
+                <h3>Tips</h3>
+                <p id="tips-text"></p>
+            </div>
+        </div>
+
+        <!-- History Tab -->
+        <div class="tab-content" id="tab-history">
+            <div class="card history-card">
+                <div class="history-period" id="history-period"></div>
+                <div class="history-french">
+                    <h3>&#127467;&#127479; En Français</h3>
+                    <p class="french-text" id="history-fr"></p>
+                </div>
+                <div class="history-vocab" id="history-vocab"></div>
+                <div class="history-reveal">
+                    <button class="btn-secondary" id="reveal-btn" onclick="app.revealTranslation()">
+                        Show English Translation
+                    </button>
+                </div>
+                <div class="history-english hidden" id="history-en-container">
+                    <h3>&#127468;&#127463; In English</h3>
+                    <p id="history-en"></p>
+                </div>
+                <div class="history-funfact" id="history-funfact"></div>
+            </div>
+        </div>
+
+        <!-- Practice Tab -->
+        <div class="tab-content" id="tab-practice">
+            <div class="practice-container" id="practice-container"></div>
+            <div class="practice-results hidden" id="practice-results">
+                <div class="results-card">
+                    <h2 id="results-title"></h2>
+                    <div class="results-stars" id="results-stars"></div>
+                    <p id="results-message"></p>
+                    <div class="results-score" id="results-score"></div>
+                    <button class="btn-primary" onclick="app.showHome()">Back to Lessons</button>
+                    <button class="btn-secondary" onclick="app.retryPractice()">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/lessons.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
