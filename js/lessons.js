@@ -1,5 +1,5 @@
 // ===== Bianca French — Lesson Content =====
-// 10 progressive lessons: French grammar + World History
+// 15 progressive lessons: French grammar + World History
 
 const LESSONS = [
     // ===== LESSON 1: Être =====
@@ -489,6 +489,251 @@ const LESSONS = [
             { type: "translate", en: "I think it's a good idea.", answer: "Je pense que c'est une bonne idée.", accept: ["je pense que c'est une bonne idée", "je pense que c'est une bonne idee"] },
             { type: "translate", en: "I disagree with you.", answer: "Je ne suis pas d'accord avec toi.", accept: ["je ne suis pas d'accord avec toi", "je ne suis pas d'accord avec vous"] },
             { type: "history", fr: "La France était d'accord et a aidé les Américains.", answer: "France agreed and helped the Americans.", options: ["France agreed and helped the Americans.", "France disagreed and fought the Americans.", "France agreed but didn't help the Americans.", "France agreed and traded with the Americans."] }
+        ]
+    },
+
+    // ===== LESSON 11: Savoir & Connaître =====
+    {
+        id: 11,
+        title: "Savoir & Connaître — To Know",
+        desc: "Two ways to say 'to know' — facts vs. familiarity.",
+        frenchFocus: {
+            verb: "savoir / connaître",
+            conjugation: {
+                "je": "sais / connais",
+                "tu": "sais / connais",
+                "il/elle": "sait / connaît",
+                "nous": "savons / connaissons",
+                "vous": "savez / connaissez",
+                "ils/elles": "savent / connaissent"
+            },
+            pattern: "savoir + fact/how to | connaître + person/place",
+            examples: [
+                { fr: "Je sais parler français.", en: "I know how to speak French." },
+                { fr: "Tu sais la réponse?", en: "Do you know the answer?" },
+                { fr: "Elle connaît bien Paris.", en: "She knows Paris well." },
+                { fr: "Nous connaissons cet avocat.", en: "We know that lawyer." },
+                { fr: "Vous savez que c'est important.", en: "You know that it's important." },
+                { fr: "Ils ne connaissent pas ma famille.", en: "They don't know my family." }
+            ],
+            tips: "Use 'savoir' for facts, information, and skills (savoir + infinitive = 'to know how to'). Use 'connaître' for people, places, and things you're familiar with."
+        },
+        history: {
+            period: "The Renaissance (1400s–1600s)",
+            fr: "La Renaissance était une période de renouveau culturel en Europe. Les artistes comme Léonard de Vinci savaient peindre, sculpter et inventer. Les gens connaissaient les œuvres de Michel-Ange et de Raphaël. C'était une époque de curiosité et de savoir.",
+            en: "The Renaissance was a period of cultural renewal in Europe. Artists like Leonardo da Vinci knew how to paint, sculpt, and invent. People knew the works of Michelangelo and Raphael. It was an era of curiosity and knowledge.",
+            vocab: [
+                { word: "le renouveau", meaning: "renewal" },
+                { word: "peindre", meaning: "to paint" },
+                { word: "sculpter", meaning: "to sculpt" },
+                { word: "les œuvres", meaning: "the works" },
+                { word: "le savoir", meaning: "knowledge" }
+            ],
+            funFact: "Leonardo da Vinci wrote his notebooks in mirror writing — you need a mirror to read them!"
+        },
+        exercises: [
+            { type: "fill", prompt: "Je ___ parler trois langues.", answer: "sais", options: ["sais", "connais", "savons", "connaît"] },
+            { type: "fill", prompt: "Elle ___ bien cette ville.", answer: "connaît", options: ["sait", "connaît", "savez", "connaissent"] },
+            { type: "fill", prompt: "Nous ___ la réponse.", answer: "savons", options: ["connaissons", "savons", "savent", "connaissez"] },
+            { type: "translate", en: "I know how to cook.", answer: "Je sais cuisiner.", accept: ["je sais cuisiner"] },
+            { type: "translate", en: "Do you know Paris?", answer: "Tu connais Paris?", accept: ["tu connais paris", "vous connaissez paris", "est-ce que tu connais paris"] },
+            { type: "history", fr: "Les artistes savaient peindre et sculpter.", answer: "The artists knew how to paint and sculpt.", options: ["The artists knew how to paint and sculpt.", "The artists knew many famous people.", "The artists knew how to read and write.", "The artists knew the king personally."] }
+        ]
+    },
+
+    // ===== LESSON 12: Prendre =====
+    {
+        id: 12,
+        title: "Prendre — To Take",
+        desc: "A key irregular verb used for taking, eating, drinking, and decisions.",
+        frenchFocus: {
+            verb: "prendre",
+            conjugation: {
+                "je": "prends",
+                "tu": "prends",
+                "il/elle": "prend",
+                "nous": "prenons",
+                "vous": "prenez",
+                "ils/elles": "prennent"
+            },
+            pattern: "Subject + prendre + object (food, transport, decision)",
+            examples: [
+                { fr: "Je prends un café.", en: "I'm having a coffee." },
+                { fr: "Tu prends le métro?", en: "Are you taking the metro?" },
+                { fr: "Elle prend une décision.", en: "She is making a decision." },
+                { fr: "Nous prenons le petit déjeuner.", en: "We are having breakfast." },
+                { fr: "Vous prenez du sucre?", en: "Do you take sugar?" },
+                { fr: "Ils prennent l'avion demain.", en: "They are taking a plane tomorrow." }
+            ],
+            tips: "Prendre is used for meals (prendre le déjeuner), transport (prendre le bus), and decisions (prendre une décision). Its family: apprendre (to learn), comprendre (to understand)."
+        },
+        history: {
+            period: "Napoleon Bonaparte (1799–1815)",
+            fr: "Napoléon a pris le pouvoir en France en 1799. Il a pris la décision d'envahir l'Égypte et la Russie. Son armée a pris beaucoup de territoires en Europe. Mais la campagne de Russie a été un désastre — il a perdu plus de cinq cent mille soldats.",
+            en: "Napoleon took power in France in 1799. He made the decision to invade Egypt and Russia. His army took many territories in Europe. But the Russian campaign was a disaster — he lost more than five hundred thousand soldiers.",
+            vocab: [
+                { word: "le pouvoir", meaning: "power" },
+                { word: "envahir", meaning: "to invade" },
+                { word: "une armée", meaning: "an army" },
+                { word: "un désastre", meaning: "a disaster" },
+                { word: "les soldats", meaning: "soldiers" }
+            ],
+            funFact: "Napoleon was not actually short — he was about 5'7\", which was average height for his time."
+        },
+        exercises: [
+            { type: "fill", prompt: "Je ___ un café chaque matin.", answer: "prends", options: ["prends", "prend", "prenons", "prennent"] },
+            { type: "fill", prompt: "Ils ___ l'avion à midi.", answer: "prennent", options: ["prend", "prenons", "prenez", "prennent"] },
+            { type: "fill", prompt: "Nous ___ le petit déjeuner ensemble.", answer: "prenons", options: ["prenons", "prends", "prenez", "prennent"] },
+            { type: "translate", en: "She is making a decision.", answer: "Elle prend une décision.", accept: ["elle prend une decision"] },
+            { type: "translate", en: "Do you take the metro?", answer: "Tu prends le métro?", accept: ["tu prends le metro", "vous prenez le metro", "vous prenez le métro", "est-ce que tu prends le métro"] },
+            { type: "history", fr: "Napoléon a pris le pouvoir en 1799.", answer: "Napoleon took power in 1799.", options: ["Napoleon took power in 1799.", "Napoleon lost power in 1799.", "Napoleon took a vacation in 1799.", "Napoleon took an army in 1799."] }
+        ]
+    },
+
+    // ===== LESSON 13: Devoir =====
+    {
+        id: 13,
+        title: "Devoir — Must / To Have To",
+        desc: "Express obligation, duty, and what you owe — essential for legal French.",
+        frenchFocus: {
+            verb: "devoir",
+            conjugation: {
+                "je": "dois",
+                "tu": "dois",
+                "il/elle": "doit",
+                "nous": "devons",
+                "vous": "devez",
+                "ils/elles": "doivent"
+            },
+            pattern: "Subject + devoir + infinitive (obligation) / noun (debt)",
+            examples: [
+                { fr: "Je dois étudier ce soir.", en: "I must study tonight." },
+                { fr: "Tu dois respecter la loi.", en: "You must respect the law." },
+                { fr: "Elle doit partir à huit heures.", en: "She has to leave at eight." },
+                { fr: "Nous devons trouver une solution.", en: "We must find a solution." },
+                { fr: "Vous devez signer le contrat.", en: "You must sign the contract." },
+                { fr: "Ils doivent payer l'amende.", en: "They must pay the fine." }
+            ],
+            tips: "Devoir + infinitive = must/have to. Devoir + noun = to owe. 'Je dois 50 euros' = 'I owe 50 euros.' In legal contexts it means 'duty' — 'le devoir' as a noun means 'duty' or 'homework.'"
+        },
+        history: {
+            period: "The Magna Carta (1215)",
+            fr: "En 1215, les barons anglais ont forcé le roi Jean à signer la Magna Carta. Ce document disait que le roi devait respecter certaines lois. Il devait protéger les droits des citoyens. Ce document est devenu la base de la démocratie moderne.",
+            en: "In 1215, the English barons forced King John to sign the Magna Carta. This document said that the king had to respect certain laws. He had to protect citizens' rights. This document became the foundation of modern democracy.",
+            vocab: [
+                { word: "les barons", meaning: "the barons" },
+                { word: "forcer", meaning: "to force" },
+                { word: "les droits", meaning: "rights" },
+                { word: "les citoyens", meaning: "citizens" },
+                { word: "la démocratie", meaning: "democracy" }
+            ],
+            funFact: "Only four original copies of the 1215 Magna Carta survive today — two are held by the British Library."
+        },
+        exercises: [
+            { type: "fill", prompt: "Je ___ finir ce travail avant vendredi.", answer: "dois", options: ["dois", "doit", "devons", "doivent"] },
+            { type: "fill", prompt: "Vous ___ signer ici.", answer: "devez", options: ["dois", "doit", "devez", "doivent"] },
+            { type: "fill", prompt: "Ils ___ respecter les règles.", answer: "doivent", options: ["doit", "devons", "devez", "doivent"] },
+            { type: "translate", en: "We must find a solution.", answer: "Nous devons trouver une solution.", accept: ["nous devons trouver une solution"] },
+            { type: "translate", en: "She has to leave.", answer: "Elle doit partir.", accept: ["elle doit partir"] },
+            { type: "history", fr: "Le roi devait respecter certaines lois.", answer: "The king had to respect certain laws.", options: ["The king had to respect certain laws.", "The king had to write new laws.", "The king had to ignore the laws.", "The king had to change the laws."] }
+        ]
+    },
+
+    // ===== LESSON 14: Dire & Parler =====
+    {
+        id: 14,
+        title: "Dire & Parler — To Say & To Speak",
+        desc: "Two verbs of communication — what you say and how you speak.",
+        frenchFocus: {
+            verb: "dire / parler",
+            conjugation: {
+                "je": "dis / parle",
+                "tu": "dis / parles",
+                "il/elle": "dit / parle",
+                "nous": "disons / parlons",
+                "vous": "dites / parlez",
+                "ils/elles": "disent / parlent"
+            },
+            pattern: "dire + que/à (specific words) | parler + de/à (general speech)",
+            examples: [
+                { fr: "Je dis la vérité.", en: "I tell the truth." },
+                { fr: "Qu'est-ce que tu dis?", en: "What are you saying?" },
+                { fr: "Elle parle trois langues.", en: "She speaks three languages." },
+                { fr: "Nous disons au revoir.", en: "We say goodbye." },
+                { fr: "Vous parlez très bien français.", en: "You speak French very well." },
+                { fr: "Ils disent que c'est important.", en: "They say it's important." }
+            ],
+            tips: "Use 'dire' for specific words or messages (dire la vérité, dire que...). Use 'parler' for the act of speaking (parler français, parler à quelqu'un). Note: 'vous dites' is irregular — not 'vous disez!'"
+        },
+        history: {
+            period: "Martin Luther King Jr. (1963)",
+            fr: "En 1963, Martin Luther King Jr. a parlé devant des milliers de personnes à Washington. Il a dit les mots célèbres de son discours. Il parlait de justice et d'égalité pour tous. Son discours a changé l'histoire des droits civiques aux États-Unis.",
+            en: "In 1963, Martin Luther King Jr. spoke in front of thousands of people in Washington. He said the famous words of his speech. He spoke about justice and equality for all. His speech changed the history of civil rights in the United States.",
+            vocab: [
+                { word: "un discours", meaning: "a speech" },
+                { word: "des milliers", meaning: "thousands" },
+                { word: "la justice", meaning: "justice" },
+                { word: "l'égalité", meaning: "equality" },
+                { word: "les droits civiques", meaning: "civil rights" }
+            ],
+            funFact: "The March on Washington in 1963 drew over 250,000 people — one of the largest political rallies in American history."
+        },
+        exercises: [
+            { type: "fill", prompt: "Je ___ toujours la vérité.", answer: "dis", options: ["dis", "dit", "parle", "disons"] },
+            { type: "fill", prompt: "Elle ___ français et anglais.", answer: "parle", options: ["dit", "parle", "dis", "parlent"] },
+            { type: "fill", prompt: "Vous ___ que c'est facile?", answer: "dites", options: ["disez", "dites", "disons", "parlons"] },
+            { type: "translate", en: "We say goodbye.", answer: "Nous disons au revoir.", accept: ["nous disons au revoir"] },
+            { type: "translate", en: "You speak French very well.", answer: "Vous parlez très bien français.", accept: ["vous parlez tres bien francais", "tu parles très bien français", "tu parles tres bien francais"] },
+            { type: "history", fr: "Martin Luther King a parlé de justice et d'égalité.", answer: "MLK spoke about justice and equality.", options: ["MLK spoke about justice and equality.", "MLK spoke about war and peace.", "MLK spoke about science and art.", "MLK spoke about religion and faith."] }
+        ]
+    },
+
+    // ===== LESSON 15: Venir & Revenir =====
+    {
+        id: 15,
+        title: "Venir — To Come",
+        desc: "Coming, returning, and talking about what just happened.",
+        frenchFocus: {
+            verb: "venir",
+            conjugation: {
+                "je": "viens",
+                "tu": "viens",
+                "il/elle": "vient",
+                "nous": "venons",
+                "vous": "venez",
+                "ils/elles": "viennent"
+            },
+            pattern: "venir + de + place (origin) | venir de + infinitive (just did)",
+            examples: [
+                { fr: "Je viens de France.", en: "I come from France." },
+                { fr: "Tu viens avec nous?", en: "Are you coming with us?" },
+                { fr: "Elle vient de terminer.", en: "She just finished." },
+                { fr: "Nous venons d'arriver.", en: "We just arrived." },
+                { fr: "Vous venez de quelle ville?", en: "What city do you come from?" },
+                { fr: "Ils viennent demain.", en: "They are coming tomorrow." }
+            ],
+            tips: "Venir de + infinitive = 'to have just done something.' 'Je viens de manger' = 'I just ate.' This is called the passé récent — a very useful construction! Family: revenir (come back), devenir (become)."
+        },
+        history: {
+            period: "Immigration to America (1892–1954)",
+            fr: "Des millions de personnes sont venues en Amérique par Ellis Island. Ils venaient d'Europe — d'Italie, d'Irlande, de Pologne et d'ailleurs. Ils venaient de quitter leur pays pour chercher une vie meilleure. Ellis Island est devenu un symbole d'espoir.",
+            en: "Millions of people came to America through Ellis Island. They came from Europe — Italy, Ireland, Poland, and elsewhere. They had just left their country to seek a better life. Ellis Island became a symbol of hope.",
+            vocab: [
+                { word: "des millions", meaning: "millions" },
+                { word: "chercher", meaning: "to seek" },
+                { word: "une vie meilleure", meaning: "a better life" },
+                { word: "l'espoir", meaning: "hope" },
+                { word: "quitter", meaning: "to leave" }
+            ],
+            funFact: "Over 12 million immigrants were processed at Ellis Island between 1892 and 1954."
+        },
+        exercises: [
+            { type: "fill", prompt: "Je ___ de Paris.", answer: "viens", options: ["viens", "vient", "venons", "viennent"] },
+            { type: "fill", prompt: "Nous ___ d'arriver à la maison.", answer: "venons", options: ["viens", "venons", "venez", "viennent"] },
+            { type: "fill", prompt: "Ils ___ demain matin.", answer: "viennent", options: ["vient", "venons", "venez", "viennent"] },
+            { type: "translate", en: "She just finished.", answer: "Elle vient de terminer.", accept: ["elle vient de terminer", "elle vient de finir"] },
+            { type: "translate", en: "Are you coming with us?", answer: "Tu viens avec nous?", accept: ["tu viens avec nous", "vous venez avec nous", "est-ce que tu viens avec nous"] },
+            { type: "history", fr: "Les immigrants venaient d'Europe pour chercher une vie meilleure.", answer: "Immigrants came from Europe to seek a better life.", options: ["Immigrants came from Europe to seek a better life.", "Immigrants came from Europe to start a war.", "Immigrants came from Europe to visit briefly.", "Immigrants came from Europe to study art."] }
         ]
     }
 ];
