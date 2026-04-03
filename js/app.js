@@ -1,24 +1,55 @@
 // ===== Bianca French — App Logic =====
 
 // ===== TEXT-TO-SPEECH HELPER =====
+let _frenchVoice = null;
+
+function pickFrenchVoice() {
+    const voices = window.speechSynthesis.getVoices();
+    if (!voices.length) return null;
+
+    // Priority order: native fr-FR > any fr-FR > fr-CA > any fr-*
+    // Prefer voices with "France" or known native names (Amelie, Thomas, etc.)
+    const nativeNames = ['amelie', 'thomas', 'audrey', 'aurelie', 'marie', 'pierre', 'lea', 'hugo', 'chloe', 'nicolas', 'sylvie', 'renaud'];
+    const frFR = voices.filter(v => v.lang === 'fr-FR');
+    const frAny = voices.filter(v => v.lang.startsWith('fr'));
+
+    // Best: fr-FR voice with a known native French name
+    const native = frFR.find(v => nativeNames.some(n => v.name.toLowerCase().includes(n)));
+    if (native) return native;
+
+    // Next: any fr-FR voice (not "Google" which can sound robotic)
+    const preferredFR = frFR.find(v => !v.name.toLowerCase().includes('google'));
+    if (preferredFR) return preferredFR;
+
+    // Next: any fr-FR
+    if (frFR.length) return frFR[0];
+
+    // Fallback: fr-CA or other French variant
+    if (frAny.length) return frAny[0];
+
+    return null;
+}
+
 function speak(text) {
     if (!('speechSynthesis' in window)) return;
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'fr-FR';
-    utterance.rate = 0.85;
+    utterance.rate = 0.7;
+    utterance.pitch = 1.0;
 
-    // Try to pick a French voice
-    const voices = window.speechSynthesis.getVoices();
-    const frVoice = voices.find(v => v.lang.startsWith('fr'));
-    if (frVoice) utterance.voice = frVoice;
+    // Use cached voice or find one
+    if (!_frenchVoice) _frenchVoice = pickFrenchVoice();
+    if (_frenchVoice) utterance.voice = _frenchVoice;
 
     window.speechSynthesis.speak(utterance);
 }
 
 // Preload voices (some browsers load them async)
 if ('speechSynthesis' in window) {
-    window.speechSynthesis.onvoiceschanged = () => {};
+    window.speechSynthesis.onvoiceschanged = () => {
+        _frenchVoice = pickFrenchVoice();
+    };
     window.speechSynthesis.getVoices();
 }
 
