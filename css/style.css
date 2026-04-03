@@ -1285,6 +1285,27 @@ body {
     color: var(--navy);
 }
 
+/* ===== Clickable Verbs ===== */
+.verb-clickable {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: var(--gold);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    transition: all var(--transition);
+}
+
+.verb-clickable:hover {
+    color: var(--gold);
+    text-decoration-thickness: 3px;
+}
+
+.verb-clickable::after {
+    content: " \21E8";
+    font-size: 0.7em;
+    opacity: 0.5;
+}
+
 /* ===== Vocabulary Tab ===== */
 .vocab-header-card {
     background: linear-gradient(135deg, var(--navy), var(--navy-light));
