@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+
+# Capacitor iOS
+ios/App/Pods/
+ios/App/App/public/
+ios/App/output/
+
+# OS files
+.DS_Store
+Thumbs.db

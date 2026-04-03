@@ -1,5 +1,32 @@
 // ===== Bianca French — App Logic =====
 
+// ===== TEXT-TO-SPEECH HELPER =====
+function speak(text) {
+    if (!('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'fr-FR';
+    utterance.rate = 0.85;
+
+    // Try to pick a French voice
+    const voices = window.speechSynthesis.getVoices();
+    const frVoice = voices.find(v => v.lang.startsWith('fr'));
+    if (frVoice) utterance.voice = frVoice;
+
+    window.speechSynthesis.speak(utterance);
+}
+
+// Preload voices (some browsers load them async)
+if ('speechSynthesis' in window) {
+    window.speechSynthesis.onvoiceschanged = () => {};
+    window.speechSynthesis.getVoices();
+}
+
+function speakBtn(text) {
+    const escaped = text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    return `<button class="speak-btn" onclick="event.stopPropagation();speak('${escaped}')" title="Listen">&#128264;</button>`;
+}
+
 const app = {
     currentLesson: null,
     currentTab: 'french',
@@ -121,10 +148,12 @@ const app = {
         const grid = document.getElementById('conjugation-grid');
         grid.innerHTML = '';
         for (const [pronoun, form] of Object.entries(f.conjugation)) {
+            const phrase = `${pronoun} ${form}`;
             grid.innerHTML += `
                 <div class="conj-item">
                     <span class="conj-pronoun">${pronoun}</span>
                     <span class="conj-verb">${form}</span>
+                    ${speakBtn(phrase)}
                 </div>
             `;
         }
@@ -138,7 +167,7 @@ const app = {
         f.examples.forEach(ex => {
             list.innerHTML += `
                 <div class="example-item">
-                    <div class="example-fr">${ex.fr}</div>
+                    <div class="example-fr">${ex.fr} ${speakBtn(ex.fr)}</div>
                     <div class="example-en">${ex.en}</div>
                 </div>
             `;
@@ -159,15 +188,16 @@ const app = {
         if (f.extraVerbs && f.extraVerbs.length > 0) {
             f.extraVerbs.forEach(ev => {
                 let html = `<div class="card extra-verb-card">`;
-                html += `<div class="card-header"><h3>${ev.verb}</h3><span class="badge">${ev.meaning}</span></div>`;
+                html += `<div class="card-header"><h3>${ev.verb} ${speakBtn(ev.verb)}</h3><span class="badge">${ev.meaning}</span></div>`;
                 html += `<div class="conjugation-grid">`;
                 for (const [pronoun, form] of Object.entries(ev.conjugation)) {
-                    html += `<div class="conj-item"><span class="conj-pronoun">${pronoun}</span><span class="conj-verb">${form}</span></div>`;
+                    const phrase = `${pronoun} ${form}`;
+                    html += `<div class="conj-item"><span class="conj-pronoun">${pronoun}</span><span class="conj-verb">${form}</span>${speakBtn(phrase)}</div>`;
                 }
                 html += `</div>`;
                 html += `<div class="examples-list">`;
                 ev.examples.forEach(ex => {
-                    html += `<div class="example-item"><div class="example-fr">${ex.fr}</div><div class="example-en">${ex.en}</div></div>`;
+                    html += `<div class="example-item"><div class="example-fr">${ex.fr} ${speakBtn(ex.fr)}</div><div class="example-en">${ex.en}</div></div>`;
                 });
                 html += `</div></div>`;
                 extraContainer.innerHTML += html;
@@ -372,9 +402,122 @@ const app = {
         }
     },
 
+    generateTrueFalse(lesson) {
+        const h = lesson.history;
+        const trueFalse = [];
+
+        if (h.facts && h.facts.length > 0) {
+            const shuffled = [...h.facts].sort(() => Math.random() - 0.5);
+            shuffled.slice(0, 2).forEach(fact => {
+                trueFalse.push({ statement: fact, answer: true });
+            });
+        }
+        if (h.funFact) {
+            trueFalse.push({ statement: h.funFact, answer: true });
+        }
+
+        const falseStatements = this.makeFalseStatements(lesson);
+        falseStatements.forEach(fs => {
+            trueFalse.push({ statement: fs, answer: false });
+        });
+
+        return trueFalse.sort(() => Math.random() - 0.5);
+    },
+
+    makeFalseStatements(lesson) {
+        const period = lesson.history.period;
+        const map = {
+            'French Revolution': [
+                "The Bastille held over 500 prisoners when it was stormed on July 14, 1789.",
+                "The French Revolution began in 1805 after Napoleon became emperor."
+            ],
+            'Ancient Egypt': [
+                "The ancient Egyptians used the Roman alphabet for their writing system.",
+                "The Great Pyramid was built as a temple for worship, not as a tomb."
+            ],
+            'Renaissance Italy': [
+                "The Renaissance began in Germany before spreading to Italy.",
+                "Leonardo da Vinci was primarily known as a military general."
+            ],
+            'World War I': [
+                "World War I lasted from 1920 to 1926.",
+                "The Treaty of Versailles was signed before the war began."
+            ],
+            'Napoleon': [
+                "Napoleon was born in England and later moved to France.",
+                "Napoleon's empire peacefully dissolved without any military conflicts."
+            ],
+            'Ancient Greece': [
+                "Ancient Greek democracy allowed all people including slaves to vote.",
+                "The Olympic Games originated in Ancient Rome, not Greece."
+            ],
+            'Moon Landing': [
+                "The first moon landing took place in 1955 during the Korean War.",
+                "The Soviet Union was the first country to land astronauts on the moon."
+            ],
+            'Enlightenment': [
+                "The Enlightenment rejected science in favor of traditional religious authority.",
+                "The Enlightenment took place during the 1400s alongside the Renaissance."
+            ],
+            'Medieval': [
+                "During Medieval times, most Europeans could read and write fluently.",
+                "The Black Plague improved economic conditions across Medieval Europe."
+            ],
+            'American Revolution': [
+                "The American Revolution was fought against France for independence.",
+                "The Declaration of Independence was signed in 1800."
+            ],
+            'Magna Carta': [
+                "The Magna Carta was written by the King to increase his own power.",
+                "The Magna Carta was signed in 1492, the same year Columbus sailed."
+            ],
+            'Martin Luther King': [
+                "Martin Luther King Jr.'s famous speech was delivered in Chicago.",
+                "The Civil Rights Act was passed in 1945, right after World War II."
+            ],
+            'Immigration': [
+                "Ellis Island was located in Boston Harbor.",
+                "Most immigrants to America in the 1800s arrived through California."
+            ]
+        };
+        for (const [key, stmts] of Object.entries(map)) {
+            if (period.includes(key)) return stmts;
+        }
+        return ["This historical event took place in the 1500s.", "This event had no lasting impact on world history."];
+    },
+
+    answerTrueFalse(globalIdx, chosen) {
+        if (this.exerciseState.answered[globalIdx]) return;
+        this.exerciseState.answered[globalIdx] = true;
+
+        const tfIdx = globalIdx - this.currentLesson.exercises.length;
+        const tf = this.exerciseState.trueFalse[tfIdx];
+        const correct = chosen === tf.answer;
+        if (correct) this.exerciseState.score++;
+
+        const card = document.getElementById(`exercise-${globalIdx}`);
+        card.querySelectorAll('.tf-btn').forEach(btn => {
+            btn.classList.add('disabled');
+            const btnVal = btn.classList.contains('tf-true');
+            if (btnVal === tf.answer) btn.classList.add('correct');
+            if (btnVal === chosen && !correct) btn.classList.add('wrong');
+        });
+
+        const hint = tf.answer ? 'That statement is TRUE.' : 'That statement is FALSE.';
+        this.showFeedback(globalIdx, correct, hint);
+        this.checkAllAnswered();
+    },
+
     renderExercises(lesson) {
         const container = document.getElementById('practice-container');
         container.innerHTML = '';
+
+        const totalExercises = lesson.exercises.length;
+        const trueFalseQs = this.generateTrueFalse(lesson);
+        this.exerciseState.trueFalse = trueFalseQs;
+        this.exerciseState.total = totalExercises + trueFalseQs.length;
+        this.exerciseState.answered = new Array(this.exerciseState.total).fill(false);
+        const totalAll = this.exerciseState.total;
 
         lesson.exercises.forEach((ex, idx) => {
             const card = document.createElement('div');
@@ -386,7 +529,7 @@ const app = {
                 : 'History comprehension';
 
             let content = `
-                <div class="exercise-number">Question ${idx + 1} of ${lesson.exercises.length}</div>
+                <div class="exercise-number">Question ${idx + 1} of ${totalAll}</div>
                 <div class="exercise-type">${typeLabel}</div>
             `;
 
@@ -420,6 +563,35 @@ const app = {
 
             content += `<div class="exercise-feedback" id="feedback-${idx}"></div>`;
             card.innerHTML = content;
+            container.appendChild(card);
+        });
+
+        // True/False section header
+        const sectionHeader = document.createElement('div');
+        sectionHeader.className = 'tf-section-header';
+        sectionHeader.innerHTML = `
+            <h3>True or False — History Check</h3>
+            <p>Did you read the History tab? Prove it!</p>
+        `;
+        container.appendChild(sectionHeader);
+
+        // Render true/false questions
+        trueFalseQs.forEach((tf, i) => {
+            const globalIdx = totalExercises + i;
+            const card = document.createElement('div');
+            card.className = 'exercise-card tf-card';
+            card.id = `exercise-${globalIdx}`;
+
+            card.innerHTML = `
+                <div class="exercise-number">Question ${globalIdx + 1} of ${totalAll}</div>
+                <div class="exercise-type">True or False</div>
+                <div class="exercise-prompt">${tf.statement}</div>
+                <div class="options-grid tf-grid">
+                    <button class="option-btn tf-btn tf-true" onclick="app.answerTrueFalse(${globalIdx}, true)">True</button>
+                    <button class="option-btn tf-btn tf-false" onclick="app.answerTrueFalse(${globalIdx}, false)">False</button>
+                </div>
+                <div class="exercise-feedback" id="feedback-${globalIdx}"></div>
+            `;
             container.appendChild(card);
         });
     },
@@ -528,6 +700,15 @@ const app = {
 
         // Scroll to results
         resultsEl.scrollIntoView({ behavior: 'smooth' });
+    },
+
+    completeTest() {
+        document.getElementById('love-message-overlay').classList.remove('hidden');
+    },
+
+    dismissLoveMessage() {
+        document.getElementById('love-message-overlay').classList.add('hidden');
+        this.showHome();
     },
 
     // ===== CONFETTI =====

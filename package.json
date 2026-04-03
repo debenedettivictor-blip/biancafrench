@@ -3,9 +3,18 @@
   "version": "1.0.0",
   "description": "Daily French + History learning app for Bianca",
   "scripts": {
-    "start": "npx serve . -l $PORT"
+    "start": "npx serve . -l $PORT",
+    "cap:sync": "npx cap sync ios",
+    "cap:open": "npx cap open ios"
   },
   "dependencies": {
-    "serve": "^14.2.0"
+    "serve": "^14.2.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/ios": "^6.0.0",
+    "@capacitor/status-bar": "^6.0.0",
+    "@capacitor/splash-screen": "^6.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0"
   }
 }

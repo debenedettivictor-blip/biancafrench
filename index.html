@@ -75,6 +75,9 @@
             <button class="tab" data-tab="history" onclick="app.switchTab('history')">
                 &#128218; History
             </button>
+            <button class="tab" data-tab="vocab" onclick="app.switchTab('vocab')">
+                &#128209; Vocab
+            </button>
             <button class="tab" data-tab="news" onclick="app.switchTab('news')">
                 &#127758; World News
             </button>
@@ -130,6 +133,26 @@
             </div>
         </div>
 
+        <!-- Vocabulary Tab -->
+        <div class="tab-content" id="tab-vocab">
+            <div class="card vocab-header-card">
+                <h3>&#128209; Vocabulary</h3>
+                <p class="vocab-subtitle">Tap any word to see homonyms and synonyms</p>
+            </div>
+            <div class="vocab-grid" id="vocab-grid"></div>
+        </div>
+
+        <!-- Word Detail Modal -->
+        <div class="word-detail-overlay hidden" id="word-detail-overlay" onclick="app.closeWordDetail(event)">
+            <div class="word-detail-modal" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="app.closeWordDetail()">&times;</button>
+                <div class="modal-word-header" id="modal-word-header"></div>
+                <div class="modal-example" id="modal-example"></div>
+                <div class="modal-section" id="modal-homonyms"></div>
+                <div class="modal-section" id="modal-synonyms"></div>
+            </div>
+        </div>
+
         <!-- World News Tab -->
         <div class="tab-content" id="tab-news">
             <div class="card news-card">
@@ -160,8 +183,17 @@
                     <div class="results-stars" id="results-stars"></div>
                     <p id="results-message"></p>
                     <div class="results-score" id="results-score"></div>
-                    <button class="btn-primary" onclick="app.showHome()">Back to Lessons</button>
+                    <button class="btn-primary" onclick="app.completeTest()">Complete</button>
                     <button class="btn-secondary" onclick="app.retryPractice()">Try Again</button>
+                </div>
+            </div>
+            <div class="love-message-overlay hidden" id="love-message-overlay" onclick="app.dismissLoveMessage()">
+                <div class="love-message-card">
+                    <div class="love-hearts">&#128150;&#127861;&#128150;</div>
+                    <h2>Hey Bianca!</h2>
+                    <p class="love-text">Your fianc&#233;e Victor loves you so matcha!</p>
+                    <div class="love-hearts-bottom">&#128154;&#127861;&#128155;</div>
+                    <button class="btn-primary love-dismiss-btn" onclick="app.dismissLoveMessage()">Aww, merci!</button>
                 </div>
             </div>
         </div>
