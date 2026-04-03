@@ -12,6 +12,39 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="landing-page">
+        <div class="landing-bg"></div>
+        <div class="landing-content">
+            <div class="landing-header">
+                <span class="landing-logo">&#128150;</span>
+                <h1 class="landing-title">Love Dove Learning</h1>
+                <p class="landing-subtitle">Tap your name to start learning</p>
+            </div>
+            <div class="profiles-grid">
+                <button class="profile-card" onclick="enterApp('bianca')">
+                    <div class="profile-avatar">B</div>
+                    <div class="profile-info">
+                        <span class="profile-name">Bianca</span>
+                        <span class="profile-lang">&#127467;&#127479; French</span>
+                    </div>
+                    <span class="profile-arrow">&#8250;</span>
+                </button>
+                <!-- Add more profiles here as languages are added -->
+                <div class="profile-card profile-add" onclick="addProfileHint()">
+                    <div class="profile-avatar profile-avatar-add">+</div>
+                    <div class="profile-info">
+                        <span class="profile-name">Add Learner</span>
+                        <span class="profile-lang">Coming soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- App Container (hidden until profile is selected) -->
+    <div id="app-container" class="app-container hidden">
+
     <!-- Confetti canvas -->
     <canvas id="confetti-canvas"></canvas>
 
@@ -22,6 +55,7 @@
                 <span class="logo-icon">&#128150;</span>
                 <span class="logo-text">Love Dove Learning French</span>
             </div>
+            <button class="switch-user-btn" onclick="exitToLanding()" title="Switch user">&#128101;</button>
             <div class="stats">
                 <div class="stat streak" id="streak-display">
                     <span class="stat-icon">&#128293;</span>
@@ -202,6 +236,8 @@
         </div>
     </main>
 
+    </div><!-- end #app-container -->
+
     <script src="js/lessons.js"></script>
     <script src="js/progress.js"></script>
     <script src="js/app.js"></script>
@@ -209,6 +245,31 @@
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js');
       }
+
+      function enterApp(user) {
+        document.getElementById('landing-page').classList.add('hidden');
+        document.getElementById('app-container').classList.remove('hidden');
+        localStorage.setItem('currentUser', user);
+      }
+
+      function addProfileHint() {
+        alert('More languages coming soon! Stay tuned.');
+      }
+
+      function exitToLanding() {
+        localStorage.removeItem('currentUser');
+        document.getElementById('app-container').classList.add('hidden');
+        document.getElementById('landing-page').classList.remove('hidden');
+      }
+
+      // If user previously selected, skip landing page
+      (function() {
+        const last = localStorage.getItem('currentUser');
+        if (last) {
+          document.getElementById('landing-page').classList.add('hidden');
+          document.getElementById('app-container').classList.remove('hidden');
+        }
+      })();
     </script>
 </body>
 </html>

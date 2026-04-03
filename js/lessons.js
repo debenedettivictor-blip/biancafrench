@@ -1008,26 +1008,36 @@ const LESSONS = [
                 { fr: "Combien ça coûte ?", en: "How much does it cost?" }
             ],
             tips: "Three ways to ask questions: 1) Add '?' to a statement (Tu parles français ?), 2) Add 'Est-ce que' (Est-ce que tu parles français ?), 3) Invert subject-verb (Parles-tu français ?). Method 1 is casual, 3 is formal.",
+            homonyms: [],
+            synonyms: [],
             extraVerbs: [
                 {
                     verb: "demander", meaning: "to ask",
                     conjugation: { "je": "demande", "tu": "demandes", "il/elle": "demande", "nous": "demandons", "vous": "demandez", "ils/elles": "demandent" },
-                    examples: [{ fr: "Je demande l'addition.", en: "I ask for the check." }, { fr: "Elle demande des informations.", en: "She asks for information." }]
+                    examples: [{ fr: "Je demande l'addition.", en: "I ask for the check." }, { fr: "Elle demande des informations.", en: "She asks for information." }],
+                    homonyms: [],
+                    synonyms: [{ word: "questionner", meaning: "to question" }, { word: "interroger", meaning: "to interrogate" }]
                 },
                 {
                     verb: "répondre", meaning: "to answer / to reply",
                     conjugation: { "je": "réponds", "tu": "réponds", "il/elle": "répond", "nous": "répondons", "vous": "répondez", "ils/elles": "répondent" },
-                    examples: [{ fr: "Il répond à la question.", en: "He answers the question." }, { fr: "Nous répondons au téléphone.", en: "We answer the phone." }]
+                    examples: [{ fr: "Il répond à la question.", en: "He answers the question." }, { fr: "Nous répondons au téléphone.", en: "We answer the phone." }],
+                    homonyms: [],
+                    synonyms: [{ word: "répliquer", meaning: "to reply" }, { word: "rétorquer", meaning: "to retort" }]
                 },
                 {
                     verb: "chercher", meaning: "to look for / to search",
                     conjugation: { "je": "cherche", "tu": "cherches", "il/elle": "cherche", "nous": "cherchons", "vous": "cherchez", "ils/elles": "cherchent" },
-                    examples: [{ fr: "Je cherche mes clés.", en: "I am looking for my keys." }, { fr: "Nous cherchons un restaurant.", en: "We are looking for a restaurant." }]
+                    examples: [{ fr: "Je cherche mes clés.", en: "I am looking for my keys." }, { fr: "Nous cherchons un restaurant.", en: "We are looking for a restaurant." }],
+                    homonyms: [],
+                    synonyms: [{ word: "rechercher", meaning: "to search for" }, { word: "explorer", meaning: "to explore" }]
                 },
                 {
                     verb: "trouver", meaning: "to find",
                     conjugation: { "je": "trouve", "tu": "trouves", "il/elle": "trouve", "nous": "trouvons", "vous": "trouvez", "ils/elles": "trouvent" },
-                    examples: [{ fr: "Tu trouves la réponse facilement.", en: "You find the answer easily." }, { fr: "Ils trouvent le chemin.", en: "They find the way." }]
+                    examples: [{ fr: "Tu trouves la réponse facilement.", en: "You find the answer easily." }, { fr: "Ils trouvent le chemin.", en: "They find the way." }],
+                    homonyms: [],
+                    synonyms: [{ word: "découvrir", meaning: "to discover" }, { word: "dénicher", meaning: "to unearth" }]
                 }
             ]
         },
@@ -1139,26 +1149,36 @@ const LESSONS = [
                 { fr: "Pourriez-vous parler plus lentement ?", en: "Could you speak more slowly?" }
             ],
             tips: "'S'il vous plaît' (formal) and 's'il te plaît' (informal) both mean 'please.' Always add it — French people really appreciate politeness! 'Pourriez-vous...' is the polite way to ask for something.",
+            homonyms: [],
+            synonyms: [],
             extraVerbs: [
                 {
                     verb: "acheter", meaning: "to buy",
                     conjugation: { "je": "achète", "tu": "achètes", "il/elle": "achète", "nous": "achetons", "vous": "achetez", "ils/elles": "achètent" },
-                    examples: [{ fr: "J'achète du pain à la boulangerie.", en: "I buy bread at the bakery." }, { fr: "Nous achetons des souvenirs.", en: "We buy souvenirs." }]
+                    examples: [{ fr: "J'achète du pain à la boulangerie.", en: "I buy bread at the bakery." }, { fr: "Nous achetons des souvenirs.", en: "We buy souvenirs." }],
+                    homonyms: [],
+                    synonyms: [{ word: "acquérir", meaning: "to acquire" }, { word: "se procurer", meaning: "to obtain" }]
                 },
                 {
                     verb: "payer", meaning: "to pay",
                     conjugation: { "je": "paie", "tu": "paies", "il/elle": "paie", "nous": "payons", "vous": "payez", "ils/elles": "paient" },
-                    examples: [{ fr: "Je paie par carte bancaire.", en: "I pay by credit card." }, { fr: "Vous payez combien ?", en: "How much do you pay?" }]
+                    examples: [{ fr: "Je paie par carte bancaire.", en: "I pay by credit card." }, { fr: "Vous payez combien ?", en: "How much do you pay?" }],
+                    homonyms: [],
+                    synonyms: [{ word: "régler", meaning: "to settle (a bill)" }, { word: "rembourser", meaning: "to reimburse" }]
                 },
                 {
                     verb: "essayer", meaning: "to try",
                     conjugation: { "je": "essaie", "tu": "essaies", "il/elle": "essaie", "nous": "essayons", "vous": "essayez", "ils/elles": "essaient" },
-                    examples: [{ fr: "J'essaie cette robe.", en: "I try on this dress." }, { fr: "Nous essayons un nouveau restaurant.", en: "We try a new restaurant." }]
+                    examples: [{ fr: "J'essaie cette robe.", en: "I try on this dress." }, { fr: "Nous essayons un nouveau restaurant.", en: "We try a new restaurant." }],
+                    homonyms: [],
+                    synonyms: [{ word: "tenter", meaning: "to attempt" }, { word: "goûter", meaning: "to taste/try" }]
                 },
                 {
                     verb: "attendre", meaning: "to wait",
                     conjugation: { "je": "attends", "tu": "attends", "il/elle": "attend", "nous": "attendons", "vous": "attendez", "ils/elles": "attendent" },
-                    examples: [{ fr: "J'attends le bus depuis dix minutes.", en: "I have been waiting for the bus for ten minutes." }, { fr: "Nous attendons notre commande.", en: "We are waiting for our order." }]
+                    examples: [{ fr: "J'attends le bus depuis dix minutes.", en: "I have been waiting for the bus for ten minutes." }, { fr: "Nous attendons notre commande.", en: "We are waiting for our order." }],
+                    homonyms: [],
+                    synonyms: [{ word: "patienter", meaning: "to be patient" }, { word: "espérer", meaning: "to hope/wait for" }]
                 }
             ]
         },
@@ -1270,26 +1290,36 @@ const LESSONS = [
                 { fr: "C'est vrai, mais d'un autre côté...", en: "That's true, but on the other hand..." }
             ],
             tips: "To sound more natural, vary your expressions: don't always use 'je pense.' Try 'il me semble,' 'je trouve,' 'à mon avis.' Use 'd'un autre côté' (on the other hand) to show nuance — the French love nuance!",
+            homonyms: [],
+            synonyms: [{ word: "exprimer", meaning: "to express" }, { word: "formuler", meaning: "to formulate" }],
             extraVerbs: [
                 {
                     verb: "préférer", meaning: "to prefer",
                     conjugation: { "je": "préfère", "tu": "préfères", "il/elle": "préfère", "nous": "préférons", "vous": "préférez", "ils/elles": "préfèrent" },
-                    examples: [{ fr: "Je préfère le théâtre au cinéma.", en: "I prefer theater to cinema." }, { fr: "Nous préférons rester à la maison.", en: "We prefer to stay at home." }]
+                    examples: [{ fr: "Je préfère le théâtre au cinéma.", en: "I prefer theater to cinema." }, { fr: "Nous préférons rester à la maison.", en: "We prefer to stay at home." }],
+                    homonyms: [],
+                    synonyms: [{ word: "favoriser", meaning: "to favor" }, { word: "privilégier", meaning: "to prioritize" }]
                 },
                 {
                     verb: "détester", meaning: "to hate / to detest",
                     conjugation: { "je": "déteste", "tu": "détestes", "il/elle": "déteste", "nous": "détestons", "vous": "détestez", "ils/elles": "détestent" },
-                    examples: [{ fr: "Je déteste les embouteillages.", en: "I hate traffic jams." }, { fr: "Elle déteste le froid.", en: "She hates the cold." }]
+                    examples: [{ fr: "Je déteste les embouteillages.", en: "I hate traffic jams." }, { fr: "Elle déteste le froid.", en: "She hates the cold." }],
+                    homonyms: [],
+                    synonyms: [{ word: "haïr", meaning: "to hate" }, { word: "abhorrer", meaning: "to abhor" }]
                 },
                 {
                     verb: "adorer", meaning: "to love / to adore",
                     conjugation: { "je": "adore", "tu": "adores", "il/elle": "adore", "nous": "adorons", "vous": "adorez", "ils/elles": "adorent" },
-                    examples: [{ fr: "J'adore la musique classique.", en: "I love classical music." }, { fr: "Ils adorent voyager.", en: "They love traveling." }]
+                    examples: [{ fr: "J'adore la musique classique.", en: "I love classical music." }, { fr: "Ils adorent voyager.", en: "They love traveling." }],
+                    homonyms: [],
+                    synonyms: [{ word: "aimer passionnément", meaning: "to love passionately" }, { word: "vénérer", meaning: "to worship" }]
                 },
                 {
                     verb: "espérer", meaning: "to hope",
                     conjugation: { "je": "espère", "tu": "espères", "il/elle": "espère", "nous": "espérons", "vous": "espérez", "ils/elles": "espèrent" },
-                    examples: [{ fr: "J'espère que tu vas bien.", en: "I hope you are doing well." }, { fr: "Nous espérons réussir.", en: "We hope to succeed." }]
+                    examples: [{ fr: "J'espère que tu vas bien.", en: "I hope you are doing well." }, { fr: "Nous espérons réussir.", en: "We hope to succeed." }],
+                    homonyms: [],
+                    synonyms: [{ word: "souhaiter", meaning: "to wish" }, { word: "compter sur", meaning: "to count on" }]
                 }
             ]
         },
@@ -1395,26 +1425,36 @@ const LESSONS = [
                 { fr: "Ils ne connaissent pas ma famille.", en: "They don't know my family." }
             ],
             tips: "Use 'savoir' for facts, information, and skills (savoir + infinitive = 'to know how to'). Use 'connaître' for people, places, and things you're familiar with.",
+            homonyms: [{ word: "savoir", meaning: "knowledge (noun)", example: "Le savoir est précieux. (Knowledge is precious.)" }],
+            synonyms: [{ word: "connaître", meaning: "to know (person/place)" }, { word: "comprendre", meaning: "to understand" }],
             extraVerbs: [
                 {
                     verb: "découvrir", meaning: "to discover",
                     conjugation: { "je": "découvre", "tu": "découvres", "il/elle": "découvre", "nous": "découvrons", "vous": "découvrez", "ils/elles": "découvrent" },
-                    examples: [{ fr: "Je découvre une nouvelle ville.", en: "I discover a new city." }, { fr: "Nous découvrons la vérité.", en: "We discover the truth." }]
+                    examples: [{ fr: "Je découvre une nouvelle ville.", en: "I discover a new city." }, { fr: "Nous découvrons la vérité.", en: "We discover the truth." }],
+                    homonyms: [],
+                    synonyms: [{ word: "trouver", meaning: "to find" }, { word: "révéler", meaning: "to reveal" }]
                 },
                 {
                     verb: "apprendre", meaning: "to learn",
                     conjugation: { "je": "apprends", "tu": "apprends", "il/elle": "apprend", "nous": "apprenons", "vous": "apprenez", "ils/elles": "apprennent" },
-                    examples: [{ fr: "J'apprends le français.", en: "I am learning French." }, { fr: "Ils apprennent vite.", en: "They learn quickly." }]
+                    examples: [{ fr: "J'apprends le français.", en: "I am learning French." }, { fr: "Ils apprennent vite.", en: "They learn quickly." }],
+                    homonyms: [],
+                    synonyms: [{ word: "étudier", meaning: "to study" }, { word: "assimiler", meaning: "to assimilate" }]
                 },
                 {
                     verb: "reconnaître", meaning: "to recognize",
                     conjugation: { "je": "reconnais", "tu": "reconnais", "il/elle": "reconnaît", "nous": "reconnaissons", "vous": "reconnaissez", "ils/elles": "reconnaissent" },
-                    examples: [{ fr: "Je reconnais cette chanson.", en: "I recognize this song." }, { fr: "Elle reconnaît son erreur.", en: "She recognizes her mistake." }]
+                    examples: [{ fr: "Je reconnais cette chanson.", en: "I recognize this song." }, { fr: "Elle reconnaît son erreur.", en: "She recognizes her mistake." }],
+                    homonyms: [],
+                    synonyms: [{ word: "identifier", meaning: "to identify" }, { word: "admettre", meaning: "to admit" }]
                 },
                 {
                     verb: "croire", meaning: "to believe",
                     conjugation: { "je": "crois", "tu": "crois", "il/elle": "croit", "nous": "croyons", "vous": "croyez", "ils/elles": "croient" },
-                    examples: [{ fr: "Je crois que c'est vrai.", en: "I believe it is true." }, { fr: "Nous croyons en la science.", en: "We believe in science." }]
+                    examples: [{ fr: "Je crois que c'est vrai.", en: "I believe it is true." }, { fr: "Nous croyons en la science.", en: "We believe in science." }],
+                    homonyms: [],
+                    synonyms: [{ word: "penser", meaning: "to think" }, { word: "estimer", meaning: "to consider" }]
                 }
             ]
         },
@@ -1520,26 +1560,36 @@ const LESSONS = [
                 { fr: "Ils prennent l'avion demain.", en: "They are taking a plane tomorrow." }
             ],
             tips: "Prendre is used for meals (prendre le déjeuner), transport (prendre le bus), and decisions (prendre une décision). Its family: apprendre (to learn), comprendre (to understand).",
+            homonyms: [],
+            synonyms: [{ word: "saisir", meaning: "to seize" }, { word: "attraper", meaning: "to catch" }, { word: "emporter", meaning: "to take away" }],
             extraVerbs: [
                 {
                     verb: "comprendre", meaning: "to understand",
                     conjugation: { "je": "comprends", "tu": "comprends", "il/elle": "comprend", "nous": "comprenons", "vous": "comprenez", "ils/elles": "comprennent" },
-                    examples: [{ fr: "Je comprends le problème.", en: "I understand the problem." }, { fr: "Vous comprenez cette leçon?", en: "Do you understand this lesson?" }]
+                    examples: [{ fr: "Je comprends le problème.", en: "I understand the problem." }, { fr: "Vous comprenez cette leçon?", en: "Do you understand this lesson?" }],
+                    homonyms: [{ word: "comprendre", meaning: "to include", example: "Le prix comprend le dessert. (The price includes dessert.)" }],
+                    synonyms: [{ word: "saisir", meaning: "to grasp" }, { word: "capter", meaning: "to get (informal)" }]
                 },
                 {
                     verb: "surprendre", meaning: "to surprise",
                     conjugation: { "je": "surprends", "tu": "surprends", "il/elle": "surprend", "nous": "surprenons", "vous": "surprenez", "ils/elles": "surprennent" },
-                    examples: [{ fr: "Cette nouvelle me surprend.", en: "This news surprises me." }, { fr: "Ils surprennent leurs amis.", en: "They surprise their friends." }]
+                    examples: [{ fr: "Cette nouvelle me surprend.", en: "This news surprises me." }, { fr: "Ils surprennent leurs amis.", en: "They surprise their friends." }],
+                    homonyms: [],
+                    synonyms: [{ word: "étonner", meaning: "to astonish" }, { word: "stupéfier", meaning: "to stupefy" }]
                 },
                 {
                     verb: "conquérir", meaning: "to conquer",
                     conjugation: { "je": "conquiers", "tu": "conquiers", "il/elle": "conquiert", "nous": "conquérons", "vous": "conquérez", "ils/elles": "conquièrent" },
-                    examples: [{ fr: "Napoléon conquiert l\'Europe.", en: "Napoleon conquers Europe." }, { fr: "Ils conquièrent de nouveaux territoires.", en: "They conquer new territories." }]
+                    examples: [{ fr: "Napoléon conquiert l\'Europe.", en: "Napoleon conquers Europe." }, { fr: "Ils conquièrent de nouveaux territoires.", en: "They conquer new territories." }],
+                    homonyms: [],
+                    synonyms: [{ word: "vaincre", meaning: "to defeat" }, { word: "soumettre", meaning: "to subjugate" }]
                 },
                 {
                     verb: "perdre", meaning: "to lose",
                     conjugation: { "je": "perds", "tu": "perds", "il/elle": "perd", "nous": "perdons", "vous": "perdez", "ils/elles": "perdent" },
-                    examples: [{ fr: "Je perds mes clés souvent.", en: "I often lose my keys." }, { fr: "Il perd la bataille.", en: "He loses the battle." }]
+                    examples: [{ fr: "Je perds mes clés souvent.", en: "I often lose my keys." }, { fr: "Il perd la bataille.", en: "He loses the battle." }],
+                    homonyms: [],
+                    synonyms: [{ word: "égarer", meaning: "to misplace" }, { word: "manquer", meaning: "to miss" }]
                 }
             ]
         },
@@ -1645,26 +1695,36 @@ const LESSONS = [
                 { fr: "Ils doivent payer l'amende.", en: "They must pay the fine." }
             ],
             tips: "Devoir + infinitive = must/have to. Devoir + noun = to owe. 'Je dois 50 euros' = 'I owe 50 euros.' In legal contexts it means 'duty' — 'le devoir' as a noun means 'duty' or 'homework.'",
+            homonyms: [{ word: "devoir", meaning: "homework / duty (noun)", example: "Fais tes devoirs ! (Do your homework!)" }],
+            synonyms: [{ word: "falloir", meaning: "to be necessary" }, { word: "être obligé de", meaning: "to be obligated to" }],
             extraVerbs: [
                 {
                     verb: "falloir", meaning: "to be necessary (impersonal)",
                     conjugation: { "je": "—", "tu": "—", "il/elle": "faut", "nous": "—", "vous": "—", "ils/elles": "—" },
-                    examples: [{ fr: "Il faut étudier.", en: "It is necessary to study. / One must study." }, { fr: "Il faut respecter la loi.", en: "One must respect the law." }]
+                    examples: [{ fr: "Il faut étudier.", en: "It is necessary to study. / One must study." }, { fr: "Il faut respecter la loi.", en: "One must respect the law." }],
+                    homonyms: [],
+                    synonyms: [{ word: "devoir", meaning: "to must" }, { word: "être nécessaire", meaning: "to be necessary" }]
                 },
                 {
                     verb: "protéger", meaning: "to protect",
                     conjugation: { "je": "protège", "tu": "protèges", "il/elle": "protège", "nous": "protégeons", "vous": "protégez", "ils/elles": "protègent" },
-                    examples: [{ fr: "La loi protège les citoyens.", en: "The law protects the citizens." }, { fr: "Nous protégeons nos droits.", en: "We protect our rights." }]
+                    examples: [{ fr: "La loi protège les citoyens.", en: "The law protects the citizens." }, { fr: "Nous protégeons nos droits.", en: "We protect our rights." }],
+                    homonyms: [],
+                    synonyms: [{ word: "défendre", meaning: "to defend" }, { word: "sauvegarder", meaning: "to safeguard" }]
                 },
                 {
                     verb: "obéir", meaning: "to obey",
                     conjugation: { "je": "obéis", "tu": "obéis", "il/elle": "obéit", "nous": "obéissons", "vous": "obéissez", "ils/elles": "obéissent" },
-                    examples: [{ fr: "Tu dois obéir à la loi.", en: "You must obey the law." }, { fr: "Les soldats obéissent aux ordres.", en: "The soldiers obey orders." }]
+                    examples: [{ fr: "Tu dois obéir à la loi.", en: "You must obey the law." }, { fr: "Les soldats obéissent aux ordres.", en: "The soldiers obey orders." }],
+                    homonyms: [],
+                    synonyms: [{ word: "se soumettre", meaning: "to submit" }, { word: "respecter", meaning: "to respect" }]
                 },
                 {
                     verb: "interdire", meaning: "to forbid",
                     conjugation: { "je": "interdis", "tu": "interdis", "il/elle": "interdit", "nous": "interdisons", "vous": "interdisez", "ils/elles": "interdisent" },
-                    examples: [{ fr: "La loi interdit la discrimination.", en: "The law forbids discrimination." }, { fr: "On interdit de fumer ici.", en: "Smoking is forbidden here." }]
+                    examples: [{ fr: "La loi interdit la discrimination.", en: "The law forbids discrimination." }, { fr: "On interdit de fumer ici.", en: "Smoking is forbidden here." }],
+                    homonyms: [],
+                    synonyms: [{ word: "défendre", meaning: "to forbid" }, { word: "prohiber", meaning: "to prohibit" }]
                 }
             ]
         },
@@ -1770,26 +1830,36 @@ const LESSONS = [
                 { fr: "Ils disent que c'est important.", en: "They say it's important." }
             ],
             tips: "Use 'dire' for specific words or messages (dire la vérité, dire que...). Use 'parler' for the act of speaking (parler français, parler à quelqu'un). Note: 'vous dites' is irregular — not 'vous disez!'",
+            homonyms: [],
+            synonyms: [{ word: "raconter", meaning: "to tell (a story)" }, { word: "affirmer", meaning: "to state" }, { word: "discuter", meaning: "to discuss" }],
             extraVerbs: [
                 {
                     verb: "raconter", meaning: "to tell / to narrate",
                     conjugation: { "je": "raconte", "tu": "racontes", "il/elle": "raconte", "nous": "racontons", "vous": "racontez", "ils/elles": "racontent" },
-                    examples: [{ fr: "Elle raconte une histoire.", en: "She tells a story." }, { fr: "Raconte-moi ta journée.", en: "Tell me about your day." }]
+                    examples: [{ fr: "Elle raconte une histoire.", en: "She tells a story." }, { fr: "Raconte-moi ta journée.", en: "Tell me about your day." }],
+                    homonyms: [],
+                    synonyms: [{ word: "narrer", meaning: "to narrate" }, { word: "relater", meaning: "to recount" }]
                 },
                 {
                     verb: "expliquer", meaning: "to explain",
                     conjugation: { "je": "explique", "tu": "expliques", "il/elle": "explique", "nous": "expliquons", "vous": "expliquez", "ils/elles": "expliquent" },
-                    examples: [{ fr: "Le professeur explique la leçon.", en: "The teacher explains the lesson." }, { fr: "Peux-tu expliquer ce mot?", en: "Can you explain this word?" }]
+                    examples: [{ fr: "Le professeur explique la leçon.", en: "The teacher explains the lesson." }, { fr: "Peux-tu expliquer ce mot?", en: "Can you explain this word?" }],
+                    homonyms: [],
+                    synonyms: [{ word: "clarifier", meaning: "to clarify" }, { word: "éclaircir", meaning: "to elucidate" }]
                 },
                 {
                     verb: "répondre", meaning: "to answer / to respond",
                     conjugation: { "je": "réponds", "tu": "réponds", "il/elle": "répond", "nous": "répondons", "vous": "répondez", "ils/elles": "répondent" },
-                    examples: [{ fr: "Je réponds à la question.", en: "I answer the question." }, { fr: "Il ne répond pas au téléphone.", en: "He does not answer the phone." }]
+                    examples: [{ fr: "Je réponds à la question.", en: "I answer the question." }, { fr: "Il ne répond pas au téléphone.", en: "He does not answer the phone." }],
+                    homonyms: [],
+                    synonyms: [{ word: "répliquer", meaning: "to reply" }, { word: "rétorquer", meaning: "to retort" }]
                 },
                 {
                     verb: "crier", meaning: "to shout / to yell",
                     conjugation: { "je": "crie", "tu": "cries", "il/elle": "crie", "nous": "crions", "vous": "criez", "ils/elles": "crient" },
-                    examples: [{ fr: "Ne crie pas!", en: "Don't shout!" }, { fr: "La foule crie de joie.", en: "The crowd shouts with joy." }]
+                    examples: [{ fr: "Ne crie pas!", en: "Don't shout!" }, { fr: "La foule crie de joie.", en: "The crowd shouts with joy." }],
+                    homonyms: [],
+                    synonyms: [{ word: "hurler", meaning: "to scream" }, { word: "s'exclamer", meaning: "to exclaim" }]
                 }
             ]
         },
@@ -1895,26 +1965,36 @@ const LESSONS = [
                 { fr: "Ils viennent demain.", en: "They are coming tomorrow." }
             ],
             tips: "Venir de + infinitive = 'to have just done something.' 'Je viens de manger' = 'I just ate.' This is called the passé récent — a very useful construction! Family: revenir (come back), devenir (become).",
+            homonyms: [],
+            synonyms: [{ word: "arriver", meaning: "to arrive" }, { word: "se présenter", meaning: "to show up" }, { word: "approcher", meaning: "to approach" }],
             extraVerbs: [
                 {
                     verb: "revenir", meaning: "to come back / to return",
                     conjugation: { "je": "reviens", "tu": "reviens", "il/elle": "revient", "nous": "revenons", "vous": "revenez", "ils/elles": "reviennent" },
-                    examples: [{ fr: "Je reviens dans cinq minutes.", en: "I\'ll be back in five minutes." }, { fr: "Ils reviennent de vacances.", en: "They are coming back from vacation." }]
+                    examples: [{ fr: "Je reviens dans cinq minutes.", en: "I\'ll be back in five minutes." }, { fr: "Ils reviennent de vacances.", en: "They are coming back from vacation." }],
+                    homonyms: [],
+                    synonyms: [{ word: "retourner", meaning: "to go back" }, { word: "rentrer", meaning: "to go home" }]
                 },
                 {
                     verb: "devenir", meaning: "to become",
                     conjugation: { "je": "deviens", "tu": "deviens", "il/elle": "devient", "nous": "devenons", "vous": "devenez", "ils/elles": "deviennent" },
-                    examples: [{ fr: "Elle devient médecin.", en: "She is becoming a doctor." }, { fr: "La ville devient plus grande.", en: "The city is becoming bigger." }]
+                    examples: [{ fr: "Elle devient médecin.", en: "She is becoming a doctor." }, { fr: "La ville devient plus grande.", en: "The city is becoming bigger." }],
+                    homonyms: [],
+                    synonyms: [{ word: "se transformer en", meaning: "to turn into" }, { word: "évoluer", meaning: "to evolve" }]
                 },
                 {
                     verb: "partir", meaning: "to leave / to depart",
                     conjugation: { "je": "pars", "tu": "pars", "il/elle": "part", "nous": "partons", "vous": "partez", "ils/elles": "partent" },
-                    examples: [{ fr: "Je pars demain matin.", en: "I am leaving tomorrow morning." }, { fr: "Nous partons en voyage.", en: "We are leaving on a trip." }]
+                    examples: [{ fr: "Je pars demain matin.", en: "I am leaving tomorrow morning." }, { fr: "Nous partons en voyage.", en: "We are leaving on a trip." }],
+                    homonyms: [],
+                    synonyms: [{ word: "quitter", meaning: "to leave" }, { word: "s'en aller", meaning: "to go away" }]
                 },
                 {
                     verb: "arriver", meaning: "to arrive",
                     conjugation: { "je": "arrive", "tu": "arrives", "il/elle": "arrive", "nous": "arrivons", "vous": "arrivez", "ils/elles": "arrivent" },
-                    examples: [{ fr: "Le train arrive à midi.", en: "The train arrives at noon." }, { fr: "Nous arrivons bientôt.", en: "We are arriving soon." }]
+                    examples: [{ fr: "Le train arrive à midi.", en: "The train arrives at noon." }, { fr: "Nous arrivons bientôt.", en: "We are arriving soon." }],
+                    homonyms: [],
+                    synonyms: [{ word: "venir", meaning: "to come" }, { word: "parvenir", meaning: "to reach" }]
                 }
             ]
         },
@@ -2019,7 +2099,9 @@ const LESSONS = [
                 { fr: "Vous savez que c'est important.", en: "You know that it's important." },
                 { fr: "Ils ne connaissent pas ma famille.", en: "They don't know my family." }
             ],
-            tips: "Use 'savoir' for facts, information, and skills (savoir + infinitive = 'to know how to'). Use 'connaître' for people, places, and things you're familiar with."
+            tips: "Use 'savoir' for facts, information, and skills (savoir + infinitive = 'to know how to'). Use 'connaître' for people, places, and things you're familiar with.",
+            homonyms: [{ word: "savoir", meaning: "knowledge (noun)", example: "Le savoir est précieux. (Knowledge is precious.)" }],
+            synonyms: [{ word: "connaître", meaning: "to know (person/place)" }, { word: "comprendre", meaning: "to understand" }]
         },
         history: {
             period: "The Renaissance (1400s–1600s)",
@@ -2100,7 +2182,9 @@ const LESSONS = [
                 { fr: "Vous prenez du sucre?", en: "Do you take sugar?" },
                 { fr: "Ils prennent l'avion demain.", en: "They are taking a plane tomorrow." }
             ],
-            tips: "Prendre is used for meals (prendre le déjeuner), transport (prendre le bus), and decisions (prendre une décision). Its family: apprendre (to learn), comprendre (to understand)."
+            tips: "Prendre is used for meals (prendre le déjeuner), transport (prendre le bus), and decisions (prendre une décision). Its family: apprendre (to learn), comprendre (to understand).",
+            homonyms: [],
+            synonyms: [{ word: "saisir", meaning: "to seize" }, { word: "attraper", meaning: "to catch" }, { word: "emporter", meaning: "to take away" }]
         },
         history: {
             period: "Napoleon Bonaparte (1799–1815)",
@@ -2181,7 +2265,9 @@ const LESSONS = [
                 { fr: "Vous devez signer le contrat.", en: "You must sign the contract." },
                 { fr: "Ils doivent payer l'amende.", en: "They must pay the fine." }
             ],
-            tips: "Devoir + infinitive = must/have to. Devoir + noun = to owe. 'Je dois 50 euros' = 'I owe 50 euros.' In legal contexts it means 'duty' — 'le devoir' as a noun means 'duty' or 'homework.'"
+            tips: "Devoir + infinitive = must/have to. Devoir + noun = to owe. 'Je dois 50 euros' = 'I owe 50 euros.' In legal contexts it means 'duty' — 'le devoir' as a noun means 'duty' or 'homework.'",
+            homonyms: [{ word: "devoir", meaning: "homework / duty (noun)", example: "Fais tes devoirs ! (Do your homework!)" }],
+            synonyms: [{ word: "falloir", meaning: "to be necessary" }, { word: "être obligé de", meaning: "to be obligated to" }]
         },
         history: {
             period: "The Magna Carta (1215)",
@@ -2262,7 +2348,9 @@ const LESSONS = [
                 { fr: "Vous parlez très bien français.", en: "You speak French very well." },
                 { fr: "Ils disent que c'est important.", en: "They say it's important." }
             ],
-            tips: "Use 'dire' for specific words or messages (dire la vérité, dire que...). Use 'parler' for the act of speaking (parler français, parler à quelqu'un). Note: 'vous dites' is irregular — not 'vous disez!'"
+            tips: "Use 'dire' for specific words or messages (dire la vérité, dire que...). Use 'parler' for the act of speaking (parler français, parler à quelqu'un). Note: 'vous dites' is irregular — not 'vous disez!'",
+            homonyms: [],
+            synonyms: [{ word: "raconter", meaning: "to tell (a story)" }, { word: "affirmer", meaning: "to state" }, { word: "discuter", meaning: "to discuss" }]
         },
         history: {
             period: "Martin Luther King Jr. (1963)",
@@ -2343,7 +2431,9 @@ const LESSONS = [
                 { fr: "Vous venez de quelle ville?", en: "What city do you come from?" },
                 { fr: "Ils viennent demain.", en: "They are coming tomorrow." }
             ],
-            tips: "Venir de + infinitive = 'to have just done something.' 'Je viens de manger' = 'I just ate.' This is called the passé récent — a very useful construction! Family: revenir (come back), devenir (become)."
+            tips: "Venir de + infinitive = 'to have just done something.' 'Je viens de manger' = 'I just ate.' This is called the passé récent — a very useful construction! Family: revenir (come back), devenir (become).",
+            homonyms: [],
+            synonyms: [{ word: "arriver", meaning: "to arrive" }, { word: "se présenter", meaning: "to show up" }, { word: "approcher", meaning: "to approach" }]
         },
         history: {
             period: "Immigration to America (1892–1954)",
