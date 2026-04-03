@@ -1625,6 +1625,38 @@ const LESSONS = [
             { fr: "Les citoyens doivent voter pour protéger leurs droits démocratiques.", en: "Citizens must vote to protect their democratic rights." },
             { fr: "Le Royaume-Uni réforme ses lois sur les droits de l\'homme.", en: "The United Kingdom reforms its human rights laws." }
         ],
+        vocabulary: [
+            {
+                word: "devoir", partOfSpeech: "verb", meaning: "to must / to owe",
+                example: { fr: "Je dois étudier.", en: "I must study." },
+                homonyms: [{ word: "devoir", meaning: "homework / duty (noun)", example: "Fais tes devoirs ! (Do your homework!)" }],
+                synonyms: [{ word: "falloir", meaning: "to be necessary" }, { word: "être obligé de", meaning: "to be obligated to" }]
+            },
+            {
+                word: "loi", partOfSpeech: "noun (f)", meaning: "law",
+                example: { fr: "Tu dois respecter la loi.", en: "You must respect the law." },
+                homonyms: [],
+                synonyms: [{ word: "règle", meaning: "rule" }, { word: "droit", meaning: "right/law" }]
+            },
+            {
+                word: "contrat", partOfSpeech: "noun (m)", meaning: "contract",
+                example: { fr: "Vous devez signer le contrat.", en: "You must sign the contract." },
+                homonyms: [],
+                synonyms: [{ word: "accord", meaning: "agreement" }, { word: "pacte", meaning: "pact" }]
+            },
+            {
+                word: "droits", partOfSpeech: "noun (m pl)", meaning: "rights",
+                example: { fr: "Les droits des citoyens.", en: "Citizens' rights." },
+                homonyms: [{ word: "droit", meaning: "straight / right (direction)", example: "Allez tout droit. (Go straight ahead.)" }],
+                synonyms: [{ word: "libertés", meaning: "freedoms" }, { word: "privilèges", meaning: "privileges" }]
+            },
+            {
+                word: "amende", partOfSpeech: "noun (f)", meaning: "fine (penalty)",
+                example: { fr: "Ils doivent payer l'amende.", en: "They must pay the fine." },
+                homonyms: [{ word: "amande", meaning: "almond", example: "Un gâteau aux amandes. (An almond cake.)" }],
+                synonyms: [{ word: "pénalité", meaning: "penalty" }, { word: "contravention", meaning: "ticket/fine" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ finir ce travail avant vendredi.", answer: "dois", options: ["dois", "doit", "devons", "doivent"] },
             { type: "fill", prompt: "Vous ___ signer ici.", answer: "devez", options: ["dois", "doit", "devez", "doivent"] },
@@ -1718,6 +1750,38 @@ const LESSONS = [
             { fr: "Les écoles enseignent l\'histoire des droits civiques aux élèves.", en: "Schools teach the history of civil rights to students." },
             { fr: "Les dirigeants du monde entier disent que l\'égalité reste un objectif important.", en: "Leaders around the world say that equality remains an important goal." }
         ],
+        vocabulary: [
+            {
+                word: "dire", partOfSpeech: "verb", meaning: "to say / to tell",
+                example: { fr: "Je dis la vérité.", en: "I tell the truth." },
+                homonyms: [],
+                synonyms: [{ word: "raconter", meaning: "to tell (a story)" }, { word: "affirmer", meaning: "to affirm" }, { word: "déclarer", meaning: "to declare" }]
+            },
+            {
+                word: "parler", partOfSpeech: "verb", meaning: "to speak / to talk",
+                example: { fr: "Elle parle trois langues.", en: "She speaks three languages." },
+                homonyms: [],
+                synonyms: [{ word: "discuter", meaning: "to discuss" }, { word: "causer", meaning: "to chat" }, { word: "bavarder", meaning: "to chatter" }]
+            },
+            {
+                word: "vérité", partOfSpeech: "noun (f)", meaning: "truth",
+                example: { fr: "Je dis la vérité.", en: "I tell the truth." },
+                homonyms: [],
+                synonyms: [{ word: "réalité", meaning: "reality" }, { word: "fait", meaning: "fact" }]
+            },
+            {
+                word: "discours", partOfSpeech: "noun (m)", meaning: "speech",
+                example: { fr: "Il a fait un discours.", en: "He gave a speech." },
+                homonyms: [],
+                synonyms: [{ word: "allocution", meaning: "address" }, { word: "conférence", meaning: "lecture" }]
+            },
+            {
+                word: "langue", partOfSpeech: "noun (f)", meaning: "language / tongue",
+                example: { fr: "Elle parle trois langues.", en: "She speaks three languages." },
+                homonyms: [{ word: "langue", meaning: "tongue (body part)", example: "Tire la langue. (Stick out your tongue.)" }],
+                synonyms: [{ word: "idiome", meaning: "idiom/language" }, { word: "dialecte", meaning: "dialect" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ toujours la vérité.", answer: "dis", options: ["dis", "dit", "parle", "disons"] },
             { type: "fill", prompt: "Elle ___ français et anglais.", answer: "parle", options: ["dit", "parle", "dis", "parlent"] },
@@ -1810,6 +1874,38 @@ const LESSONS = [
             { fr: "Les débats sur l\'immigration deviennent de plus en plus importants.", en: "Debates about immigration are becoming increasingly important." },
             { fr: "Le musée d\'Ellis Island accueille des visiteurs du monde entier.", en: "The Ellis Island museum welcomes visitors from around the world." },
             { fr: "Les familles d\'immigrants reviennent à Ellis Island pour retrouver leur histoire.", en: "Immigrant families return to Ellis Island to rediscover their history." }
+        ],
+        vocabulary: [
+            {
+                word: "venir", partOfSpeech: "verb", meaning: "to come",
+                example: { fr: "Je viens de France.", en: "I come from France." },
+                homonyms: [],
+                synonyms: [{ word: "arriver", meaning: "to arrive" }, { word: "se présenter", meaning: "to show up" }]
+            },
+            {
+                word: "espoir", partOfSpeech: "noun (m)", meaning: "hope",
+                example: { fr: "Ellis Island est un symbole d'espoir.", en: "Ellis Island is a symbol of hope." },
+                homonyms: [],
+                synonyms: [{ word: "espérance", meaning: "hope/expectation" }, { word: "optimisme", meaning: "optimism" }]
+            },
+            {
+                word: "vie", partOfSpeech: "noun (f)", meaning: "life",
+                example: { fr: "Chercher une vie meilleure.", en: "To seek a better life." },
+                homonyms: [{ word: "vis", meaning: "screw (noun) / live (verb)", example: "Je vis à Paris. (I live in Paris.)" }],
+                synonyms: [{ word: "existence", meaning: "existence" }]
+            },
+            {
+                word: "quitter", partOfSpeech: "verb", meaning: "to leave (a place/person)",
+                example: { fr: "Ils venaient de quitter leur pays.", en: "They had just left their country." },
+                homonyms: [],
+                synonyms: [{ word: "partir de", meaning: "to depart from" }, { word: "abandonner", meaning: "to abandon" }]
+            },
+            {
+                word: "chercher", partOfSpeech: "verb", meaning: "to seek / to look for",
+                example: { fr: "Ils cherchent une vie meilleure.", en: "They are looking for a better life." },
+                homonyms: [],
+                synonyms: [{ word: "rechercher", meaning: "to search for" }, { word: "explorer", meaning: "to explore" }]
+            }
         ],
         exercises: [
             { type: "fill", prompt: "Je ___ de Paris.", answer: "viens", options: ["viens", "vient", "venons", "viennent"] },

@@ -163,6 +163,7 @@ const app = {
 
         this.renderFrenchTab(lesson);
         this.renderHistoryTab(lesson);
+        this.renderVocabTab(lesson);
         this.renderNewsTab(lesson);
         this.resetPractice(lesson);
     },
@@ -397,6 +398,114 @@ const app = {
             document.getElementById('algeria-live-badge').classList.add('hidden');
             algeriaList.innerHTML = '<div class="news-loading">Algerian news unavailable right now</div>';
         });
+    },
+
+    // ===== VOCABULARY TAB =====
+    renderVocabTab(lesson) {
+        const grid = document.getElementById('vocab-grid');
+        grid.innerHTML = '';
+
+        if (!lesson.vocabulary || lesson.vocabulary.length === 0) {
+            grid.innerHTML = '<p style="color:var(--text-light);text-align:center;padding:20px;">No vocabulary for this lesson yet.</p>';
+            return;
+        }
+
+        lesson.vocabulary.forEach((v, idx) => {
+            const card = document.createElement('div');
+            card.className = 'vocab-card';
+            card.onclick = () => this.openWordDetail(idx);
+
+            const hasHomonyms = v.homonyms && v.homonyms.length > 0;
+            const hasSynonyms = v.synonyms && v.synonyms.length > 0;
+            const badges = [];
+            if (hasHomonyms) badges.push('homonyms');
+            if (hasSynonyms) badges.push('synonyms');
+
+            card.innerHTML = `
+                <div class="vocab-card-top">
+                    <span class="vocab-card-word">${v.word}</span>
+                    <span class="vocab-card-pos">${v.partOfSpeech}</span>
+                </div>
+                <div class="vocab-card-meaning">${v.meaning}</div>
+                <div class="vocab-card-example">
+                    <div class="vocab-card-fr">${v.example.fr}</div>
+                    <div class="vocab-card-en">${v.example.en}</div>
+                </div>
+                ${badges.length > 0 ? `<div class="vocab-card-badges">${badges.map(b => `<span class="vocab-badge">${b}</span>`).join('')}<span class="vocab-tap-hint">tap to explore</span></div>` : ''}
+            `;
+            grid.appendChild(card);
+        });
+    },
+
+    openWordDetail(wordIndex) {
+        const lesson = this.currentLesson;
+        if (!lesson || !lesson.vocabulary) return;
+        const v = lesson.vocabulary[wordIndex];
+        if (!v) return;
+
+        const header = document.getElementById('modal-word-header');
+        header.innerHTML = `
+            <h2>${v.word}</h2>
+            <span class="modal-pos">${v.partOfSpeech}</span>
+            <p class="modal-meaning">${v.meaning}</p>
+        `;
+
+        const example = document.getElementById('modal-example');
+        example.innerHTML = `
+            <div class="modal-example-label">Example</div>
+            <div class="modal-example-fr">${v.example.fr}</div>
+            <div class="modal-example-en">${v.example.en}</div>
+        `;
+
+        const homonymsEl = document.getElementById('modal-homonyms');
+        if (v.homonyms && v.homonyms.length > 0) {
+            homonymsEl.innerHTML = `
+                <h3>Homonyms</h3>
+                <p class="modal-section-desc">Words that sound or look the same but have different meanings</p>
+                ${v.homonyms.map(h => `
+                    <div class="modal-word-item homonym-item">
+                        <div class="modal-item-word">${h.word}</div>
+                        <div class="modal-item-meaning">${h.meaning}</div>
+                        ${h.example ? `<div class="modal-item-example">${h.example}</div>` : ''}
+                    </div>
+                `).join('')}
+            `;
+        } else {
+            homonymsEl.innerHTML = `
+                <h3>Homonyms</h3>
+                <p class="modal-section-empty">No common homonyms for this word</p>
+            `;
+        }
+
+        const synonymsEl = document.getElementById('modal-synonyms');
+        if (v.synonyms && v.synonyms.length > 0) {
+            synonymsEl.innerHTML = `
+                <h3>Synonyms</h3>
+                <p class="modal-section-desc">Words with similar meanings</p>
+                <div class="synonym-chips">
+                    ${v.synonyms.map(s => `
+                        <div class="synonym-chip">
+                            <span class="synonym-word">${s.word}</span>
+                            <span class="synonym-meaning">${s.meaning}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        } else {
+            synonymsEl.innerHTML = `
+                <h3>Synonyms</h3>
+                <p class="modal-section-empty">No common synonyms listed</p>
+            `;
+        }
+
+        document.getElementById('word-detail-overlay').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    },
+
+    closeWordDetail(event) {
+        if (event && event.target !== event.currentTarget && !event.target.classList.contains('modal-close')) return;
+        document.getElementById('word-detail-overlay').classList.add('hidden');
+        document.body.style.overflow = '';
     },
 
     revealTranslation() {
