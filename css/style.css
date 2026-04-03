@@ -1213,3 +1213,74 @@ body {
     from { opacity: 0; transform: scale(0.5) rotate(-5deg); }
     to { opacity: 1; transform: scale(1) rotate(0deg); }
 }
+
+/* ===== Speak Buttons (Text-to-Speech) ===== */
+.speak-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 15px;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 6px;
+    padding: 0;
+    transition: all var(--transition);
+    flex-shrink: 0;
+}
+
+.speak-btn:hover {
+    background: var(--gold-light);
+    transform: scale(1.15);
+}
+
+.speak-btn:active {
+    transform: scale(0.95);
+}
+
+/* Speak buttons inside conjugation items */
+.conj-item {
+    display: flex;
+    align-items: center;
+}
+
+.conj-item .speak-btn {
+    margin-left: auto;
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+}
+
+/* Speak buttons inside vocab chips */
+.vocab-chip {
+    display: inline-flex;
+    align-items: center;
+}
+
+.vocab-chip .speak-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    margin-left: 4px;
+    margin-right: 2px;
+}
+
+/* Speak buttons on dark backgrounds (news, history) */
+.news-fr .speak-btn,
+.event-fr .speak-btn,
+#history-fr .speak-btn {
+    background: rgba(212, 168, 67, 0.3);
+    color: var(--gold);
+}
+
+.news-fr .speak-btn:hover,
+.event-fr .speak-btn:hover,
+#history-fr .speak-btn:hover {
+    background: var(--gold);
+    color: var(--navy);
+}

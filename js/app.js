@@ -210,7 +210,7 @@ const app = {
         const h = lesson.history;
 
         document.getElementById('history-period').textContent = h.period;
-        document.getElementById('history-fr').textContent = h.fr;
+        document.getElementById('history-fr').innerHTML = h.fr + ' ' + speakBtn(h.fr);
         document.getElementById('history-en').textContent = h.en;
 
         // Vocab chips
@@ -220,6 +220,7 @@ const app = {
             vocabEl.innerHTML += `
                 <div class="vocab-chip">
                     <span class="vocab-word">${v.word}</span>
+                    ${speakBtn(v.word)}
                     <span class="vocab-meaning"> = ${v.meaning}</span>
                 </div>
             `;
@@ -313,7 +314,7 @@ const app = {
             item.innerHTML = `
                 <div class="news-number">${i + 1}</div>
                 <div class="news-content">
-                    <div class="news-fr">${article.title}</div>
+                    <div class="news-fr">${article.title} ${speakBtn(article.title)}</div>
                     ${article.en ? `<div class="news-en">${article.en}</div>` : ''}
                     <div class="news-date">${article.date}</div>
                 </div>
@@ -348,7 +349,7 @@ const app = {
                     item.innerHTML = `
                         <div class="news-number">${i + 1}</div>
                         <div class="news-content">
-                            <div class="news-fr">${ev.fr}</div>
+                            <div class="news-fr">${ev.fr} ${speakBtn(ev.fr)}</div>
                             <div class="news-en">${ev.en}</div>
                         </div>
                     `;

@@ -77,6 +77,44 @@ const LESSONS = [
             { fr: "Les pays européens investissent dans les énergies renouvelables.", en: "European countries are investing in renewable energy." },
             { fr: "Le musée du Louvre bat des records de fréquentation avec plus de dix millions de visiteurs.", en: "The Louvre museum breaks attendance records with over ten million visitors." }
         ],
+        vocabulary: [
+            {
+                word: "suis", partOfSpeech: "verb", meaning: "am (from être)",
+                example: { fr: "Je suis prête.", en: "I am ready." },
+                homonyms: [{ word: "suis", meaning: "follow (from suivre)", example: "Je suis le chemin. (I follow the path.)" }],
+                synonyms: [{ word: "existe", meaning: "exist" }, { word: "se trouve", meaning: "find oneself" }]
+            },
+            {
+                word: "est", partOfSpeech: "verb", meaning: "is (from être)",
+                example: { fr: "Elle est française.", en: "She is French." },
+                homonyms: [{ word: "est", meaning: "east (direction)", example: "Paris est à l'est. (Paris is to the east.)" }],
+                synonyms: [{ word: "se trouve", meaning: "is located" }, { word: "reste", meaning: "remains" }]
+            },
+            {
+                word: "prêt", partOfSpeech: "adjective", meaning: "ready",
+                example: { fr: "Nous sommes prêts.", en: "We are ready." },
+                homonyms: [{ word: "prêt", meaning: "a loan (noun)", example: "Il demande un prêt. (He asks for a loan.)" }],
+                synonyms: [{ word: "préparé", meaning: "prepared" }, { word: "disposé", meaning: "willing/disposed" }]
+            },
+            {
+                word: "content", partOfSpeech: "adjective", meaning: "happy/glad",
+                example: { fr: "Ils sont contents.", en: "They are happy." },
+                homonyms: [{ word: "contenu", meaning: "content/contents (noun)", example: "Le contenu du livre. (The contents of the book.)" }],
+                synonyms: [{ word: "heureux", meaning: "happy" }, { word: "joyeux", meaning: "joyful" }, { word: "ravi", meaning: "delighted" }]
+            },
+            {
+                word: "avocate", partOfSpeech: "noun (f)", meaning: "lawyer (female)",
+                example: { fr: "Je suis avocate.", en: "I am a lawyer." },
+                homonyms: [{ word: "avocat", meaning: "avocado (fruit)", example: "Je mange un avocat. (I eat an avocado.)" }],
+                synonyms: [{ word: "juriste", meaning: "jurist" }, { word: "conseillère juridique", meaning: "legal advisor" }]
+            },
+            {
+                word: "en retard", partOfSpeech: "expression", meaning: "late",
+                example: { fr: "Vous êtes en retard.", en: "You are late." },
+                homonyms: [],
+                synonyms: [{ word: "tardif", meaning: "tardy/late" }, { word: "en décalage", meaning: "behind schedule" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ avocate.", answer: "suis", options: ["suis", "es", "est", "sommes"] },
             { type: "fill", prompt: "Nous ___ prêts pour l'examen.", answer: "sommes", options: ["êtes", "suis", "sommes", "sont"] },
@@ -169,6 +207,44 @@ const LESSONS = [
             { fr: "Le changement climatique menace les sites historiques dans le monde entier.", en: "Climate change threatens historic sites around the world." },
             { fr: "Les musées utilisent la réalité virtuelle pour montrer l'histoire ancienne.", en: "Museums are using virtual reality to showcase ancient history." },
             { fr: "Le Grand Musée égyptien ouvre ses portes au Caire près des pyramides de Gizeh.", en: "The Grand Egyptian Museum opens its doors in Cairo near the Giza pyramids." }
+        ],
+        vocabulary: [
+            {
+                word: "faim", partOfSpeech: "noun (f)", meaning: "hunger",
+                example: { fr: "J'ai faim.", en: "I am hungry." },
+                homonyms: [{ word: "fin", meaning: "end / thin", example: "C'est la fin du film. (It's the end of the movie.)" }],
+                synonyms: [{ word: "appétit", meaning: "appetite" }, { word: "fringale", meaning: "craving" }]
+            },
+            {
+                word: "raison", partOfSpeech: "noun (f)", meaning: "reason / right",
+                example: { fr: "Tu as raison.", en: "You are right." },
+                homonyms: [],
+                synonyms: [{ word: "motif", meaning: "motive" }, { word: "cause", meaning: "cause" }]
+            },
+            {
+                word: "besoin", partOfSpeech: "noun (m)", meaning: "need",
+                example: { fr: "Nous avons besoin d'aide.", en: "We need help." },
+                homonyms: [],
+                synonyms: [{ word: "nécessité", meaning: "necessity" }, { word: "exigence", meaning: "requirement" }]
+            },
+            {
+                word: "chance", partOfSpeech: "noun (f)", meaning: "luck",
+                example: { fr: "Vous avez de la chance.", en: "You are lucky." },
+                homonyms: [{ word: "chance", meaning: "chance/opportunity (in English loanword context)", example: "Donne-moi une chance. (Give me a chance.)" }],
+                synonyms: [{ word: "fortune", meaning: "fortune" }, { word: "veine", meaning: "luck (informal)" }]
+            },
+            {
+                word: "ans", partOfSpeech: "noun (m pl)", meaning: "years (of age)",
+                example: { fr: "Elle a trente ans.", en: "She is thirty years old." },
+                homonyms: [],
+                synonyms: [{ word: "années", meaning: "years (duration)" }]
+            },
+            {
+                word: "donner", partOfSpeech: "verb", meaning: "to give",
+                example: { fr: "Je te donne mon numéro.", en: "I give you my number." },
+                homonyms: [],
+                synonyms: [{ word: "offrir", meaning: "to offer" }, { word: "fournir", meaning: "to provide" }]
+            }
         ],
         exercises: [
             { type: "fill", prompt: "J'___ une question importante.", answer: "ai", options: ["ai", "as", "a", "avons"] },
@@ -263,6 +339,44 @@ const LESSONS = [
             { fr: "Le tourisme culturel reprend en Europe après la pandémie.", en: "Cultural tourism is recovering in Europe after the pandemic." },
             { fr: "Des œuvres de Léonard de Vinci sont exposées dans une nouvelle exposition immersive à Milan.", en: "Works by Leonardo da Vinci are displayed in a new immersive exhibition in Milan." }
         ],
+        vocabulary: [
+            {
+                word: "aller", partOfSpeech: "verb", meaning: "to go",
+                example: { fr: "Je vais au bureau.", en: "I'm going to the office." },
+                homonyms: [],
+                synonyms: [{ word: "se rendre", meaning: "to head to" }, { word: "partir", meaning: "to leave/depart" }]
+            },
+            {
+                word: "venir", partOfSpeech: "verb", meaning: "to come",
+                example: { fr: "Tu viens avec nous ?", en: "Are you coming with us?" },
+                homonyms: [],
+                synonyms: [{ word: "arriver", meaning: "to arrive" }, { word: "se présenter", meaning: "to show up" }]
+            },
+            {
+                word: "bureau", partOfSpeech: "noun (m)", meaning: "office / desk",
+                example: { fr: "Je vais au bureau.", en: "I'm going to the office." },
+                homonyms: [{ word: "bureau", meaning: "desk (furniture)", example: "Le livre est sur le bureau. (The book is on the desk.)" }],
+                synonyms: [{ word: "cabinet", meaning: "office (professional)" }, { word: "lieu de travail", meaning: "workplace" }]
+            },
+            {
+                word: "cinéma", partOfSpeech: "noun (m)", meaning: "cinema / movies",
+                example: { fr: "Ils vont au cinéma.", en: "They are going to the cinema." },
+                homonyms: [],
+                synonyms: [{ word: "salle de cinéma", meaning: "movie theater" }, { word: "film", meaning: "film/movie" }]
+            },
+            {
+                word: "marcher", partOfSpeech: "verb", meaning: "to walk",
+                example: { fr: "Je marche dans la rue.", en: "I walk in the street." },
+                homonyms: [{ word: "marcher", meaning: "to work/function", example: "Mon téléphone ne marche pas. (My phone doesn't work.)" }],
+                synonyms: [{ word: "se promener", meaning: "to stroll" }, { word: "avancer", meaning: "to advance" }]
+            },
+            {
+                word: "retourner", partOfSpeech: "verb", meaning: "to return / go back",
+                example: { fr: "Je retourne en Italie.", en: "I'm going back to Italy." },
+                homonyms: [{ word: "retourner", meaning: "to flip/turn over", example: "Retourne la crêpe. (Flip the crêpe.)" }],
+                synonyms: [{ word: "revenir", meaning: "to come back" }, { word: "rentrer", meaning: "to go home" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ au restaurant ce soir.", answer: "vais", options: ["vais", "vas", "va", "allons"] },
             { type: "fill", prompt: "Nous ___ étudier le français.", answer: "allons", options: ["allons", "allez", "vont", "vais"] },
@@ -355,6 +469,44 @@ const LESSONS = [
             { fr: "Le télétravail change la façon dont les gens travaillent dans le monde.", en: "Remote work is changing how people work around the world." },
             { fr: "Les femmes occupent de plus en plus de postes de direction dans les entreprises.", en: "Women are holding more and more leadership positions in companies." },
             { fr: "Des historiens utilisent la technologie pour identifier des soldats inconnus de la Grande Guerre.", en: "Historians are using technology to identify unknown soldiers from the Great War." }
+        ],
+        vocabulary: [
+            {
+                word: "faire", partOfSpeech: "verb", meaning: "to do / to make",
+                example: { fr: "Je fais du sport.", en: "I do sports." },
+                homonyms: [],
+                synonyms: [{ word: "réaliser", meaning: "to carry out" }, { word: "effectuer", meaning: "to perform" }]
+            },
+            {
+                word: "beau", partOfSpeech: "adjective", meaning: "beautiful / nice (weather)",
+                example: { fr: "Il fait beau aujourd'hui.", en: "The weather is nice today." },
+                homonyms: [],
+                synonyms: [{ word: "joli", meaning: "pretty" }, { word: "magnifique", meaning: "magnificent" }, { word: "splendide", meaning: "splendid" }]
+            },
+            {
+                word: "froid", partOfSpeech: "adjective/noun", meaning: "cold",
+                example: { fr: "Il fait froid en hiver.", en: "It's cold in winter." },
+                homonyms: [],
+                synonyms: [{ word: "glacial", meaning: "icy/freezing" }, { word: "frais", meaning: "cool/fresh" }]
+            },
+            {
+                word: "travailler", partOfSpeech: "verb", meaning: "to work",
+                example: { fr: "Je travaille dans un bureau.", en: "I work in an office." },
+                homonyms: [],
+                synonyms: [{ word: "bosser", meaning: "to work (informal)" }, { word: "œuvrer", meaning: "to labor" }]
+            },
+            {
+                word: "jouer", partOfSpeech: "verb", meaning: "to play",
+                example: { fr: "Les enfants jouent dans le parc.", en: "The children play in the park." },
+                homonyms: [],
+                synonyms: [{ word: "s'amuser", meaning: "to have fun" }]
+            },
+            {
+                word: "guerre", partOfSpeech: "noun (f)", meaning: "war",
+                example: { fr: "La Première Guerre mondiale.", en: "World War I." },
+                homonyms: [],
+                synonyms: [{ word: "conflit", meaning: "conflict" }, { word: "bataille", meaning: "battle" }, { word: "combat", meaning: "combat" }]
+            }
         ],
         exercises: [
             { type: "fill", prompt: "Je ___ du yoga chaque matin.", answer: "fais", options: ["fais", "fait", "faisons", "font"] },
@@ -449,6 +601,44 @@ const LESSONS = [
             { fr: "Le droit international évolue pour répondre aux nouveaux conflits.", en: "International law is evolving to address new conflicts." },
             { fr: "La France commémore le bicentenaire de la mort de Napoléon avec des expositions nationales.", en: "France commemorates the bicentenary of Napoleon's death with national exhibitions." }
         ],
+        vocabulary: [
+            {
+                word: "pouvoir", partOfSpeech: "verb", meaning: "to be able to / can",
+                example: { fr: "Je peux vous aider.", en: "I can help you." },
+                homonyms: [{ word: "pouvoir", meaning: "power (noun)", example: "Le pouvoir du roi. (The power of the king.)" }],
+                synonyms: [{ word: "être capable de", meaning: "to be capable of" }]
+            },
+            {
+                word: "vouloir", partOfSpeech: "verb", meaning: "to want",
+                example: { fr: "Tu veux un café ?", en: "Do you want a coffee?" },
+                homonyms: [],
+                synonyms: [{ word: "désirer", meaning: "to desire" }, { word: "souhaiter", meaning: "to wish" }]
+            },
+            {
+                word: "savoir", partOfSpeech: "verb", meaning: "to know (a fact/how to)",
+                example: { fr: "Je sais nager.", en: "I know how to swim." },
+                homonyms: [{ word: "savoir", meaning: "knowledge (noun)", example: "Le savoir est précieux. (Knowledge is precious.)" }],
+                synonyms: [{ word: "connaître", meaning: "to know (person/place)" }]
+            },
+            {
+                word: "devoir", partOfSpeech: "verb", meaning: "to must / to have to",
+                example: { fr: "Je dois partir.", en: "I have to leave." },
+                homonyms: [{ word: "devoir", meaning: "homework / duty (noun)", example: "Fais tes devoirs ! (Do your homework!)" }],
+                synonyms: [{ word: "être obligé de", meaning: "to be obligated to" }, { word: "falloir", meaning: "to be necessary" }]
+            },
+            {
+                word: "choisir", partOfSpeech: "verb", meaning: "to choose",
+                example: { fr: "Je choisis le menu du jour.", en: "I choose the daily special." },
+                homonyms: [],
+                synonyms: [{ word: "sélectionner", meaning: "to select" }, { word: "opter pour", meaning: "to opt for" }]
+            },
+            {
+                word: "empereur", partOfSpeech: "noun (m)", meaning: "emperor",
+                example: { fr: "Il est devenu empereur.", en: "He became emperor." },
+                homonyms: [],
+                synonyms: [{ word: "souverain", meaning: "sovereign" }, { word: "monarque", meaning: "monarch" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ vous aider.", answer: "peux", options: ["peux", "veux", "peut", "paux"] },
             { type: "fill", prompt: "Elle ___ un verre d'eau.", answer: "veut", options: ["veut", "peut", "veux", "voulez"] },
@@ -541,6 +731,44 @@ const LESSONS = [
             { fr: "La démocratie fait face à de nouveaux défis dans le monde numérique.", en: "Democracy faces new challenges in the digital world." },
             { fr: "Les philosophes modernes débattent de l'éthique de l'intelligence artificielle.", en: "Modern philosophers debate the ethics of artificial intelligence." },
             { fr: "Des archéologues découvrent de nouveaux trésors dans les ruines de temples grecs anciens.", en: "Archaeologists discover new treasures in the ruins of ancient Greek temples." }
+        ],
+        vocabulary: [
+            {
+                word: "jamais", partOfSpeech: "adverb", meaning: "never",
+                example: { fr: "Elle ne mange jamais de viande.", en: "She never eats meat." },
+                homonyms: [{ word: "jamais", meaning: "ever (in questions)", example: "As-tu jamais vu ça ? (Have you ever seen that?)" }],
+                synonyms: [{ word: "à aucun moment", meaning: "at no point" }]
+            },
+            {
+                word: "rien", partOfSpeech: "pronoun", meaning: "nothing",
+                example: { fr: "Il n'y a rien ici.", en: "There is nothing here." },
+                homonyms: [],
+                synonyms: [{ word: "néant", meaning: "nothingness" }]
+            },
+            {
+                word: "personne", partOfSpeech: "pronoun/noun", meaning: "nobody / a person",
+                example: { fr: "Je ne connais personne.", en: "I don't know anyone." },
+                homonyms: [{ word: "personne", meaning: "a person (noun)", example: "Cette personne est gentille. (This person is kind.)" }],
+                synonyms: [{ word: "nul", meaning: "no one" }, { word: "aucun", meaning: "not any" }]
+            },
+            {
+                word: "comprendre", partOfSpeech: "verb", meaning: "to understand",
+                example: { fr: "Je ne comprends pas.", en: "I don't understand." },
+                homonyms: [],
+                synonyms: [{ word: "saisir", meaning: "to grasp" }, { word: "capter", meaning: "to get (informal)" }]
+            },
+            {
+                word: "connaître", partOfSpeech: "verb", meaning: "to know (person/place)",
+                example: { fr: "Tu connais Marie ?", en: "Do you know Marie?" },
+                homonyms: [],
+                synonyms: [{ word: "savoir", meaning: "to know (fact)" }, { word: "reconnaître", meaning: "to recognize" }]
+            },
+            {
+                word: "démocratie", partOfSpeech: "noun (f)", meaning: "democracy",
+                example: { fr: "La démocratie n'existait nulle part ailleurs.", en: "Democracy didn't exist anywhere else." },
+                homonyms: [],
+                synonyms: [{ word: "république", meaning: "republic" }, { word: "régime démocratique", meaning: "democratic system" }]
+            }
         ],
         exercises: [
             { type: "fill", prompt: "Je ne ___ pas français.", answer: "parle", options: ["parle", "parles", "parlons", "parlent"] },
@@ -635,6 +863,38 @@ const LESSONS = [
             { fr: "L'Inde et la Chine développent leurs programmes spatiaux rapidement.", en: "India and China are rapidly developing their space programs." },
             { fr: "La station spatiale internationale accueille des expériences scientifiques de dizaines de pays.", en: "The International Space Station hosts scientific experiments from dozens of countries." }
         ],
+        vocabulary: [
+            {
+                word: "mangé", partOfSpeech: "past participle", meaning: "eaten (from manger)",
+                example: { fr: "J'ai mangé un croissant.", en: "I ate a croissant." },
+                homonyms: [],
+                synonyms: [{ word: "dévoré", meaning: "devoured" }, { word: "consommé", meaning: "consumed" }]
+            },
+            {
+                word: "allé", partOfSpeech: "past participle", meaning: "gone (from aller)",
+                example: { fr: "Nous sommes allés au musée.", en: "We went to the museum." },
+                homonyms: [{ word: "allée", meaning: "path/walkway (noun)", example: "L'allée du jardin. (The garden path.)" }],
+                synonyms: [{ word: "parti", meaning: "left/departed" }]
+            },
+            {
+                word: "compris", partOfSpeech: "past participle", meaning: "understood (from comprendre)",
+                example: { fr: "Elle a compris la leçon.", en: "She understood the lesson." },
+                homonyms: [{ word: "compris", meaning: "included", example: "Service compris. (Service included.)" }],
+                synonyms: [{ word: "saisi", meaning: "grasped" }, { word: "assimilé", meaning: "assimilated" }]
+            },
+            {
+                word: "née", partOfSpeech: "past participle (f)", meaning: "born",
+                example: { fr: "Elle est née en France.", en: "She was born in France." },
+                homonyms: [{ word: "nez", meaning: "nose", example: "Il a un grand nez. (He has a big nose.)" }],
+                synonyms: []
+            },
+            {
+                word: "arrivée", partOfSpeech: "past participle (f) / noun", meaning: "arrived / arrival",
+                example: { fr: "Tu es arrivée en retard.", en: "You arrived late." },
+                homonyms: [{ word: "arrivée", meaning: "arrival (noun)", example: "L'arrivée du train. (The arrival of the train.)" }],
+                synonyms: [{ word: "venue", meaning: "coming" }, { word: "parvenue", meaning: "reached" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "J'ai ___ un bon livre hier.", answer: "lu", options: ["lu", "lire", "lis", "lit"] },
             { type: "fill", prompt: "Elle est ___ au cinéma.", answer: "allée", options: ["allée", "allé", "aller", "allés"] },
@@ -727,6 +987,44 @@ const LESSONS = [
             { fr: "Les universités françaises modernisent leurs programmes pour attirer des étudiants internationaux.", en: "French universities are modernizing their programs to attract international students." },
             { fr: "La pensée critique est considérée comme une compétence essentielle dans l'éducation moderne.", en: "Critical thinking is considered an essential skill in modern education." },
             { fr: "Des intellectuels du monde entier se réunissent pour discuter de l'avenir de la démocratie.", en: "Intellectuals from around the world gather to discuss the future of democracy." }
+        ],
+        vocabulary: [
+            {
+                word: "où", partOfSpeech: "adverb", meaning: "where",
+                example: { fr: "Où est-ce que tu habites ?", en: "Where do you live?" },
+                homonyms: [{ word: "ou", meaning: "or (conjunction, no accent)", example: "Thé ou café ? (Tea or coffee?)" }],
+                synonyms: []
+            },
+            {
+                word: "comment", partOfSpeech: "adverb", meaning: "how",
+                example: { fr: "Comment allez-vous ?", en: "How are you?" },
+                homonyms: [],
+                synonyms: [{ word: "de quelle manière", meaning: "in what way" }]
+            },
+            {
+                word: "pourquoi", partOfSpeech: "adverb", meaning: "why",
+                example: { fr: "Pourquoi tu apprends le français ?", en: "Why are you learning French?" },
+                homonyms: [],
+                synonyms: [{ word: "pour quelle raison", meaning: "for what reason" }]
+            },
+            {
+                word: "quand", partOfSpeech: "adverb", meaning: "when",
+                example: { fr: "Quand est-ce que tu pars ?", en: "When are you leaving?" },
+                homonyms: [{ word: "quant", meaning: "as for (quant à)", example: "Quant à moi, je reste. (As for me, I'm staying.)" }],
+                synonyms: [{ word: "à quel moment", meaning: "at what moment" }]
+            },
+            {
+                word: "combien", partOfSpeech: "adverb", meaning: "how much / how many",
+                example: { fr: "Combien ça coûte ?", en: "How much does it cost?" },
+                homonyms: [],
+                synonyms: [{ word: "quel prix", meaning: "what price" }]
+            },
+            {
+                word: "est-ce que", partOfSpeech: "expression", meaning: "question marker (do/does/is)",
+                example: { fr: "Est-ce que tu parles français ?", en: "Do you speak French?" },
+                homonyms: [],
+                synonyms: []
+            }
         ],
         exercises: [
             { type: "fill", prompt: "___ est-ce que tu habites ?", answer: "Où", options: ["Où", "Qui", "Quand", "Comment"] },
@@ -821,6 +1119,44 @@ const LESSONS = [
             { fr: "Les châteaux forts de France sont de plus en plus visités grâce aux réseaux sociaux.", en: "France's medieval castles are increasingly visited thanks to social media." },
             { fr: "Les historiens utilisent l'intelligence artificielle pour déchiffrer des manuscrits médiévaux.", en: "Historians are using artificial intelligence to decipher medieval manuscripts." }
         ],
+        vocabulary: [
+            {
+                word: "bonjour", partOfSpeech: "interjection", meaning: "hello / good morning",
+                example: { fr: "Bonjour, comment allez-vous ?", en: "Hello, how are you?" },
+                homonyms: [],
+                synonyms: [{ word: "salut", meaning: "hi (informal)" }, { word: "coucou", meaning: "hey (familiar)" }]
+            },
+            {
+                word: "s'il vous plaît", partOfSpeech: "expression", meaning: "please (formal)",
+                example: { fr: "Un café, s'il vous plaît.", en: "A coffee, please." },
+                homonyms: [],
+                synonyms: [{ word: "s'il te plaît", meaning: "please (informal)" }]
+            },
+            {
+                word: "merci", partOfSpeech: "interjection", meaning: "thank you",
+                example: { fr: "Merci beaucoup !", en: "Thank you very much!" },
+                homonyms: [],
+                synonyms: [{ word: "je vous remercie", meaning: "I thank you (formal)" }]
+            },
+            {
+                word: "excusez-moi", partOfSpeech: "expression", meaning: "excuse me",
+                example: { fr: "Excusez-moi, où est la gare ?", en: "Excuse me, where is the station?" },
+                homonyms: [],
+                synonyms: [{ word: "pardon", meaning: "sorry/pardon" }, { word: "pardonnez-moi", meaning: "forgive me" }]
+            },
+            {
+                word: "gare", partOfSpeech: "noun (f)", meaning: "train station",
+                example: { fr: "La gare est à gauche.", en: "The station is on the left." },
+                homonyms: [{ word: "gare !", meaning: "watch out! (interjection)", example: "Gare à toi ! (Watch out!)" }],
+                synonyms: [{ word: "station", meaning: "station (metro)" }]
+            },
+            {
+                word: "addition", partOfSpeech: "noun (f)", meaning: "the bill/check (restaurant)",
+                example: { fr: "L'addition, s'il vous plaît.", en: "The check, please." },
+                homonyms: [{ word: "addition", meaning: "addition (math)", example: "Faire une addition. (To do an addition.)" }],
+                synonyms: [{ word: "note", meaning: "bill" }, { word: "facture", meaning: "invoice" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "Excusez-moi, ___ se trouve la gare ?", answer: "où", options: ["où", "qui", "que", "comment"] },
             { type: "fill", prompt: "Je voudrais ___ une table pour deux.", answer: "réserver", options: ["réserver", "manger", "trouver", "acheter"] },
@@ -913,6 +1249,38 @@ const LESSONS = [
             { fr: "Les débats sur les droits constitutionnels restent au cœur de la politique américaine.", en: "Debates over constitutional rights remain at the heart of American politics." },
             { fr: "La relation diplomatique entre la France et les États-Unis continue d'évoluer au XXIe siècle.", en: "The diplomatic relationship between France and the United States continues to evolve in the 21st century." },
             { fr: "De nouveaux musées consacrés à l'histoire de la Révolution américaine ouvrent leurs portes.", en: "New museums dedicated to the history of the American Revolution are opening their doors." }
+        ],
+        vocabulary: [
+            {
+                word: "penser", partOfSpeech: "verb", meaning: "to think",
+                example: { fr: "Je pense que c'est vrai.", en: "I think that it's true." },
+                homonyms: [{ word: "panser", meaning: "to bandage/dress (a wound)", example: "Panser une blessure. (To dress a wound.)" }],
+                synonyms: [{ word: "croire", meaning: "to believe" }, { word: "réfléchir", meaning: "to reflect" }]
+            },
+            {
+                word: "avis", partOfSpeech: "noun (m)", meaning: "opinion",
+                example: { fr: "À mon avis, c'est important.", en: "In my opinion, it's important." },
+                homonyms: [],
+                synonyms: [{ word: "opinion", meaning: "opinion" }, { word: "point de vue", meaning: "point of view" }]
+            },
+            {
+                word: "trouver", partOfSpeech: "verb", meaning: "to find / to think (opinion)",
+                example: { fr: "Je trouve que c'est intéressant.", en: "I find that it's interesting." },
+                homonyms: [],
+                synonyms: [{ word: "considérer", meaning: "to consider" }, { word: "estimer", meaning: "to estimate/judge" }]
+            },
+            {
+                word: "accord", partOfSpeech: "noun (m)", meaning: "agreement",
+                example: { fr: "Je suis d'accord avec toi.", en: "I agree with you." },
+                homonyms: [{ word: "accord", meaning: "chord (music)", example: "Un accord de guitare. (A guitar chord.)" }],
+                synonyms: [{ word: "entente", meaning: "understanding" }, { word: "consensus", meaning: "consensus" }]
+            },
+            {
+                word: "raison", partOfSpeech: "noun (f)", meaning: "reason / right",
+                example: { fr: "Tu as raison.", en: "You are right." },
+                homonyms: [],
+                synonyms: [{ word: "motif", meaning: "motive" }, { word: "cause", meaning: "cause" }]
+            }
         ],
         exercises: [
             { type: "fill", prompt: "Je ___ que c'est une bonne idée.", answer: "pense", options: ["pense", "suis", "trouve", "vais"] },
@@ -1007,6 +1375,38 @@ const LESSONS = [
             { fr: "L\'Italie restaure des œuvres d\'art célèbres de la Renaissance.", en: "Italy restores famous Renaissance artworks." },
             { fr: "Les écoles européennes apprennent l\'histoire de la Renaissance avec des outils numériques.", en: "European schools learn Renaissance history with digital tools." }
         ],
+        vocabulary: [
+            {
+                word: "savoir", partOfSpeech: "verb", meaning: "to know (fact/how to)",
+                example: { fr: "Je sais parler français.", en: "I know how to speak French." },
+                homonyms: [{ word: "savoir", meaning: "knowledge (noun)", example: "Le savoir est important. (Knowledge is important.)" }],
+                synonyms: [{ word: "connaître", meaning: "to know (person/place)" }]
+            },
+            {
+                word: "connaître", partOfSpeech: "verb", meaning: "to know (person/place)",
+                example: { fr: "Elle connaît bien Paris.", en: "She knows Paris well." },
+                homonyms: [],
+                synonyms: [{ word: "reconnaître", meaning: "to recognize" }, { word: "être familier avec", meaning: "to be familiar with" }]
+            },
+            {
+                word: "réponse", partOfSpeech: "noun (f)", meaning: "answer",
+                example: { fr: "Tu sais la réponse ?", en: "Do you know the answer?" },
+                homonyms: [],
+                synonyms: [{ word: "solution", meaning: "solution" }, { word: "résultat", meaning: "result" }]
+            },
+            {
+                word: "peindre", partOfSpeech: "verb", meaning: "to paint",
+                example: { fr: "Il sait peindre.", en: "He knows how to paint." },
+                homonyms: [],
+                synonyms: [{ word: "dessiner", meaning: "to draw" }, { word: "illustrer", meaning: "to illustrate" }]
+            },
+            {
+                word: "œuvre", partOfSpeech: "noun (f)", meaning: "work (of art)",
+                example: { fr: "Les œuvres de Michel-Ange.", en: "The works of Michelangelo." },
+                homonyms: [],
+                synonyms: [{ word: "création", meaning: "creation" }, { word: "chef-d'œuvre", meaning: "masterpiece" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ parler trois langues.", answer: "sais", options: ["sais", "connais", "savons", "connaît"] },
             { type: "fill", prompt: "Elle ___ bien cette ville.", answer: "connaît", options: ["sait", "connaît", "savez", "connaissent"] },
@@ -1099,6 +1499,38 @@ const LESSONS = [
             { fr: "Les historiens débattent de l'héritage de Napoléon en Europe.", en: "Historians debate Napoleon's legacy in Europe." },
             { fr: "Un nouveau film sur Napoléon attire des millions de spectateurs.", en: "A new film about Napoleon attracts millions of viewers." },
             { fr: "Les archéologues découvrent des artefacts de la campagne de Russie.", en: "Archaeologists discover artifacts from the Russian campaign." }
+        ],
+        vocabulary: [
+            {
+                word: "prendre", partOfSpeech: "verb", meaning: "to take",
+                example: { fr: "Je prends un café.", en: "I'm having a coffee." },
+                homonyms: [],
+                synonyms: [{ word: "saisir", meaning: "to seize" }, { word: "attraper", meaning: "to catch" }]
+            },
+            {
+                word: "décision", partOfSpeech: "noun (f)", meaning: "decision",
+                example: { fr: "Elle prend une décision.", en: "She is making a decision." },
+                homonyms: [],
+                synonyms: [{ word: "choix", meaning: "choice" }, { word: "résolution", meaning: "resolution" }]
+            },
+            {
+                word: "métro", partOfSpeech: "noun (m)", meaning: "subway/metro",
+                example: { fr: "Tu prends le métro ?", en: "Are you taking the metro?" },
+                homonyms: [],
+                synonyms: [{ word: "transport en commun", meaning: "public transport" }]
+            },
+            {
+                word: "pouvoir", partOfSpeech: "noun (m)", meaning: "power",
+                example: { fr: "Il a pris le pouvoir.", en: "He took power." },
+                homonyms: [{ word: "pouvoir", meaning: "to be able (verb)", example: "Je peux aider. (I can help.)" }],
+                synonyms: [{ word: "autorité", meaning: "authority" }, { word: "puissance", meaning: "might" }]
+            },
+            {
+                word: "avion", partOfSpeech: "noun (m)", meaning: "airplane",
+                example: { fr: "Ils prennent l'avion.", en: "They are taking a plane." },
+                homonyms: [],
+                synonyms: [{ word: "aéronef", meaning: "aircraft" }, { word: "vol", meaning: "flight" }]
+            }
         ],
         exercises: [
             { type: "fill", prompt: "Je ___ un café chaque matin.", answer: "prends", options: ["prends", "prend", "prenons", "prennent"] },
@@ -1436,6 +1868,38 @@ const LESSONS = [
             ],
             funFact: "Leonardo da Vinci wrote his notebooks in mirror writing — you need a mirror to read them!"
         },
+        vocabulary: [
+            {
+                word: "savoir", partOfSpeech: "verb", meaning: "to know (fact/how to)",
+                example: { fr: "Je sais parler français.", en: "I know how to speak French." },
+                homonyms: [{ word: "savoir", meaning: "knowledge (noun)", example: "Le savoir est important. (Knowledge is important.)" }],
+                synonyms: [{ word: "connaître", meaning: "to know (person/place)" }]
+            },
+            {
+                word: "connaître", partOfSpeech: "verb", meaning: "to know (person/place)",
+                example: { fr: "Elle connaît bien Paris.", en: "She knows Paris well." },
+                homonyms: [],
+                synonyms: [{ word: "reconnaître", meaning: "to recognize" }, { word: "être familier avec", meaning: "to be familiar with" }]
+            },
+            {
+                word: "réponse", partOfSpeech: "noun (f)", meaning: "answer",
+                example: { fr: "Tu sais la réponse ?", en: "Do you know the answer?" },
+                homonyms: [],
+                synonyms: [{ word: "solution", meaning: "solution" }, { word: "résultat", meaning: "result" }]
+            },
+            {
+                word: "peindre", partOfSpeech: "verb", meaning: "to paint",
+                example: { fr: "Il sait peindre.", en: "He knows how to paint." },
+                homonyms: [],
+                synonyms: [{ word: "dessiner", meaning: "to draw" }, { word: "illustrer", meaning: "to illustrate" }]
+            },
+            {
+                word: "œuvre", partOfSpeech: "noun (f)", meaning: "work (of art)",
+                example: { fr: "Les œuvres de Michel-Ange.", en: "The works of Michelangelo." },
+                homonyms: [],
+                synonyms: [{ word: "création", meaning: "creation" }, { word: "chef-d'œuvre", meaning: "masterpiece" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ parler trois langues.", answer: "sais", options: ["sais", "connais", "savons", "connaît"] },
             { type: "fill", prompt: "Elle ___ bien cette ville.", answer: "connaît", options: ["sait", "connaît", "savez", "connaissent"] },
@@ -1485,6 +1949,38 @@ const LESSONS = [
             ],
             funFact: "Napoleon was not actually short — he was about 5'7\", which was average height for his time."
         },
+        vocabulary: [
+            {
+                word: "prendre", partOfSpeech: "verb", meaning: "to take",
+                example: { fr: "Je prends un café.", en: "I'm having a coffee." },
+                homonyms: [],
+                synonyms: [{ word: "saisir", meaning: "to seize" }, { word: "attraper", meaning: "to catch" }]
+            },
+            {
+                word: "décision", partOfSpeech: "noun (f)", meaning: "decision",
+                example: { fr: "Elle prend une décision.", en: "She is making a decision." },
+                homonyms: [],
+                synonyms: [{ word: "choix", meaning: "choice" }, { word: "résolution", meaning: "resolution" }]
+            },
+            {
+                word: "métro", partOfSpeech: "noun (m)", meaning: "subway/metro",
+                example: { fr: "Tu prends le métro ?", en: "Are you taking the metro?" },
+                homonyms: [],
+                synonyms: [{ word: "transport en commun", meaning: "public transport" }]
+            },
+            {
+                word: "pouvoir", partOfSpeech: "noun (m)", meaning: "power",
+                example: { fr: "Il a pris le pouvoir.", en: "He took power." },
+                homonyms: [{ word: "pouvoir", meaning: "to be able (verb)", example: "Je peux aider. (I can help.)" }],
+                synonyms: [{ word: "autorité", meaning: "authority" }, { word: "puissance", meaning: "might" }]
+            },
+            {
+                word: "avion", partOfSpeech: "noun (m)", meaning: "airplane",
+                example: { fr: "Ils prennent l'avion.", en: "They are taking a plane." },
+                homonyms: [],
+                synonyms: [{ word: "aéronef", meaning: "aircraft" }, { word: "vol", meaning: "flight" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ un café chaque matin.", answer: "prends", options: ["prends", "prend", "prenons", "prennent"] },
             { type: "fill", prompt: "Ils ___ l'avion à midi.", answer: "prennent", options: ["prend", "prenons", "prenez", "prennent"] },
@@ -1534,6 +2030,38 @@ const LESSONS = [
             ],
             funFact: "Only four original copies of the 1215 Magna Carta survive today — two are held by the British Library."
         },
+        vocabulary: [
+            {
+                word: "devoir", partOfSpeech: "verb", meaning: "to must / to owe",
+                example: { fr: "Je dois étudier.", en: "I must study." },
+                homonyms: [{ word: "devoir", meaning: "homework / duty (noun)", example: "Fais tes devoirs ! (Do your homework!)" }],
+                synonyms: [{ word: "falloir", meaning: "to be necessary" }, { word: "être obligé de", meaning: "to be obligated to" }]
+            },
+            {
+                word: "loi", partOfSpeech: "noun (f)", meaning: "law",
+                example: { fr: "Tu dois respecter la loi.", en: "You must respect the law." },
+                homonyms: [],
+                synonyms: [{ word: "règle", meaning: "rule" }, { word: "droit", meaning: "right/law" }]
+            },
+            {
+                word: "contrat", partOfSpeech: "noun (m)", meaning: "contract",
+                example: { fr: "Vous devez signer le contrat.", en: "You must sign the contract." },
+                homonyms: [],
+                synonyms: [{ word: "accord", meaning: "agreement" }, { word: "pacte", meaning: "pact" }]
+            },
+            {
+                word: "droits", partOfSpeech: "noun (m pl)", meaning: "rights",
+                example: { fr: "Les droits des citoyens.", en: "Citizens' rights." },
+                homonyms: [{ word: "droit", meaning: "straight / right (direction)", example: "Allez tout droit. (Go straight ahead.)" }],
+                synonyms: [{ word: "libertés", meaning: "freedoms" }, { word: "privilèges", meaning: "privileges" }]
+            },
+            {
+                word: "amende", partOfSpeech: "noun (f)", meaning: "fine (penalty)",
+                example: { fr: "Ils doivent payer l'amende.", en: "They must pay the fine." },
+                homonyms: [{ word: "amande", meaning: "almond", example: "Un gâteau aux amandes. (An almond cake.)" }],
+                synonyms: [{ word: "pénalité", meaning: "penalty" }, { word: "contravention", meaning: "ticket/fine" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ finir ce travail avant vendredi.", answer: "dois", options: ["dois", "doit", "devons", "doivent"] },
             { type: "fill", prompt: "Vous ___ signer ici.", answer: "devez", options: ["dois", "doit", "devez", "doivent"] },
@@ -1583,6 +2111,38 @@ const LESSONS = [
             ],
             funFact: "The March on Washington in 1963 drew over 250,000 people — one of the largest political rallies in American history."
         },
+        vocabulary: [
+            {
+                word: "dire", partOfSpeech: "verb", meaning: "to say / to tell",
+                example: { fr: "Je dis la vérité.", en: "I tell the truth." },
+                homonyms: [],
+                synonyms: [{ word: "raconter", meaning: "to tell (a story)" }, { word: "affirmer", meaning: "to affirm" }, { word: "déclarer", meaning: "to declare" }]
+            },
+            {
+                word: "parler", partOfSpeech: "verb", meaning: "to speak / to talk",
+                example: { fr: "Elle parle trois langues.", en: "She speaks three languages." },
+                homonyms: [],
+                synonyms: [{ word: "discuter", meaning: "to discuss" }, { word: "causer", meaning: "to chat" }, { word: "bavarder", meaning: "to chatter" }]
+            },
+            {
+                word: "vérité", partOfSpeech: "noun (f)", meaning: "truth",
+                example: { fr: "Je dis la vérité.", en: "I tell the truth." },
+                homonyms: [],
+                synonyms: [{ word: "réalité", meaning: "reality" }, { word: "fait", meaning: "fact" }]
+            },
+            {
+                word: "discours", partOfSpeech: "noun (m)", meaning: "speech",
+                example: { fr: "Il a fait un discours.", en: "He gave a speech." },
+                homonyms: [],
+                synonyms: [{ word: "allocution", meaning: "address" }, { word: "conférence", meaning: "lecture" }]
+            },
+            {
+                word: "langue", partOfSpeech: "noun (f)", meaning: "language / tongue",
+                example: { fr: "Elle parle trois langues.", en: "She speaks three languages." },
+                homonyms: [{ word: "langue", meaning: "tongue (body part)", example: "Tire la langue. (Stick out your tongue.)" }],
+                synonyms: [{ word: "idiome", meaning: "idiom/language" }, { word: "dialecte", meaning: "dialect" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ toujours la vérité.", answer: "dis", options: ["dis", "dit", "parle", "disons"] },
             { type: "fill", prompt: "Elle ___ français et anglais.", answer: "parle", options: ["dit", "parle", "dis", "parlent"] },
@@ -1632,6 +2192,38 @@ const LESSONS = [
             ],
             funFact: "Over 12 million immigrants were processed at Ellis Island between 1892 and 1954."
         },
+        vocabulary: [
+            {
+                word: "venir", partOfSpeech: "verb", meaning: "to come",
+                example: { fr: "Je viens de France.", en: "I come from France." },
+                homonyms: [],
+                synonyms: [{ word: "arriver", meaning: "to arrive" }, { word: "se présenter", meaning: "to show up" }]
+            },
+            {
+                word: "espoir", partOfSpeech: "noun (m)", meaning: "hope",
+                example: { fr: "Ellis Island est un symbole d'espoir.", en: "Ellis Island is a symbol of hope." },
+                homonyms: [],
+                synonyms: [{ word: "espérance", meaning: "hope/expectation" }, { word: "optimisme", meaning: "optimism" }]
+            },
+            {
+                word: "vie", partOfSpeech: "noun (f)", meaning: "life",
+                example: { fr: "Chercher une vie meilleure.", en: "To seek a better life." },
+                homonyms: [{ word: "vis", meaning: "screw (noun) / live (verb)", example: "Je vis à Paris. (I live in Paris.)" }],
+                synonyms: [{ word: "existence", meaning: "existence" }]
+            },
+            {
+                word: "quitter", partOfSpeech: "verb", meaning: "to leave (a place/person)",
+                example: { fr: "Ils venaient de quitter leur pays.", en: "They had just left their country." },
+                homonyms: [],
+                synonyms: [{ word: "partir de", meaning: "to depart from" }, { word: "abandonner", meaning: "to abandon" }]
+            },
+            {
+                word: "chercher", partOfSpeech: "verb", meaning: "to seek / to look for",
+                example: { fr: "Ils cherchent une vie meilleure.", en: "They are looking for a better life." },
+                homonyms: [],
+                synonyms: [{ word: "rechercher", meaning: "to search for" }, { word: "explorer", meaning: "to explore" }]
+            }
+        ],
         exercises: [
             { type: "fill", prompt: "Je ___ de Paris.", answer: "viens", options: ["viens", "vient", "venons", "viennent"] },
             { type: "fill", prompt: "Nous ___ d'arriver à la maison.", answer: "venons", options: ["viens", "venons", "venez", "viennent"] },
