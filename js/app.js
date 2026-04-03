@@ -7,40 +7,62 @@ function pickFrenchVoice() {
     const voices = window.speechSynthesis.getVoices();
     if (!voices.length) return null;
 
-    // Priority order: native fr-FR > any fr-FR > fr-CA > any fr-*
-    // Prefer voices with "France" or known native names (Amelie, Thomas, etc.)
-    const nativeNames = ['amelie', 'thomas', 'audrey', 'aurelie', 'marie', 'pierre', 'lea', 'hugo', 'chloe', 'nicolas', 'sylvie', 'renaud'];
+    // ONLY French voices — never fall back to English
     const frFR = voices.filter(v => v.lang === 'fr-FR');
     const frAny = voices.filter(v => v.lang.startsWith('fr'));
 
-    // Best: fr-FR voice with a known native French name
-    const native = frFR.find(v => nativeNames.some(n => v.name.toLowerCase().includes(n)));
-    if (native) return native;
+    // Known female French voice names across platforms
+    const femaleNames = ['amelie', 'audrey', 'aurelie', 'marie', 'lea', 'chloe', 'sylvie', 'virginie', 'denise', 'isabelle', 'caroline', 'josephine', 'female'];
+    // Male names to skip
+    const maleNames = ['thomas', 'pierre', 'hugo', 'nicolas', 'renaud', 'male'];
 
-    // Next: any fr-FR voice (not "Google" which can sound robotic)
-    const preferredFR = frFR.find(v => !v.name.toLowerCase().includes('google'));
-    if (preferredFR) return preferredFR;
+    function isFemale(v) {
+        const name = v.name.toLowerCase();
+        return femaleNames.some(n => name.includes(n)) || (!maleNames.some(n => name.includes(n)));
+    }
 
-    // Next: any fr-FR
+    // Best: fr-FR female voice with a known native name
+    const nativeFemale = frFR.find(v => femaleNames.some(n => v.name.toLowerCase().includes(n)));
+    if (nativeFemale) return nativeFemale;
+
+    // Next: fr-FR female (non-Google, which sounds robotic)
+    const femaleFR = frFR.find(v => isFemale(v) && !v.name.toLowerCase().includes('google'));
+    if (femaleFR) return femaleFR;
+
+    // Next: any fr-FR female
+    const anyFemaleFR = frFR.find(v => isFemale(v));
+    if (anyFemaleFR) return anyFemaleFR;
+
+    // Next: any fr-FR at all (still better than English)
     if (frFR.length) return frFR[0];
 
-    // Fallback: fr-CA or other French variant
+    // Fallback: fr-CA or other French variant, prefer female
+    const anyFemaleFr = frAny.find(v => isFemale(v));
+    if (anyFemaleFr) return anyFemaleFr;
     if (frAny.length) return frAny[0];
 
+    // Return null — speak() will refuse rather than use English
     return null;
 }
 
 function speak(text) {
     if (!('speechSynthesis' in window)) return;
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'fr-FR';
-    utterance.rate = 0.7;
-    utterance.pitch = 1.0;
 
     // Use cached voice or find one
     if (!_frenchVoice) _frenchVoice = pickFrenchVoice();
-    if (_frenchVoice) utterance.voice = _frenchVoice;
+
+    // ONLY speak with a French voice — never fall back to English
+    if (!_frenchVoice) {
+        alert('No French voice found on this device.\n\niPhone: Settings > General > Accessibility > Speech > Voices > French\n\nAndroid: Settings > Language > Text-to-Speech > Install French');
+        return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.voice = _frenchVoice;
+    utterance.lang = 'fr-FR';
+    utterance.rate = 0.7;
+    utterance.pitch = 1.0;
 
     window.speechSynthesis.speak(utterance);
 }
@@ -172,9 +194,25 @@ const app = {
     renderFrenchTab(lesson) {
         const f = lesson.frenchFocus;
 
-        // Verb title
-        document.getElementById('verb-title').textContent = f.verb;
+        // Verb title (clickable if it has homonyms/synonyms)
+        const verbTitleEl = document.getElementById('verb-title');
+        verbTitleEl.textContent = f.verb;
         document.getElementById('verb-badge').textContent = lesson.title.split(' — ')[1] || '';
+
+        if (f.homonyms || f.synonyms) {
+            verbTitleEl.classList.add('verb-clickable');
+            verbTitleEl.onclick = () => this.openWordDetail({
+                word: f.verb,
+                partOfSpeech: 'verb',
+                meaning: lesson.title.split(' — ')[1] || f.verb,
+                example: f.examples[0] || { fr: '', en: '' },
+                homonyms: f.homonyms || [],
+                synonyms: f.synonyms || []
+            });
+        } else {
+            verbTitleEl.classList.remove('verb-clickable');
+            verbTitleEl.onclick = null;
+        }
 
         // Conjugation
         const grid = document.getElementById('conjugation-grid');
@@ -218,9 +256,11 @@ const app = {
         const extraContainer = document.getElementById('extra-verbs-container');
         extraContainer.innerHTML = '';
         if (f.extraVerbs && f.extraVerbs.length > 0) {
-            f.extraVerbs.forEach(ev => {
+            f.extraVerbs.forEach((ev, evIdx) => {
+                const hasDetail = ev.homonyms || ev.synonyms;
+                const clickClass = hasDetail ? ' verb-clickable' : '';
                 let html = `<div class="card extra-verb-card">`;
-                html += `<div class="card-header"><h3>${ev.verb} ${speakBtn(ev.verb)}</h3><span class="badge">${ev.meaning}</span></div>`;
+                html += `<div class="card-header"><h3><span class="extra-verb-name${clickClass}" data-ev-idx="${evIdx}">${ev.verb}</span> ${speakBtn(ev.verb)}</h3><span class="badge">${ev.meaning}</span></div>`;
                 html += `<div class="conjugation-grid">`;
                 for (const [pronoun, form] of Object.entries(ev.conjugation)) {
                     const phrase = `${pronoun} ${form}`;
@@ -233,6 +273,20 @@ const app = {
                 });
                 html += `</div></div>`;
                 extraContainer.innerHTML += html;
+            });
+
+            // Attach click handlers for extra verb names
+            extraContainer.querySelectorAll('.extra-verb-name.verb-clickable').forEach(el => {
+                const idx = parseInt(el.dataset.evIdx);
+                const ev = f.extraVerbs[idx];
+                el.onclick = () => this.openWordDetail({
+                    word: ev.verb,
+                    partOfSpeech: 'verb',
+                    meaning: ev.meaning,
+                    example: ev.examples[0] || { fr: '', en: '' },
+                    homonyms: ev.homonyms || [],
+                    synonyms: ev.synonyms || []
+                });
             });
         }
     },
@@ -437,10 +491,15 @@ const app = {
         });
     },
 
-    openWordDetail(wordIndex) {
-        const lesson = this.currentLesson;
-        if (!lesson || !lesson.vocabulary) return;
-        const v = lesson.vocabulary[wordIndex];
+    openWordDetail(wordIndexOrObj) {
+        let v;
+        if (typeof wordIndexOrObj === 'object') {
+            v = wordIndexOrObj;
+        } else {
+            const lesson = this.currentLesson;
+            if (!lesson || !lesson.vocabulary) return;
+            v = lesson.vocabulary[wordIndexOrObj];
+        }
         if (!v) return;
 
         const header = document.getElementById('modal-word-header');
