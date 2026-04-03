@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Bianca French — Apprends le Français!</title>
+    <title>Love Dove Learning French</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,8 +16,8 @@
     <header id="top-bar">
         <div class="top-bar-inner">
             <div class="logo" onclick="app.showHome()">
-                <span class="logo-icon">&#127470;&#127479;</span>
-                <span class="logo-text">Bianca French</span>
+                <span class="logo-icon">&#128150;</span>
+                <span class="logo-text">Love Dove Learning French</span>
             </div>
             <div class="stats">
                 <div class="stat streak" id="streak-display">
@@ -135,12 +135,19 @@
             <div class="card news-card">
                 <div class="news-header">
                     <h3>&#127758; World News <span class="news-live-badge"><span class="live-dot"></span> LIVE</span></h3>
-                    <p class="news-subtitle">Today's headlines in French — real reading practice</p>
+                    <p class="news-subtitle">Today's headlines in French with English translations</p>
                 </div>
                 <div class="news-list" id="news-list"></div>
                 <div class="news-fallback-label hidden" id="news-fallback-label">
                     <p>Could not load live news — showing lesson headlines instead</p>
                 </div>
+            </div>
+            <div class="card news-card algeria-card">
+                <div class="news-header">
+                    <h3>&#127465;&#127487; Algerian News <span class="news-live-badge" id="algeria-live-badge"><span class="live-dot"></span> LIVE</span></h3>
+                    <p class="news-subtitle">Latest headlines from Algeria in French</p>
+                </div>
+                <div class="news-list" id="algeria-news-list"></div>
             </div>
         </div>
 

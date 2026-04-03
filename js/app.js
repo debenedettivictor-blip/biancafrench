@@ -218,60 +218,95 @@ const app = {
 
     // ===== WORLD NEWS TAB =====
     newsCache: null,
+    algeriaCache: null,
     newsCacheTime: 0,
+    algeriaCacheTime: 0,
 
-    async fetchLiveNews() {
-        // Cache for 30 minutes
-        const now = Date.now();
-        if (this.newsCache && (now - this.newsCacheTime) < 30 * 60 * 1000) {
-            return this.newsCache;
-        }
+    async translateText(text) {
+        try {
+            const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=fr|en`);
+            const data = await res.json();
+            if (data.responseStatus === 200 && data.responseData) {
+                return data.responseData.translatedText;
+            }
+        } catch (e) { /* ignore */ }
+        return '';
+    },
 
-        const rssUrl = encodeURIComponent('https://www.france24.com/fr/rss');
-        const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`);
+    async fetchRSSFeed(rssUrl, count) {
+        const url = encodeURIComponent(rssUrl);
+        const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${url}`);
         if (!res.ok) throw new Error('Feed fetch failed');
-
         const data = await res.json();
         if (data.status !== 'ok' || !data.items) throw new Error('Bad feed data');
-
-        const articles = data.items.slice(0, 6).map(item => ({
+        return data.items.slice(0, count).map(item => ({
             title: item.title,
             date: new Date(item.pubDate).toLocaleDateString('fr-FR', {
                 weekday: 'short', day: 'numeric', month: 'short'
             }),
             link: item.link
         }));
+    },
 
+    async fetchLiveNews() {
+        const now = Date.now();
+        if (this.newsCache && (now - this.newsCacheTime) < 30 * 60 * 1000) {
+            return this.newsCache;
+        }
+        const articles = await this.fetchRSSFeed('https://www.france24.com/fr/rss', 6);
+        // Translate all headlines in parallel
+        const translations = await Promise.all(articles.map(a => this.translateText(a.title)));
+        articles.forEach((a, i) => { a.en = translations[i]; });
         this.newsCache = articles;
         this.newsCacheTime = now;
         return articles;
     },
 
+    async fetchAlgerianNews() {
+        const now = Date.now();
+        if (this.algeriaCache && (now - this.algeriaCacheTime) < 30 * 60 * 1000) {
+            return this.algeriaCache;
+        }
+        const articles = await this.fetchRSSFeed('https://www.tsa-algerie.com/feed/', 5);
+        const translations = await Promise.all(articles.map(a => this.translateText(a.title)));
+        articles.forEach((a, i) => { a.en = translations[i]; });
+        this.algeriaCache = articles;
+        this.algeriaCacheTime = now;
+        return articles;
+    },
+
+    renderNewsList(container, articles) {
+        container.innerHTML = '';
+        articles.forEach((article, i) => {
+            const item = document.createElement('div');
+            item.className = 'news-item';
+            item.innerHTML = `
+                <div class="news-number">${i + 1}</div>
+                <div class="news-content">
+                    <div class="news-fr">${article.title}</div>
+                    ${article.en ? `<div class="news-en">${article.en}</div>` : ''}
+                    <div class="news-date">${article.date}</div>
+                </div>
+            `;
+            container.appendChild(item);
+        });
+    },
+
     renderNewsTab(lesson) {
         const newsList = document.getElementById('news-list');
+        const algeriaList = document.getElementById('algeria-news-list');
         const fallbackLabel = document.getElementById('news-fallback-label');
         fallbackLabel.classList.add('hidden');
 
-        // Show loading state
-        newsList.innerHTML = '<div class="news-loading">Loading latest news...</div>';
+        // Loading states
+        newsList.innerHTML = '<div class="news-loading">Loading world news...</div>';
+        algeriaList.innerHTML = '<div class="news-loading">Loading Algerian news...</div>';
 
+        // Fetch world news
         this.fetchLiveNews().then(articles => {
-            newsList.innerHTML = '';
             document.querySelector('.news-live-badge').classList.remove('hidden');
-            articles.forEach((article, i) => {
-                const item = document.createElement('div');
-                item.className = 'news-item';
-                item.innerHTML = `
-                    <div class="news-number">${i + 1}</div>
-                    <div class="news-content">
-                        <div class="news-fr">${article.title}</div>
-                        <div class="news-date">${article.date}</div>
-                    </div>
-                `;
-                newsList.appendChild(item);
-            });
+            this.renderNewsList(newsList, articles);
         }).catch(() => {
-            // Fallback to static lesson content
             document.querySelector('.news-live-badge').classList.add('hidden');
             newsList.innerHTML = '';
             const events = lesson.currentEvents;
@@ -290,6 +325,15 @@ const app = {
                     newsList.appendChild(item);
                 });
             }
+        });
+
+        // Fetch Algerian news
+        this.fetchAlgerianNews().then(articles => {
+            document.getElementById('algeria-live-badge').classList.remove('hidden');
+            this.renderNewsList(algeriaList, articles);
+        }).catch(() => {
+            document.getElementById('algeria-live-badge').classList.add('hidden');
+            algeriaList.innerHTML = '<div class="news-loading">Algerian news unavailable right now</div>';
         });
     },
 

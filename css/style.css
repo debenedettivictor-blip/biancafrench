@@ -974,6 +974,11 @@ body {
     color: white;
 }
 
+.algeria-card {
+    background: linear-gradient(135deg, #1A3A2A 0%, #2C5B3F 100%);
+    margin-top: 16px;
+}
+
 .news-card h3 {
     color: var(--gold);
 }
