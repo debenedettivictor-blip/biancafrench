@@ -487,7 +487,7 @@ const app = {
             gallery.innerHTML += `
                 <div class="art-artwork-card">
                     <div class="art-image-container">
-                        <img src="${aw.image}" alt="${aw.titleEn}" class="art-image" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'art-image-fallback\\'>Image not available</div>'">
+                        <img src="${aw.image}" alt="${aw.titleEn}" class="art-image" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.innerHTML='<div class=\\'art-image-fallback\\'>Image not available</div>'">
                     </div>
                     <div class="art-artwork-info">
                         <h4 class="art-title-fr">${aw.title} ${speakBtn(aw.title)}</h4>

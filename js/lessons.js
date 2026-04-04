@@ -136,7 +136,7 @@ const LESSONS = [
                     titleEn: "The Oath of the Horatii",
                     artist: "Jacques-Louis David",
                     year: 1784,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Jacques-Louis_David%2C_Le_Serment_des_Horaces.jpg/800px-Jacques-Louis_David%2C_Le_Serment_des_Horaces.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Jacques-Louis_David%2C_Le_Serment_des_Horaces.jpg/400px-Jacques-Louis_David%2C_Le_Serment_des_Horaces.jpg",
                     descFr: "Ce tableau montre trois frères romains jurant de défendre Rome. C'est un symbole du devoir et du sacrifice patriotique.",
                     descEn: "This painting shows three Roman brothers swearing to defend Rome. It is a symbol of duty and patriotic sacrifice."
                 },
@@ -145,7 +145,7 @@ const LESSONS = [
                     titleEn: "The Death of Marat",
                     artist: "Jacques-Louis David",
                     year: 1793,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Death_of_Marat_by_David.jpg/800px-Death_of_Marat_by_David.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Death_of_Marat_by_David.jpg/400px-Death_of_Marat_by_David.jpg",
                     descFr: "David a peint cette œuvre pour honorer Jean-Paul Marat, un révolutionnaire assassiné dans sa baignoire. C'est l'un des tableaux les plus célèbres de la Révolution française.",
                     descEn: "David painted this work to honor Jean-Paul Marat, a revolutionary assassinated in his bathtub. It is one of the most famous paintings of the French Revolution."
                 }
@@ -311,7 +311,7 @@ const LESSONS = [
                     titleEn: "Pilgrimage to the Isle of Cythera",
                     artist: "Jean-Antoine Watteau",
                     year: 1717,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Jean-Antoine_Watteau_-_L%27Embarquement_pour_Cyth%C3%A8re.jpg/800px-Jean-Antoine_Watteau_-_L%27Embarquement_pour_Cyth%C3%A8re.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Jean-Antoine_Watteau_-_L%27Embarquement_pour_Cyth%C3%A8re.jpg/400px-Jean-Antoine_Watteau_-_L%27Embarquement_pour_Cyth%C3%A8re.jpg",
                     descFr: "Ce chef-d'œuvre du Rococo montre des couples élégants dans un paysage idyllique. L'île de Cythère symbolise l'amour et la romance.",
                     descEn: "This Rococo masterpiece shows elegant couples in an idyllic landscape. The isle of Cythera symbolizes love and romance."
                 },
@@ -320,7 +320,7 @@ const LESSONS = [
                     titleEn: "The Swing",
                     artist: "Jean-Honoré Fragonard",
                     year: 1767,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Fragonard%2C_The_Swing.jpg/800px-Fragonard%2C_The_Swing.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Fragonard%2C_The_Swing.jpg/400px-Fragonard%2C_The_Swing.jpg",
                     descFr: "Une jeune femme se balance dans un jardin luxuriant. Ce tableau incarne la légèreté et l'esprit joueur du Rococo.",
                     descEn: "A young woman swings in a lush garden. This painting embodies the lightness and playful spirit of Rococo."
                 }
@@ -486,7 +486,7 @@ const LESSONS = [
                     titleEn: "Liberty Leading the People",
                     artist: "Eugène Delacroix",
                     year: 1830,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg/800px-Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg/400px-Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg",
                     descFr: "Ce tableau emblématique montre une femme symbolisant la Liberté qui mène le peuple français pendant la Révolution de Juillet 1830. Elle tient le drapeau tricolore.",
                     descEn: "This iconic painting shows a woman symbolizing Liberty leading the French people during the July Revolution of 1830. She holds the tricolor flag."
                 },
@@ -495,7 +495,7 @@ const LESSONS = [
                     titleEn: "The Raft of the Medusa",
                     artist: "Théodore Géricault",
                     year: 1819,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg/800px-JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg/400px-JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg",
                     descFr: "Cette peinture dramatique représente les survivants d'un naufrage sur un radeau en mer. C'est un symbole de la souffrance humaine et de l'espoir.",
                     descEn: "This dramatic painting depicts the survivors of a shipwreck on a raft at sea. It is a symbol of human suffering and hope."
                 }
@@ -661,7 +661,7 @@ const LESSONS = [
                     titleEn: "Impression, Sunrise",
                     artist: "Claude Monet",
                     year: 1872,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/800px-Monet_-_Impression%2C_Sunrise.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/400px-Monet_-_Impression%2C_Sunrise.jpg",
                     descFr: "Ce tableau a donné son nom au mouvement impressionniste. Monet peint le port du Havre au lever du soleil avec des couleurs douces et des reflets sur l'eau.",
                     descEn: "This painting gave its name to the Impressionist movement. Monet paints the port of Le Havre at sunrise with soft colors and reflections on the water."
                 },
@@ -670,7 +670,7 @@ const LESSONS = [
                     titleEn: "Luncheon of the Boating Party",
                     artist: "Pierre-Auguste Renoir",
                     year: 1881,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg/800px-Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg/400px-Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg",
                     descFr: "Renoir capture un déjeuner entre amis au bord de la Seine. La lumière naturelle illumine les visages souriants et les verres de vin.",
                     descEn: "Renoir captures a lunch among friends by the Seine. Natural light illuminates the smiling faces and wine glasses."
                 }
@@ -836,7 +836,7 @@ const LESSONS = [
                     titleEn: "The Starry Night (painted in France)",
                     artist: "Vincent van Gogh",
                     year: 1889,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/800px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/400px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
                     descFr: "Van Gogh a peint ce chef-d'œuvre depuis un asile en Provence, France. Le ciel tourbillonnant exprime son tourment intérieur et sa fascination pour la nuit.",
                     descEn: "Van Gogh painted this masterpiece from an asylum in Provence, France. The swirling sky expresses his inner turmoil and fascination with the night."
                 },
@@ -845,7 +845,7 @@ const LESSONS = [
                     titleEn: "The Card Players",
                     artist: "Paul Cézanne",
                     year: 1895,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Les_Joueurs_de_cartes%2C_par_Paul_C%C3%A9zanne%2C_Yorck.jpg/800px-Les_Joueurs_de_cartes%2C_par_Paul_C%C3%A9zanne%2C_Yorck.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Les_Joueurs_de_cartes%2C_par_Paul_C%C3%A9zanne%2C_Yorck.jpg/400px-Les_Joueurs_de_cartes%2C_par_Paul_C%C3%A9zanne%2C_Yorck.jpg",
                     descFr: "Cézanne peint des paysans provençaux jouant aux cartes. Les formes géométriques simples annoncent l'art moderne et le cubisme.",
                     descEn: "Cézanne paints Provençal peasants playing cards. The simple geometric forms herald modern art and cubism."
                 }
@@ -1011,7 +1011,7 @@ const LESSONS = [
                     titleEn: "A Burial at Ornans",
                     artist: "Gustave Courbet",
                     year: 1850,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg/800px-Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg/400px-Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg",
                     descFr: "Courbet peint un enterrement de village avec des personnages grandeur nature. Il donne aux gens ordinaires la même importance que les héros classiques.",
                     descEn: "Courbet paints a village burial with life-size figures. He gives ordinary people the same importance as classical heroes."
                 },
@@ -1020,7 +1020,7 @@ const LESSONS = [
                     titleEn: "The Angelus",
                     artist: "Jean-François Millet",
                     year: 1859,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/JEAN-FRAN%C3%87OIS_MILLET_-_El_%C3%81ngelus_%28Museo_de_Orsay%2C_1857-1859%29.jpg/800px-JEAN-FRAN%C3%87OIS_MILLET_-_El_%C3%81ngelus_%28Museo_de_Orsay%2C_1857-1859%29.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/JEAN-FRAN%C3%87OIS_MILLET_-_El_%C3%81ngelus_%28Museo_de_Orsay%2C_1857-1859%29.jpg/400px-JEAN-FRAN%C3%87OIS_MILLET_-_El_%C3%81ngelus_%28Museo_de_Orsay%2C_1857-1859%29.jpg",
                     descFr: "Deux paysans prient dans un champ au coucher du soleil. Cette image simple et émouvante est devenue l'une des plus reproduites au monde.",
                     descEn: "Two peasants pray in a field at sunset. This simple and moving image became one of the most reproduced in the world."
                 }
@@ -1180,7 +1180,7 @@ const LESSONS = [
                     titleEn: "The Cheat with the Ace of Diamonds",
                     artist: "Georges de La Tour",
                     year: 1635,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Georges_de_La_Tour_-_The_Cheat_with_the_Ace_of_Diamonds_-_Google_Art_Project.jpg/800px-Georges_de_La_Tour_-_The_Cheat_with_the_Ace_of_Diamonds_-_Google_Art_Project.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Georges_de_La_Tour_-_The_Cheat_with_the_Ace_of_Diamonds_-_Google_Art_Project.jpg/400px-Georges_de_La_Tour_-_The_Cheat_with_the_Ace_of_Diamonds_-_Google_Art_Project.jpg",
                     descFr: "La Tour peint une scène de tromperie autour d'une table de jeu. Le jeu de lumière et d'ombre (clair-obscur) crée une atmosphère dramatique.",
                     descEn: "La Tour paints a scene of deception around a gaming table. The play of light and shadow (chiaroscuro) creates a dramatic atmosphere."
                 },
@@ -1189,7 +1189,7 @@ const LESSONS = [
                     titleEn: "The Arcadian Shepherds",
                     artist: "Nicolas Poussin",
                     year: 1638,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Nicolas_Poussin_-_Et_in_Arcadia_ego_%28deuxi%C3%A8me_version%29.jpg/800px-Nicolas_Poussin_-_Et_in_Arcadia_ego_%28deuxi%C3%A8me_version%29.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Nicolas_Poussin_-_Et_in_Arcadia_ego_%28deuxi%C3%A8me_version%29.jpg/400px-Nicolas_Poussin_-_Et_in_Arcadia_ego_%28deuxi%C3%A8me_version%29.jpg",
                     descFr: "Des bergers découvrent une tombe dans un paysage idéal. Le message rappelle que même au paradis, la mort existe. Poussin est le maître du classicisme français.",
                     descEn: "Shepherds discover a tomb in an ideal landscape. The message reminds us that even in paradise, death exists. Poussin is the master of French classicism."
                 }
@@ -1539,7 +1539,7 @@ const LESSONS = [
                     titleEn: "The Dance",
                     artist: "Henri Matisse",
                     year: 1910,
-                    image: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Matissedance.jpg/800px-Matissedance.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Matissedance.jpg/400px-Matissedance.jpg",
                     descFr: "Cinq figures dansent en cercle avec seulement trois couleurs : rouge, bleu et vert. La simplicité exprime la joie pure du mouvement.",
                     descEn: "Five figures dance in a circle with only three colors: red, blue, and green. The simplicity expresses the pure joy of movement."
                 }
@@ -2544,7 +2544,7 @@ const LESSONS = [
                     titleEn: "The Grand Salon of the SS Normandie",
                     artist: "Jean Dunand & Jean Dupas",
                     year: 1935,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/SS_Normandie_color.jpg/800px-SS_Normandie_color.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/SS_Normandie_color.jpg/400px-SS_Normandie_color.jpg",
                     descFr: "Le paquebot Normandie était un chef-d'œuvre flottant de l'Art Déco français. Son grand salon était décoré de panneaux laqués, de dorures et de motifs géométriques luxueux.",
                     descEn: "The SS Normandie was a floating masterpiece of French Art Deco. Its grand salon was decorated with lacquered panels, gilding, and luxurious geometric patterns."
                 },
@@ -3137,7 +3137,7 @@ const LESSONS = [
                     titleEn: "The Grand Salon of the SS Normandie",
                     artist: "Jean Dunand & Jean Dupas",
                     year: 1935,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/SS_Normandie_color.jpg/800px-SS_Normandie_color.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/SS_Normandie_color.jpg/400px-SS_Normandie_color.jpg",
                     descFr: "Le paquebot Normandie était un chef-d'œuvre flottant de l'Art Déco français. Son grand salon était décoré de panneaux laqués, de dorures et de motifs géométriques luxueux.",
                     descEn: "The SS Normandie was a floating masterpiece of French Art Deco. Its grand salon was decorated with lacquered panels, gilding, and luxurious geometric patterns."
                 },
