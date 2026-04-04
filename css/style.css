@@ -1898,8 +1898,6 @@ body {
 
 .art-image-container {
     width: 100%;
-    max-height: 300px;
-    overflow: hidden;
     background: #111;
     display: flex;
     align-items: center;
@@ -1909,7 +1907,7 @@ body {
 .art-image {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 

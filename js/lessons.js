@@ -136,7 +136,7 @@ const LESSONS = [
                     titleEn: "The Oath of the Horatii",
                     artist: "Jacques-Louis David",
                     year: 1784,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Jacques-Louis_David%2C_Le_Serment_des_Horaces.jpg/500px-Jacques-Louis_David%2C_Le_Serment_des_Horaces.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Jacques-Louis_David_-_Oath_of_the_Horatii_-_Google_Art_Project.jpg/1280px-Jacques-Louis_David_-_Oath_of_the_Horatii_-_Google_Art_Project.jpg",
                     descFr: "Ce tableau montre trois frères romains jurant de défendre Rome. C'est un symbole du devoir et du sacrifice patriotique.",
                     descEn: "This painting shows three Roman brothers swearing to defend Rome. It is a symbol of duty and patriotic sacrifice."
                 },
@@ -145,7 +145,7 @@ const LESSONS = [
                     titleEn: "The Death of Marat",
                     artist: "Jacques-Louis David",
                     year: 1793,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Death_of_Marat_by_David.jpg/400px-Death_of_Marat_by_David.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Death_of_Marat_by_David.jpg/1280px-Death_of_Marat_by_David.jpg",
                     descFr: "David a peint cette œuvre pour honorer Jean-Paul Marat, un révolutionnaire assassiné dans sa baignoire. C'est l'un des tableaux les plus célèbres de la Révolution française.",
                     descEn: "David painted this work to honor Jean-Paul Marat, a revolutionary assassinated in his bathtub. It is one of the most famous paintings of the French Revolution."
                 }
@@ -311,7 +311,7 @@ const LESSONS = [
                     titleEn: "Pilgrimage to the Isle of Cythera",
                     artist: "Jean-Antoine Watteau",
                     year: 1717,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/L%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg/500px-L%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/L%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg/1280px-L%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg",
                     descFr: "Ce chef-d'œuvre du Rococo montre des couples élégants dans un paysage idyllique. L'île de Cythère symbolise l'amour et la romance.",
                     descEn: "This Rococo masterpiece shows elegant couples in an idyllic landscape. The isle of Cythera symbolizes love and romance."
                 },
@@ -320,7 +320,7 @@ const LESSONS = [
                     titleEn: "The Swing",
                     artist: "Jean-Honoré Fragonard",
                     year: 1767,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Fragonard%2C_The_Swing.jpg/400px-Fragonard%2C_The_Swing.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Fragonard%2C_The_Swing.jpg/1280px-Fragonard%2C_The_Swing.jpg",
                     descFr: "Une jeune femme se balance dans un jardin luxuriant. Ce tableau incarne la légèreté et l'esprit joueur du Rococo.",
                     descEn: "A young woman swings in a lush garden. This painting embodies the lightness and playful spirit of Rococo."
                 }
@@ -486,7 +486,7 @@ const LESSONS = [
                     titleEn: "Liberty Leading the People",
                     artist: "Eugène Delacroix",
                     year: 1830,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg/400px-Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg/1280px-Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg",
                     descFr: "Ce tableau emblématique montre une femme symbolisant la Liberté qui mène le peuple français pendant la Révolution de Juillet 1830. Elle tient le drapeau tricolore.",
                     descEn: "This iconic painting shows a woman symbolizing Liberty leading the French people during the July Revolution of 1830. She holds the tricolor flag."
                 },
@@ -495,7 +495,7 @@ const LESSONS = [
                     titleEn: "The Raft of the Medusa",
                     artist: "Théodore Géricault",
                     year: 1819,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg/400px-JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg/1280px-JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg",
                     descFr: "Cette peinture dramatique représente les survivants d'un naufrage sur un radeau en mer. C'est un symbole de la souffrance humaine et de l'espoir.",
                     descEn: "This dramatic painting depicts the survivors of a shipwreck on a raft at sea. It is a symbol of human suffering and hope."
                 }
@@ -661,7 +661,7 @@ const LESSONS = [
                     titleEn: "Impression, Sunrise",
                     artist: "Claude Monet",
                     year: 1872,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/400px-Monet_-_Impression%2C_Sunrise.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/1280px-Monet_-_Impression%2C_Sunrise.jpg",
                     descFr: "Ce tableau a donné son nom au mouvement impressionniste. Monet peint le port du Havre au lever du soleil avec des couleurs douces et des reflets sur l'eau.",
                     descEn: "This painting gave its name to the Impressionist movement. Monet paints the port of Le Havre at sunrise with soft colors and reflections on the water."
                 },
@@ -670,7 +670,7 @@ const LESSONS = [
                     titleEn: "Luncheon of the Boating Party",
                     artist: "Pierre-Auguste Renoir",
                     year: 1881,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg/400px-Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg/1280px-Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg",
                     descFr: "Renoir capture un déjeuner entre amis au bord de la Seine. La lumière naturelle illumine les visages souriants et les verres de vin.",
                     descEn: "Renoir captures a lunch among friends by the Seine. Natural light illuminates the smiling faces and wine glasses."
                 }
@@ -836,7 +836,7 @@ const LESSONS = [
                     titleEn: "The Starry Night (painted in France)",
                     artist: "Vincent van Gogh",
                     year: 1889,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/400px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
                     descFr: "Van Gogh a peint ce chef-d'œuvre depuis un asile en Provence, France. Le ciel tourbillonnant exprime son tourment intérieur et sa fascination pour la nuit.",
                     descEn: "Van Gogh painted this masterpiece from an asylum in Provence, France. The swirling sky expresses his inner turmoil and fascination with the night."
                 },
@@ -845,7 +845,7 @@ const LESSONS = [
                     titleEn: "The Card Players",
                     artist: "Paul Cézanne",
                     year: 1895,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Card_Players-Paul_Cezanne.jpg/500px-Card_Players-Paul_Cezanne.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Paul_C%C3%A9zanne_-_Les_joueurs_de_cartes.jpg/1280px-Paul_C%C3%A9zanne_-_Les_joueurs_de_cartes.jpg",
                     descFr: "Cézanne peint des paysans provençaux jouant aux cartes. Les formes géométriques simples annoncent l'art moderne et le cubisme.",
                     descEn: "Cézanne paints Provençal peasants playing cards. The simple geometric forms herald modern art and cubism."
                 }
@@ -1011,7 +1011,7 @@ const LESSONS = [
                     titleEn: "A Burial at Ornans",
                     artist: "Gustave Courbet",
                     year: 1850,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg/500px-Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg/1280px-Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg",
                     descFr: "Courbet peint un enterrement de village avec des personnages grandeur nature. Il donne aux gens ordinaires la même importance que les héros classiques.",
                     descEn: "Courbet paints a village burial with life-size figures. He gives ordinary people the same importance as classical heroes."
                 },
@@ -1020,7 +1020,7 @@ const LESSONS = [
                     titleEn: "The Angelus",
                     artist: "Jean-François Millet",
                     year: 1859,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Jean-Fran%C3%A7ois_Millet_Angelus.jpg/500px-Jean-Fran%C3%A7ois_Millet_Angelus.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Jean-Fran%C3%A7ois_Millet_-_The_Angelus_-_Google_Art_Project.jpg/1280px-Jean-Fran%C3%A7ois_Millet_-_The_Angelus_-_Google_Art_Project.jpg",
                     descFr: "Deux paysans prient dans un champ au coucher du soleil. Cette image simple et émouvante est devenue l'une des plus reproduites au monde.",
                     descEn: "Two peasants pray in a field at sunset. This simple and moving image became one of the most reproduced in the world."
                 }
@@ -1180,7 +1180,7 @@ const LESSONS = [
                     titleEn: "The Cheat with the Ace of Diamonds",
                     artist: "Georges de La Tour",
                     year: 1635,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Georges_de_La_Tour_-_Cheater_with_the_Ace_of_Diamonds_-_WGA12334.jpg/500px-Georges_de_La_Tour_-_Cheater_with_the_Ace_of_Diamonds_-_WGA12334.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Le_Tricheur_%C3%A0_l%27as_de_carreau_-_Georges_de_La_Tour_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1972_8.jpg/1280px-Le_Tricheur_%C3%A0_l%27as_de_carreau_-_Georges_de_La_Tour_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1972_8.jpg",
                     descFr: "La Tour peint une scène de tromperie autour d'une table de jeu. Le jeu de lumière et d'ombre (clair-obscur) crée une atmosphère dramatique.",
                     descEn: "La Tour paints a scene of deception around a gaming table. The play of light and shadow (chiaroscuro) creates a dramatic atmosphere."
                 },
@@ -1189,7 +1189,7 @@ const LESSONS = [
                     titleEn: "The Arcadian Shepherds",
                     artist: "Nicolas Poussin",
                     year: 1638,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Nicolas_Poussin_-_Et_in_Arcadia_ego_%28deuxi%C3%A8me_version%29.jpg/500px-Nicolas_Poussin_-_Et_in_Arcadia_ego_%28deuxi%C3%A8me_version%29.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Les_Bergers_d%27Arcadie_-_Nicolas_Poussin_-_Mus%C3%A9e_du_Louvre_Peintures_INV_7300_%3B_MR_2339.jpg/1280px-Les_Bergers_d%27Arcadie_-_Nicolas_Poussin_-_Mus%C3%A9e_du_Louvre_Peintures_INV_7300_%3B_MR_2339.jpg",
                     descFr: "Des bergers découvrent une tombe dans un paysage idéal. Le message rappelle que même au paradis, la mort existe. Poussin est le maître du classicisme français.",
                     descEn: "Shepherds discover a tomb in an ideal landscape. The message reminds us that even in paradise, death exists. Poussin is the master of French classicism."
                 }
@@ -1355,7 +1355,7 @@ const LESSONS = [
                     titleEn: "Gismonda (poster)",
                     artist: "Alphonse Mucha",
                     year: 1894,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Alfons_Mucha_-_1894_-_Gismonda.jpg/500px-Alfons_Mucha_-_1894_-_Gismonda.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Alfons_Mucha_-_1894_-_Gismonda.jpg/1280px-Alfons_Mucha_-_1894_-_Gismonda.jpg",
                     descFr: "Cette affiche pour le théâtre parisien montre une femme entourée de motifs floraux. Mucha a popularisé l'Art Nouveau à travers ses affiches iconiques.",
                     descEn: "This poster for a Parisian theater shows a woman surrounded by floral motifs. Mucha popularized Art Nouveau through his iconic posters."
                 },
@@ -1364,7 +1364,7 @@ const LESSONS = [
                     titleEn: "Paris Metro Entrances",
                     artist: "Hector Guimard",
                     year: 1900,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Metro_station_entrance_%28%C3%A9dicule_Guimard%29_Porte_Dauphine_Paris_16e_001.jpg/500px-Metro_station_entrance_%28%C3%A9dicule_Guimard%29_Porte_Dauphine_Paris_16e_001.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Entr%C3%A9e_Station_M%C3%A9tro_Abbesses_Place_Abbesses_-_Paris_XVIII_%28FR75%29_-_2021-08-04_-_1.jpg/1280px-Entr%C3%A9e_Station_M%C3%A9tro_Abbesses_Place_Abbesses_-_Paris_XVIII_%28FR75%29_-_2021-08-04_-_1.jpg",
                     descFr: "Les entrées du métro parisien conçues par Guimard sont des exemples célèbres de l'Art Nouveau architectural. Les formes en fer forgé imitent des plantes et des fleurs.",
                     descEn: "The Parisian metro entrances designed by Guimard are famous examples of architectural Art Nouveau. The wrought iron forms imitate plants and flowers."
                 }
@@ -1530,7 +1530,7 @@ const LESSONS = [
                     titleEn: "Woman with a Hat",
                     artist: "Henri Matisse",
                     year: 1905,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Matisse-Woman-with-a-Hat.jpg/500px-Matisse-Woman-with-a-Hat.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Matisse-Woman-with-a-Hat.jpg/1280px-Matisse-Woman-with-a-Hat.jpg",
                     descFr: "Matisse peint sa femme avec des couleurs audacieuses et non naturelles — du vert, du rouge et du bleu sur le visage. Ce portrait a choqué le public lors du Salon d'Automne de 1905.",
                     descEn: "Matisse paints his wife with bold, unnatural colors — green, red, and blue on the face. This portrait shocked the public at the 1905 Salon d'Automne."
                 },
@@ -1539,7 +1539,7 @@ const LESSONS = [
                     titleEn: "The Dance",
                     artist: "Henri Matisse",
                     year: 1910,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/La_Danse_I%2C_par_Henri_Matisse.jpg/500px-La_Danse_I%2C_par_Henri_Matisse.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Matissedance.jpg/1280px-Matissedance.jpg",
                     descFr: "Cinq figures dansent en cercle avec seulement trois couleurs : rouge, bleu et vert. La simplicité exprime la joie pure du mouvement.",
                     descEn: "Five figures dance in a circle with only three colors: red, blue, and green. The simplicity expresses the pure joy of movement."
                 }
@@ -1708,7 +1708,7 @@ const LESSONS = [
                     titleEn: "Pierrot",
                     artist: "Juan Gris",
                     year: 1921,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/1/13/Juan_Gris_-_Pierrot_1921.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Pierrot_.PNG/1280px-Pierrot_.PNG",
                     descFr: "Juan Gris, artiste espagnol installé à Paris, peint ce Pierrot en formes géométriques colorées. Son style cubiste synthétique utilise des couleurs vives et des formes superposées.",
                     descEn: "Juan Gris, a Spanish artist based in Paris, paints this Pierrot in colorful geometric forms. His synthetic cubist style uses vivid colors and overlapping shapes."
                 }
@@ -1868,7 +1868,7 @@ const LESSONS = [
                     titleEn: "Mona Lisa",
                     artist: "Léonard de Vinci",
                     year: 1519,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/400px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1280px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
                     descFr: "Le tableau le plus célèbre du monde est conservé au Louvre à Paris. Léonard l'a apporté en France quand François Ier l'a invité au Château du Clos Lucé.",
                     descEn: "The most famous painting in the world is kept at the Louvre in Paris. Leonardo brought it to France when Francis I invited him to the Château du Clos Lucé."
                 },
@@ -1877,7 +1877,7 @@ const LESSONS = [
                     titleEn: "Diana the Huntress",
                     artist: "École de Fontainebleau",
                     year: 1550,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Diana_the_Huntress_-_School_of_Fontainebleau%2C_attributed_to_Luca_Penni.jpg/500px-Diana_the_Huntress_-_School_of_Fontainebleau%2C_attributed_to_Luca_Penni.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Diana_the_Huntress_-_School_of_Fontainebleau%2C_attributed_to_Luca_Penni.jpg/1280px-Diana_the_Huntress_-_School_of_Fontainebleau%2C_attributed_to_Luca_Penni.jpg",
                     descFr: "Cette peinture de l'École de Fontainebleau représente la déesse Diane. Le style mélange la grâce italienne avec l'élégance française de la cour.",
                     descEn: "This painting from the School of Fontainebleau depicts the goddess Diana. The style blends Italian grace with the French elegance of the court."
                 }
@@ -2206,7 +2206,7 @@ const LESSONS = [
                     titleEn: "Stained Glass of Sainte-Chapelle",
                     artist: "Artisans médiévaux",
                     year: 1248,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Sainte_Chapelle_-_Upper_level_1.jpg/500px-Sainte_Chapelle_-_Upper_level_1.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Vitraux_de_la_Saint-Chapelle.jpg/1280px-Vitraux_de_la_Saint-Chapelle.jpg",
                     descFr: "La Sainte-Chapelle à Paris possède les plus beaux vitraux médiévaux du monde. Plus de 1 100 scènes bibliques racontent des histoires en lumière et en couleur.",
                     descEn: "The Sainte-Chapelle in Paris has the most beautiful medieval stained glass in the world. Over 1,100 biblical scenes tell stories in light and color."
                 },
@@ -2215,7 +2215,7 @@ const LESSONS = [
                     titleEn: "The Very Rich Hours of the Duke of Berry",
                     artist: "Les Frères Limbourg",
                     year: 1416,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_Janvier.jpg/500px-Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_Janvier.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_Janvier.jpg/1280px-Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_Janvier.jpg",
                     descFr: "Ce manuscrit enluminé est un chef-d'œuvre de l'art médiéval français. Chaque page illustre un mois de l'année avec des scènes de la vie quotidienne et des châteaux.",
                     descEn: "This illuminated manuscript is a masterpiece of French medieval art. Each page illustrates a month of the year with scenes of daily life and castles."
                 }
@@ -2375,7 +2375,7 @@ const LESSONS = [
                     titleEn: "IKB 79 (International Klein Blue)",
                     artist: "Yves Klein",
                     year: 1959,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/IKB_191.jpg/500px-IKB_191.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/IKB_191.jpg/1280px-IKB_191.jpg",
                     descFr: "Yves Klein a inventé sa propre couleur bleue, l'International Klein Blue. Ses monochromes bleus explorent l'infini et l'immatériel à travers une seule couleur pure.",
                     descEn: "Yves Klein invented his own shade of blue, International Klein Blue. His blue monochromes explore infinity and the immaterial through a single pure color."
                 },
@@ -2384,7 +2384,7 @@ const LESSONS = [
                     titleEn: "Maman (Mother)",
                     artist: "Louise Bourgeois",
                     year: 1999,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Maman_de_Louise_Bourgeois_-_Bilbao.jpg/500px-Maman_de_Louise_Bourgeois_-_Bilbao.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Maman_sculpture%2C_Ottawa%2C_Canada.jpg/1280px-Maman_sculpture%2C_Ottawa%2C_Canada.jpg",
                     descFr: "Cette sculpture géante d'araignée de 9 mètres représente la mère de l'artiste. Bourgeois, née à Paris, explore les thèmes de la famille, la protection et la vulnérabilité.",
                     descEn: "This giant 9-meter spider sculpture represents the artist's mother. Bourgeois, born in Paris, explores themes of family, protection, and vulnerability."
                 }
@@ -2544,7 +2544,7 @@ const LESSONS = [
                     titleEn: "The Grand Salon of the SS Normandie",
                     artist: "Jean Dunand & Jean Dupas",
                     year: 1935,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/SS_Normandie_at_sea_01.jpg/500px-SS_Normandie_at_sea_01.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/SS_Normandie_at_sea.jpg/1280px-SS_Normandie_at_sea.jpg",
                     descFr: "Le paquebot Normandie était un chef-d'œuvre flottant de l'Art Déco français. Son grand salon était décoré de panneaux laqués, de dorures et de motifs géométriques luxueux.",
                     descEn: "The SS Normandie was a floating masterpiece of French Art Deco. Its grand salon was decorated with lacquered panels, gilding, and luxurious geometric patterns."
                 },
@@ -2553,7 +2553,7 @@ const LESSONS = [
                     titleEn: "The Eiffel Tower illuminated (Citroën Art Deco style)",
                     artist: "Fernand Jacopozzi",
                     year: 1925,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg/500px-Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Eiffel_Tower_at_night.JPG/1280px-Eiffel_Tower_at_night.JPG",
                     descFr: "Pendant l'exposition de 1925, la Tour Eiffel a été illuminée avec le nom Citroën en lettres lumineuses Art Déco. C'était la plus grande publicité du monde à l'époque.",
                     descEn: "During the 1925 exhibition, the Eiffel Tower was illuminated with the Citroën name in Art Deco light letters. It was the world's largest advertisement at the time."
                 }
@@ -2669,7 +2669,7 @@ const LESSONS = [
                     titleEn: "Mona Lisa",
                     artist: "Léonard de Vinci",
                     year: 1519,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/400px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1280px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
                     descFr: "Le tableau le plus célèbre du monde est conservé au Louvre à Paris. Léonard l'a apporté en France quand François Ier l'a invité au Château du Clos Lucé.",
                     descEn: "The most famous painting in the world is kept at the Louvre in Paris. Leonardo brought it to France when Francis I invited him to the Château du Clos Lucé."
                 },
@@ -2678,7 +2678,7 @@ const LESSONS = [
                     titleEn: "Diana the Huntress",
                     artist: "École de Fontainebleau",
                     year: 1550,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Diana_the_Huntress_-_School_of_Fontainebleau%2C_attributed_to_Luca_Penni.jpg/500px-Diana_the_Huntress_-_School_of_Fontainebleau%2C_attributed_to_Luca_Penni.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Diana_the_Huntress_-_School_of_Fontainebleau%2C_attributed_to_Luca_Penni.jpg/1280px-Diana_the_Huntress_-_School_of_Fontainebleau%2C_attributed_to_Luca_Penni.jpg",
                     descFr: "Cette peinture de l'École de Fontainebleau représente la déesse Diane. Le style mélange la grâce italienne avec l'élégance française de la cour.",
                     descEn: "This painting from the School of Fontainebleau depicts the goddess Diana. The style blends Italian grace with the French elegance of the court."
                 }
@@ -2903,7 +2903,7 @@ const LESSONS = [
                     titleEn: "Stained Glass of Sainte-Chapelle",
                     artist: "Artisans médiévaux",
                     year: 1248,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Sainte_Chapelle_-_Upper_level_1.jpg/500px-Sainte_Chapelle_-_Upper_level_1.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Vitraux_de_la_Saint-Chapelle.jpg/1280px-Vitraux_de_la_Saint-Chapelle.jpg",
                     descFr: "La Sainte-Chapelle à Paris possède les plus beaux vitraux médiévaux du monde. Plus de 1 100 scènes bibliques racontent des histoires en lumière et en couleur.",
                     descEn: "The Sainte-Chapelle in Paris has the most beautiful medieval stained glass in the world. Over 1,100 biblical scenes tell stories in light and color."
                 },
@@ -2912,7 +2912,7 @@ const LESSONS = [
                     titleEn: "The Very Rich Hours of the Duke of Berry",
                     artist: "Les Frères Limbourg",
                     year: 1416,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_Janvier.jpg/500px-Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_Janvier.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_Janvier.jpg/1280px-Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_Janvier.jpg",
                     descFr: "Ce manuscrit enluminé est un chef-d'œuvre de l'art médiéval français. Chaque page illustre un mois de l'année avec des scènes de la vie quotidienne et des châteaux.",
                     descEn: "This illuminated manuscript is a masterpiece of French medieval art. Each page illustrates a month of the year with scenes of daily life and castles."
                 }
@@ -3020,7 +3020,7 @@ const LESSONS = [
                     titleEn: "IKB 79 (International Klein Blue)",
                     artist: "Yves Klein",
                     year: 1959,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/IKB_191.jpg/500px-IKB_191.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/IKB_191.jpg/1280px-IKB_191.jpg",
                     descFr: "Yves Klein a inventé sa propre couleur bleue, l'International Klein Blue. Ses monochromes bleus explorent l'infini et l'immatériel à travers une seule couleur pure.",
                     descEn: "Yves Klein invented his own shade of blue, International Klein Blue. His blue monochromes explore infinity and the immaterial through a single pure color."
                 },
@@ -3029,7 +3029,7 @@ const LESSONS = [
                     titleEn: "Maman (Mother)",
                     artist: "Louise Bourgeois",
                     year: 1999,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Maman_de_Louise_Bourgeois_-_Bilbao.jpg/500px-Maman_de_Louise_Bourgeois_-_Bilbao.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Maman_sculpture%2C_Ottawa%2C_Canada.jpg/1280px-Maman_sculpture%2C_Ottawa%2C_Canada.jpg",
                     descFr: "Cette sculpture géante d'araignée de 9 mètres représente la mère de l'artiste. Bourgeois, née à Paris, explore les thèmes de la famille, la protection et la vulnérabilité.",
                     descEn: "This giant 9-meter spider sculpture represents the artist's mother. Bourgeois, born in Paris, explores themes of family, protection, and vulnerability."
                 }
@@ -3137,7 +3137,7 @@ const LESSONS = [
                     titleEn: "The Grand Salon of the SS Normandie",
                     artist: "Jean Dunand & Jean Dupas",
                     year: 1935,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/SS_Normandie_at_sea_01.jpg/500px-SS_Normandie_at_sea_01.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/SS_Normandie_at_sea.jpg/1280px-SS_Normandie_at_sea.jpg",
                     descFr: "Le paquebot Normandie était un chef-d'œuvre flottant de l'Art Déco français. Son grand salon était décoré de panneaux laqués, de dorures et de motifs géométriques luxueux.",
                     descEn: "The SS Normandie was a floating masterpiece of French Art Deco. Its grand salon was decorated with lacquered panels, gilding, and luxurious geometric patterns."
                 },
@@ -3146,7 +3146,7 @@ const LESSONS = [
                     titleEn: "The Eiffel Tower illuminated (Citroën Art Deco style)",
                     artist: "Fernand Jacopozzi",
                     year: 1925,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg/500px-Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Eiffel_Tower_at_night.JPG/1280px-Eiffel_Tower_at_night.JPG",
                     descFr: "Pendant l'exposition de 1925, la Tour Eiffel a été illuminée avec le nom Citroën en lettres lumineuses Art Déco. C'était la plus grande publicité du monde à l'époque.",
                     descEn: "During the 1925 exhibition, the Eiffel Tower was illuminated with the Citroën name in Art Deco light letters. It was the world's largest advertisement at the time."
                 }

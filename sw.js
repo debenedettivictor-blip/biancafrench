@@ -1,10 +1,11 @@
-const CACHE_NAME = 'bianca-french-v7';
+const CACHE_NAME = 'love-dove-learning-v9';
 const ASSETS = [
   '/',
   '/index.html',
   '/css/style.css',
   '/js/app.js',
   '/js/lessons.js',
+  '/js/spanish-lessons.js',
   '/js/progress.js',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
