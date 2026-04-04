@@ -1,4 +1,4 @@
-const CACHE_NAME = 'love-dove-learning-v9';
+const CACHE_NAME = 'love-dove-learning-v10';
 const ASSETS = [
   '/',
   '/index.html',
