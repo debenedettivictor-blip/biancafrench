@@ -30,7 +30,14 @@
                     </div>
                     <span class="profile-arrow">&#8250;</span>
                 </button>
-                <!-- Add more profiles here as languages are added -->
+                <button class="profile-card" onclick="enterApp('victor')">
+                    <div class="profile-avatar">V</div>
+                    <div class="profile-info">
+                        <span class="profile-name">Victor</span>
+                        <span class="profile-lang">&#127466;&#127480; Spanish</span>
+                    </div>
+                    <span class="profile-arrow">&#8250;</span>
+                </button>
                 <div class="profile-card profile-add" onclick="addProfileHint()">
                     <div class="profile-avatar profile-avatar-add">+</div>
                     <div class="profile-info">
@@ -196,8 +203,8 @@
         <!-- Art History Tab -->
         <div class="tab-content" id="tab-art">
             <div class="card art-header-card">
-                <h3>&#127912; L'Histoire de l'Art Fran&#231;ais</h3>
-                <p class="art-subtitle">French Art History — Discover masterpieces with French &amp; English</p>
+                <h3 id="art-header-title">&#127912; L'Histoire de l'Art Fran&#231;ais</h3>
+                <p class="art-subtitle" id="art-header-subtitle">French Art History — Discover masterpieces with French &amp; English</p>
             </div>
             <div class="art-period-banner" id="art-period-banner"></div>
             <div class="art-gallery" id="art-gallery"></div>
@@ -254,6 +261,7 @@
     </div><!-- end #app-container -->
 
     <script src="js/lessons.js"></script>
+    <script src="js/spanish-lessons.js"></script>
     <script src="js/progress.js"></script>
     <script src="js/app.js"></script>
     <script>
@@ -265,6 +273,12 @@
         document.getElementById('landing-page').classList.add('hidden');
         document.getElementById('app-container').classList.remove('hidden');
         localStorage.setItem('currentUser', user);
+        app.currentUser = user;
+        Progress.setUser(user);
+        app.applyUserUI();
+        const data = Progress.updateStreak();
+        app.updateTopBar(data);
+        app.renderHome();
       }
 
       function addProfileHint() {
@@ -277,12 +291,14 @@
         document.getElementById('landing-page').classList.remove('hidden');
       }
 
-      // If user previously selected, skip landing page
+      // If user previously selected, skip landing page and init with that user
       (function() {
         const last = localStorage.getItem('currentUser');
         if (last) {
           document.getElementById('landing-page').classList.add('hidden');
           document.getElementById('app-container').classList.remove('hidden');
+          app.currentUser = last;
+          Progress.setUser(last);
         }
       })();
     </script>

@@ -1,66 +1,56 @@
-// ===== Bianca French — App Logic =====
+// ===== Love Dove Learning — App Logic =====
 
 // ===== TEXT-TO-SPEECH HELPER =====
 let _frenchVoice = null;
+let _spanishVoice = null;
 
-function pickFrenchVoice() {
+function pickVoiceForLang(langCode, langPrefix) {
     const voices = window.speechSynthesis.getVoices();
     if (!voices.length) return null;
 
-    // ONLY French voices — never fall back to English
-    const frFR = voices.filter(v => v.lang === 'fr-FR');
-    const frAny = voices.filter(v => v.lang.startsWith('fr'));
+    const exact = voices.filter(v => v.lang === langCode);
+    const any = voices.filter(v => v.lang.startsWith(langPrefix));
 
-    // Known female French voice names across platforms
-    const femaleNames = ['amelie', 'audrey', 'aurelie', 'marie', 'lea', 'chloe', 'sylvie', 'virginie', 'denise', 'isabelle', 'caroline', 'josephine', 'female'];
-    // Male names to skip
-    const maleNames = ['thomas', 'pierre', 'hugo', 'nicolas', 'renaud', 'male'];
-
-    function isFemale(v) {
-        const name = v.name.toLowerCase();
-        return femaleNames.some(n => name.includes(n)) || (!maleNames.some(n => name.includes(n)));
-    }
-
-    // Best: fr-FR female voice with a known native name
-    const nativeFemale = frFR.find(v => femaleNames.some(n => v.name.toLowerCase().includes(n)));
-    if (nativeFemale) return nativeFemale;
-
-    // Next: fr-FR female (non-Google, which sounds robotic)
-    const femaleFR = frFR.find(v => isFemale(v) && !v.name.toLowerCase().includes('google'));
-    if (femaleFR) return femaleFR;
-
-    // Next: any fr-FR female
-    const anyFemaleFR = frFR.find(v => isFemale(v));
-    if (anyFemaleFR) return anyFemaleFR;
-
-    // Next: any fr-FR at all (still better than English)
-    if (frFR.length) return frFR[0];
-
-    // Fallback: fr-CA or other French variant, prefer female
-    const anyFemaleFr = frAny.find(v => isFemale(v));
-    if (anyFemaleFr) return anyFemaleFr;
-    if (frAny.length) return frAny[0];
-
-    // Return null — speak() will refuse rather than use English
+    // Prefer non-Google voices (less robotic)
+    const nonGoogle = exact.find(v => !v.name.toLowerCase().includes('google'));
+    if (nonGoogle) return nonGoogle;
+    if (exact.length) return exact[0];
+    const anyNonGoogle = any.find(v => !v.name.toLowerCase().includes('google'));
+    if (anyNonGoogle) return anyNonGoogle;
+    if (any.length) return any[0];
     return null;
 }
+
+function pickFrenchVoice() { return pickVoiceForLang('fr-FR', 'fr'); }
+function pickSpanishVoice() { return pickVoiceForLang('es-ES', 'es'); }
 
 function speak(text) {
     if (!('speechSynthesis' in window)) return;
     window.speechSynthesis.cancel();
 
-    // Use cached voice or find one
-    if (!_frenchVoice) _frenchVoice = pickFrenchVoice();
+    const isSpanish = app.currentUser === 'victor';
+    let voice, lang, langLabel;
 
-    // ONLY speak with a French voice — never fall back to English
-    if (!_frenchVoice) {
-        alert('No French voice found on this device.\n\niPhone: Settings > General > Accessibility > Speech > Voices > French\n\nAndroid: Settings > Language > Text-to-Speech > Install French');
+    if (isSpanish) {
+        if (!_spanishVoice) _spanishVoice = pickSpanishVoice();
+        voice = _spanishVoice;
+        lang = 'es-ES';
+        langLabel = 'Spanish';
+    } else {
+        if (!_frenchVoice) _frenchVoice = pickFrenchVoice();
+        voice = _frenchVoice;
+        lang = 'fr-FR';
+        langLabel = 'French';
+    }
+
+    if (!voice) {
+        alert(`No ${langLabel} voice found on this device.\n\niPhone: Settings > General > Accessibility > Speech > Voices > ${langLabel}\n\nAndroid: Settings > Language > Text-to-Speech > Install ${langLabel}`);
         return;
     }
 
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.voice = _frenchVoice;
-    utterance.lang = 'fr-FR';
+    utterance.voice = voice;
+    utterance.lang = lang;
     utterance.rate = 0.7;
     utterance.pitch = 1.0;
 
@@ -71,6 +61,7 @@ function speak(text) {
 if ('speechSynthesis' in window) {
     window.speechSynthesis.onvoiceschanged = () => {
         _frenchVoice = pickFrenchVoice();
+        _spanishVoice = pickSpanishVoice();
     };
     window.speechSynthesis.getVoices();
 }
@@ -83,6 +74,7 @@ function speakBtn(text) {
 const app = {
     currentLesson: null,
     currentTab: 'french',
+    currentUser: 'bianca',
     exerciseState: {
         answers: [],
         currentIndex: 0,
@@ -91,12 +83,100 @@ const app = {
         answered: []
     },
 
+    // Get the right lessons array for the current user
+    getLessons() {
+        return this.currentUser === 'victor' ? SPANISH_LESSONS : LESSONS;
+    },
+
+    // Get language-specific config
+    getLangConfig() {
+        if (this.currentUser === 'victor') {
+            return {
+                langKey: 'spanish',
+                flag: '\uD83C\uDDEA\uD83C\uDDF8',
+                greeting: '\u00a1Hola Victor! \uD83D\uDC96',
+                subtitle: 'Your daily Spanish & History adventure awaits',
+                logoText: 'Love Dove Learning Spanish',
+                tabLabel: 'Spanish',
+                focusKey: 'spanishFocus',
+                exampleKeys: { source: 'es', target: 'en' },
+                artDescKeys: { source: 'descEs', target: 'descEn' },
+                newsRssUrl: 'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada',
+                newsLabel: 'Spanish News',
+                localNewsRssUrl: null,
+                localNewsLabel: null,
+                translatePair: 'es|en',
+                loveName: 'Victor',
+                loveFrom: 'Bianca',
+                loveMessage: 'Your fianc\u00e9e Bianca loves you so matcha!',
+                loveDismiss: '\u00a1Aww, gracias!'
+            };
+        }
+        return {
+            langKey: 'french',
+            flag: '\uD83C\uDDEB\uD83C\uDDF7',
+            greeting: 'Bonjour Bianca! \uD83D\uDC96',
+            subtitle: 'Your daily French & History adventure awaits',
+            logoText: 'Love Dove Learning French',
+            tabLabel: 'French',
+            focusKey: 'frenchFocus',
+            exampleKeys: { source: 'fr', target: 'en' },
+            artDescKeys: { source: 'descFr', target: 'descEn' },
+            newsRssUrl: 'https://www.france24.com/fr/rss',
+            newsLabel: 'World News',
+            localNewsRssUrl: 'https://www.tsa-algerie.com/feed/',
+            localNewsLabel: 'Algerian News',
+            translatePair: 'fr|en',
+            loveName: 'Bianca',
+            loveFrom: 'Victor',
+            loveMessage: 'Your fianc\u00e9e Victor loves you so matcha!',
+            loveDismiss: 'Aww, merci!'
+        };
+    },
+
     // ===== INIT =====
     init() {
-        // Update streak on load
+        this.currentUser = localStorage.getItem('currentUser') || 'bianca';
+        Progress.setUser(this.currentUser);
+        this.applyUserUI();
         const data = Progress.updateStreak();
         this.updateTopBar(data);
         this.renderHome();
+    },
+
+    // Apply user-specific UI changes
+    applyUserUI() {
+        const cfg = this.getLangConfig();
+        // Logo text
+        const logoText = document.querySelector('.logo-text');
+        if (logoText) logoText.textContent = cfg.logoText;
+        // Welcome
+        const welcomeH1 = document.querySelector('.welcome-card h1');
+        if (welcomeH1) welcomeH1.innerHTML = cfg.greeting;
+        const welcomeSub = document.querySelector('.welcome-card .subtitle');
+        if (welcomeSub) welcomeSub.innerHTML = `Your daily ${cfg.tabLabel} &amp; History adventure awaits`;
+        // Tab label
+        const langTab = document.querySelector('[data-tab="french"]');
+        if (langTab) langTab.innerHTML = `${cfg.flag} ${cfg.tabLabel}`;
+        // Love message
+        const loveH2 = document.querySelector('.love-message-card h2');
+        if (loveH2) loveH2.textContent = `Hey ${cfg.loveName}!`;
+        const loveText = document.querySelector('.love-text');
+        if (loveText) loveText.textContent = cfg.loveMessage;
+        const loveDismissBtn = document.querySelector('.love-dismiss-btn');
+        if (loveDismissBtn) loveDismissBtn.textContent = cfg.loveDismiss;
+        // Art header
+        const artTitle = document.getElementById('art-header-title');
+        if (artTitle) artTitle.innerHTML = this.currentUser === 'victor'
+            ? '&#127912; Historia del Arte Espa\u00f1ol'
+            : "&#127912; L'Histoire de l'Art Fran\u00e7ais";
+        const artSub = document.getElementById('art-header-subtitle');
+        if (artSub) artSub.textContent = this.currentUser === 'victor'
+            ? 'Spanish Art History \u2014 Discover masterpieces with Spanish & English'
+            : 'French Art History \u2014 Discover masterpieces with French & English';
+        // Local news section visibility
+        const algeriaCard = document.querySelector('.algeria-card');
+        if (algeriaCard) algeriaCard.style.display = cfg.localNewsRssUrl ? '' : 'none';
     },
 
     // ===== TOP BAR =====
@@ -122,8 +202,9 @@ const app = {
 
     // ===== HOME RENDERING =====
     renderHome() {
+        const lessons = this.getLessons();
         const dailyId = Progress.getDailyLessonId();
-        const dailyLesson = LESSONS.find(l => l.id === dailyId);
+        const dailyLesson = lessons.find(l => l.id === dailyId);
 
         // Daily CTA
         const hint = document.getElementById('daily-hint');
@@ -133,7 +214,7 @@ const app = {
         const grid = document.getElementById('lessons-grid');
         grid.innerHTML = '';
 
-        LESSONS.forEach((lesson, index) => {
+        lessons.forEach((lesson, index) => {
             const status = Progress.getLessonStatus(lesson.id);
             const card = document.createElement('div');
             card.className = 'lesson-card' + (status ? ' completed' : '');
@@ -165,7 +246,7 @@ const app = {
 
     // ===== OPEN LESSON =====
     openLesson(lessonId) {
-        const lesson = LESSONS.find(l => l.id === lessonId);
+        const lesson = this.getLessons().find(l => l.id === lessonId);
         if (!lesson) return;
 
         this.currentLesson = lesson;
@@ -191,9 +272,10 @@ const app = {
         this.resetPractice(lesson);
     },
 
-    // ===== FRENCH TAB =====
+    // ===== LANGUAGE TAB (French or Spanish) =====
     renderFrenchTab(lesson) {
-        const f = lesson.frenchFocus;
+        const cfg = this.getLangConfig();
+        const f = lesson[cfg.focusKey] || lesson.frenchFocus;
 
         // Verb title (clickable if it has homonyms/synonyms)
         const verbTitleEl = document.getElementById('verb-title');
@@ -233,12 +315,14 @@ const app = {
         document.getElementById('pattern-display').textContent = f.pattern;
 
         // Examples
+        const srcKey = cfg.exampleKeys.source;
         const list = document.getElementById('examples-list');
         list.innerHTML = '';
         f.examples.forEach(ex => {
+            const srcText = ex[srcKey] || ex.fr || ex.es;
             list.innerHTML += `
                 <div class="example-item">
-                    <div class="example-fr">${ex.fr} ${speakBtn(ex.fr)}</div>
+                    <div class="example-fr">${srcText} ${speakBtn(srcText)}</div>
                     <div class="example-en">${ex.en}</div>
                 </div>
             `;
@@ -270,7 +354,8 @@ const app = {
                 html += `</div>`;
                 html += `<div class="examples-list">`;
                 ev.examples.forEach(ex => {
-                    html += `<div class="example-item"><div class="example-fr">${ex.fr} ${speakBtn(ex.fr)}</div><div class="example-en">${ex.en}</div></div>`;
+                    const exSrc = ex[srcKey] || ex.fr || ex.es;
+                    html += `<div class="example-item"><div class="example-fr">${exSrc} ${speakBtn(exSrc)}</div><div class="example-en">${ex.en}</div></div>`;
                 });
                 html += `</div></div>`;
                 extraContainer.innerHTML += html;
@@ -342,7 +427,8 @@ const app = {
 
     async translateText(text) {
         try {
-            const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=fr|en`);
+            const pair = this.getLangConfig().translatePair;
+            const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${pair}`);
             const data = await res.json();
             if (data.responseStatus === 200 && data.responseData) {
                 return data.responseData.translatedText;
@@ -371,7 +457,7 @@ const app = {
         if (this.newsCache && (now - this.newsCacheTime) < 30 * 60 * 1000) {
             return this.newsCache;
         }
-        const articles = await this.fetchRSSFeed('https://www.france24.com/fr/rss', 6);
+        const articles = await this.fetchRSSFeed(this.getLangConfig().newsRssUrl, 6);
         // Translate all headlines in parallel
         const translations = await Promise.all(articles.map(a => this.translateText(a.title)));
         articles.forEach((a, i) => { a.en = translations[i]; });
@@ -385,7 +471,9 @@ const app = {
         if (this.algeriaCache && (now - this.algeriaCacheTime) < 30 * 60 * 1000) {
             return this.algeriaCache;
         }
-        const articles = await this.fetchRSSFeed('https://www.tsa-algerie.com/feed/', 5);
+        const cfg = this.getLangConfig();
+        if (!cfg.localNewsRssUrl) throw new Error('No local news for this user');
+        const articles = await this.fetchRSSFeed(cfg.localNewsRssUrl, 5);
         const translations = await Promise.all(articles.map(a => this.translateText(a.title)));
         articles.forEach((a, i) => { a.en = translations[i]; });
         this.algeriaCache = articles;
@@ -436,7 +524,7 @@ const app = {
                     item.innerHTML = `
                         <div class="news-number">${i + 1}</div>
                         <div class="news-content">
-                            <div class="news-fr">${ev.fr} ${speakBtn(ev.fr)}</div>
+                            <div class="news-fr">${ev[this.getLangConfig().exampleKeys.source] || ev.fr || ev.es} ${speakBtn(ev[this.getLangConfig().exampleKeys.source] || ev.fr || ev.es)}</div>
                             <div class="news-en">${ev.en}</div>
                         </div>
                     `;
@@ -457,6 +545,8 @@ const app = {
 
     // ===== ART HISTORY TAB =====
     renderArtTab(lesson) {
+        const cfg = this.getLangConfig();
+        const descSrcKey = cfg.artDescKeys.source;
         const banner = document.getElementById('art-period-banner');
         const gallery = document.getElementById('art-gallery');
         const contextCard = document.getElementById('art-context-card');
@@ -484,6 +574,7 @@ const app = {
         // Gallery
         gallery.innerHTML = '';
         art.artworks.forEach(aw => {
+            const awDesc = aw[descSrcKey] || aw.descFr || aw.descEs;
             gallery.innerHTML += `
                 <div class="art-artwork-card">
                     <div class="art-image-container">
@@ -494,7 +585,7 @@ const app = {
                         <p class="art-title-en">${aw.titleEn}</p>
                         <p class="art-artist">${aw.artist} &bull; ${aw.year}</p>
                         <div class="art-desc">
-                            <p class="art-desc-fr">${aw.descFr} ${speakBtn(aw.descFr)}</p>
+                            <p class="art-desc-fr">${awDesc} ${speakBtn(awDesc)}</p>
                             <p class="art-desc-en">${aw.descEn}</p>
                         </div>
                     </div>
@@ -503,15 +594,17 @@ const app = {
         });
 
         // Context
+        const ctxTitle = this.currentUser === 'victor' ? 'Contexto Hist\u00f3rico' : 'Contexte Historique';
         contextCard.innerHTML = `
-            <h3>&#127912; Contexte Historique</h3>
+            <h3>&#127912; ${ctxTitle}</h3>
             <p class="art-context-fr">${art.context} ${speakBtn(art.context)}</p>
             <div class="art-context-divider"></div>
             <p class="art-context-en">${art.contextEn}</p>
         `;
 
         // Vocab
-        let vocabHTML = `<h3>&#128218; Vocabulaire de l'Art</h3><div class="art-vocab-chips">`;
+        const vocTitle = this.currentUser === 'victor' ? 'Vocabulario del Arte' : "Vocabulaire de l'Art";
+        let vocabHTML = `<h3>&#128218; ${vocTitle}</h3><div class="art-vocab-chips">`;
         art.vocab.forEach(v => {
             vocabHTML += `
                 <div class="art-vocab-chip">
@@ -553,7 +646,7 @@ const app = {
                 </div>
                 <div class="vocab-card-meaning">${v.meaning}</div>
                 <div class="vocab-card-example">
-                    <div class="vocab-card-fr">${v.example.fr}</div>
+                    <div class="vocab-card-fr">${v.example[this.getLangConfig().exampleKeys.source] || v.example.fr || v.example.es}</div>
                     <div class="vocab-card-en">${v.example.en}</div>
                 </div>
                 ${badges.length > 0 ? `<div class="vocab-card-badges">${badges.map(b => `<span class="vocab-badge">${b}</span>`).join('')}<span class="vocab-tap-hint">tap to explore</span></div>` : ''}
@@ -580,10 +673,12 @@ const app = {
             <p class="modal-meaning">${v.meaning}</p>
         `;
 
+        const exSrcKey = this.getLangConfig().exampleKeys.source;
+        const exSrc = v.example[exSrcKey] || v.example.fr || v.example.es;
         const example = document.getElementById('modal-example');
         example.innerHTML = `
             <div class="modal-example-label">Example</div>
-            <div class="modal-example-fr">${v.example.fr}</div>
+            <div class="modal-example-fr">${exSrc}</div>
             <div class="modal-example-en">${v.example.en}</div>
         `;
 

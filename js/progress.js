@@ -1,7 +1,13 @@
-// ===== Bianca French — Progress & Streak Tracking =====
+// ===== Love Dove Learning — Progress & Streak Tracking =====
 
 const Progress = {
     STORAGE_KEY: 'biancafrench_progress',
+    _currentUser: 'bianca',
+
+    setUser(user) {
+        this._currentUser = user;
+        this.STORAGE_KEY = user === 'victor' ? 'victorspanish_progress' : 'biancafrench_progress';
+    },
 
     // Default state
     _default() {
@@ -120,17 +126,18 @@ const Progress = {
 
     // Get overall progress percentage
     getProgressPercent() {
-        return Math.round((this.getCompletedCount() / LESSONS.length) * 100);
+        const lessons = this._currentUser === 'victor' ? SPANISH_LESSONS : LESSONS;
+        return Math.round((this.getCompletedCount() / lessons.length) * 100);
     },
 
     // Get today's lesson number (1-indexed, cycles through lessons)
     getDailyLessonId() {
+        const lessons = this._currentUser === 'victor' ? SPANISH_LESSONS : LESSONS;
         const data = this.load();
         const start = new Date(data.startDate || '2026-04-02');
         const now = new Date();
         const diffDays = Math.floor((now - start) / (1000 * 60 * 60 * 24));
-        // Cycle through available lessons, 1-indexed
-        return (diffDays % LESSONS.length) + 1;
+        return (diffDays % lessons.length) + 1;
     },
 
     // Reset all progress (for testing)
@@ -149,11 +156,15 @@ const Progress = {
 
     // Get encouraging message based on score
     getMessage(stars) {
+        const name = this._currentUser === 'victor' ? 'Victor' : 'Bianca';
+        const excellent = this._currentUser === 'victor' ? '\u00a1Excelente!' : 'Tr\u00e8s bien!';
+        const perfect = this._currentUser === 'victor' ? '\u00a1PERFECTO! \u00a1Magn\u00edfico!' : 'PERFECT! Magnifique!';
+        const brilliant = this._currentUser === 'victor' ? '\u00a1Incre\u00edble! Absolutely brilliant!' : 'Incroyable! Absolutely brilliant!';
         const messages = {
-            0: ["Keep trying! You'll get there! \u{1F4AA}", "Practice makes perfect! \u{1F31F}", "Don't give up, Bianca! \u{1F338}"],
+            0: ["Keep trying! You'll get there! \u{1F4AA}", "Practice makes perfect! \u{1F31F}", `Don't give up, ${name}! \u{1F338}`],
             1: ["Good start! Keep going! \u{1F60A}", "You're learning! \u{1F331}", "Nice effort! \u{1F44D}"],
-            2: ["Great job, Bianca! \u{1F389}", "Almost perfect! \u{1F31F}", "Très bien! \u{1F496}"],
-            3: ["PERFECT! Magnifique! \u{1F389}\u{1F389}\u{1F389}", "You're a star, Bianca! \u{2B50}", "Incroyable! Absolutely brilliant! \u{1F496}"]
+            2: [`Great job, ${name}! \u{1F389}`, "Almost perfect! \u{1F31F}", `${excellent} \u{1F496}`],
+            3: [`${perfect} \u{1F389}\u{1F389}\u{1F389}`, `You're a star, ${name}! \u{2B50}`, `${brilliant} \u{1F496}`]
         };
         const pool = messages[stars] || messages[0];
         return pool[Math.floor(Math.random() * pool.length)];
