@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bianca-french-v6';
+const CACHE_NAME = 'bianca-french-v7';
 const ASSETS = [
   '/',
   '/index.html',
