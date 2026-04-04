@@ -1,4 +1,4 @@
-const CACHE_NAME = 'love-dove-learning-v10';
+const CACHE_NAME = 'love-dove-learning-v11';
 const ASSETS = [
   '/',
   '/index.html',
@@ -6,6 +6,7 @@ const ASSETS = [
   '/js/app.js',
   '/js/lessons.js',
   '/js/spanish-lessons.js',
+  '/js/conjugation-data.js',
   '/js/progress.js',
   '/icons/icon-192.png',
   '/icons/icon-512.png',

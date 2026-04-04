@@ -122,6 +122,9 @@
             <button class="tab" data-tab="vocab" onclick="app.switchTab('vocab')">
                 &#128209; Vocab
             </button>
+            <button class="tab" data-tab="conjugation" onclick="app.switchTab('conjugation')">
+                &#128221; Conjugation
+            </button>
             <button class="tab" data-tab="art" onclick="app.switchTab('art')">
                 &#127912; Art
             </button>
@@ -200,6 +203,11 @@
             </div>
         </div>
 
+        <!-- Conjugation Reference Tab -->
+        <div class="tab-content" id="tab-conjugation">
+            <div id="conjugation-container"></div>
+        </div>
+
         <!-- Art History Tab -->
         <div class="tab-content" id="tab-art">
             <div class="card art-header-card">
@@ -262,6 +270,7 @@
 
     <script src="js/lessons.js"></script>
     <script src="js/spanish-lessons.js"></script>
+    <script src="js/conjugation-data.js"></script>
     <script src="js/progress.js"></script>
     <script src="js/app.js"></script>
     <script>

@@ -266,6 +266,7 @@ const app = {
 
         this.renderFrenchTab(lesson);
         this.renderHistoryTab(lesson);
+        this.renderConjugationTab();
         this.renderArtTab(lesson);
         this.renderVocabTab(lesson);
         this.renderNewsTab(lesson);
@@ -616,6 +617,120 @@ const app = {
         });
         vocabHTML += `</div>`;
         vocabCard.innerHTML = vocabHTML;
+    },
+
+    // ===== CONJUGATION REFERENCE TAB =====
+    renderConjugationTab() {
+        const container = document.getElementById('conjugation-container');
+        const lang = this.currentUser === 'victor' ? 'spanish' : 'french';
+        const data = CONJUGATION_DATA[lang];
+        if (!data) { container.innerHTML = ''; return; }
+
+        let html = '';
+
+        // Header
+        html += `<div class="card conj-header-card">
+            <h3>&#128221; ${data.title}</h3>
+            <p class="conj-subtitle">${data.titleEn} &mdash; All tenses & groups at a glance</p>
+        </div>`;
+
+        // Conjugation Groups overview
+        html += `<div class="card conj-groups-card">
+            <h3>Verb Groups</h3>
+            <div class="conj-groups-grid">`;
+        data.groups.forEach(g => {
+            html += `<div class="conj-group-chip" style="border-left: 4px solid ${g.color}">
+                <span class="conj-group-ending" style="color:${g.color}">${g.ending}</span>
+                <span class="conj-group-model">${g.model}</span>
+                <span class="conj-group-desc">${g.descriptionEn}</span>
+            </div>`;
+        });
+        html += `</div></div>`;
+
+        // Tenses
+        data.tenses.forEach(tense => {
+            html += `<div class="card conj-tense-card">
+                <div class="conj-tense-header" onclick="this.parentElement.classList.toggle('conj-collapsed')">
+                    <h3>${tense.name} <span class="conj-tense-en">${tense.nameEn}</span></h3>
+                    <span class="conj-toggle-icon">&#9660;</span>
+                </div>
+                <div class="conj-tense-body">
+                    <p class="conj-when-to-use"><strong>When to use:</strong> ${tense.whenToUse}</p>`;
+
+            // Example sentence
+            const exSrc = tense.example[lang === 'spanish' ? 'es' : 'fr'];
+            if (exSrc) {
+                html += `<div class="conj-example-sentence">
+                    <div class="conj-ex-src">${exSrc} ${speakBtn(exSrc)}</div>
+                    <div class="conj-ex-en">${tense.example.en}</div>
+                </div>`;
+            }
+
+            // Endings table
+            html += `<div class="conj-tables-wrapper">`;
+            const groupKeys = Object.keys(tense.conjugations);
+            groupKeys.forEach((gk, gi) => {
+                const color = data.groups[gi] ? data.groups[gi].color : '#888';
+                const endings = tense.conjugations[gk];
+                const fullForms = tense.fullExamples[Object.keys(tense.fullExamples)[gi]];
+                html += `<div class="conj-table">
+                    <div class="conj-table-title" style="background:${color}">${gk}</div>
+                    <table>`;
+                for (const [pronoun, ending] of Object.entries(endings)) {
+                    const full = fullForms ? fullForms[pronoun] || '' : '';
+                    html += `<tr>
+                        <td class="conj-pronoun">${pronoun}</td>
+                        <td class="conj-ending" style="color:${color}"><strong>${ending}</strong></td>
+                        <td class="conj-full">${full}</td>
+                    </tr>`;
+                }
+                html += `</table></div>`;
+            });
+            html += `</div>`;
+
+            if (tense.note) {
+                html += `<p class="conj-note"><strong>Tip:</strong> ${tense.note}</p>`;
+            }
+
+            html += `</div></div>`;
+        });
+
+        // Irregular verbs
+        html += `<div class="card conj-irregular-card">
+            <h3>&#9888;&#65039; Common Irregular Verbs</h3>
+            <p class="conj-subtitle">These don't follow the regular patterns &mdash; you need to memorize them!</p>`;
+
+        const tenseLabels = lang === 'spanish'
+            ? [['presente', 'Presente'], ['preterito', 'Pret\u00e9rito'], ['imperfecto', 'Imperfecto'], ['futuro', 'Futuro']]
+            : [['presente', 'Pr\u00e9sent'], ['passeCompose', 'Pass\u00e9 C.'], ['imparfait', 'Imparfait'], ['futur', 'Futur']];
+
+        data.irregulars.forEach(irr => {
+            html += `<div class="conj-irreg-block">
+                <div class="conj-irreg-header" onclick="this.parentElement.classList.toggle('conj-collapsed')">
+                    <h4>${irr.verb} <span class="conj-irreg-meaning">${irr.meaning}</span></h4>
+                    <span class="conj-toggle-icon">&#9660;</span>
+                </div>
+                <div class="conj-tense-body">
+                <div class="conj-tables-wrapper">`;
+
+            tenseLabels.forEach(([key, label]) => {
+                const forms = irr[key];
+                if (!forms) return;
+                html += `<div class="conj-table conj-table-sm">
+                    <div class="conj-table-title conj-table-title-irreg">${label}</div>
+                    <table>`;
+                for (const [pronoun, form] of Object.entries(forms)) {
+                    html += `<tr><td class="conj-pronoun">${pronoun}</td><td class="conj-full">${form}</td></tr>`;
+                }
+                html += `</table></div>`;
+            });
+
+            html += `</div></div></div>`;
+        });
+
+        html += `</div>`;
+
+        container.innerHTML = html;
     },
 
     // ===== VOCABULARY TAB =====

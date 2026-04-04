@@ -2043,3 +2043,211 @@ body {
         padding: 12px;
     }
 }
+
+/* ===== Conjugation Reference Tab ===== */
+.conj-header-card h3 {
+    font-size: 1.3em;
+    color: var(--gold);
+    margin-bottom: 4px;
+}
+.conj-subtitle {
+    color: var(--text-light);
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* Groups overview */
+.conj-groups-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+.conj-group-chip {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.conj-group-ending {
+    font-size: 1.4em;
+    font-weight: 700;
+}
+.conj-group-model {
+    font-size: 0.95em;
+    color: var(--text);
+    font-style: italic;
+}
+.conj-group-desc {
+    font-size: 0.85em;
+    color: var(--text-light);
+}
+
+/* Tense cards */
+.conj-tense-card {
+    overflow: hidden;
+}
+.conj-tense-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 2px 0;
+}
+.conj-tense-header h3 {
+    margin: 0;
+    color: var(--gold);
+    font-size: 1.1em;
+}
+.conj-tense-en {
+    font-weight: 400;
+    color: var(--text-light);
+    font-size: 0.85em;
+    margin-left: 8px;
+}
+.conj-toggle-icon {
+    font-size: 0.8em;
+    color: var(--text-light);
+    transition: transform 0.2s;
+}
+.conj-collapsed .conj-toggle-icon {
+    transform: rotate(-90deg);
+}
+.conj-collapsed .conj-tense-body {
+    display: none;
+}
+.conj-tense-body {
+    margin-top: 10px;
+}
+.conj-when-to-use {
+    font-size: 0.9em;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+.conj-example-sentence {
+    background: rgba(212,168,67,0.08);
+    border-left: 3px solid var(--gold);
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 14px;
+}
+.conj-ex-src {
+    font-size: 1em;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+.conj-ex-en {
+    font-size: 0.88em;
+    color: var(--text-light);
+}
+
+/* Conjugation tables */
+.conj-tables-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.conj-table {
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.conj-table-sm {
+    min-width: 0;
+}
+.conj-table-title {
+    color: #fff;
+    font-size: 0.82em;
+    font-weight: 700;
+    padding: 6px 12px;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+.conj-table-title-irreg {
+    background: #555 !important;
+}
+.conj-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.conj-table tr {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.conj-table tr:last-child {
+    border-bottom: none;
+}
+.conj-table td {
+    padding: 5px 10px;
+    font-size: 0.88em;
+}
+.conj-table .conj-pronoun {
+    color: var(--text-light);
+    width: 70px;
+    white-space: nowrap;
+}
+.conj-table .conj-ending {
+    font-weight: 700;
+    white-space: nowrap;
+}
+.conj-table .conj-full {
+    color: var(--text);
+    font-style: italic;
+    white-space: nowrap;
+}
+.conj-note {
+    font-size: 0.88em;
+    color: var(--gold);
+    background: rgba(212,168,67,0.08);
+    padding: 10px 14px;
+    border-radius: 8px;
+    line-height: 1.5;
+    margin-top: 4px;
+}
+
+/* Irregular verbs */
+.conj-irregular-card h3 {
+    color: var(--gold);
+    margin-bottom: 4px;
+}
+.conj-irreg-block {
+    margin-top: 14px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0 14px 0 14px;
+}
+.conj-irreg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 12px 0;
+}
+.conj-irreg-header h4 {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.05em;
+}
+.conj-irreg-meaning {
+    font-weight: 400;
+    color: var(--text-light);
+    font-size: 0.85em;
+    margin-left: 8px;
+}
+
+/* Responsive conjugation */
+@media (max-width: 480px) {
+    .conj-tables-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .conj-table td {
+        padding: 4px 8px;
+        font-size: 0.82em;
+    }
+}
