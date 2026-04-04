@@ -125,6 +125,40 @@ const LESSONS = [
                 synonyms: [{ word: "tardif", meaning: "tardy/late" }, { word: "en décalage", meaning: "behind schedule" }]
             }
         ],
+        artHistory: {
+            period: "Le Néoclassicisme (1750–1850)",
+            periodEn: "Neoclassicism (1750–1850)",
+            context: "Le néoclassicisme est né en France pendant la période des Lumières et de la Révolution française. Les artistes se sont inspirés de l'Antiquité grecque et romaine pour créer des œuvres majestueuses célébrant la vertu, le patriotisme et le sacrifice.",
+            contextEn: "Neoclassicism was born in France during the Enlightenment and the French Revolution. Artists drew inspiration from Greek and Roman antiquity to create majestic works celebrating virtue, patriotism, and sacrifice.",
+            artworks: [
+                {
+                    title: "Le Serment des Horaces",
+                    titleEn: "The Oath of the Horatii",
+                    artist: "Jacques-Louis David",
+                    year: 1784,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Jacques-Louis_David%2C_Le_Serment_des_Horaces.jpg/800px-Jacques-Louis_David%2C_Le_Serment_des_Horaces.jpg",
+                    descFr: "Ce tableau montre trois frères romains jurant de défendre Rome. C'est un symbole du devoir et du sacrifice patriotique.",
+                    descEn: "This painting shows three Roman brothers swearing to defend Rome. It is a symbol of duty and patriotic sacrifice."
+                },
+                {
+                    title: "La Mort de Marat",
+                    titleEn: "The Death of Marat",
+                    artist: "Jacques-Louis David",
+                    year: 1793,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Death_of_Marat_by_David.jpg/800px-Death_of_Marat_by_David.jpg",
+                    descFr: "David a peint cette œuvre pour honorer Jean-Paul Marat, un révolutionnaire assassiné dans sa baignoire. C'est l'un des tableaux les plus célèbres de la Révolution française.",
+                    descEn: "David painted this work to honor Jean-Paul Marat, a revolutionary assassinated in his bathtub. It is one of the most famous paintings of the French Revolution."
+                }
+            ],
+            vocab: [
+                { word: "un tableau", meaning: "a painting" },
+                { word: "un peintre", meaning: "a painter" },
+                { word: "une œuvre", meaning: "a work (of art)" },
+                { word: "le sacrifice", meaning: "sacrifice" },
+                { word: "le devoir", meaning: "duty" },
+                { word: "la vertu", meaning: "virtue" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ avocate.", answer: "suis", options: ["suis", "es", "est", "sommes"] },
             { type: "fill", prompt: "Nous ___ prêts pour l'examen.", answer: "sommes", options: ["êtes", "suis", "sommes", "sont"] },
@@ -266,6 +300,40 @@ const LESSONS = [
                 synonyms: [{ word: "offrir", meaning: "to offer" }, { word: "fournir", meaning: "to provide" }]
             }
         ],
+        artHistory: {
+            period: "Le Rococo (1720–1780)",
+            periodEn: "Rococo (1720–1780)",
+            context: "Le Rococo est un style artistique français caractérisé par l'élégance, la légèreté et les couleurs pastel. Il célèbre la joie de vivre de l'aristocratie française avant la Révolution.",
+            contextEn: "Rococo is a French artistic style characterized by elegance, lightness, and pastel colors. It celebrates the joy of living of the French aristocracy before the Revolution.",
+            artworks: [
+                {
+                    title: "Le Pèlerinage à l'île de Cythère",
+                    titleEn: "Pilgrimage to the Isle of Cythera",
+                    artist: "Jean-Antoine Watteau",
+                    year: 1717,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Jean-Antoine_Watteau_-_L%27Embarquement_pour_Cyth%C3%A8re.jpg/800px-Jean-Antoine_Watteau_-_L%27Embarquement_pour_Cyth%C3%A8re.jpg",
+                    descFr: "Ce chef-d'œuvre du Rococo montre des couples élégants dans un paysage idyllique. L'île de Cythère symbolise l'amour et la romance.",
+                    descEn: "This Rococo masterpiece shows elegant couples in an idyllic landscape. The isle of Cythera symbolizes love and romance."
+                },
+                {
+                    title: "La Balançoire",
+                    titleEn: "The Swing",
+                    artist: "Jean-Honoré Fragonard",
+                    year: 1767,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Fragonard%2C_The_Swing.jpg/800px-Fragonard%2C_The_Swing.jpg",
+                    descFr: "Une jeune femme se balance dans un jardin luxuriant. Ce tableau incarne la légèreté et l'esprit joueur du Rococo.",
+                    descEn: "A young woman swings in a lush garden. This painting embodies the lightness and playful spirit of Rococo."
+                }
+            ],
+            vocab: [
+                { word: "la légèreté", meaning: "lightness" },
+                { word: "un chef-d'œuvre", meaning: "a masterpiece" },
+                { word: "un paysage", meaning: "a landscape" },
+                { word: "l'amour", meaning: "love" },
+                { word: "un jardin", meaning: "a garden" },
+                { word: "élégant(e)", meaning: "elegant" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "J'___ une question importante.", answer: "ai", options: ["ai", "as", "a", "avons"] },
             { type: "fill", prompt: "Elle ___ vingt-cinq ans.", answer: "a", options: ["est", "a", "ai", "as"] },
@@ -407,6 +475,40 @@ const LESSONS = [
                 synonyms: [{ word: "revenir", meaning: "to come back" }, { word: "rentrer", meaning: "to go home" }]
             }
         ],
+        artHistory: {
+            period: "Le Romantisme (1800–1850)",
+            periodEn: "Romanticism (1800–1850)",
+            context: "Le Romantisme français privilégie l'émotion, la passion et l'imagination. Les artistes rejettent la raison froide du néoclassicisme pour exprimer des sentiments intenses et la beauté de la nature sauvage.",
+            contextEn: "French Romanticism favors emotion, passion, and imagination. Artists reject the cold reason of neoclassicism to express intense feelings and the beauty of wild nature.",
+            artworks: [
+                {
+                    title: "La Liberté guidant le peuple",
+                    titleEn: "Liberty Leading the People",
+                    artist: "Eugène Delacroix",
+                    year: 1830,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg/800px-Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg",
+                    descFr: "Ce tableau emblématique montre une femme symbolisant la Liberté qui mène le peuple français pendant la Révolution de Juillet 1830. Elle tient le drapeau tricolore.",
+                    descEn: "This iconic painting shows a woman symbolizing Liberty leading the French people during the July Revolution of 1830. She holds the tricolor flag."
+                },
+                {
+                    title: "Le Radeau de la Méduse",
+                    titleEn: "The Raft of the Medusa",
+                    artist: "Théodore Géricault",
+                    year: 1819,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg/800px-JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg",
+                    descFr: "Cette peinture dramatique représente les survivants d'un naufrage sur un radeau en mer. C'est un symbole de la souffrance humaine et de l'espoir.",
+                    descEn: "This dramatic painting depicts the survivors of a shipwreck on a raft at sea. It is a symbol of human suffering and hope."
+                }
+            ],
+            vocab: [
+                { word: "la liberté", meaning: "liberty/freedom" },
+                { word: "le peuple", meaning: "the people" },
+                { word: "le drapeau", meaning: "the flag" },
+                { word: "la souffrance", meaning: "suffering" },
+                { word: "l'espoir", meaning: "hope" },
+                { word: "sauvage", meaning: "wild" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ au restaurant ce soir.", answer: "vais", options: ["vais", "vas", "va", "allons"] },
             { type: "fill", prompt: "Nous ___ étudier le français.", answer: "allons", options: ["allons", "allez", "vont", "vais"] },
@@ -548,6 +650,40 @@ const LESSONS = [
                 synonyms: [{ word: "conflit", meaning: "conflict" }, { word: "bataille", meaning: "battle" }, { word: "combat", meaning: "combat" }]
             }
         ],
+        artHistory: {
+            period: "L'Impressionnisme (1860–1890)",
+            periodEn: "Impressionism (1860–1890)",
+            context: "L'Impressionnisme est né à Paris et a révolutionné l'art occidental. Les peintres capturent les effets de la lumière et les moments fugaces de la vie quotidienne en plein air, avec des touches de couleur rapides.",
+            contextEn: "Impressionism was born in Paris and revolutionized Western art. Painters capture the effects of light and fleeting moments of everyday life outdoors, with quick brushstrokes of color.",
+            artworks: [
+                {
+                    title: "Impression, soleil levant",
+                    titleEn: "Impression, Sunrise",
+                    artist: "Claude Monet",
+                    year: 1872,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/800px-Monet_-_Impression%2C_Sunrise.jpg",
+                    descFr: "Ce tableau a donné son nom au mouvement impressionniste. Monet peint le port du Havre au lever du soleil avec des couleurs douces et des reflets sur l'eau.",
+                    descEn: "This painting gave its name to the Impressionist movement. Monet paints the port of Le Havre at sunrise with soft colors and reflections on the water."
+                },
+                {
+                    title: "Le Déjeuner des canotiers",
+                    titleEn: "Luncheon of the Boating Party",
+                    artist: "Pierre-Auguste Renoir",
+                    year: 1881,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg/800px-Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg",
+                    descFr: "Renoir capture un déjeuner entre amis au bord de la Seine. La lumière naturelle illumine les visages souriants et les verres de vin.",
+                    descEn: "Renoir captures a lunch among friends by the Seine. Natural light illuminates the smiling faces and wine glasses."
+                }
+            ],
+            vocab: [
+                { word: "la lumière", meaning: "light" },
+                { word: "le soleil", meaning: "the sun" },
+                { word: "un reflet", meaning: "a reflection" },
+                { word: "en plein air", meaning: "outdoors" },
+                { word: "une touche", meaning: "a brushstroke" },
+                { word: "la couleur", meaning: "color" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ du yoga chaque matin.", answer: "fais", options: ["fais", "fait", "faisons", "font"] },
             { type: "fill", prompt: "Il ___ très chaud en été.", answer: "fait", options: ["fais", "fait", "faites", "font"] },
@@ -689,6 +825,40 @@ const LESSONS = [
                 synonyms: [{ word: "souverain", meaning: "sovereign" }, { word: "monarque", meaning: "monarch" }]
             }
         ],
+        artHistory: {
+            period: "Le Post-Impressionnisme (1886–1910)",
+            periodEn: "Post-Impressionism (1886–1910)",
+            context: "Le Post-Impressionnisme prolonge l'Impressionnisme mais va plus loin. Les artistes utilisent des couleurs vives, des formes géométriques et des perspectives uniques pour exprimer leurs émotions personnelles.",
+            contextEn: "Post-Impressionism extends Impressionism but goes further. Artists use vivid colors, geometric forms, and unique perspectives to express their personal emotions.",
+            artworks: [
+                {
+                    title: "La Nuit étoilée (peinte en France)",
+                    titleEn: "The Starry Night (painted in France)",
+                    artist: "Vincent van Gogh",
+                    year: 1889,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/800px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+                    descFr: "Van Gogh a peint ce chef-d'œuvre depuis un asile en Provence, France. Le ciel tourbillonnant exprime son tourment intérieur et sa fascination pour la nuit.",
+                    descEn: "Van Gogh painted this masterpiece from an asylum in Provence, France. The swirling sky expresses his inner turmoil and fascination with the night."
+                },
+                {
+                    title: "Les Joueurs de cartes",
+                    titleEn: "The Card Players",
+                    artist: "Paul Cézanne",
+                    year: 1895,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Les_Joueurs_de_cartes%2C_par_Paul_C%C3%A9zanne%2C_Yorck.jpg/800px-Les_Joueurs_de_cartes%2C_par_Paul_C%C3%A9zanne%2C_Yorck.jpg",
+                    descFr: "Cézanne peint des paysans provençaux jouant aux cartes. Les formes géométriques simples annoncent l'art moderne et le cubisme.",
+                    descEn: "Cézanne paints Provençal peasants playing cards. The simple geometric forms herald modern art and cubism."
+                }
+            ],
+            vocab: [
+                { word: "le ciel", meaning: "the sky" },
+                { word: "une étoile", meaning: "a star" },
+                { word: "tourbillonnant", meaning: "swirling" },
+                { word: "les formes", meaning: "shapes/forms" },
+                { word: "un paysan", meaning: "a peasant" },
+                { word: "vif/vive", meaning: "vivid/bright" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ vous aider.", answer: "peux", options: ["peux", "veux", "peut", "paux"] },
             { type: "fill", prompt: "Elle ___ un verre d'eau.", answer: "veut", options: ["veut", "peut", "veux", "voulez"] },
@@ -830,6 +1000,40 @@ const LESSONS = [
                 synonyms: [{ word: "république", meaning: "republic" }, { word: "régime démocratique", meaning: "democratic system" }]
             }
         ],
+        artHistory: {
+            period: "Le Réalisme (1840–1880)",
+            periodEn: "Realism (1840–1880)",
+            context: "Le Réalisme rejette l'idéalisation romantique. Les peintres montrent la vie quotidienne des gens ordinaires — paysans, ouvriers, et scènes rurales — sans embellissement.",
+            contextEn: "Realism rejects romantic idealization. Painters show the everyday life of ordinary people — peasants, workers, and rural scenes — without embellishment.",
+            artworks: [
+                {
+                    title: "Un enterrement à Ornans",
+                    titleEn: "A Burial at Ornans",
+                    artist: "Gustave Courbet",
+                    year: 1850,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg/800px-Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg",
+                    descFr: "Courbet peint un enterrement de village avec des personnages grandeur nature. Il donne aux gens ordinaires la même importance que les héros classiques.",
+                    descEn: "Courbet paints a village burial with life-size figures. He gives ordinary people the same importance as classical heroes."
+                },
+                {
+                    title: "L'Angélus",
+                    titleEn: "The Angelus",
+                    artist: "Jean-François Millet",
+                    year: 1859,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/JEAN-FRAN%C3%87OIS_MILLET_-_El_%C3%81ngelus_%28Museo_de_Orsay%2C_1857-1859%29.jpg/800px-JEAN-FRAN%C3%87OIS_MILLET_-_El_%C3%81ngelus_%28Museo_de_Orsay%2C_1857-1859%29.jpg",
+                    descFr: "Deux paysans prient dans un champ au coucher du soleil. Cette image simple et émouvante est devenue l'une des plus reproduites au monde.",
+                    descEn: "Two peasants pray in a field at sunset. This simple and moving image became one of the most reproduced in the world."
+                }
+            ],
+            vocab: [
+                { word: "un ouvrier", meaning: "a worker" },
+                { word: "un champ", meaning: "a field" },
+                { word: "le coucher du soleil", meaning: "sunset" },
+                { word: "prier", meaning: "to pray" },
+                { word: "quotidien(ne)", meaning: "daily/everyday" },
+                { word: "ordinaire", meaning: "ordinary" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ne ___ pas français.", answer: "parle", options: ["parle", "parles", "parlons", "parlent"] },
             { type: "fill", prompt: "Elle ne mange ___ de viande.", answer: "jamais", options: ["jamais", "pas", "rien", "plus"] },
@@ -965,6 +1169,40 @@ const LESSONS = [
                 synonyms: [{ word: "venue", meaning: "coming" }, { word: "parvenue", meaning: "reached" }]
             }
         ],
+        artHistory: {
+            period: "Le Baroque Français (1600–1750)",
+            periodEn: "French Baroque (1600–1750)",
+            context: "Le Baroque français est grandiose et majestueux. Sous Louis XIV, l'art sert la gloire du roi. Le château de Versailles est le symbole ultime de cette période avec ses peintures, sculptures et jardins somptueux.",
+            contextEn: "French Baroque is grand and majestic. Under Louis XIV, art serves the glory of the king. The Palace of Versailles is the ultimate symbol of this period with its paintings, sculptures, and sumptuous gardens.",
+            artworks: [
+                {
+                    title: "Le Tricheur à l'as de carreau",
+                    titleEn: "The Cheat with the Ace of Diamonds",
+                    artist: "Georges de La Tour",
+                    year: 1635,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Georges_de_La_Tour_-_The_Cheat_with_the_Ace_of_Diamonds_-_Google_Art_Project.jpg/800px-Georges_de_La_Tour_-_The_Cheat_with_the_Ace_of_Diamonds_-_Google_Art_Project.jpg",
+                    descFr: "La Tour peint une scène de tromperie autour d'une table de jeu. Le jeu de lumière et d'ombre (clair-obscur) crée une atmosphère dramatique.",
+                    descEn: "La Tour paints a scene of deception around a gaming table. The play of light and shadow (chiaroscuro) creates a dramatic atmosphere."
+                },
+                {
+                    title: "Et in Arcadia ego",
+                    titleEn: "The Arcadian Shepherds",
+                    artist: "Nicolas Poussin",
+                    year: 1638,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Nicolas_Poussin_-_Et_in_Arcadia_ego_%28deuxi%C3%A8me_version%29.jpg/800px-Nicolas_Poussin_-_Et_in_Arcadia_ego_%28deuxi%C3%A8me_version%29.jpg",
+                    descFr: "Des bergers découvrent une tombe dans un paysage idéal. Le message rappelle que même au paradis, la mort existe. Poussin est le maître du classicisme français.",
+                    descEn: "Shepherds discover a tomb in an ideal landscape. The message reminds us that even in paradise, death exists. Poussin is the master of French classicism."
+                }
+            ],
+            vocab: [
+                { word: "un château", meaning: "a castle/palace" },
+                { word: "la gloire", meaning: "glory" },
+                { word: "un berger", meaning: "a shepherd" },
+                { word: "la lumière", meaning: "light" },
+                { word: "l'ombre", meaning: "shadow" },
+                { word: "somptueux", meaning: "sumptuous/lavish" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "J'ai ___ un bon livre hier.", answer: "lu", options: ["lu", "lire", "lis", "lit"] },
             { type: "fill", prompt: "Elle est ___ au cinéma.", answer: "allée", options: ["allée", "allé", "aller", "allés"] },
@@ -1106,6 +1344,40 @@ const LESSONS = [
                 synonyms: []
             }
         ],
+        artHistory: {
+            period: "L'Art Nouveau (1890–1910)",
+            periodEn: "Art Nouveau (1890–1910)",
+            context: "L'Art Nouveau est un mouvement décoratif né à Paris. Il s'inspire des formes organiques de la nature — fleurs, plantes, courbes — pour créer un style élégant dans l'architecture, les affiches et les objets du quotidien.",
+            contextEn: "Art Nouveau is a decorative movement born in Paris. It draws inspiration from organic forms of nature — flowers, plants, curves — to create an elegant style in architecture, posters, and everyday objects.",
+            artworks: [
+                {
+                    title: "Gismonda (affiche)",
+                    titleEn: "Gismonda (poster)",
+                    artist: "Alphonse Mucha",
+                    year: 1894,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Alfons_Mucha_-_1894_-_Gismonda.jpg/400px-Alfons_Mucha_-_1894_-_Gismonda.jpg",
+                    descFr: "Cette affiche pour le théâtre parisien montre une femme entourée de motifs floraux. Mucha a popularisé l'Art Nouveau à travers ses affiches iconiques.",
+                    descEn: "This poster for a Parisian theater shows a woman surrounded by floral motifs. Mucha popularized Art Nouveau through his iconic posters."
+                },
+                {
+                    title: "Entrées du Métro de Paris",
+                    titleEn: "Paris Metro Entrances",
+                    artist: "Hector Guimard",
+                    year: 1900,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Edicule_Guimard_Abbesses.jpg/600px-Edicule_Guimard_Abbesses.jpg",
+                    descFr: "Les entrées du métro parisien conçues par Guimard sont des exemples célèbres de l'Art Nouveau architectural. Les formes en fer forgé imitent des plantes et des fleurs.",
+                    descEn: "The Parisian metro entrances designed by Guimard are famous examples of architectural Art Nouveau. The wrought iron forms imitate plants and flowers."
+                }
+            ],
+            vocab: [
+                { word: "une affiche", meaning: "a poster" },
+                { word: "une fleur", meaning: "a flower" },
+                { word: "une courbe", meaning: "a curve" },
+                { word: "le fer forgé", meaning: "wrought iron" },
+                { word: "un motif", meaning: "a pattern/motif" },
+                { word: "décoratif", meaning: "decorative" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "___ est-ce que tu habites ?", answer: "Où", options: ["Où", "Qui", "Quand", "Comment"] },
             { type: "fill", prompt: "___ est cette femme ?", answer: "Qui", options: ["Qui", "Que", "Où", "Quand"] },
@@ -1247,6 +1519,40 @@ const LESSONS = [
                 synonyms: [{ word: "note", meaning: "bill" }, { word: "facture", meaning: "invoice" }]
             }
         ],
+        artHistory: {
+            period: "Le Fauvisme (1904–1908)",
+            periodEn: "Fauvism (1904–1908)",
+            context: "Le Fauvisme est un mouvement audacieux né à Paris. Les peintres utilisent des couleurs pures et éclatantes, appliquées directement du tube, pour créer des œuvres expressives. Les critiques les ont surnommés 'les fauves' (les bêtes sauvages).",
+            contextEn: "Fauvism is a bold movement born in Paris. Painters use pure, brilliant colors applied directly from the tube to create expressive works. Critics nicknamed them 'les fauves' (the wild beasts).",
+            artworks: [
+                {
+                    title: "La Femme au chapeau",
+                    titleEn: "Woman with a Hat",
+                    artist: "Henri Matisse",
+                    year: 1905,
+                    image: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Woman_with_a_Hat_by_Henri_Matisse%2C_1905.jpg/400px-Woman_with_a_Hat_by_Henri_Matisse%2C_1905.jpg",
+                    descFr: "Matisse peint sa femme avec des couleurs audacieuses et non naturelles — du vert, du rouge et du bleu sur le visage. Ce portrait a choqué le public lors du Salon d'Automne de 1905.",
+                    descEn: "Matisse paints his wife with bold, unnatural colors — green, red, and blue on the face. This portrait shocked the public at the 1905 Salon d'Automne."
+                },
+                {
+                    title: "La Danse",
+                    titleEn: "The Dance",
+                    artist: "Henri Matisse",
+                    year: 1910,
+                    image: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Matissedance.jpg/800px-Matissedance.jpg",
+                    descFr: "Cinq figures dansent en cercle avec seulement trois couleurs : rouge, bleu et vert. La simplicité exprime la joie pure du mouvement.",
+                    descEn: "Five figures dance in a circle with only three colors: red, blue, and green. The simplicity expresses the pure joy of movement."
+                }
+            ],
+            vocab: [
+                { word: "audacieux", meaning: "bold/daring" },
+                { word: "éclatant(e)", meaning: "brilliant/bright" },
+                { word: "un chapeau", meaning: "a hat" },
+                { word: "danser", meaning: "to dance" },
+                { word: "le mouvement", meaning: "movement" },
+                { word: "sauvage", meaning: "wild" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Excusez-moi, ___ se trouve la gare ?", answer: "où", options: ["où", "qui", "que", "comment"] },
             { type: "fill", prompt: "Je voudrais ___ une table pour deux.", answer: "réserver", options: ["réserver", "manger", "trouver", "acheter"] },
@@ -1382,6 +1688,40 @@ const LESSONS = [
                 synonyms: [{ word: "motif", meaning: "motive" }, { word: "cause", meaning: "cause" }]
             }
         ],
+        artHistory: {
+            period: "Le Cubisme (1907–1920)",
+            periodEn: "Cubism (1907–1920)",
+            context: "Le Cubisme, inventé à Paris par Picasso et Braque, décompose les objets en formes géométriques et les montre sous plusieurs angles simultanément. C'est une révolution totale dans la façon de voir le monde.",
+            contextEn: "Cubism, invented in Paris by Picasso and Braque, breaks objects down into geometric shapes and shows them from multiple angles simultaneously. It is a total revolution in the way of seeing the world.",
+            artworks: [
+                {
+                    title: "Les Demoiselles d'Avignon",
+                    titleEn: "The Young Ladies of Avignon",
+                    artist: "Pablo Picasso",
+                    year: 1907,
+                    image: "https://upload.wikimedia.org/wikipedia/en/4/4c/Les_Demoiselles_d%27Avignon.jpg",
+                    descFr: "Ce tableau montre cinq femmes aux visages anguleux inspirés de l'art africain. Peint à Paris, il est considéré comme le point de départ du cubisme.",
+                    descEn: "This painting shows five women with angular faces inspired by African art. Painted in Paris, it is considered the starting point of cubism."
+                },
+                {
+                    title: "Maisons à l'Estaque",
+                    titleEn: "Houses at l'Estaque",
+                    artist: "Georges Braque",
+                    year: 1908,
+                    image: "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Georges_Braque%2C_1908%2C_Maisons_%C3%A0_l%27Estaque_%28Houses_at_l%27Estaque%29.jpg/400px-Georges_Braque%2C_1908%2C_Maisons_%C3%A0_l%27Estaque_%28Houses_at_l%27Estaque%29.jpg",
+                    descFr: "Braque réduit les maisons et les arbres à des cubes et des formes géométriques. C'est ce tableau qui a inspiré le nom 'cubisme'.",
+                    descEn: "Braque reduces houses and trees to cubes and geometric shapes. It was this painting that inspired the name 'cubism'."
+                }
+            ],
+            vocab: [
+                { word: "un angle", meaning: "an angle" },
+                { word: "une forme", meaning: "a shape" },
+                { word: "décomposer", meaning: "to break down" },
+                { word: "simultanément", meaning: "simultaneously" },
+                { word: "un cube", meaning: "a cube" },
+                { word: "géométrique", meaning: "geometric" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ que c'est une bonne idée.", answer: "pense", options: ["pense", "suis", "trouve", "vais"] },
             { type: "fill", prompt: "Je ne suis pas ___ avec toi.", answer: "d'accord", options: ["d'accord", "content", "sûr", "certain"] },
@@ -1517,6 +1857,40 @@ const LESSONS = [
                 synonyms: [{ word: "création", meaning: "creation" }, { word: "chef-d'œuvre", meaning: "masterpiece" }]
             }
         ],
+        artHistory: {
+            period: "La Renaissance Française (1494–1610)",
+            periodEn: "The French Renaissance (1494–1610)",
+            context: "La Renaissance française s'inspire de l'Italie. Le roi François Ier invite Léonard de Vinci en France et lance de grands projets de châteaux. L'art français devient plus raffiné avec un mélange d'influences italiennes et françaises.",
+            contextEn: "The French Renaissance draws inspiration from Italy. King Francis I invites Leonardo da Vinci to France and launches grand castle projects. French art becomes more refined with a blend of Italian and French influences.",
+            artworks: [
+                {
+                    title: "La Joconde (Mona Lisa)",
+                    titleEn: "Mona Lisa",
+                    artist: "Léonard de Vinci",
+                    year: 1519,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/400px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+                    descFr: "Le tableau le plus célèbre du monde est conservé au Louvre à Paris. Léonard l'a apporté en France quand François Ier l'a invité au Château du Clos Lucé.",
+                    descEn: "The most famous painting in the world is kept at the Louvre in Paris. Leonardo brought it to France when Francis I invited him to the Château du Clos Lucé."
+                },
+                {
+                    title: "Diana Chasseresse",
+                    titleEn: "Diana the Huntress",
+                    artist: "École de Fontainebleau",
+                    year: 1550,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/%C3%89cole_de_Fontainebleau_-_Diane_chasseresse_%28Mus%C3%A9e_du_Louvre%29.jpg/400px-%C3%89cole_de_Fontainebleau_-_Diane_chasseresse_%28Mus%C3%A9e_du_Louvre%29.jpg",
+                    descFr: "Cette peinture de l'École de Fontainebleau représente la déesse Diane. Le style mélange la grâce italienne avec l'élégance française de la cour.",
+                    descEn: "This painting from the School of Fontainebleau depicts the goddess Diana. The style blends Italian grace with the French elegance of the court."
+                }
+            ],
+            vocab: [
+                { word: "un roi", meaning: "a king" },
+                { word: "un musée", meaning: "a museum" },
+                { word: "célèbre", meaning: "famous" },
+                { word: "raffiné(e)", meaning: "refined" },
+                { word: "la cour", meaning: "the court" },
+                { word: "inviter", meaning: "to invite" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ parler trois langues.", answer: "sais", options: ["sais", "connais", "savons", "connaît"] },
             { type: "fill", prompt: "Elle ___ bien cette ville.", answer: "connaît", options: ["sait", "connaît", "savez", "connaissent"] },
@@ -1652,6 +2026,40 @@ const LESSONS = [
                 synonyms: [{ word: "aéronef", meaning: "aircraft" }, { word: "vol", meaning: "flight" }]
             }
         ],
+        artHistory: {
+            period: "Le Surréalisme (1920–1960)",
+            periodEn: "Surrealism (1920–1960)",
+            context: "Le Surréalisme est né à Paris sous l'influence d'André Breton. Les artistes explorent les rêves, l'inconscient et l'imagination sans limites. Ils créent des images étranges et poétiques qui défient la logique.",
+            contextEn: "Surrealism was born in Paris under the influence of André Breton. Artists explore dreams, the unconscious, and limitless imagination. They create strange and poetic images that defy logic.",
+            artworks: [
+                {
+                    title: "La Persistance de la mémoire",
+                    titleEn: "The Persistence of Memory",
+                    artist: "Salvador Dalí",
+                    year: 1931,
+                    image: "https://upload.wikimedia.org/wikipedia/en/d/dd/The_Persistence_of_Memory.jpg",
+                    descFr: "Les montres molles de Dalí symbolisent la fluidité du temps dans les rêves. Ce tableau est devenu l'icône du mouvement surréaliste, créé pendant son séjour à Paris.",
+                    descEn: "Dalí's soft watches symbolize the fluidity of time in dreams. This painting became the icon of the surrealist movement, created during his time in Paris."
+                },
+                {
+                    title: "Le Fils de l'homme",
+                    titleEn: "The Son of Man",
+                    artist: "René Magritte",
+                    year: 1964,
+                    image: "https://upload.wikimedia.org/wikipedia/en/e/e5/Magritte_TheSonOfMan.jpg",
+                    descFr: "Un homme en costume avec une pomme verte cachant son visage. Magritte, lié au mouvement parisien, explore le conflit entre le visible et le caché.",
+                    descEn: "A man in a suit with a green apple hiding his face. Magritte, linked to the Parisian movement, explores the conflict between the visible and the hidden."
+                }
+            ],
+            vocab: [
+                { word: "un rêve", meaning: "a dream" },
+                { word: "l'inconscient", meaning: "the unconscious" },
+                { word: "étrange", meaning: "strange" },
+                { word: "une montre", meaning: "a watch" },
+                { word: "le visage", meaning: "the face" },
+                { word: "caché(e)", meaning: "hidden" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ un café chaque matin.", answer: "prends", options: ["prends", "prend", "prenons", "prennent"] },
             { type: "fill", prompt: "Ils ___ l'avion à midi.", answer: "prennent", options: ["prend", "prenons", "prenez", "prennent"] },
@@ -1787,6 +2195,40 @@ const LESSONS = [
                 synonyms: [{ word: "pénalité", meaning: "penalty" }, { word: "contravention", meaning: "ticket/fine" }]
             }
         ],
+        artHistory: {
+            period: "L'Art Gothique Français (1140–1500)",
+            periodEn: "French Gothic Art (1140–1500)",
+            context: "L'art gothique est né en France au XIIe siècle. Les cathédrales majestueuses comme Notre-Dame de Paris présentent des vitraux colorés, des sculptures détaillées et des arcs brisés qui s'élèvent vers le ciel.",
+            contextEn: "Gothic art was born in France in the 12th century. Majestic cathedrals like Notre-Dame de Paris feature colorful stained glass windows, detailed sculptures, and pointed arches that rise toward the sky.",
+            artworks: [
+                {
+                    title: "Les Vitraux de la Sainte-Chapelle",
+                    titleEn: "Stained Glass of Sainte-Chapelle",
+                    artist: "Artisans médiévaux",
+                    year: 1248,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Sainte_Chapelle_-_Upper_Chapel.jpg/600px-Sainte_Chapelle_-_Upper_Chapel.jpg",
+                    descFr: "La Sainte-Chapelle à Paris possède les plus beaux vitraux médiévaux du monde. Plus de 1 100 scènes bibliques racontent des histoires en lumière et en couleur.",
+                    descEn: "The Sainte-Chapelle in Paris has the most beautiful medieval stained glass in the world. Over 1,100 biblical scenes tell stories in light and color."
+                },
+                {
+                    title: "Les Très Riches Heures du Duc de Berry",
+                    titleEn: "The Very Rich Hours of the Duke of Berry",
+                    artist: "Les Frères Limbourg",
+                    year: 1416,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_Janvier.jpg/400px-Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_Janvier.jpg",
+                    descFr: "Ce manuscrit enluminé est un chef-d'œuvre de l'art médiéval français. Chaque page illustre un mois de l'année avec des scènes de la vie quotidienne et des châteaux.",
+                    descEn: "This illuminated manuscript is a masterpiece of French medieval art. Each page illustrates a month of the year with scenes of daily life and castles."
+                }
+            ],
+            vocab: [
+                { word: "un vitrail (des vitraux)", meaning: "a stained glass window" },
+                { word: "une cathédrale", meaning: "a cathedral" },
+                { word: "un arc", meaning: "an arch" },
+                { word: "médiéval(e)", meaning: "medieval" },
+                { word: "un manuscrit", meaning: "a manuscript" },
+                { word: "enluminé(e)", meaning: "illuminated" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ finir ce travail avant vendredi.", answer: "dois", options: ["dois", "doit", "devons", "doivent"] },
             { type: "fill", prompt: "Vous ___ signer ici.", answer: "devez", options: ["dois", "doit", "devez", "doivent"] },
@@ -1922,6 +2364,40 @@ const LESSONS = [
                 synonyms: [{ word: "idiome", meaning: "idiom/language" }, { word: "dialecte", meaning: "dialect" }]
             }
         ],
+        artHistory: {
+            period: "L'Art Moderne et Contemporain (1945–aujourd'hui)",
+            periodEn: "Modern and Contemporary Art (1945–present)",
+            context: "Après la Seconde Guerre mondiale, Paris reste un centre artistique majeur. De nouveaux mouvements comme le Nouveau Réalisme et l'art conceptuel émergent. Des artistes comme Yves Klein et Louise Bourgeois redéfinissent l'art.",
+            contextEn: "After World War II, Paris remains a major artistic center. New movements like New Realism and conceptual art emerge. Artists like Yves Klein and Louise Bourgeois redefine art.",
+            artworks: [
+                {
+                    title: "IKB 79 (Bleu International Klein)",
+                    titleEn: "IKB 79 (International Klein Blue)",
+                    artist: "Yves Klein",
+                    year: 1959,
+                    image: "https://upload.wikimedia.org/wikipedia/en/3/38/IKB_191.jpg",
+                    descFr: "Yves Klein a inventé sa propre couleur bleue, l'International Klein Blue. Ses monochromes bleus explorent l'infini et l'immatériel à travers une seule couleur pure.",
+                    descEn: "Yves Klein invented his own shade of blue, International Klein Blue. His blue monochromes explore infinity and the immaterial through a single pure color."
+                },
+                {
+                    title: "Maman",
+                    titleEn: "Maman (Mother)",
+                    artist: "Louise Bourgeois",
+                    year: 1999,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Maman_at_Mus%C3%A9e_des_beaux-arts_du_Canada.jpg/600px-Maman_at_Mus%C3%A9e_des_beaux-arts_du_Canada.jpg",
+                    descFr: "Cette sculpture géante d'araignée de 9 mètres représente la mère de l'artiste. Bourgeois, née à Paris, explore les thèmes de la famille, la protection et la vulnérabilité.",
+                    descEn: "This giant 9-meter spider sculpture represents the artist's mother. Bourgeois, born in Paris, explores themes of family, protection, and vulnerability."
+                }
+            ],
+            vocab: [
+                { word: "une sculpture", meaning: "a sculpture" },
+                { word: "contemporain(e)", meaning: "contemporary" },
+                { word: "l'infini", meaning: "infinity" },
+                { word: "une araignée", meaning: "a spider" },
+                { word: "la vulnérabilité", meaning: "vulnerability" },
+                { word: "redéfinir", meaning: "to redefine" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ toujours la vérité.", answer: "dis", options: ["dis", "dit", "parle", "disons"] },
             { type: "fill", prompt: "Elle ___ français et anglais.", answer: "parle", options: ["dit", "parle", "dis", "parlent"] },
@@ -2057,6 +2533,40 @@ const LESSONS = [
                 synonyms: [{ word: "rechercher", meaning: "to search for" }, { word: "explorer", meaning: "to explore" }]
             }
         ],
+        artHistory: {
+            period: "L'Art Déco (1920–1940)",
+            periodEn: "Art Deco (1920–1940)",
+            context: "L'Art Déco est né à Paris lors de l'Exposition internationale des Arts décoratifs de 1925. Ce style géométrique et luxueux influence l'architecture, la mode, le design et les affiches. Il symbolise la modernité et l'élégance.",
+            contextEn: "Art Deco was born in Paris at the 1925 International Exhibition of Decorative Arts. This geometric and luxurious style influences architecture, fashion, design, and posters. It symbolizes modernity and elegance.",
+            artworks: [
+                {
+                    title: "Le Grand Salon du Paquebot Normandie",
+                    titleEn: "The Grand Salon of the SS Normandie",
+                    artist: "Jean Dunand & Jean Dupas",
+                    year: 1935,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/SS_Normandie_color.jpg/800px-SS_Normandie_color.jpg",
+                    descFr: "Le paquebot Normandie était un chef-d'œuvre flottant de l'Art Déco français. Son grand salon était décoré de panneaux laqués, de dorures et de motifs géométriques luxueux.",
+                    descEn: "The SS Normandie was a floating masterpiece of French Art Deco. Its grand salon was decorated with lacquered panels, gilding, and luxurious geometric patterns."
+                },
+                {
+                    title: "La Tour Eiffel illuminée (style Art Déco Citroën)",
+                    titleEn: "The Eiffel Tower illuminated (Citroën Art Deco style)",
+                    artist: "Fernand Jacopozzi",
+                    year: 1925,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_eiffel_at_night.jpg/400px-Tour_eiffel_at_night.jpg",
+                    descFr: "Pendant l'exposition de 1925, la Tour Eiffel a été illuminée avec le nom Citroën en lettres lumineuses Art Déco. C'était la plus grande publicité du monde à l'époque.",
+                    descEn: "During the 1925 exhibition, the Eiffel Tower was illuminated with the Citroën name in Art Deco light letters. It was the world's largest advertisement at the time."
+                }
+            ],
+            vocab: [
+                { word: "géométrique", meaning: "geometric" },
+                { word: "luxueux/luxueuse", meaning: "luxurious" },
+                { word: "la mode", meaning: "fashion" },
+                { word: "une exposition", meaning: "an exhibition" },
+                { word: "doré(e)", meaning: "golden/gilded" },
+                { word: "la modernité", meaning: "modernity" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ de Paris.", answer: "viens", options: ["viens", "vient", "venons", "viennent"] },
             { type: "fill", prompt: "Nous ___ d'arriver à la maison.", answer: "venons", options: ["viens", "venons", "venez", "viennent"] },
@@ -2148,6 +2658,40 @@ const LESSONS = [
                 synonyms: [{ word: "création", meaning: "creation" }, { word: "chef-d'œuvre", meaning: "masterpiece" }]
             }
         ],
+        artHistory: {
+            period: "La Renaissance Française (1494–1610)",
+            periodEn: "The French Renaissance (1494–1610)",
+            context: "La Renaissance française s'inspire de l'Italie. Le roi François Ier invite Léonard de Vinci en France et lance de grands projets de châteaux. L'art français devient plus raffiné avec un mélange d'influences italiennes et françaises.",
+            contextEn: "The French Renaissance draws inspiration from Italy. King Francis I invites Leonardo da Vinci to France and launches grand castle projects. French art becomes more refined with a blend of Italian and French influences.",
+            artworks: [
+                {
+                    title: "La Joconde (Mona Lisa)",
+                    titleEn: "Mona Lisa",
+                    artist: "Léonard de Vinci",
+                    year: 1519,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/400px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+                    descFr: "Le tableau le plus célèbre du monde est conservé au Louvre à Paris. Léonard l'a apporté en France quand François Ier l'a invité au Château du Clos Lucé.",
+                    descEn: "The most famous painting in the world is kept at the Louvre in Paris. Leonardo brought it to France when Francis I invited him to the Château du Clos Lucé."
+                },
+                {
+                    title: "Diana Chasseresse",
+                    titleEn: "Diana the Huntress",
+                    artist: "École de Fontainebleau",
+                    year: 1550,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/%C3%89cole_de_Fontainebleau_-_Diane_chasseresse_%28Mus%C3%A9e_du_Louvre%29.jpg/400px-%C3%89cole_de_Fontainebleau_-_Diane_chasseresse_%28Mus%C3%A9e_du_Louvre%29.jpg",
+                    descFr: "Cette peinture de l'École de Fontainebleau représente la déesse Diane. Le style mélange la grâce italienne avec l'élégance française de la cour.",
+                    descEn: "This painting from the School of Fontainebleau depicts the goddess Diana. The style blends Italian grace with the French elegance of the court."
+                }
+            ],
+            vocab: [
+                { word: "un roi", meaning: "a king" },
+                { word: "un musée", meaning: "a museum" },
+                { word: "célèbre", meaning: "famous" },
+                { word: "raffiné(e)", meaning: "refined" },
+                { word: "la cour", meaning: "the court" },
+                { word: "inviter", meaning: "to invite" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ parler trois langues.", answer: "sais", options: ["sais", "connais", "savons", "connaît"] },
             { type: "fill", prompt: "Elle ___ bien cette ville.", answer: "connaît", options: ["sait", "connaît", "savez", "connaissent"] },
@@ -2231,6 +2775,40 @@ const LESSONS = [
                 synonyms: [{ word: "aéronef", meaning: "aircraft" }, { word: "vol", meaning: "flight" }]
             }
         ],
+        artHistory: {
+            period: "Le Surréalisme (1920–1960)",
+            periodEn: "Surrealism (1920–1960)",
+            context: "Le Surréalisme est né à Paris sous l'influence d'André Breton. Les artistes explorent les rêves, l'inconscient et l'imagination sans limites. Ils créent des images étranges et poétiques qui défient la logique.",
+            contextEn: "Surrealism was born in Paris under the influence of André Breton. Artists explore dreams, the unconscious, and limitless imagination. They create strange and poetic images that defy logic.",
+            artworks: [
+                {
+                    title: "La Persistance de la mémoire",
+                    titleEn: "The Persistence of Memory",
+                    artist: "Salvador Dalí",
+                    year: 1931,
+                    image: "https://upload.wikimedia.org/wikipedia/en/d/dd/The_Persistence_of_Memory.jpg",
+                    descFr: "Les montres molles de Dalí symbolisent la fluidité du temps dans les rêves. Ce tableau est devenu l'icône du mouvement surréaliste, créé pendant son séjour à Paris.",
+                    descEn: "Dalí's soft watches symbolize the fluidity of time in dreams. This painting became the icon of the surrealist movement, created during his time in Paris."
+                },
+                {
+                    title: "Le Fils de l'homme",
+                    titleEn: "The Son of Man",
+                    artist: "René Magritte",
+                    year: 1964,
+                    image: "https://upload.wikimedia.org/wikipedia/en/e/e5/Magritte_TheSonOfMan.jpg",
+                    descFr: "Un homme en costume avec une pomme verte cachant son visage. Magritte, lié au mouvement parisien, explore le conflit entre le visible et le caché.",
+                    descEn: "A man in a suit with a green apple hiding his face. Magritte, linked to the Parisian movement, explores the conflict between the visible and the hidden."
+                }
+            ],
+            vocab: [
+                { word: "un rêve", meaning: "a dream" },
+                { word: "l'inconscient", meaning: "the unconscious" },
+                { word: "étrange", meaning: "strange" },
+                { word: "une montre", meaning: "a watch" },
+                { word: "le visage", meaning: "the face" },
+                { word: "caché(e)", meaning: "hidden" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ un café chaque matin.", answer: "prends", options: ["prends", "prend", "prenons", "prennent"] },
             { type: "fill", prompt: "Ils ___ l'avion à midi.", answer: "prennent", options: ["prend", "prenons", "prenez", "prennent"] },
@@ -2314,6 +2892,40 @@ const LESSONS = [
                 synonyms: [{ word: "pénalité", meaning: "penalty" }, { word: "contravention", meaning: "ticket/fine" }]
             }
         ],
+        artHistory: {
+            period: "L'Art Gothique Français (1140–1500)",
+            periodEn: "French Gothic Art (1140–1500)",
+            context: "L'art gothique est né en France au XIIe siècle. Les cathédrales majestueuses comme Notre-Dame de Paris présentent des vitraux colorés, des sculptures détaillées et des arcs brisés qui s'élèvent vers le ciel.",
+            contextEn: "Gothic art was born in France in the 12th century. Majestic cathedrals like Notre-Dame de Paris feature colorful stained glass windows, detailed sculptures, and pointed arches that rise toward the sky.",
+            artworks: [
+                {
+                    title: "Les Vitraux de la Sainte-Chapelle",
+                    titleEn: "Stained Glass of Sainte-Chapelle",
+                    artist: "Artisans médiévaux",
+                    year: 1248,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Sainte_Chapelle_-_Upper_Chapel.jpg/600px-Sainte_Chapelle_-_Upper_Chapel.jpg",
+                    descFr: "La Sainte-Chapelle à Paris possède les plus beaux vitraux médiévaux du monde. Plus de 1 100 scènes bibliques racontent des histoires en lumière et en couleur.",
+                    descEn: "The Sainte-Chapelle in Paris has the most beautiful medieval stained glass in the world. Over 1,100 biblical scenes tell stories in light and color."
+                },
+                {
+                    title: "Les Très Riches Heures du Duc de Berry",
+                    titleEn: "The Very Rich Hours of the Duke of Berry",
+                    artist: "Les Frères Limbourg",
+                    year: 1416,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_Janvier.jpg/400px-Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_Janvier.jpg",
+                    descFr: "Ce manuscrit enluminé est un chef-d'œuvre de l'art médiéval français. Chaque page illustre un mois de l'année avec des scènes de la vie quotidienne et des châteaux.",
+                    descEn: "This illuminated manuscript is a masterpiece of French medieval art. Each page illustrates a month of the year with scenes of daily life and castles."
+                }
+            ],
+            vocab: [
+                { word: "un vitrail (des vitraux)", meaning: "a stained glass window" },
+                { word: "une cathédrale", meaning: "a cathedral" },
+                { word: "un arc", meaning: "an arch" },
+                { word: "médiéval(e)", meaning: "medieval" },
+                { word: "un manuscrit", meaning: "a manuscript" },
+                { word: "enluminé(e)", meaning: "illuminated" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ finir ce travail avant vendredi.", answer: "dois", options: ["dois", "doit", "devons", "doivent"] },
             { type: "fill", prompt: "Vous ___ signer ici.", answer: "devez", options: ["dois", "doit", "devez", "doivent"] },
@@ -2397,6 +3009,40 @@ const LESSONS = [
                 synonyms: [{ word: "idiome", meaning: "idiom/language" }, { word: "dialecte", meaning: "dialect" }]
             }
         ],
+        artHistory: {
+            period: "L'Art Moderne et Contemporain (1945–aujourd'hui)",
+            periodEn: "Modern and Contemporary Art (1945–present)",
+            context: "Après la Seconde Guerre mondiale, Paris reste un centre artistique majeur. De nouveaux mouvements comme le Nouveau Réalisme et l'art conceptuel émergent. Des artistes comme Yves Klein et Louise Bourgeois redéfinissent l'art.",
+            contextEn: "After World War II, Paris remains a major artistic center. New movements like New Realism and conceptual art emerge. Artists like Yves Klein and Louise Bourgeois redefine art.",
+            artworks: [
+                {
+                    title: "IKB 79 (Bleu International Klein)",
+                    titleEn: "IKB 79 (International Klein Blue)",
+                    artist: "Yves Klein",
+                    year: 1959,
+                    image: "https://upload.wikimedia.org/wikipedia/en/3/38/IKB_191.jpg",
+                    descFr: "Yves Klein a inventé sa propre couleur bleue, l'International Klein Blue. Ses monochromes bleus explorent l'infini et l'immatériel à travers une seule couleur pure.",
+                    descEn: "Yves Klein invented his own shade of blue, International Klein Blue. His blue monochromes explore infinity and the immaterial through a single pure color."
+                },
+                {
+                    title: "Maman",
+                    titleEn: "Maman (Mother)",
+                    artist: "Louise Bourgeois",
+                    year: 1999,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Maman_at_Mus%C3%A9e_des_beaux-arts_du_Canada.jpg/600px-Maman_at_Mus%C3%A9e_des_beaux-arts_du_Canada.jpg",
+                    descFr: "Cette sculpture géante d'araignée de 9 mètres représente la mère de l'artiste. Bourgeois, née à Paris, explore les thèmes de la famille, la protection et la vulnérabilité.",
+                    descEn: "This giant 9-meter spider sculpture represents the artist's mother. Bourgeois, born in Paris, explores themes of family, protection, and vulnerability."
+                }
+            ],
+            vocab: [
+                { word: "une sculpture", meaning: "a sculpture" },
+                { word: "contemporain(e)", meaning: "contemporary" },
+                { word: "l'infini", meaning: "infinity" },
+                { word: "une araignée", meaning: "a spider" },
+                { word: "la vulnérabilité", meaning: "vulnerability" },
+                { word: "redéfinir", meaning: "to redefine" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ toujours la vérité.", answer: "dis", options: ["dis", "dit", "parle", "disons"] },
             { type: "fill", prompt: "Elle ___ français et anglais.", answer: "parle", options: ["dit", "parle", "dis", "parlent"] },
@@ -2480,6 +3126,40 @@ const LESSONS = [
                 synonyms: [{ word: "rechercher", meaning: "to search for" }, { word: "explorer", meaning: "to explore" }]
             }
         ],
+        artHistory: {
+            period: "L'Art Déco (1920–1940)",
+            periodEn: "Art Deco (1920–1940)",
+            context: "L'Art Déco est né à Paris lors de l'Exposition internationale des Arts décoratifs de 1925. Ce style géométrique et luxueux influence l'architecture, la mode, le design et les affiches. Il symbolise la modernité et l'élégance.",
+            contextEn: "Art Deco was born in Paris at the 1925 International Exhibition of Decorative Arts. This geometric and luxurious style influences architecture, fashion, design, and posters. It symbolizes modernity and elegance.",
+            artworks: [
+                {
+                    title: "Le Grand Salon du Paquebot Normandie",
+                    titleEn: "The Grand Salon of the SS Normandie",
+                    artist: "Jean Dunand & Jean Dupas",
+                    year: 1935,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/SS_Normandie_color.jpg/800px-SS_Normandie_color.jpg",
+                    descFr: "Le paquebot Normandie était un chef-d'œuvre flottant de l'Art Déco français. Son grand salon était décoré de panneaux laqués, de dorures et de motifs géométriques luxueux.",
+                    descEn: "The SS Normandie was a floating masterpiece of French Art Deco. Its grand salon was decorated with lacquered panels, gilding, and luxurious geometric patterns."
+                },
+                {
+                    title: "La Tour Eiffel illuminée (style Art Déco Citroën)",
+                    titleEn: "The Eiffel Tower illuminated (Citroën Art Deco style)",
+                    artist: "Fernand Jacopozzi",
+                    year: 1925,
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_eiffel_at_night.jpg/400px-Tour_eiffel_at_night.jpg",
+                    descFr: "Pendant l'exposition de 1925, la Tour Eiffel a été illuminée avec le nom Citroën en lettres lumineuses Art Déco. C'était la plus grande publicité du monde à l'époque.",
+                    descEn: "During the 1925 exhibition, the Eiffel Tower was illuminated with the Citroën name in Art Deco light letters. It was the world's largest advertisement at the time."
+                }
+            ],
+            vocab: [
+                { word: "géométrique", meaning: "geometric" },
+                { word: "luxueux/luxueuse", meaning: "luxurious" },
+                { word: "la mode", meaning: "fashion" },
+                { word: "une exposition", meaning: "an exhibition" },
+                { word: "doré(e)", meaning: "golden/gilded" },
+                { word: "la modernité", meaning: "modernity" }
+            ]
+        },
         exercises: [
             { type: "fill", prompt: "Je ___ de Paris.", answer: "viens", options: ["viens", "vient", "venons", "viennent"] },
             { type: "fill", prompt: "Nous ___ d'arriver à la maison.", answer: "venons", options: ["viens", "venons", "venez", "viennent"] },

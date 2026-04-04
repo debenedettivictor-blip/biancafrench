@@ -185,6 +185,7 @@ const app = {
 
         this.renderFrenchTab(lesson);
         this.renderHistoryTab(lesson);
+        this.renderArtTab(lesson);
         this.renderVocabTab(lesson);
         this.renderNewsTab(lesson);
         this.resetPractice(lesson);
@@ -452,6 +453,76 @@ const app = {
             document.getElementById('algeria-live-badge').classList.add('hidden');
             algeriaList.innerHTML = '<div class="news-loading">Algerian news unavailable right now</div>';
         });
+    },
+
+    // ===== ART HISTORY TAB =====
+    renderArtTab(lesson) {
+        const banner = document.getElementById('art-period-banner');
+        const gallery = document.getElementById('art-gallery');
+        const contextCard = document.getElementById('art-context-card');
+        const vocabCard = document.getElementById('art-vocab-card');
+
+        if (!lesson.artHistory) {
+            banner.innerHTML = '';
+            gallery.innerHTML = '<p style="color:var(--text-light);text-align:center;padding:20px;">No art history for this lesson yet.</p>';
+            contextCard.innerHTML = '';
+            vocabCard.innerHTML = '';
+            return;
+        }
+
+        const art = lesson.artHistory;
+
+        // Period banner
+        banner.innerHTML = `
+            <div class="art-period-label">
+                <span class="art-period-fr">${art.period}</span>
+                ${speakBtn(art.period)}
+                <span class="art-period-en">${art.periodEn}</span>
+            </div>
+        `;
+
+        // Gallery
+        gallery.innerHTML = '';
+        art.artworks.forEach(aw => {
+            gallery.innerHTML += `
+                <div class="art-artwork-card">
+                    <div class="art-image-container">
+                        <img src="${aw.image}" alt="${aw.titleEn}" class="art-image" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'art-image-fallback\\'>Image not available</div>'">
+                    </div>
+                    <div class="art-artwork-info">
+                        <h4 class="art-title-fr">${aw.title} ${speakBtn(aw.title)}</h4>
+                        <p class="art-title-en">${aw.titleEn}</p>
+                        <p class="art-artist">${aw.artist} &bull; ${aw.year}</p>
+                        <div class="art-desc">
+                            <p class="art-desc-fr">${aw.descFr} ${speakBtn(aw.descFr)}</p>
+                            <p class="art-desc-en">${aw.descEn}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Context
+        contextCard.innerHTML = `
+            <h3>&#127912; Contexte Historique</h3>
+            <p class="art-context-fr">${art.context} ${speakBtn(art.context)}</p>
+            <div class="art-context-divider"></div>
+            <p class="art-context-en">${art.contextEn}</p>
+        `;
+
+        // Vocab
+        let vocabHTML = `<h3>&#128218; Vocabulaire de l'Art</h3><div class="art-vocab-chips">`;
+        art.vocab.forEach(v => {
+            vocabHTML += `
+                <div class="art-vocab-chip">
+                    <span class="art-vocab-word">${v.word}</span>
+                    ${speakBtn(v.word)}
+                    <span class="art-vocab-meaning">= ${v.meaning}</span>
+                </div>
+            `;
+        });
+        vocabHTML += `</div>`;
+        vocabCard.innerHTML = vocabHTML;
     },
 
     // ===== VOCABULARY TAB =====

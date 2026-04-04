@@ -542,10 +542,14 @@ body {
     padding: 4px;
     border-radius: 14px;
     margin-bottom: 24px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
 }
+.lesson-tabs::-webkit-scrollbar { display: none; }
 
 .tab {
-    flex: 1;
+    flex: 1 0 auto;
     padding: 12px 16px;
     border: none;
     background: transparent;
@@ -1826,5 +1830,214 @@ body {
     }
     .synonym-chip {
         padding: 6px 12px;
+    }
+}
+
+/* ===== Art History Tab ===== */
+.art-header-card {
+    text-align: center;
+    background: linear-gradient(135deg, #2C3E6B 0%, #1B2A4A 100%);
+    border: 1px solid rgba(212, 168, 67, 0.3);
+}
+
+.art-header-card h3 {
+    font-size: 20px;
+    color: #D4A843;
+    margin-bottom: 4px;
+}
+
+.art-subtitle {
+    color: var(--text-light);
+    font-size: 13px;
+    margin: 0;
+}
+
+.art-period-banner {
+    margin: 0 16px 16px;
+    text-align: center;
+}
+
+.art-period-label {
+    background: linear-gradient(135deg, rgba(212, 168, 67, 0.15) 0%, rgba(212, 168, 67, 0.05) 100%);
+    border: 1px solid rgba(212, 168, 67, 0.3);
+    border-radius: 16px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.art-period-fr {
+    font-size: 18px;
+    font-weight: 700;
+    color: #D4A843;
+}
+
+.art-period-en {
+    font-size: 14px;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.art-gallery {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.art-artwork-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.art-image-container {
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.art-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.art-image-fallback {
+    padding: 40px;
+    color: var(--text-light);
+    font-style: italic;
+    text-align: center;
+}
+
+.art-artwork-info {
+    padding: 16px;
+}
+
+.art-title-fr {
+    font-size: 17px;
+    font-weight: 700;
+    color: #D4A843;
+    margin: 0 0 2px;
+}
+
+.art-title-en {
+    font-size: 14px;
+    color: var(--text-light);
+    font-style: italic;
+    margin: 0 0 8px;
+}
+
+.art-artist {
+    font-size: 13px;
+    color: var(--accent-pink);
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+.art-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.art-desc-fr {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 10px 12px;
+    background: rgba(212, 168, 67, 0.08);
+    border-radius: 10px;
+    border-left: 3px solid #D4A843;
+}
+
+.art-desc-en {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    border-left: 3px solid rgba(255,255,255,0.15);
+}
+
+.art-context-card h3 {
+    color: #D4A843;
+    margin-bottom: 12px;
+}
+
+.art-context-fr {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.7;
+    margin: 0 0 12px;
+}
+
+.art-context-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    margin: 12px 0;
+}
+
+.art-context-en {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+}
+
+.art-vocab-card h3 {
+    color: #D4A843;
+    margin-bottom: 12px;
+}
+
+.art-vocab-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.art-vocab-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(212, 168, 67, 0.1);
+    border: 1px solid rgba(212, 168, 67, 0.25);
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 13px;
+}
+
+.art-vocab-word {
+    color: #D4A843;
+    font-weight: 600;
+}
+
+.art-vocab-meaning {
+    color: var(--text-light);
+}
+
+@media (max-width: 500px) {
+    .art-image-container {
+        max-height: 220px;
+    }
+    .art-period-fr {
+        font-size: 16px;
+    }
+    .art-artwork-info {
+        padding: 12px;
     }
 }

@@ -115,6 +115,9 @@
             <button class="tab" data-tab="vocab" onclick="app.switchTab('vocab')">
                 &#128209; Vocab
             </button>
+            <button class="tab" data-tab="art" onclick="app.switchTab('art')">
+                &#127912; Art
+            </button>
             <button class="tab" data-tab="news" onclick="app.switchTab('news')">
                 &#127758; World News
             </button>
@@ -188,6 +191,18 @@
                 <div class="modal-section" id="modal-homonyms"></div>
                 <div class="modal-section" id="modal-synonyms"></div>
             </div>
+        </div>
+
+        <!-- Art History Tab -->
+        <div class="tab-content" id="tab-art">
+            <div class="card art-header-card">
+                <h3>&#127912; L'Histoire de l'Art Fran&#231;ais</h3>
+                <p class="art-subtitle">French Art History — Discover masterpieces with French &amp; English</p>
+            </div>
+            <div class="art-period-banner" id="art-period-banner"></div>
+            <div class="art-gallery" id="art-gallery"></div>
+            <div class="card art-context-card" id="art-context-card"></div>
+            <div class="card art-vocab-card" id="art-vocab-card"></div>
         </div>
 
         <!-- World News Tab -->
