@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.biancafrench.app',
-  appName: 'Love Dove Learning French',
+  appName: 'BDLingo',
   webDir: '.',
   server: {
     androidScheme: 'https',

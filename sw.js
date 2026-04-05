@@ -1,4 +1,4 @@
-const CACHE_NAME = 'love-dove-learning-v11';
+const CACHE_NAME = 'bdlingo-v12';
 const ASSETS = [
   '/',
   '/index.html',
