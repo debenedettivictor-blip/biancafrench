@@ -21,31 +21,33 @@
                 <h1 class="landing-title">Love Dove Learning</h1>
                 <p class="landing-subtitle">Tap your name to start learning</p>
             </div>
-            <div class="profiles-grid">
-                <button class="profile-card" onclick="enterApp('bianca')">
-                    <div class="profile-avatar">B</div>
-                    <div class="profile-info">
-                        <span class="profile-name">Bianca</span>
-                        <span class="profile-lang">&#127467;&#127479; French</span>
-                    </div>
-                    <span class="profile-arrow">&#8250;</span>
-                </button>
-                <button class="profile-card" onclick="enterApp('victor')">
-                    <div class="profile-avatar">V</div>
-                    <div class="profile-info">
-                        <span class="profile-name">Victor</span>
-                        <span class="profile-lang">&#127466;&#127480; Spanish</span>
-                    </div>
-                    <span class="profile-arrow">&#8250;</span>
-                </button>
-                <div class="profile-card profile-add" onclick="addProfileHint()">
-                    <div class="profile-avatar profile-avatar-add">+</div>
-                    <div class="profile-info">
-                        <span class="profile-name">Add Learner</span>
-                        <span class="profile-lang">Coming soon</span>
-                    </div>
-                </div>
+            <div class="profiles-grid" id="profiles-grid">
+                <!-- Profiles rendered dynamically -->
             </div>
+
+    <!-- Add Learner Modal -->
+    <div id="add-learner-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <h2>Add New Learner</h2>
+            <label class="modal-label" for="new-learner-name">Your Name</label>
+            <input type="text" id="new-learner-name" class="modal-input" placeholder="Enter your name" maxlength="20" autocomplete="off">
+            <label class="modal-label">Choose Your Language</label>
+            <div class="lang-picker">
+                <button class="lang-option selected" data-lang="french" onclick="selectLang(this)">
+                    <span class="lang-flag">&#127467;&#127479;</span>
+                    <span class="lang-name">French</span>
+                </button>
+                <button class="lang-option" data-lang="spanish" onclick="selectLang(this)">
+                    <span class="lang-flag">&#127466;&#127480;</span>
+                    <span class="lang-name">Spanish</span>
+                </button>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-cancel" onclick="closeAddLearner()">Cancel</button>
+                <button class="modal-btn modal-btn-save" onclick="saveNewLearner()">Start Learning</button>
+            </div>
+        </div>
+    </div>
         </div>
     </div>
 
@@ -278,6 +280,38 @@
         navigator.serviceWorker.register('/sw.js');
       }
 
+      const LANG_FLAGS = { french: '&#127467;&#127479;', spanish: '&#127466;&#127480;' };
+      const LANG_LABELS = { french: 'French', spanish: 'Spanish' };
+
+      function renderProfiles() {
+        const grid = document.getElementById('profiles-grid');
+        const profiles = UserProfiles.getAll();
+        let html = '';
+        profiles.forEach(p => {
+          const flag = LANG_FLAGS[p.language] || '';
+          const label = LANG_LABELS[p.language] || p.language;
+          const initial = p.name.charAt(0).toUpperCase();
+          const isCustom = p.id !== 'bianca' && p.id !== 'victor';
+          html += `<button class="profile-card" onclick="enterApp('${p.id}')">
+            <div class="profile-avatar">${initial}</div>
+            <div class="profile-info">
+              <span class="profile-name">${p.name}</span>
+              <span class="profile-lang">${flag} ${label}</span>
+            </div>
+            ${isCustom ? `<span class="profile-delete" onclick="event.stopPropagation();deleteProfile('${p.id}')" title="Remove learner">&times;</span>` : ''}
+            <span class="profile-arrow">&#8250;</span>
+          </button>`;
+        });
+        html += `<button class="profile-card profile-add" onclick="openAddLearner()">
+          <div class="profile-avatar profile-avatar-add">+</div>
+          <div class="profile-info">
+            <span class="profile-name">Add Learner</span>
+            <span class="profile-lang">French or Spanish</span>
+          </div>
+        </button>`;
+        grid.innerHTML = html;
+      }
+
       function enterApp(user) {
         document.getElementById('landing-page').classList.add('hidden');
         document.getElementById('app-container').classList.remove('hidden');
@@ -290,20 +324,69 @@
         app.renderHome();
       }
 
-      function addProfileHint() {
-        alert('More languages coming soon! Stay tuned.');
-      }
-
       function exitToLanding() {
         localStorage.removeItem('currentUser');
         document.getElementById('app-container').classList.add('hidden');
         document.getElementById('landing-page').classList.remove('hidden');
+        renderProfiles();
       }
+
+      // Add Learner modal
+      function openAddLearner() {
+        document.getElementById('new-learner-name').value = '';
+        document.querySelectorAll('.lang-option').forEach(b => b.classList.remove('selected'));
+        document.querySelector('.lang-option[data-lang="french"]').classList.add('selected');
+        document.getElementById('add-learner-modal').classList.remove('hidden');
+        setTimeout(() => document.getElementById('new-learner-name').focus(), 100);
+      }
+
+      function closeAddLearner() {
+        document.getElementById('add-learner-modal').classList.add('hidden');
+      }
+
+      function selectLang(btn) {
+        document.querySelectorAll('.lang-option').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      }
+
+      function saveNewLearner() {
+        const nameInput = document.getElementById('new-learner-name');
+        const name = nameInput.value.trim();
+        if (!name) {
+          nameInput.focus();
+          nameInput.style.borderColor = '#e74c3c';
+          setTimeout(() => nameInput.style.borderColor = '', 1500);
+          return;
+        }
+        const langBtn = document.querySelector('.lang-option.selected');
+        const language = langBtn ? langBtn.dataset.lang : 'french';
+        const profile = UserProfiles.add(name, language);
+        closeAddLearner();
+        renderProfiles();
+        // Auto-enter the new profile
+        enterApp(profile.id);
+      }
+
+      function deleteProfile(id) {
+        const profile = UserProfiles.get(id);
+        if (!profile) return;
+        if (!confirm(`Remove ${profile.name}? This will delete all their progress.`)) return;
+        UserProfiles.remove(id);
+        // If the deleted user was active, go back to landing
+        if (localStorage.getItem('currentUser') === id) {
+          exitToLanding();
+        } else {
+          renderProfiles();
+        }
+      }
+
+      // Render profiles on load
+      renderProfiles();
 
       // If user previously selected, skip landing page and init with that user
       (function() {
         const last = localStorage.getItem('currentUser');
-        if (last) {
+        if (last && UserProfiles.get(last)) {
           document.getElementById('landing-page').classList.add('hidden');
           document.getElementById('app-container').classList.remove('hidden');
           app.currentUser = last;

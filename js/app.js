@@ -1,5 +1,66 @@
 // ===== Love Dove Learning — App Logic =====
 
+// ===== USER PROFILES =====
+const UserProfiles = {
+    STORAGE_KEY: 'lovedove_profiles',
+
+    // Default profiles for backwards compatibility
+    _defaults() {
+        return [
+            { id: 'bianca', name: 'Bianca', language: 'french' },
+            { id: 'victor', name: 'Victor', language: 'spanish' }
+        ];
+    },
+
+    load() {
+        try {
+            const saved = localStorage.getItem(this.STORAGE_KEY);
+            if (saved) return JSON.parse(saved);
+        } catch (e) {}
+        const defaults = this._defaults();
+        this.save(defaults);
+        return defaults;
+    },
+
+    save(profiles) {
+        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(profiles));
+    },
+
+    getAll() { return this.load(); },
+
+    get(id) { return this.load().find(p => p.id === id) || null; },
+
+    add(name, language) {
+        const profiles = this.load();
+        const id = name.toLowerCase().replace(/[^a-z0-9]/g, '') + '_' + Date.now();
+        const profile = { id, name, language };
+        profiles.push(profile);
+        this.save(profiles);
+        return profile;
+    },
+
+    remove(id) {
+        // Don't allow removing default profiles
+        if (id === 'bianca' || id === 'victor') return false;
+        let profiles = this.load();
+        profiles = profiles.filter(p => p.id !== id);
+        this.save(profiles);
+        // Clean up progress data
+        localStorage.removeItem(id + '_progress');
+        return true;
+    }
+};
+
+// Helper: get the current user's language
+function getUserLang() {
+    const profile = UserProfiles.get(app.currentUser);
+    return profile ? profile.language : 'french';
+}
+
+function isSpanishUser() {
+    return getUserLang() === 'spanish';
+}
+
 // ===== TEXT-TO-SPEECH HELPER =====
 let _frenchVoice = null;
 let _spanishVoice = null;
@@ -28,7 +89,7 @@ function speak(text) {
     if (!('speechSynthesis' in window)) return;
     window.speechSynthesis.cancel();
 
-    const isSpanish = app.currentUser === 'victor';
+    const isSpanish = isSpanishUser();
     let voice, lang, langLabel;
 
     if (isSpanish) {
@@ -85,16 +146,20 @@ const app = {
 
     // Get the right lessons array for the current user
     getLessons() {
-        return this.currentUser === 'victor' ? SPANISH_LESSONS : LESSONS;
+        return getUserLang() === 'spanish' ? SPANISH_LESSONS : LESSONS;
     },
 
     // Get language-specific config
     getLangConfig() {
-        if (this.currentUser === 'victor') {
+        const profile = UserProfiles.get(this.currentUser);
+        const name = profile ? profile.name : 'Learner';
+        const lang = profile ? profile.language : 'french';
+
+        if (lang === 'spanish') {
             return {
                 langKey: 'spanish',
                 flag: '\uD83C\uDDEA\uD83C\uDDF8',
-                greeting: '\u00a1Hola Victor! \uD83D\uDC96',
+                greeting: `\u00a1Hola ${name}! \uD83D\uDC96`,
                 subtitle: 'Your daily Spanish & History adventure awaits',
                 logoText: 'Love Dove Learning Spanish',
                 tabLabel: 'Spanish',
@@ -106,16 +171,16 @@ const app = {
                 localNewsRssUrl: null,
                 localNewsLabel: null,
                 translatePair: 'es|en',
-                loveName: 'Victor',
-                loveFrom: 'Bianca',
-                loveMessage: 'Your fianc\u00e9e Bianca loves you so matcha!',
+                loveName: name,
+                loveFrom: 'Love Dove',
+                loveMessage: `Keep going, ${name}! You're doing amazing!`,
                 loveDismiss: '\u00a1Aww, gracias!'
             };
         }
         return {
             langKey: 'french',
             flag: '\uD83C\uDDEB\uD83C\uDDF7',
-            greeting: 'Bonjour Bianca! \uD83D\uDC96',
+            greeting: `Bonjour ${name}! \uD83D\uDC96`,
             subtitle: 'Your daily French & History adventure awaits',
             logoText: 'Love Dove Learning French',
             tabLabel: 'French',
@@ -127,9 +192,9 @@ const app = {
             localNewsRssUrl: 'https://www.tsa-algerie.com/feed/',
             localNewsLabel: 'Algerian News',
             translatePair: 'fr|en',
-            loveName: 'Bianca',
-            loveFrom: 'Victor',
-            loveMessage: 'Your fianc\u00e9e Victor loves you so matcha!',
+            loveName: name,
+            loveFrom: 'Love Dove',
+            loveMessage: `Keep going, ${name}! You're doing amazing!`,
             loveDismiss: 'Aww, merci!'
         };
     },
@@ -167,11 +232,11 @@ const app = {
         if (loveDismissBtn) loveDismissBtn.textContent = cfg.loveDismiss;
         // Art header
         const artTitle = document.getElementById('art-header-title');
-        if (artTitle) artTitle.innerHTML = this.currentUser === 'victor'
+        if (artTitle) artTitle.innerHTML = isSpanishUser()
             ? '&#127912; Historia del Arte Espa\u00f1ol'
             : "&#127912; L'Histoire de l'Art Fran\u00e7ais";
         const artSub = document.getElementById('art-header-subtitle');
-        if (artSub) artSub.textContent = this.currentUser === 'victor'
+        if (artSub) artSub.textContent = isSpanishUser()
             ? 'Spanish Art History \u2014 Discover masterpieces with Spanish & English'
             : 'French Art History \u2014 Discover masterpieces with French & English';
         // Local news section visibility
@@ -595,7 +660,7 @@ const app = {
         });
 
         // Context
-        const ctxTitle = this.currentUser === 'victor' ? 'Contexto Hist\u00f3rico' : 'Contexte Historique';
+        const ctxTitle = isSpanishUser() ? 'Contexto Hist\u00f3rico' : 'Contexte Historique';
         contextCard.innerHTML = `
             <h3>&#127912; ${ctxTitle}</h3>
             <p class="art-context-fr">${art.context} ${speakBtn(art.context)}</p>
@@ -604,7 +669,7 @@ const app = {
         `;
 
         // Vocab
-        const vocTitle = this.currentUser === 'victor' ? 'Vocabulario del Arte' : "Vocabulaire de l'Art";
+        const vocTitle = isSpanishUser() ? 'Vocabulario del Arte' : "Vocabulaire de l'Art";
         let vocabHTML = `<h3>&#128218; ${vocTitle}</h3><div class="art-vocab-chips">`;
         art.vocab.forEach(v => {
             vocabHTML += `
@@ -622,7 +687,7 @@ const app = {
     // ===== CONJUGATION REFERENCE TAB =====
     renderConjugationTab() {
         const container = document.getElementById('conjugation-container');
-        const lang = this.currentUser === 'victor' ? 'spanish' : 'french';
+        const lang = getUserLang();
         const data = CONJUGATION_DATA[lang];
         if (!data) { container.innerHTML = ''; return; }
 

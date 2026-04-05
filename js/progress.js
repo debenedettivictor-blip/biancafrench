@@ -6,7 +6,22 @@ const Progress = {
 
     setUser(user) {
         this._currentUser = user;
-        this.STORAGE_KEY = user === 'victor' ? 'victorspanish_progress' : 'biancafrench_progress';
+        // Use user ID as storage key for dynamic profiles
+        if (user === 'bianca') {
+            this.STORAGE_KEY = 'biancafrench_progress';
+        } else if (user === 'victor') {
+            this.STORAGE_KEY = 'victorspanish_progress';
+        } else {
+            this.STORAGE_KEY = user + '_progress';
+        }
+    },
+
+    _getUserLang() {
+        if (typeof UserProfiles !== 'undefined') {
+            const profile = UserProfiles.get(this._currentUser);
+            if (profile) return profile.language;
+        }
+        return this._currentUser === 'victor' ? 'spanish' : 'french';
     },
 
     // Default state
@@ -126,13 +141,13 @@ const Progress = {
 
     // Get overall progress percentage
     getProgressPercent() {
-        const lessons = this._currentUser === 'victor' ? SPANISH_LESSONS : LESSONS;
+        const lessons = this._getUserLang() === 'spanish' ? SPANISH_LESSONS : LESSONS;
         return Math.round((this.getCompletedCount() / lessons.length) * 100);
     },
 
     // Get today's lesson number (1-indexed, cycles through lessons)
     getDailyLessonId() {
-        const lessons = this._currentUser === 'victor' ? SPANISH_LESSONS : LESSONS;
+        const lessons = this._getUserLang() === 'spanish' ? SPANISH_LESSONS : LESSONS;
         const data = this.load();
         const start = new Date(data.startDate || '2026-04-02');
         const now = new Date();
@@ -156,10 +171,12 @@ const Progress = {
 
     // Get encouraging message based on score
     getMessage(stars) {
-        const name = this._currentUser === 'victor' ? 'Victor' : 'Bianca';
-        const excellent = this._currentUser === 'victor' ? '\u00a1Excelente!' : 'Tr\u00e8s bien!';
-        const perfect = this._currentUser === 'victor' ? '\u00a1PERFECTO! \u00a1Magn\u00edfico!' : 'PERFECT! Magnifique!';
-        const brilliant = this._currentUser === 'victor' ? '\u00a1Incre\u00edble! Absolutely brilliant!' : 'Incroyable! Absolutely brilliant!';
+        const profile = (typeof UserProfiles !== 'undefined') ? UserProfiles.get(this._currentUser) : null;
+        const name = profile ? profile.name : (this._currentUser === 'victor' ? 'Victor' : 'Bianca');
+        const isSpanish = this._getUserLang() === 'spanish';
+        const excellent = isSpanish ? '\u00a1Excelente!' : 'Tr\u00e8s bien!';
+        const perfect = isSpanish ? '\u00a1PERFECTO! \u00a1Magn\u00edfico!' : 'PERFECT! Magnifique!';
+        const brilliant = isSpanish ? '\u00a1Incre\u00edble! Absolutely brilliant!' : 'Incroyable! Absolutely brilliant!';
         const messages = {
             0: ["Keep trying! You'll get there! \u{1F4AA}", "Practice makes perfect! \u{1F31F}", `Don't give up, ${name}! \u{1F338}`],
             1: ["Good start! Keep going! \u{1F60A}", "You're learning! \u{1F331}", "Nice effort! \u{1F44D}"],
